@@ -1,0 +1,1729 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="ZeitgeistRemoteLog">
+<refmeta>
+<refentrytitle role="top_of_page" id="ZeitgeistRemoteLog.top_of_page">ZeitgeistRemoteLog</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ZEITGEIST-2.0 Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ZeitgeistRemoteLog</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="ZeitgeistRemoteLog.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ZeitgeistVersionStruct"><returnvalue>ZeitgeistVersionStruct</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-version-struct-dup">zeitgeist_version_struct_dup</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-version-struct-free">zeitgeist_version_struct_free</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-delete-events">zeitgeist_remote_log_delete_events</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-delete-events-finish">zeitgeist_remote_log_delete_events_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-find-event-ids">zeitgeist_remote_log_find_event_ids</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-find-event-ids-finish">zeitgeist_remote_log_find_event_ids_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-find-events">zeitgeist_remote_log_find_events</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-find-events-finish">zeitgeist_remote_log_find_events_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-find-related-uris">zeitgeist_remote_log_find_related_uris</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;**
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-find-related-uris-finish">zeitgeist_remote_log_find_related_uris_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-get-events">zeitgeist_remote_log_get_events</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-get-events-finish">zeitgeist_remote_log_get_events_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-insert-events">zeitgeist_remote_log_insert_events</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-insert-events-finish">zeitgeist_remote_log_insert_events_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-install-monitor">zeitgeist_remote_log_install_monitor</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-install-monitor-finish">zeitgeist_remote_log_install_monitor_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-remove-monitor">zeitgeist_remote_log_remove_monitor</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-remove-monitor-finish">zeitgeist_remote_log_remove_monitor_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-quit">zeitgeist_remote_log_quit</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-quit-finish">zeitgeist_remote_log_quit_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;**
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-get-extensions">zeitgeist_remote_log_get_extensions</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-get-version">zeitgeist_remote_log_get_version</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-log-get-datapath">zeitgeist_remote_log_get_datapath</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-monitor-notify-insert">zeitgeist_remote_monitor_notify_insert</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-monitor-notify-insert-finish">zeitgeist_remote_monitor_notify_insert_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-monitor-notify-delete">zeitgeist_remote_monitor_notify_delete</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-monitor-notify-delete-finish">zeitgeist_remote_monitor_notify_delete_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-simple-indexer-search">zeitgeist_remote_simple_indexer_search</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-simple-indexer-search-finish">zeitgeist_remote_simple_indexer_search_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-simple-indexer-search-with-relevancies">zeitgeist_remote_simple_indexer_search_with_relevancies</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-simple-indexer-search-with-relevancies-finish">zeitgeist_remote_simple_indexer_search_with_relevancies_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-network-manager-dbus-state">zeitgeist_network_manager_dbus_state</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-connman-manager-dbus-get-state">zeitgeist_connman_manager_dbus_get_state</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistRemoteLog.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signal_proto_type" colwidth="150px"/>
+<colspec colname="signal_proto_name" colwidth="300px"/>
+<colspec colname="signal_proto_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="ZeitgeistNetworkManagerDBus-state-changed">state-changed</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="ZeitgeistConnmanManagerDBus-state-changed">state-changed</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="ZeitgeistVersionStruct"/><anchor id="ZeitgeistRemoteMonitor"/><anchor id="ZeitgeistRemoteSimpleIndexer"/><anchor id="ZeitgeistNetworkManagerDBus"/><anchor id="ZeitgeistConnmanManagerDBus"/><refsect1 id="ZeitgeistRemoteLog.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistVersionStruct-struct">ZeitgeistVersionStruct</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ZeitgeistRemoteLog-struct">ZeitgeistRemoteLog</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistRemoteLogIface">ZeitgeistRemoteLogIface</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ZeitgeistRemoteMonitor-struct">ZeitgeistRemoteMonitor</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistRemoteMonitorIface">ZeitgeistRemoteMonitorIface</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ZeitgeistRemoteSimpleIndexer-struct">ZeitgeistRemoteSimpleIndexer</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistRemoteSimpleIndexerIface">ZeitgeistRemoteSimpleIndexerIface</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ZeitgeistNetworkManagerDBus-struct">ZeitgeistNetworkManagerDBus</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistNetworkManagerDBusIface">ZeitgeistNetworkManagerDBusIface</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ZeitgeistConnmanManagerDBus-struct">ZeitgeistConnmanManagerDBus</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistConnmanManagerDBusIface">ZeitgeistConnmanManagerDBusIface</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistRemoteLog.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GBoxed">GBoxed</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ZeitgeistVersionStruct
+    <link linkend="GInterface">GInterface</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> ZeitgeistConnmanManagerDBus
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> ZeitgeistNetworkManagerDBus
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> ZeitgeistRemoteLog
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> ZeitgeistRemoteMonitor
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ZeitgeistRemoteSimpleIndexer
+</screen>
+</refsect1>
+<refsect1 id="ZeitgeistRemoteLog.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+ZeitgeistRemoteLog requires
+ <link linkend="GObject">GObject</link>.</para>
+<para>
+ZeitgeistRemoteMonitor requires
+ <link linkend="GObject">GObject</link>.</para>
+<para>
+ZeitgeistRemoteSimpleIndexer requires
+ <link linkend="GObject">GObject</link>.</para>
+<para>
+ZeitgeistNetworkManagerDBus requires
+ <link linkend="GObject">GObject</link>.</para>
+<para>
+ZeitgeistConnmanManagerDBus requires
+ <link linkend="GObject">GObject</link>.</para>
+
+</refsect1>
+<refsect1 id="ZeitgeistRemoteLog.implementations" role="implementations">
+<title role="implementations.title">Known Implementations</title>
+<para>
+ZeitgeistRemoteMonitor is implemented by
+ <link linkend="ZeitgeistMonitor">ZeitgeistMonitor</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="ZeitgeistRemoteLog.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ZeitgeistRemoteLog.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="zeitgeist-version-struct-dup" role="function">
+<title>zeitgeist_version_struct_dup&#160;()</title>
+<indexterm zone="zeitgeist-version-struct-dup"><primary>zeitgeist_version_struct_dup</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistVersionStruct"><returnvalue>ZeitgeistVersionStruct</returnvalue></link>&#160;*
+zeitgeist_version_struct_dup (<parameter>const <link linkend="ZeitgeistVersionStruct"><type>ZeitgeistVersionStruct</type></link> *self</parameter>);</programlisting>
+<para>Creates a copy of self.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-version-struct-copy"><function>zeitgeist_version_struct_copy()</function></link>, <link linkend="zeitgeist-version-struct-destroy"><function>zeitgeist_version_struct_destroy()</function></link>, <link linkend="zeitgeist-version-struct-free"><function>zeitgeist_version_struct_free()</function></link></para>
+<refsect3 id="zeitgeist-version-struct-dup.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the instance to duplicate</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-version-struct-dup.returns" role="returns">
+<title>Returns</title>
+<para> a copy of <parameter>self</parameter>
+, free with <link linkend="zeitgeist-version-struct-free"><function>zeitgeist_version_struct_free()</function></link></para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-version-struct-free" role="function">
+<title>zeitgeist_version_struct_free&#160;()</title>
+<indexterm zone="zeitgeist-version-struct-free"><primary>zeitgeist_version_struct_free</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_version_struct_free (<parameter><link linkend="ZeitgeistVersionStruct"><type>ZeitgeistVersionStruct</type></link> *self</parameter>);</programlisting>
+<para>Frees the heap-allocated struct.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-version-struct-dup"><function>zeitgeist_version_struct_dup()</function></link>, <link linkend="zeitgeist-version-struct-copy"><function>zeitgeist_version_struct_copy()</function></link>, <link linkend="zeitgeist-version-struct-destroy"><function>zeitgeist_version_struct_destroy()</function></link></para>
+<refsect3 id="zeitgeist-version-struct-free.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the struct to free</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-delete-events" role="function">
+<title>zeitgeist_remote_log_delete_events&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-delete-events"><primary>zeitgeist_remote_log_delete_events</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_log_delete_events (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                    <parameter><link linkend="guint32"><type>guint32</type></link> *event_ids</parameter>,
+                                    <parameter><link linkend="gint"><type>gint</type></link> event_ids_length1</parameter>,
+                                    <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                    <parameter>const <link linkend="char"><type>char</type></link> *sender</parameter>,
+                                    <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                    <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-delete-events-finish"><function><link linkend="zeitgeist-remote-log-delete-events-finish"><function>zeitgeist_remote_log_delete_events_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-delete-events.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event_ids_length1</para></entry>
+<entry role="parameter_description"><para>length of the <parameter>event_ids</parameter>
+array</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event_ids</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sender</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-delete-events-finish" role="function">
+<title>zeitgeist_remote_log_delete_events_finish&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-delete-events-finish"><primary>zeitgeist_remote_log_delete_events_finish</primary></indexterm>
+<programlisting language="C"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+zeitgeist_remote_log_delete_events_finish
+                               (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-delete-events"><function><link linkend="zeitgeist-remote-log-delete-events"><function>zeitgeist_remote_log_delete_events()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-delete-events-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-find-event-ids" role="function">
+<title>zeitgeist_remote_log_find_event_ids&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-find-event-ids"><primary>zeitgeist_remote_log_find_event_ids</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_log_find_event_ids (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                     <parameter><link linkend="GVariant"><type>GVariant</type></link> *time_range</parameter>,
+                                     <parameter><link linkend="GVariant"><type>GVariant</type></link> *event_templates</parameter>,
+                                     <parameter><link linkend="guint"><type>guint</type></link> storage_state</parameter>,
+                                     <parameter><link linkend="guint"><type>guint</type></link> num_events</parameter>,
+                                     <parameter><link linkend="guint"><type>guint</type></link> result_type</parameter>,
+                                     <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                     <parameter>const <link linkend="char"><type>char</type></link> *sender</parameter>,
+                                     <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                     <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-find-event-ids-finish"><function><link linkend="zeitgeist-remote-log-find-event-ids-finish"><function>zeitgeist_remote_log_find_event_ids_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-find-event-ids.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>time_range</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event_templates</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>storage_state</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>num_events</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>result_type</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sender</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-find-event-ids-finish" role="function">
+<title>zeitgeist_remote_log_find_event_ids_finish&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-find-event-ids-finish"><primary>zeitgeist_remote_log_find_event_ids_finish</primary></indexterm>
+<programlisting language="C"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>&#160;*
+zeitgeist_remote_log_find_event_ids_finish
+                               (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> *result_length1</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-find-event-ids"><function><link linkend="zeitgeist-remote-log-find-event-ids"><function>zeitgeist_remote_log_find_event_ids()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-find-event-ids-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-find-events" role="function">
+<title>zeitgeist_remote_log_find_events&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-find-events"><primary>zeitgeist_remote_log_find_events</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_log_find_events (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                  <parameter><link linkend="GVariant"><type>GVariant</type></link> *time_range</parameter>,
+                                  <parameter><link linkend="GVariant"><type>GVariant</type></link> *event_templates</parameter>,
+                                  <parameter><link linkend="guint"><type>guint</type></link> storage_state</parameter>,
+                                  <parameter><link linkend="guint"><type>guint</type></link> num_events</parameter>,
+                                  <parameter><link linkend="guint"><type>guint</type></link> result_type</parameter>,
+                                  <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                  <parameter>const <link linkend="char"><type>char</type></link> *sender</parameter>,
+                                  <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                  <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-find-events-finish"><function><link linkend="zeitgeist-remote-log-find-events-finish"><function>zeitgeist_remote_log_find_events_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-find-events.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>time_range</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event_templates</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>storage_state</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>num_events</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>result_type</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sender</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-find-events-finish" role="function">
+<title>zeitgeist_remote_log_find_events_finish&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-find-events-finish"><primary>zeitgeist_remote_log_find_events_finish</primary></indexterm>
+<programlisting language="C"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+zeitgeist_remote_log_find_events_finish
+                               (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-find-events"><function><link linkend="zeitgeist-remote-log-find-events"><function>zeitgeist_remote_log_find_events()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-find-events-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-find-related-uris" role="function">
+<title>zeitgeist_remote_log_find_related_uris&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-find-related-uris"><primary>zeitgeist_remote_log_find_related_uris</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_log_find_related_uris
+                               (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                <parameter><link linkend="GVariant"><type>GVariant</type></link> *time_range</parameter>,
+                                <parameter><link linkend="GVariant"><type>GVariant</type></link> *event_templates</parameter>,
+                                <parameter><link linkend="GVariant"><type>GVariant</type></link> *result_event_templates</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> storage_state</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> num_events</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> result_type</parameter>,
+                                <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *sender</parameter>,
+                                <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-find-related-uris-finish"><function><link linkend="zeitgeist-remote-log-find-related-uris-finish"><function>zeitgeist_remote_log_find_related_uris_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-find-related-uris.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>time_range</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event_templates</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>result_event_templates</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>storage_state</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>num_events</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>result_type</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sender</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-find-related-uris-finish" role="function">
+<title>zeitgeist_remote_log_find_related_uris_finish&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-find-related-uris-finish"><primary>zeitgeist_remote_log_find_related_uris_finish</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;**
+zeitgeist_remote_log_find_related_uris_finish
+                               (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> *result_length1</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-find-related-uris"><function><link linkend="zeitgeist-remote-log-find-related-uris"><function>zeitgeist_remote_log_find_related_uris()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-find-related-uris-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-get-events" role="function">
+<title>zeitgeist_remote_log_get_events&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-get-events"><primary>zeitgeist_remote_log_get_events</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_log_get_events (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                 <parameter><link linkend="guint32"><type>guint32</type></link> *event_ids</parameter>,
+                                 <parameter><link linkend="gint"><type>gint</type></link> event_ids_length1</parameter>,
+                                 <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                 <parameter>const <link linkend="char"><type>char</type></link> *sender</parameter>,
+                                 <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                 <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-get-events-finish"><function><link linkend="zeitgeist-remote-log-get-events-finish"><function>zeitgeist_remote_log_get_events_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-get-events.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event_ids_length1</para></entry>
+<entry role="parameter_description"><para>length of the <parameter>event_ids</parameter>
+array</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event_ids</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sender</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-get-events-finish" role="function">
+<title>zeitgeist_remote_log_get_events_finish&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-get-events-finish"><primary>zeitgeist_remote_log_get_events_finish</primary></indexterm>
+<programlisting language="C"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+zeitgeist_remote_log_get_events_finish
+                               (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-get-events"><function><link linkend="zeitgeist-remote-log-get-events"><function>zeitgeist_remote_log_get_events()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-get-events-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-insert-events" role="function">
+<title>zeitgeist_remote_log_insert_events&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-insert-events"><primary>zeitgeist_remote_log_insert_events</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_log_insert_events (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                    <parameter><link linkend="GVariant"><type>GVariant</type></link> *events</parameter>,
+                                    <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                    <parameter>const <link linkend="char"><type>char</type></link> *sender</parameter>,
+                                    <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                    <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-insert-events-finish"><function><link linkend="zeitgeist-remote-log-insert-events-finish"><function>zeitgeist_remote_log_insert_events_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-insert-events.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>events</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sender</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-insert-events-finish" role="function">
+<title>zeitgeist_remote_log_insert_events_finish&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-insert-events-finish"><primary>zeitgeist_remote_log_insert_events_finish</primary></indexterm>
+<programlisting language="C"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>&#160;*
+zeitgeist_remote_log_insert_events_finish
+                               (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> *result_length1</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-insert-events"><function><link linkend="zeitgeist-remote-log-insert-events"><function>zeitgeist_remote_log_insert_events()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-insert-events-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-install-monitor" role="function">
+<title>zeitgeist_remote_log_install_monitor&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-install-monitor"><primary>zeitgeist_remote_log_install_monitor</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_log_install_monitor (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                      <parameter>const <link linkend="char"><type>char</type></link> *monitor_path</parameter>,
+                                      <parameter><link linkend="GVariant"><type>GVariant</type></link> *time_range</parameter>,
+                                      <parameter><link linkend="GVariant"><type>GVariant</type></link> *event_templates</parameter>,
+                                      <parameter>const <link linkend="char"><type>char</type></link> *owner</parameter>,
+                                      <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                      <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-install-monitor-finish"><function><link linkend="zeitgeist-remote-log-install-monitor-finish"><function>zeitgeist_remote_log_install_monitor_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-install-monitor.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>monitor_path</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>time_range</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event_templates</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>owner</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-install-monitor-finish" role="function">
+<title>zeitgeist_remote_log_install_monitor_finish&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-install-monitor-finish"><primary>zeitgeist_remote_log_install_monitor_finish</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_log_install_monitor_finish
+                               (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-install-monitor"><function><link linkend="zeitgeist-remote-log-install-monitor"><function>zeitgeist_remote_log_install_monitor()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-install-monitor-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-remove-monitor" role="function">
+<title>zeitgeist_remote_log_remove_monitor&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-remove-monitor"><primary>zeitgeist_remote_log_remove_monitor</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_log_remove_monitor (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                     <parameter>const <link linkend="char"><type>char</type></link> *monitor_path</parameter>,
+                                     <parameter>const <link linkend="char"><type>char</type></link> *owner</parameter>,
+                                     <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                     <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-remove-monitor-finish"><function><link linkend="zeitgeist-remote-log-remove-monitor-finish"><function>zeitgeist_remote_log_remove_monitor_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-remove-monitor.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>monitor_path</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>owner</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-remove-monitor-finish" role="function">
+<title>zeitgeist_remote_log_remove_monitor_finish&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-remove-monitor-finish"><primary>zeitgeist_remote_log_remove_monitor_finish</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_log_remove_monitor_finish
+                               (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-remove-monitor"><function><link linkend="zeitgeist-remote-log-remove-monitor"><function>zeitgeist_remote_log_remove_monitor()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-remove-monitor-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-quit" role="function">
+<title>zeitgeist_remote_log_quit&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-quit"><primary>zeitgeist_remote_log_quit</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_log_quit (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                           <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                           <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                           <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-quit-finish"><function><link linkend="zeitgeist-remote-log-quit-finish"><function>zeitgeist_remote_log_quit_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-quit.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-quit-finish" role="function">
+<title>zeitgeist_remote_log_quit_finish&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-quit-finish"><primary>zeitgeist_remote_log_quit_finish</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_log_quit_finish (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                  <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                  <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-log-quit"><function><link linkend="zeitgeist-remote-log-quit"><function>zeitgeist_remote_log_quit()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-log-quit-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-get-extensions" role="function">
+<title>zeitgeist_remote_log_get_extensions&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-get-extensions"><primary>zeitgeist_remote_log_get_extensions</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;**
+zeitgeist_remote_log_get_extensions (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                     <parameter><link linkend="gint"><type>gint</type></link> *result_length1</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistRemoteLog--extensions"><type>"extensions"</type></link> property.</para>
+<refsect3 id="zeitgeist-remote-log-get-extensions.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-remote-log-get-extensions.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistRemoteLog--extensions"><type>"extensions"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-get-version" role="function">
+<title>zeitgeist_remote_log_get_version&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-get-version"><primary>zeitgeist_remote_log_get_version</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_log_get_version (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>,
+                                  <parameter><link linkend="ZeitgeistVersionStruct"><type>ZeitgeistVersionStruct</type></link> *result</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistRemoteLog--version"><type>"version"</type></link> property.</para>
+<refsect3 id="zeitgeist-remote-log-get-version.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-remote-log-get-version.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistRemoteLog--version"><type>"version"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-log-get-datapath" role="function">
+<title>zeitgeist_remote_log_get_datapath&#160;()</title>
+<indexterm zone="zeitgeist-remote-log-get-datapath"><primary>zeitgeist_remote_log_get_datapath</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_remote_log_get_datapath (<parameter><link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistRemoteLog--datapath"><type>"datapath"</type></link> property.</para>
+<refsect3 id="zeitgeist-remote-log-get-datapath.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-remote-log-get-datapath.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistRemoteLog--datapath"><type>"datapath"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-monitor-notify-insert" role="function">
+<title>zeitgeist_remote_monitor_notify_insert&#160;()</title>
+<indexterm zone="zeitgeist-remote-monitor-notify-insert"><primary>zeitgeist_remote_monitor_notify_insert</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_monitor_notify_insert
+                               (<parameter><link linkend="ZeitgeistRemoteMonitor"><type>ZeitgeistRemoteMonitor</type></link> *self</parameter>,
+                                <parameter><link linkend="GVariant"><type>GVariant</type></link> *time_range</parameter>,
+                                <parameter><link linkend="GVariant"><type>GVariant</type></link> *events</parameter>,
+                                <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-monitor-notify-insert-finish"><function><link linkend="zeitgeist-remote-monitor-notify-insert-finish"><function>zeitgeist_remote_monitor_notify_insert_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-monitor-notify-insert.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteMonitor"><type>ZeitgeistRemoteMonitor</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>time_range</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>events</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-monitor-notify-insert-finish" role="function">
+<title>zeitgeist_remote_monitor_notify_insert_finish&#160;()</title>
+<indexterm zone="zeitgeist-remote-monitor-notify-insert-finish"><primary>zeitgeist_remote_monitor_notify_insert_finish</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_monitor_notify_insert_finish
+                               (<parameter><link linkend="ZeitgeistRemoteMonitor"><type>ZeitgeistRemoteMonitor</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-monitor-notify-insert"><function><link linkend="zeitgeist-remote-monitor-notify-insert"><function>zeitgeist_remote_monitor_notify_insert()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-monitor-notify-insert-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteMonitor"><type>ZeitgeistRemoteMonitor</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-monitor-notify-delete" role="function">
+<title>zeitgeist_remote_monitor_notify_delete&#160;()</title>
+<indexterm zone="zeitgeist-remote-monitor-notify-delete"><primary>zeitgeist_remote_monitor_notify_delete</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_monitor_notify_delete
+                               (<parameter><link linkend="ZeitgeistRemoteMonitor"><type>ZeitgeistRemoteMonitor</type></link> *self</parameter>,
+                                <parameter><link linkend="GVariant"><type>GVariant</type></link> *time_range</parameter>,
+                                <parameter><link linkend="guint32"><type>guint32</type></link> *event_ids</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> event_ids_length1</parameter>,
+                                <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-monitor-notify-delete-finish"><function><link linkend="zeitgeist-remote-monitor-notify-delete-finish"><function>zeitgeist_remote_monitor_notify_delete_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-monitor-notify-delete.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteMonitor"><type>ZeitgeistRemoteMonitor</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event_ids_length1</para></entry>
+<entry role="parameter_description"><para>length of the <parameter>event_ids</parameter>
+array</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>time_range</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event_ids</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-monitor-notify-delete-finish" role="function">
+<title>zeitgeist_remote_monitor_notify_delete_finish&#160;()</title>
+<indexterm zone="zeitgeist-remote-monitor-notify-delete-finish"><primary>zeitgeist_remote_monitor_notify_delete_finish</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_monitor_notify_delete_finish
+                               (<parameter><link linkend="ZeitgeistRemoteMonitor"><type>ZeitgeistRemoteMonitor</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-monitor-notify-delete"><function><link linkend="zeitgeist-remote-monitor-notify-delete"><function>zeitgeist_remote_monitor_notify_delete()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-monitor-notify-delete-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteMonitor"><type>ZeitgeistRemoteMonitor</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-simple-indexer-search" role="function">
+<title>zeitgeist_remote_simple_indexer_search&#160;()</title>
+<indexterm zone="zeitgeist-remote-simple-indexer-search"><primary>zeitgeist_remote_simple_indexer_search</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_simple_indexer_search
+                               (<parameter><link linkend="ZeitgeistRemoteSimpleIndexer"><type>ZeitgeistRemoteSimpleIndexer</type></link> *self</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *query_string</parameter>,
+                                <parameter><link linkend="GVariant"><type>GVariant</type></link> *time_range</parameter>,
+                                <parameter><link linkend="GVariant"><type>GVariant</type></link> *filter_templates</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> offset</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> count</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> result_type</parameter>,
+                                <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-simple-indexer-search-finish"><function><link linkend="zeitgeist-remote-simple-indexer-search-finish"><function>zeitgeist_remote_simple_indexer_search_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-simple-indexer-search.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteSimpleIndexer"><type>ZeitgeistRemoteSimpleIndexer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>query_string</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>time_range</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>filter_templates</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>count</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>result_type</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>events</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>matches</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-simple-indexer-search-finish" role="function">
+<title>zeitgeist_remote_simple_indexer_search_finish&#160;()</title>
+<indexterm zone="zeitgeist-remote-simple-indexer-search-finish"><primary>zeitgeist_remote_simple_indexer_search_finish</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_simple_indexer_search_finish
+                               (<parameter><link linkend="ZeitgeistRemoteSimpleIndexer"><type>ZeitgeistRemoteSimpleIndexer</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GVariant"><type>GVariant</type></link> * *events</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> *matches</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-simple-indexer-search"><function><link linkend="zeitgeist-remote-simple-indexer-search"><function>zeitgeist_remote_simple_indexer_search()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-simple-indexer-search-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteSimpleIndexer"><type>ZeitgeistRemoteSimpleIndexer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-simple-indexer-search-with-relevancies" role="function">
+<title>zeitgeist_remote_simple_indexer_search_with_relevancies&#160;()</title>
+<indexterm zone="zeitgeist-remote-simple-indexer-search-with-relevancies"><primary>zeitgeist_remote_simple_indexer_search_with_relevancies</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_simple_indexer_search_with_relevancies
+                               (<parameter><link linkend="ZeitgeistRemoteSimpleIndexer"><type>ZeitgeistRemoteSimpleIndexer</type></link> *self</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *query_string</parameter>,
+                                <parameter><link linkend="GVariant"><type>GVariant</type></link> *time_range</parameter>,
+                                <parameter><link linkend="GVariant"><type>GVariant</type></link> *filter_templates</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> storage_state</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> offset</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> count</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> result_type</parameter>,
+                                <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-simple-indexer-search-with-relevancies-finish"><function><link linkend="zeitgeist-remote-simple-indexer-search-with-relevancies-finish"><function>zeitgeist_remote_simple_indexer_search_with_relevancies_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-simple-indexer-search-with-relevancies.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteSimpleIndexer"><type>ZeitgeistRemoteSimpleIndexer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>relevancies_length1</para></entry>
+<entry role="parameter_description"><para>length of the <parameter>relevancies</parameter>
+array</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>query_string</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>time_range</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>filter_templates</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>storage_state</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>count</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>result_type</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>events</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>relevancies</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>matches</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-simple-indexer-search-with-relevancies-finish" role="function">
+<title>zeitgeist_remote_simple_indexer_search_with_relevancies_finish&#160;()</title>
+<indexterm zone="zeitgeist-remote-simple-indexer-search-with-relevancies-finish"><primary>zeitgeist_remote_simple_indexer_search_with_relevancies_finish</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_simple_indexer_search_with_relevancies_finish
+                               (<parameter><link linkend="ZeitgeistRemoteSimpleIndexer"><type>ZeitgeistRemoteSimpleIndexer</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GVariant"><type>GVariant</type></link> * *events</parameter>,
+                                <parameter><link linkend="gdouble"><type>gdouble</type></link> **relevancies</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> *relevancies_length1</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> *matches</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-simple-indexer-search-with-relevancies"><function><link linkend="zeitgeist-remote-simple-indexer-search-with-relevancies"><function>zeitgeist_remote_simple_indexer_search_with_relevancies()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-simple-indexer-search-with-relevancies-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteSimpleIndexer"><type>ZeitgeistRemoteSimpleIndexer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-network-manager-dbus-state" role="function">
+<title>zeitgeist_network_manager_dbus_state&#160;()</title>
+<indexterm zone="zeitgeist-network-manager-dbus-state"><primary>zeitgeist_network_manager_dbus_state</primary></indexterm>
+<programlisting language="C"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>
+zeitgeist_network_manager_dbus_state (<parameter><link linkend="ZeitgeistNetworkManagerDBus"><type>ZeitgeistNetworkManagerDBus</type></link> *self</parameter>,
+                                      <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="zeitgeist-network-manager-dbus-state.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistNetworkManagerDBus"><type>ZeitgeistNetworkManagerDBus</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-connman-manager-dbus-get-state" role="function">
+<title>zeitgeist_connman_manager_dbus_get_state&#160;()</title>
+<indexterm zone="zeitgeist-connman-manager-dbus-get-state"><primary>zeitgeist_connman_manager_dbus_get_state</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_connman_manager_dbus_get_state
+                               (<parameter><link linkend="ZeitgeistConnmanManagerDBus"><type>ZeitgeistConnmanManagerDBus</type></link> *self</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="zeitgeist-connman-manager-dbus-get-state.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistConnmanManagerDBus"><type>ZeitgeistConnmanManagerDBus</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistRemoteLog.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ZeitgeistVersionStruct-struct" role="struct">
+<title>struct ZeitgeistVersionStruct</title>
+<indexterm zone="ZeitgeistVersionStruct-struct"><primary>ZeitgeistVersionStruct</primary></indexterm>
+<programlisting language="C">struct ZeitgeistVersionStruct {
+	gint major;
+	gint minor;
+	gint micro;
+};
+</programlisting>
+<para>Version struct consisting of the following fields: - major - minor - minus</para>
+<refsect3 id="ZeitgeistVersionStruct.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gint"><type>gint</type></link>&#160;<structfield id="ZeitgeistVersionStruct-struct.major">major</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Major version number.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gint"><type>gint</type></link>&#160;<structfield id="ZeitgeistVersionStruct-struct.minor">minor</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Minor version number.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gint"><type>gint</type></link>&#160;<structfield id="ZeitgeistVersionStruct-struct.micro">micro</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Micro version number.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="ZeitgeistRemoteLog-struct" role="struct">
+<title>ZeitgeistRemoteLog</title>
+<indexterm zone="ZeitgeistRemoteLog-struct"><primary>ZeitgeistRemoteLog</primary></indexterm>
+<programlisting language="C">typedef struct _ZeitgeistRemoteLog ZeitgeistRemoteLog;</programlisting>
+</refsect2>
+<refsect2 id="ZeitgeistRemoteLogIface" role="struct">
+<title>struct ZeitgeistRemoteLogIface</title>
+<indexterm zone="ZeitgeistRemoteLogIface"><primary>ZeitgeistRemoteLogIface</primary></indexterm>
+<programlisting language="C">struct ZeitgeistRemoteLogIface {
+	GTypeInterface parent_iface;
+	void (*delete_events) (ZeitgeistRemoteLog* self, guint32* event_ids, gint event_ids_length1, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	GVariant* (*delete_events_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error);
+	void (*find_event_ids) (ZeitgeistRemoteLog* self, GVariant* time_range, GVariant* event_templates, guint storage_state, guint num_events, guint result_type, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	guint32* (*find_event_ids_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, gint* result_length1, GError** error);
+	void (*find_events) (ZeitgeistRemoteLog* self, GVariant* time_range, GVariant* event_templates, guint storage_state, guint num_events, guint result_type, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	GVariant* (*find_events_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error);
+	void (*find_related_uris) (ZeitgeistRemoteLog* self, GVariant* time_range, GVariant* event_templates, GVariant* result_event_templates, guint storage_state, guint num_events, guint result_type, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	gchar** (*find_related_uris_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, gint* result_length1, GError** error);
+	void (*get_events) (ZeitgeistRemoteLog* self, guint32* event_ids, gint event_ids_length1, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	GVariant* (*get_events_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error);
+	void (*insert_events) (ZeitgeistRemoteLog* self, GVariant* events, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	guint32* (*insert_events_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, gint* result_length1, GError** error);
+	void (*install_monitor) (ZeitgeistRemoteLog* self, const char* monitor_path, GVariant* time_range, GVariant* event_templates, const char* owner, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*install_monitor_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error);
+	void (*remove_monitor) (ZeitgeistRemoteLog* self, const char* monitor_path, const char* owner, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*remove_monitor_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error);
+	void (*quit) (ZeitgeistRemoteLog* self, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*quit_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error);
+	gchar** (*get_extensions) (ZeitgeistRemoteLog* self, gint* result_length1);
+	void (*get_version) (ZeitgeistRemoteLog* self, ZeitgeistVersionStruct * result);
+	gchar* (*get_datapath) (ZeitgeistRemoteLog* self);
+};
+</programlisting>
+<para>Interface for creating <link linkend="ZeitgeistRemoteLog"><type>ZeitgeistRemoteLog</type></link> implementations.</para>
+<refsect3 id="ZeitgeistRemoteLogIface.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GTypeInterface"><type>GTypeInterface</type></link>&#160;<structfield id="ZeitgeistRemoteLogIface.parent-iface">parent_iface</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the parent interface structure</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.delete-events">delete_events</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-remote-log-delete-events"><function><link linkend="zeitgeist-remote-log-delete-events"><function>zeitgeist_remote_log_delete_events()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.delete-events-finish">delete_events_finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>asynchronous finish function for <structfield>delete_events</structfield>, called by <link linkend="zeitgeist-remote-log-delete-events"><function><link linkend="zeitgeist-remote-log-delete-events"><function>zeitgeist_remote_log_delete_events()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.find-event-ids">find_event_ids</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-remote-log-find-event-ids"><function><link linkend="zeitgeist-remote-log-find-event-ids"><function>zeitgeist_remote_log_find_event_ids()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.find-event-ids-finish">find_event_ids_finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>asynchronous finish function for <structfield>find_event_ids</structfield>, called by <link linkend="zeitgeist-remote-log-find-event-ids"><function><link linkend="zeitgeist-remote-log-find-event-ids"><function>zeitgeist_remote_log_find_event_ids()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.find-events">find_events</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-remote-log-find-events"><function><link linkend="zeitgeist-remote-log-find-events"><function>zeitgeist_remote_log_find_events()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.find-events-finish">find_events_finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>asynchronous finish function for <structfield>find_events</structfield>, called by <link linkend="zeitgeist-remote-log-find-events"><function><link linkend="zeitgeist-remote-log-find-events"><function>zeitgeist_remote_log_find_events()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.find-related-uris">find_related_uris</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-remote-log-find-related-uris"><function><link linkend="zeitgeist-remote-log-find-related-uris"><function>zeitgeist_remote_log_find_related_uris()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.find-related-uris-finish">find_related_uris_finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>asynchronous finish function for <structfield>find_related_uris</structfield>, called by <link linkend="zeitgeist-remote-log-find-related-uris"><function><link linkend="zeitgeist-remote-log-find-related-uris"><function>zeitgeist_remote_log_find_related_uris()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.get-events">get_events</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-remote-log-get-events"><function><link linkend="zeitgeist-remote-log-get-events"><function>zeitgeist_remote_log_get_events()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.get-events-finish">get_events_finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>asynchronous finish function for <structfield>get_events</structfield>, called by <link linkend="zeitgeist-remote-log-get-events"><function><link linkend="zeitgeist-remote-log-get-events"><function>zeitgeist_remote_log_get_events()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.insert-events">insert_events</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-remote-log-insert-events"><function><link linkend="zeitgeist-remote-log-insert-events"><function>zeitgeist_remote_log_insert_events()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.insert-events-finish">insert_events_finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>asynchronous finish function for <structfield>insert_events</structfield>, called by <link linkend="zeitgeist-remote-log-insert-events"><function><link linkend="zeitgeist-remote-log-insert-events"><function>zeitgeist_remote_log_insert_events()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.install-monitor">install_monitor</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-remote-log-install-monitor"><function><link linkend="zeitgeist-remote-log-install-monitor"><function>zeitgeist_remote_log_install_monitor()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.install-monitor-finish">install_monitor_finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>asynchronous finish function for <structfield>install_monitor</structfield>, called by <link linkend="zeitgeist-remote-log-install-monitor"><function><link linkend="zeitgeist-remote-log-install-monitor"><function>zeitgeist_remote_log_install_monitor()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.remove-monitor">remove_monitor</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-remote-log-remove-monitor"><function><link linkend="zeitgeist-remote-log-remove-monitor"><function>zeitgeist_remote_log_remove_monitor()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.remove-monitor-finish">remove_monitor_finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>asynchronous finish function for <structfield>remove_monitor</structfield>, called by <link linkend="zeitgeist-remote-log-remove-monitor"><function><link linkend="zeitgeist-remote-log-remove-monitor"><function>zeitgeist_remote_log_remove_monitor()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.quit">quit</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-remote-log-quit"><function><link linkend="zeitgeist-remote-log-quit"><function>zeitgeist_remote_log_quit()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.quit-finish">quit_finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>asynchronous finish function for <structfield>quit</structfield>, called by <link linkend="zeitgeist-remote-log-quit"><function><link linkend="zeitgeist-remote-log-quit"><function>zeitgeist_remote_log_quit()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.get-extensions">get_extensions</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>getter method for the abstract property <link linkend="ZeitgeistRemoteLog--extensions"><type>"extensions"</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.get-version">get_version</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>getter method for the abstract property <link linkend="ZeitgeistRemoteLog--version"><type>"version"</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteLogIface.get-datapath">get_datapath</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>getter method for the abstract property <link linkend="ZeitgeistRemoteLog--datapath"><type>"datapath"</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="ZeitgeistRemoteMonitor-struct" role="struct">
+<title>ZeitgeistRemoteMonitor</title>
+<indexterm zone="ZeitgeistRemoteMonitor-struct"><primary>ZeitgeistRemoteMonitor</primary></indexterm>
+<programlisting language="C">typedef struct _ZeitgeistRemoteMonitor ZeitgeistRemoteMonitor;</programlisting>
+</refsect2>
+<refsect2 id="ZeitgeistRemoteMonitorIface" role="struct">
+<title>struct ZeitgeistRemoteMonitorIface</title>
+<indexterm zone="ZeitgeistRemoteMonitorIface"><primary>ZeitgeistRemoteMonitorIface</primary></indexterm>
+<programlisting language="C">struct ZeitgeistRemoteMonitorIface {
+	GTypeInterface parent_iface;
+	void (*notify_insert) (ZeitgeistRemoteMonitor* self, GVariant* time_range, GVariant* events, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*notify_insert_finish) (ZeitgeistRemoteMonitor* self, GAsyncResult* _res_, GError** error);
+	void (*notify_delete) (ZeitgeistRemoteMonitor* self, GVariant* time_range, guint32* event_ids, gint event_ids_length1, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*notify_delete_finish) (ZeitgeistRemoteMonitor* self, GAsyncResult* _res_, GError** error);
+};
+</programlisting>
+<para>Interface for creating <link linkend="ZeitgeistRemoteMonitor"><type>ZeitgeistRemoteMonitor</type></link> implementations.</para>
+<refsect3 id="ZeitgeistRemoteMonitorIface.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GTypeInterface"><type>GTypeInterface</type></link>&#160;<structfield id="ZeitgeistRemoteMonitorIface.parent-iface">parent_iface</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the parent interface structure</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteMonitorIface.notify-insert">notify_insert</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-remote-monitor-notify-insert"><function><link linkend="zeitgeist-remote-monitor-notify-insert"><function>zeitgeist_remote_monitor_notify_insert()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteMonitorIface.notify-insert-finish">notify_insert_finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>asynchronous finish function for <structfield>notify_insert</structfield>, called by <link linkend="zeitgeist-remote-monitor-notify-insert"><function><link linkend="zeitgeist-remote-monitor-notify-insert"><function>zeitgeist_remote_monitor_notify_insert()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteMonitorIface.notify-delete">notify_delete</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-remote-monitor-notify-delete"><function><link linkend="zeitgeist-remote-monitor-notify-delete"><function>zeitgeist_remote_monitor_notify_delete()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteMonitorIface.notify-delete-finish">notify_delete_finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>asynchronous finish function for <structfield>notify_delete</structfield>, called by <link linkend="zeitgeist-remote-monitor-notify-delete"><function><link linkend="zeitgeist-remote-monitor-notify-delete"><function>zeitgeist_remote_monitor_notify_delete()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="ZeitgeistRemoteSimpleIndexer-struct" role="struct">
+<title>ZeitgeistRemoteSimpleIndexer</title>
+<indexterm zone="ZeitgeistRemoteSimpleIndexer-struct"><primary>ZeitgeistRemoteSimpleIndexer</primary></indexterm>
+<programlisting language="C">typedef struct _ZeitgeistRemoteSimpleIndexer ZeitgeistRemoteSimpleIndexer;</programlisting>
+</refsect2>
+<refsect2 id="ZeitgeistRemoteSimpleIndexerIface" role="struct">
+<title>struct ZeitgeistRemoteSimpleIndexerIface</title>
+<indexterm zone="ZeitgeistRemoteSimpleIndexerIface"><primary>ZeitgeistRemoteSimpleIndexerIface</primary></indexterm>
+<programlisting language="C">struct ZeitgeistRemoteSimpleIndexerIface {
+	GTypeInterface parent_iface;
+	void (*search) (ZeitgeistRemoteSimpleIndexer* self, const gchar* query_string, GVariant* time_range, GVariant* filter_templates, guint offset, guint count, guint result_type, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*search_finish) (ZeitgeistRemoteSimpleIndexer* self, GAsyncResult* _res_, GVariant* * events, guint* matches, GError** error);
+	void (*search_with_relevancies) (ZeitgeistRemoteSimpleIndexer* self, const gchar* query_string, GVariant* time_range, GVariant* filter_templates, guint storage_state, guint offset, guint count, guint result_type, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*search_with_relevancies_finish) (ZeitgeistRemoteSimpleIndexer* self, GAsyncResult* _res_, GVariant* * events, gdouble** relevancies, gint* relevancies_length1, guint* matches, GError** error);
+};
+</programlisting>
+<para>Interface for creating <link linkend="ZeitgeistRemoteSimpleIndexer"><type>ZeitgeistRemoteSimpleIndexer</type></link> implementations.</para>
+<refsect3 id="ZeitgeistRemoteSimpleIndexerIface.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GTypeInterface"><type>GTypeInterface</type></link>&#160;<structfield id="ZeitgeistRemoteSimpleIndexerIface.parent-iface">parent_iface</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the parent interface structure</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteSimpleIndexerIface.search">search</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-remote-simple-indexer-search"><function><link linkend="zeitgeist-remote-simple-indexer-search"><function>zeitgeist_remote_simple_indexer_search()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteSimpleIndexerIface.search-finish">search_finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>asynchronous finish function for <structfield>search</structfield>, called by <link linkend="zeitgeist-remote-simple-indexer-search"><function><link linkend="zeitgeist-remote-simple-indexer-search"><function>zeitgeist_remote_simple_indexer_search()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteSimpleIndexerIface.search-with-relevancies">search_with_relevancies</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-remote-simple-indexer-search-with-relevancies"><function><link linkend="zeitgeist-remote-simple-indexer-search-with-relevancies"><function>zeitgeist_remote_simple_indexer_search_with_relevancies()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteSimpleIndexerIface.search-with-relevancies-finish">search_with_relevancies_finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>asynchronous finish function for <structfield>search_with_relevancies</structfield>, called by <link linkend="zeitgeist-remote-simple-indexer-search-with-relevancies"><function><link linkend="zeitgeist-remote-simple-indexer-search-with-relevancies"><function>zeitgeist_remote_simple_indexer_search_with_relevancies()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="ZeitgeistNetworkManagerDBus-struct" role="struct">
+<title>ZeitgeistNetworkManagerDBus</title>
+<indexterm zone="ZeitgeistNetworkManagerDBus-struct"><primary>ZeitgeistNetworkManagerDBus</primary></indexterm>
+<programlisting language="C">typedef struct _ZeitgeistNetworkManagerDBus ZeitgeistNetworkManagerDBus;</programlisting>
+</refsect2>
+<refsect2 id="ZeitgeistNetworkManagerDBusIface" role="struct">
+<title>struct ZeitgeistNetworkManagerDBusIface</title>
+<indexterm zone="ZeitgeistNetworkManagerDBusIface"><primary>ZeitgeistNetworkManagerDBusIface</primary></indexterm>
+<programlisting language="C">struct ZeitgeistNetworkManagerDBusIface {
+	GTypeInterface parent_iface;
+	guint32 (*state) (ZeitgeistNetworkManagerDBus* self, GError** error);
+};
+</programlisting>
+<para>Interface for creating <link linkend="ZeitgeistNetworkManagerDBus"><type>ZeitgeistNetworkManagerDBus</type></link> implementations.</para>
+<refsect3 id="ZeitgeistNetworkManagerDBusIface.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GTypeInterface"><type>GTypeInterface</type></link>&#160;<structfield id="ZeitgeistNetworkManagerDBusIface.parent-iface">parent_iface</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the parent interface structure</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistNetworkManagerDBusIface.state">state</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-network-manager-dbus-state"><function><link linkend="zeitgeist-network-manager-dbus-state"><function>zeitgeist_network_manager_dbus_state()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="ZeitgeistConnmanManagerDBus-struct" role="struct">
+<title>ZeitgeistConnmanManagerDBus</title>
+<indexterm zone="ZeitgeistConnmanManagerDBus-struct"><primary>ZeitgeistConnmanManagerDBus</primary></indexterm>
+<programlisting language="C">typedef struct _ZeitgeistConnmanManagerDBus ZeitgeistConnmanManagerDBus;</programlisting>
+</refsect2>
+<refsect2 id="ZeitgeistConnmanManagerDBusIface" role="struct">
+<title>struct ZeitgeistConnmanManagerDBusIface</title>
+<indexterm zone="ZeitgeistConnmanManagerDBusIface"><primary>ZeitgeistConnmanManagerDBusIface</primary></indexterm>
+<programlisting language="C">struct ZeitgeistConnmanManagerDBusIface {
+	GTypeInterface parent_iface;
+	gchar* (*get_state) (ZeitgeistConnmanManagerDBus* self, GError** error);
+};
+</programlisting>
+<para>Interface for creating <link linkend="ZeitgeistConnmanManagerDBus"><type>ZeitgeistConnmanManagerDBus</type></link> implementations.</para>
+<refsect3 id="ZeitgeistConnmanManagerDBusIface.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GTypeInterface"><type>GTypeInterface</type></link>&#160;<structfield id="ZeitgeistConnmanManagerDBusIface.parent-iface">parent_iface</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the parent interface structure</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistConnmanManagerDBusIface.get-state">get_state</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-connman-manager-dbus-get-state"><function><link linkend="zeitgeist-connman-manager-dbus-get-state"><function>zeitgeist_connman_manager_dbus_get_state()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistRemoteLog.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="ZeitgeistNetworkManagerDBus-state-changed" role="signal"><title>The <literal>“state-changed”</literal> signal</title>
+<indexterm zone="ZeitgeistNetworkManagerDBus-state-changed"><primary>ZeitgeistNetworkManagerDBus::state-changed</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="ZeitgeistNetworkManagerDBus"><type>ZeitgeistNetworkManagerDBus</type></link> *network_manager_dbus,
+               <link linkend="guint"><type>guint</type></link>                        state,
+               <link linkend="gpointer"><type>gpointer</type></link>                     user_data)</programlisting>
+<refsect3 id="ZeitgeistNetworkManagerDBus-state-changed.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>network_manager_dbus</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistNetworkManagerDBus"><type>ZeitgeistNetworkManagerDBus</type></link> instance that received the signal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>state</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2><refsect2 id="ZeitgeistConnmanManagerDBus-state-changed" role="signal"><title>The <literal>“state-changed”</literal> signal</title>
+<indexterm zone="ZeitgeistConnmanManagerDBus-state-changed"><primary>ZeitgeistConnmanManagerDBus::state-changed</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="ZeitgeistConnmanManagerDBus"><type>ZeitgeistConnmanManagerDBus</type></link> *connman_manager_dbus,
+               <link linkend="gchar"><type>gchar</type></link>                       *state,
+               <link linkend="gpointer"><type>gpointer</type></link>                     user_data)</programlisting>
+<refsect3 id="ZeitgeistConnmanManagerDBus-state-changed.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>connman_manager_dbus</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistConnmanManagerDBus"><type>ZeitgeistConnmanManagerDBus</type></link> instance that received the signal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>state</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2>
+</refsect1>
+
+</refentry>

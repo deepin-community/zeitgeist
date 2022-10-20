@@ -1,0 +1,936 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="ZeitgeistLog">
+<refmeta>
+<refentrytitle role="top_of_page" id="ZeitgeistLog.top_of_page">ZeitgeistLog</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ZEITGEIST-2.0 Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ZeitgeistLog</refname>
+<refpurpose>Primary access point for talking to the Zeitgeist daemon</refpurpose>
+</refnamediv>
+
+<refsect1 id="ZeitgeistLog.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-log-insert-event">zeitgeist_log_insert_event</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GArray"><returnvalue>GArray</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-log-insert-event-finish">zeitgeist_log_insert_event_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-log-insert-events">zeitgeist_log_insert_events</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GArray"><returnvalue>GArray</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-log-insert-events-finish">zeitgeist_log_insert_events_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-log-insert-event-no-reply">zeitgeist_log_insert_event_no_reply</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-log-insert-events-no-reply">zeitgeist_log_insert_events_no_reply</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-log-find-events">zeitgeist_log_find_events</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistResultSet"><returnvalue>ZeitgeistResultSet</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-log-find-events-finish">zeitgeist_log_find_events_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-log-find-event-ids">zeitgeist_log_find_event_ids</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-log-find-event-ids-finish">zeitgeist_log_find_event_ids_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-log-get-events">zeitgeist_log_get_events</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistResultSet"><returnvalue>ZeitgeistResultSet</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-log-get-events-finish">zeitgeist_log_get_events_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-log-find-related-uris">zeitgeist_log_find_related_uris</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;**
+</entry><entry role="function_name"><link linkend="zeitgeist-log-find-related-uris-finish">zeitgeist_log_find_related_uris_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-log-delete-events">zeitgeist_log_delete_events</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistTimeRange"><returnvalue>ZeitgeistTimeRange</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-log-delete-events-finish">zeitgeist_log_delete_events_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-log-quit">zeitgeist_log_quit</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-log-quit-finish">zeitgeist_log_quit_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-log-install-monitor">zeitgeist_log_install_monitor</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-log-remove-monitor">zeitgeist_log_remove_monitor</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-log-get-version">zeitgeist_log_get_version</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;**
+</entry><entry role="function_name"><link linkend="zeitgeist-log-get-extensions">zeitgeist_log_get_extensions</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-log-datapath">zeitgeist_log_datapath</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistLog"><returnvalue>ZeitgeistLog</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-log-new">zeitgeist_log_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistLog"><returnvalue>ZeitgeistLog</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-log-get-default">zeitgeist_log_get_default</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistLog.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-TYPE-LOG:CAPS">ZEITGEIST_TYPE_LOG</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistLog-struct">ZeitgeistLog</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistLogClass">ZeitgeistLogClass</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistLog.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ZeitgeistQueuedProxyWrapper">ZeitgeistQueuedProxyWrapper</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ZeitgeistLog
+</screen>
+</refsect1>
+
+
+<refsect1 id="ZeitgeistLog.description" role="desc">
+<title role="desc.title">Description</title>
+<para><link linkend="zeitgeist-log-new"><function><link linkend="zeitgeist-log-new"><function>zeitgeist_log_new()</function></link></function></link> encapsulates the low level access to the Zeitgeist daemon. You can use it to manage the log by inserting and deleting entries as well as do queries on the logged data.</para><para>It&apos;s important to realize that the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> class does not expose any API that does synchronous communications with the message bus - everything is asynchronous. To ease development some of the methods have variants that are &quot;fire and forget&quot; ignoring the normal return value, so that callbacks does not have to be set up.</para>
+
+</refsect1>
+<refsect1 id="ZeitgeistLog.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="zeitgeist-log-insert-event" role="function">
+<title>zeitgeist_log_insert_event&#160;()</title>
+<indexterm zone="zeitgeist-log-insert-event"><primary>zeitgeist_log_insert_event</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_log_insert_event (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                            <parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *event</parameter>,
+                            <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                            <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                            <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>Asynchronously send a set of events to the Zeitgeist daemon, requesting they be inserted into the log.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-log-insert-event-finish"><function><link linkend="zeitgeist-log-insert-event-finish"><function>zeitgeist_log_insert_event_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-log-insert-event.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>a <link linkend="GCancellable"><type>GCancellable</type></link> to cancel the operation or <link linkend="NULL:CAPS"><literal>NULL</literal></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-insert-event-finish" role="function">
+<title>zeitgeist_log_insert_event_finish&#160;()</title>
+<indexterm zone="zeitgeist-log-insert-event-finish"><primary>zeitgeist_log_insert_event_finish</primary></indexterm>
+<programlisting language="C"><link linkend="GArray"><returnvalue>GArray</returnvalue></link>&#160;*
+zeitgeist_log_insert_event_finish (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                                   <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                   <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Asynchronously send a set of events to the Zeitgeist daemon, requesting they be inserted into the log.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-log-insert-event"><function><link linkend="zeitgeist-log-insert-event"><function>zeitgeist_log_insert_event()</function></link></function></link></para>
+<refsect3 id="zeitgeist-log-insert-event-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-insert-events" role="function">
+<title>zeitgeist_log_insert_events&#160;()</title>
+<indexterm zone="zeitgeist-log-insert-events"><primary>zeitgeist_log_insert_events</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_log_insert_events (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                             <parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *events</parameter>,
+                             <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                             <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                             <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>Asynchronously send a set of events to the Zeitgeist daemon, requesting they be inserted into the log.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-log-insert-events-finish"><function><link linkend="zeitgeist-log-insert-events-finish"><function>zeitgeist_log_insert_events_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-log-insert-events.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>events</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>An <link linkend="GPtrArray"><type>GPtrArray</type></link> of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>a <link linkend="GCancellable"><type>GCancellable</type></link> to cancel the operation or <link linkend="NULL:CAPS"><literal>NULL</literal></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-insert-events-finish" role="function">
+<title>zeitgeist_log_insert_events_finish&#160;()</title>
+<indexterm zone="zeitgeist-log-insert-events-finish"><primary>zeitgeist_log_insert_events_finish</primary></indexterm>
+<programlisting language="C"><link linkend="GArray"><returnvalue>GArray</returnvalue></link>&#160;*
+zeitgeist_log_insert_events_finish (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                                    <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                    <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Asynchronously send a set of events to the Zeitgeist daemon, requesting they be inserted into the log.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-log-insert-events"><function><link linkend="zeitgeist-log-insert-events"><function>zeitgeist_log_insert_events()</function></link></function></link></para>
+<refsect3 id="zeitgeist-log-insert-events-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-insert-event-no-reply" role="function">
+<title>zeitgeist_log_insert_event_no_reply&#160;()</title>
+<indexterm zone="zeitgeist-log-insert-event-no-reply"><primary>zeitgeist_log_insert_event_no_reply</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_log_insert_event_no_reply (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                                     <parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *event</parameter>,
+                                     <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Asynchronously send a set of events to the Zeitgeist daemon, requesting they be inserted into the log. This method is &amp;quot;fire and forget&amp;quot; and the caller will never know whether the events was successfully inserted or not.</para>
+<para>This method is exactly equivalent to calling <link linkend="zeitgeist-log-insert-event"><function>zeitgeist_log_insert_event()</function></link> with NULL set as <parameter>cancellable</parameter>, <parameter>callback</parameter>, and <parameter>user_data</parameter>.</para>
+<refsect3 id="zeitgeist-log-insert-event-no-reply.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-insert-events-no-reply" role="function">
+<title>zeitgeist_log_insert_events_no_reply&#160;()</title>
+<indexterm zone="zeitgeist-log-insert-events-no-reply"><primary>zeitgeist_log_insert_events_no_reply</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_log_insert_events_no_reply (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                                      <parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *events</parameter>,
+                                      <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Asynchronously send a set of events to the Zeitgeist daemon, requesting they be inserted into the log. This method is &amp;quot;fire and forget&amp;quot; and the caller will never know whether the events was successfully inserted or not.</para>
+<para>This method is exactly equivalent to calling <link linkend="zeitgeist-log-insert-event"><function>zeitgeist_log_insert_event()</function></link> with NULL set as <parameter>cancellable</parameter>, <parameter>callback</parameter>, and <parameter>user_data</parameter>.</para>
+<refsect3 id="zeitgeist-log-insert-events-no-reply.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>events</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>An <link linkend="GPtrArray"><type>GPtrArray</type></link> of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-find-events" role="function">
+<title>zeitgeist_log_find_events&#160;()</title>
+<indexterm zone="zeitgeist-log-find-events"><primary>zeitgeist_log_find_events</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_log_find_events (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                           <parameter><link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> *time_range</parameter>,
+                           <parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *event_templates</parameter>,
+                           <parameter><link linkend="ZeitgeistStorageState"><type>ZeitgeistStorageState</type></link> storage_state</parameter>,
+                           <parameter><link linkend="guint32"><type>guint32</type></link> num_events</parameter>,
+                           <parameter><link linkend="ZeitgeistResultType"><type>ZeitgeistResultType</type></link> result_type</parameter>,
+                           <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                           <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                           <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>Send a query matching a collection of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> templates to the <link linkend="zeitgeist-log-new"><function><link linkend="zeitgeist-log-new"><function>zeitgeist_log_new()</function></link></function></link>. The query will match if an event matches any of the templates. If an event template has more than one <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> the query will match if any one of the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link>s templates match.</para>
+<para>The query will be done via an asynchronous DBus call and this method will return immediately. The return value will be passed to callback as a list of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link>s. This list must be the sole argument for the callback.</para><para>If you need to do a query yielding a large (or unpredictable) result set and you only want to show some of the results at the same time (eg., by paging them), consider using <link linkend="zeitgeist-log-find-event-ids"><function><link linkend="zeitgeist-log-find-event-ids"><function>zeitgeist_log_find_event_ids()</function></link></function></link>.</para><para>In order to use this method there needs to be a mainloop runnning. Both Qt and GLib mainloops are supported.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-log-find-events-finish"><function><link linkend="zeitgeist-log-find-events-finish"><function>zeitgeist_log_find_events_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-log-find-events.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>time_range</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para><link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> A time range in which the events should be considered in </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>event_templates</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>An <link linkend="GPtrArray"><type>GPtrArray</type></link> of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>storage_state</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para><link linkend="ZeitgeistStorageState"><type>ZeitgeistStorageState</type></link> storage state </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>num_events</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>int represteing the number of events that should be returned </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>result_type</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para><link linkend="ZeitgeistResultType"><type>ZeitgeistResultType</type></link> how the events should be grouped and sorted </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>a <link linkend="GCancellable"><type>GCancellable</type></link> to cancel the operation or <link linkend="NULL:CAPS"><literal>NULL</literal></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-find-events-finish" role="function">
+<title>zeitgeist_log_find_events_finish&#160;()</title>
+<indexterm zone="zeitgeist-log-find-events-finish"><primary>zeitgeist_log_find_events_finish</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistResultSet"><returnvalue>ZeitgeistResultSet</returnvalue></link>&#160;*
+zeitgeist_log_find_events_finish (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                                  <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                  <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Send a query matching a collection of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> templates to the <link linkend="zeitgeist-log-new"><function><link linkend="zeitgeist-log-new"><function>zeitgeist_log_new()</function></link></function></link>. The query will match if an event matches any of the templates. If an event template has more than one <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> the query will match if any one of the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link>s templates match.</para>
+<para>The query will be done via an asynchronous DBus call and this method will return immediately. The return value will be passed to callback as a list of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link>s. This list must be the sole argument for the callback.</para><para>If you need to do a query yielding a large (or unpredictable) result set and you only want to show some of the results at the same time (eg., by paging them), consider using <link linkend="zeitgeist-log-find-event-ids"><function><link linkend="zeitgeist-log-find-event-ids"><function>zeitgeist_log_find_event_ids()</function></link></function></link>.</para><para>In order to use this method there needs to be a mainloop runnning. Both Qt and GLib mainloops are supported.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-log-find-events"><function><link linkend="zeitgeist-log-find-events"><function>zeitgeist_log_find_events()</function></link></function></link></para>
+<refsect3 id="zeitgeist-log-find-events-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-find-event-ids" role="function">
+<title>zeitgeist_log_find_event_ids&#160;()</title>
+<indexterm zone="zeitgeist-log-find-event-ids"><primary>zeitgeist_log_find_event_ids</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_log_find_event_ids (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                              <parameter><link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> *time_range</parameter>,
+                              <parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *event_templates</parameter>,
+                              <parameter><link linkend="ZeitgeistStorageState"><type>ZeitgeistStorageState</type></link> storage_state</parameter>,
+                              <parameter><link linkend="guint32"><type>guint32</type></link> num_events</parameter>,
+                              <parameter><link linkend="ZeitgeistResultType"><type>ZeitgeistResultType</type></link> result_type</parameter>,
+                              <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                              <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                              <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>Send a query matching a collection of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> templates to the <link linkend="zeitgeist-log-new"><function><link linkend="zeitgeist-log-new"><function>zeitgeist_log_new()</function></link></function></link>. The query will match if an event matches any of the templates. If an event template has more than one <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> the query will match if any one of the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link>s templates match.</para>
+<para>The query will be done via an asynchronous DBus call and this method will return immediately. The return value will be passed to callback as a list of intergers represrting <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> id&apos;s. This list must be the sole argument for the callback.</para><para>In order to use this method there needs to be a mainloop runnning. Both Qt and GLib mainloops are supported.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-log-find-event-ids-finish"><function><link linkend="zeitgeist-log-find-event-ids-finish"><function>zeitgeist_log_find_event_ids_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-log-find-event-ids.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>time_range</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para><link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> A time range in which the events should be considered in </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>event_templates</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>An <link linkend="GPtrArray"><type>GPtrArray</type></link> of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>storage_state</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para><link linkend="ZeitgeistStorageState"><type>ZeitgeistStorageState</type></link> storage state </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>num_events</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>int represteing the number of events that should be returned </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>result_type</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para><link linkend="ZeitgeistResultType"><type>ZeitgeistResultType</type></link> how the events should be grouped and sorted </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>a <link linkend="GCancellable"><type>GCancellable</type></link> to cancel the operation or <link linkend="NULL:CAPS"><literal>NULL</literal></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-find-event-ids-finish" role="function">
+<title>zeitgeist_log_find_event_ids_finish&#160;()</title>
+<indexterm zone="zeitgeist-log-find-event-ids-finish"><primary>zeitgeist_log_find_event_ids_finish</primary></indexterm>
+<programlisting language="C"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>&#160;*
+zeitgeist_log_find_event_ids_finish (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                                     <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                     <parameter><link linkend="gint"><type>gint</type></link> *result_length1</parameter>,
+                                     <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Send a query matching a collection of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> templates to the <link linkend="zeitgeist-log-new"><function><link linkend="zeitgeist-log-new"><function>zeitgeist_log_new()</function></link></function></link>. The query will match if an event matches any of the templates. If an event template has more than one <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> the query will match if any one of the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link>s templates match.</para>
+<para>The query will be done via an asynchronous DBus call and this method will return immediately. The return value will be passed to callback as a list of intergers represrting <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> id&apos;s. This list must be the sole argument for the callback.</para><para>In order to use this method there needs to be a mainloop runnning. Both Qt and GLib mainloops are supported.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-log-find-event-ids"><function><link linkend="zeitgeist-log-find-event-ids"><function>zeitgeist_log_find_event_ids()</function></link></function></link></para>
+<refsect3 id="zeitgeist-log-find-event-ids-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-get-events" role="function">
+<title>zeitgeist_log_get_events&#160;()</title>
+<indexterm zone="zeitgeist-log-get-events"><primary>zeitgeist_log_get_events</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_log_get_events (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                          <parameter><link linkend="GArray"><type>GArray</type></link> *event_ids</parameter>,
+                          <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                          <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                          <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>Look up a collection of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> in the <link linkend="zeitgeist-log-new"><function><link linkend="zeitgeist-log-new"><function>zeitgeist_log_new()</function></link></function></link> given a collection of event ids. This is useful for looking up the event data for events found with the find_event_ids_* family of functions.</para>
+<para>Each <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> which is not found in the <link linkend="zeitgeist-log-new"><function><link linkend="zeitgeist-log-new"><function>zeitgeist_log_new()</function></link></function></link> is represented by NULL in the resulting collection. The query will be done via an asynchronous DBus call and this method will return immediately. The returned events will be passed to callback as a list of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link>s, which must be the only argument of the function.</para><para>In order to use this method there needs to be a mainloop runnning.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-log-get-events-finish"><function><link linkend="zeitgeist-log-get-events-finish"><function>zeitgeist_log_get_events_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-log-get-events.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event_ids</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>a <link linkend="GArray"><type>GArray</type></link> of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> ids </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>a <link linkend="GCancellable"><type>GCancellable</type></link> to cancel the operation or <link linkend="NULL:CAPS"><literal>NULL</literal></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-get-events-finish" role="function">
+<title>zeitgeist_log_get_events_finish&#160;()</title>
+<indexterm zone="zeitgeist-log-get-events-finish"><primary>zeitgeist_log_get_events_finish</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistResultSet"><returnvalue>ZeitgeistResultSet</returnvalue></link>&#160;*
+zeitgeist_log_get_events_finish (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                                 <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                 <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Look up a collection of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> in the <link linkend="zeitgeist-log-new"><function><link linkend="zeitgeist-log-new"><function>zeitgeist_log_new()</function></link></function></link> given a collection of event ids. This is useful for looking up the event data for events found with the find_event_ids_* family of functions.</para>
+<para>Each <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> which is not found in the <link linkend="zeitgeist-log-new"><function><link linkend="zeitgeist-log-new"><function>zeitgeist_log_new()</function></link></function></link> is represented by NULL in the resulting collection. The query will be done via an asynchronous DBus call and this method will return immediately. The returned events will be passed to callback as a list of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link>s, which must be the only argument of the function.</para><para>In order to use this method there needs to be a mainloop runnning.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-log-get-events"><function><link linkend="zeitgeist-log-get-events"><function>zeitgeist_log_get_events()</function></link></function></link></para>
+<refsect3 id="zeitgeist-log-get-events-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-find-related-uris" role="function">
+<title>zeitgeist_log_find_related_uris&#160;()</title>
+<indexterm zone="zeitgeist-log-find-related-uris"><primary>zeitgeist_log_find_related_uris</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_log_find_related_uris (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                                 <parameter><link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> *time_range</parameter>,
+                                 <parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *event_templates</parameter>,
+                                 <parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *result_event_templates</parameter>,
+                                 <parameter><link linkend="ZeitgeistStorageState"><type>ZeitgeistStorageState</type></link> storage_state</parameter>,
+                                 <parameter><link linkend="guint32"><type>guint32</type></link> num_events</parameter>,
+                                 <parameter><link linkend="ZeitgeistRelevantResultType"><type>ZeitgeistRelevantResultType</type></link> result_type</parameter>,
+                                 <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                 <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                 <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>Get a list of URIs of subjects which frequently occur together with events matching event_templates. Possibly restricting to time_range or to URIs that occur as subject of events matching result_event_templates.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-log-find-related-uris-finish"><function><link linkend="zeitgeist-log-find-related-uris-finish"><function>zeitgeist_log_find_related_uris_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-log-find-related-uris.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>time_range</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para><link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> A time range in which the events should be considered in </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>event_templates</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>An <link linkend="GPtrArray"><type>GPtrArray</type></link> of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> describing the events to relate to </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>result_event_templates</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>An <link linkend="GPtrArray"><type>GPtrArray</type></link> of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> desrcibing the result to be returned </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>storage_state</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para><link linkend="ZeitgeistStorageState"><type>ZeitgeistStorageState</type></link> storage state </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>num_events</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>int represteing the number of events that should be returned </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>result_type</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para><link linkend="ZeitgeistResultType"><type>ZeitgeistResultType</type></link> how the events should be grouped and sorted </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>a <link linkend="GCancellable"><type>GCancellable</type></link> to cancel the operation or <link linkend="NULL:CAPS"><literal>NULL</literal></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-find-related-uris-finish" role="function">
+<title>zeitgeist_log_find_related_uris_finish&#160;()</title>
+<indexterm zone="zeitgeist-log-find-related-uris-finish"><primary>zeitgeist_log_find_related_uris_finish</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;**
+zeitgeist_log_find_related_uris_finish
+                               (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> *result_length1</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Get a list of URIs of subjects which frequently occur together with events matching event_templates. Possibly restricting to time_range or to URIs that occur as subject of events matching result_event_templates.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-log-find-related-uris"><function><link linkend="zeitgeist-log-find-related-uris"><function>zeitgeist_log_find_related_uris()</function></link></function></link></para>
+<refsect3 id="zeitgeist-log-find-related-uris-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-delete-events" role="function">
+<title>zeitgeist_log_delete_events&#160;()</title>
+<indexterm zone="zeitgeist-log-delete-events"><primary>zeitgeist_log_delete_events</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_log_delete_events (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                             <parameter><link linkend="GArray"><type>GArray</type></link> *event_ids</parameter>,
+                             <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                             <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                             <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>Delete a collection of events from the zeitgeist log given their event ids.</para>
+<para>The deletion will be done asynchronously, and this method returns immediately.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-log-delete-events-finish"><function><link linkend="zeitgeist-log-delete-events-finish"><function>zeitgeist_log_delete_events_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-log-delete-events.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event_ids</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>Array&lt;uint32&gt; </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>a <link linkend="GCancellable"><type>GCancellable</type></link> to cancel the operation or <link linkend="NULL:CAPS"><literal>NULL</literal></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-delete-events-finish" role="function">
+<title>zeitgeist_log_delete_events_finish&#160;()</title>
+<indexterm zone="zeitgeist-log-delete-events-finish"><primary>zeitgeist_log_delete_events_finish</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistTimeRange"><returnvalue>ZeitgeistTimeRange</returnvalue></link>&#160;*
+zeitgeist_log_delete_events_finish (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                                    <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                    <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Delete a collection of events from the zeitgeist log given their event ids.</para>
+<para>The deletion will be done asynchronously, and this method returns immediately.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-log-delete-events"><function><link linkend="zeitgeist-log-delete-events"><function>zeitgeist_log_delete_events()</function></link></function></link></para>
+<refsect3 id="zeitgeist-log-delete-events-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-quit" role="function">
+<title>zeitgeist_log_quit&#160;()</title>
+<indexterm zone="zeitgeist-log-quit"><primary>zeitgeist_log_quit</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_log_quit (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                    <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                    <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                    <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>a <link linkend="GCancellable"><type>GCancellable</type></link> to cancel the operation or <link linkend="NULL:CAPS"><literal>NULL</literal></link> </para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-log-quit-finish"><function><link linkend="zeitgeist-log-quit-finish"><function>zeitgeist_log_quit_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-log-quit.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-quit-finish" role="function">
+<title>zeitgeist_log_quit_finish&#160;()</title>
+<indexterm zone="zeitgeist-log-quit-finish"><primary>zeitgeist_log_quit_finish</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_log_quit_finish (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                           <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                           <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>a <link linkend="GCancellable"><type>GCancellable</type></link> to cancel the operation or <link linkend="NULL:CAPS"><literal>NULL</literal></link> </para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-log-quit"><function><link linkend="zeitgeist-log-quit"><function>zeitgeist_log_quit()</function></link></function></link></para>
+<refsect3 id="zeitgeist-log-quit-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-install-monitor" role="function">
+<title>zeitgeist_log_install_monitor&#160;()</title>
+<indexterm zone="zeitgeist-log-install-monitor"><primary>zeitgeist_log_install_monitor</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_log_install_monitor (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                               <parameter><link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> *monitor</parameter>,
+                               <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Install a monitor in the Zeitgeist engine that calls back when events matching event_templates are logged. The matching is done exactly as in the find_* family of methods and in Event.matches_template. Furthermore matched events must also have timestamps lying in time_range.</para>
+<para>To remove a monitor call <link linkend="remove-monitor"><function>remove_monitor()</function></link> on the returned Monitor instance.</para>
+<refsect3 id="zeitgeist-log-install-monitor.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>monitor</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A <link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> to report back inserts and deletes </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-remove-monitor" role="function">
+<title>zeitgeist_log_remove_monitor&#160;()</title>
+<indexterm zone="zeitgeist-log-remove-monitor"><primary>zeitgeist_log_remove_monitor</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_log_remove_monitor (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                              <parameter><link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> *monitor</parameter>,
+                              <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Remove a monitor from Zeitgeist engine that calls back when events matching event_templates are logged.</para>
+<refsect3 id="zeitgeist-log-remove-monitor.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>monitor</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A <link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> to report back inserts and deletes </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>transfer full</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-get-version" role="function">
+<title>zeitgeist_log_get_version&#160;()</title>
+<indexterm zone="zeitgeist-log-get-version"><primary>zeitgeist_log_get_version</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_log_get_version (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                           <parameter><link linkend="gint"><type>gint</type></link> *major</parameter>,
+                           <parameter><link linkend="gint"><type>gint</type></link> *minor</parameter>,
+                           <parameter><link linkend="gint"><type>gint</type></link> *micro</parameter>);</programlisting>
+<para>Gets version of currently running Zeitgeist daemon.</para>
+<para>This method will return the version of Zeitgeist daemon this instance is connected to. If you call this method right after <link linkend="zeitgeist-log-new"><function>zeitgeist_log_new()</function></link>, only zeros will be returned, a valid version number will only be returned once this instance successfully connected to the Zeitgeist daemon - ie. the value of the &quot;is-connected&quot; property must be TRUE (you can connect to the &quot;notify::is-connected&quot; signal otherwise).</para>
+<refsect3 id="zeitgeist-log-get-version.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>major</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>Location for the major version </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>minor</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>Location for the minor version </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>micro</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>Location for the micro version </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-get-extensions" role="function">
+<title>zeitgeist_log_get_extensions&#160;()</title>
+<indexterm zone="zeitgeist-log-get-extensions"><primary>zeitgeist_log_get_extensions</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;**
+zeitgeist_log_get_extensions (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>,
+                              <parameter><link linkend="gint"><type>gint</type></link> *result_length1</parameter>);</programlisting>
+<para>Gets extensions of the running Zeitgeist daemon.</para>
+<refsect3 id="zeitgeist-log-get-extensions.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-log-get-extensions.returns" role="returns">
+<title>Returns</title>
+<para>array of extenstions names strings </para>.
+<para><emphasis role="annotation">[<acronym>array</acronym> length=result_length1]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-datapath" role="function">
+<title>zeitgeist_log_datapath&#160;()</title>
+<indexterm zone="zeitgeist-log-datapath"><primary>zeitgeist_log_datapath</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_log_datapath (<parameter><link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> *self</parameter>);</programlisting>
+<para>Gets datapath of the running Zeitgeist daemon.</para>
+<refsect3 id="zeitgeist-log-datapath.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-log-datapath.returns" role="returns">
+<title>Returns</title>
+<para>string datapath </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-log-new" role="function">
+<title>zeitgeist_log_new&#160;()</title>
+<indexterm zone="zeitgeist-log-new"><primary>zeitgeist_log_new</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistLog"><returnvalue>ZeitgeistLog</returnvalue></link>&#160;*
+zeitgeist_log_new (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="zeitgeist-log-get-default" role="function">
+<title>zeitgeist_log_get_default&#160;()</title>
+<indexterm zone="zeitgeist-log-get-default"><primary>zeitgeist_log_get_default</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistLog"><returnvalue>ZeitgeistLog</returnvalue></link>&#160;*
+zeitgeist_log_get_default (<parameter><type>void</type></parameter>);</programlisting>
+<para>Get a unique instance of <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link>, that you can share in your application without caring about memory management.</para>
+<para>See <link linkend="zeitgeist-log-new"><function>zeitgeist_log_new()</function></link> for more information.</para>
+<refsect3 id="zeitgeist-log-get-default.returns" role="returns">
+<title>Returns</title>
+<para>ZeitgeistLog. </para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistLog.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ZEITGEIST-TYPE-LOG:CAPS" role="macro">
+<title>ZEITGEIST_TYPE_LOG</title>
+<indexterm zone="ZEITGEIST-TYPE-LOG:CAPS"><primary>ZEITGEIST_TYPE_LOG</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_TYPE_LOG (zeitgeist_log_get_type ())
+</programlisting>
+<para>The type for <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link>.</para>
+</refsect2>
+<refsect2 id="ZeitgeistLog-struct" role="struct">
+<title>struct ZeitgeistLog</title>
+<indexterm zone="ZeitgeistLog-struct"><primary>ZeitgeistLog</primary></indexterm>
+<programlisting language="C">struct ZeitgeistLog;</programlisting>
+<para>Primary access point for talking to the Zeitgeist daemon</para>
+<para><link linkend="zeitgeist-log-new"><function><link linkend="zeitgeist-log-new"><function>zeitgeist_log_new()</function></link></function></link> encapsulates the low level access to the Zeitgeist daemon. You can use it to manage the log by inserting and deleting entries as well as do queries on the logged data.</para><para>It&apos;s important to realize that the <link linkend="ZeitgeistLog"><type>ZeitgeistLog</type></link> class does not expose any API that does synchronous communications with the message bus - everything is asynchronous. To ease development some of the methods have variants that are &quot;fire and forget&quot; ignoring the normal return value, so that callbacks does not have to be set up.</para>
+</refsect2>
+<refsect2 id="ZeitgeistLogClass" role="struct">
+<title>struct ZeitgeistLogClass</title>
+<indexterm zone="ZeitgeistLogClass"><primary>ZeitgeistLogClass</primary></indexterm>
+<programlisting language="C">struct ZeitgeistLogClass {
+	ZeitgeistQueuedProxyWrapperClass parent_class;
+};
+</programlisting>
+<para>The class structure for <link linkend="ZEITGEIST-TYPE-LOG:CAPS"><literal>ZEITGEIST_TYPE_LOG</literal></link>. All the fields in this structure are private and should never be accessed directly.</para>
+<refsect3 id="ZeitgeistLogClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+
+</refentry>

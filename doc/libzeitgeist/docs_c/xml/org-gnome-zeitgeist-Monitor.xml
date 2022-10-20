@@ -1,0 +1,48 @@
+<?xml version="1.0"?><!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">]>
+<refentry id="docs-org-gnome-zeitgeist-Monitor">
+<refmeta>
+<refentrytitle role="top_of_page" id="docs-org-gnome-zeitgeist-Monitor.top_of_page">org.gnome.zeitgeist.Monitor</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+ZEITGEIST-2.0 D-Bus API
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>org.gnome.zeitgeist.Monitor</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+<refsynopsisdiv id="docs-org-gnome-zeitgeist-Monitor.synopsis" role="synopsis">
+<title role="synopsis.title">Methods</title>
+<synopsis>
+<link linkend="org-gnome-zeitgeist-Monitor-NotifyInsert">NotifyInsert</link>     ()
+<link linkend="org-gnome-zeitgeist-Monitor-NotifyDelete">NotifyDelete</link>     ()</synopsis></refsynopsisdiv>
+<refsect1 id="docs-org-gnome-zeitgeist-Monitor.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="docs-org-gnome-zeitgeist-Monitor.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="org-gnome-zeitgeist-Monitor-NotifyInsert" role="function">
+<title>NotifyInsert ()</title>
+<programlisting>
+NotifyInsert     ()
+</programlisting>
+<variablelist role="params"><varlistentry><term><parameter>time_range</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>events</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara> callback to call when the request is satisfied </simpara></listitem></varlistentry><varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara> the data to pass to @_callback_ function </simpara></listitem></varlistentry></variablelist>
+</refsect2>
+<refsect2 id="org-gnome-zeitgeist-Monitor-NotifyDelete" role="function">
+<title>NotifyDelete ()</title>
+<programlisting>
+NotifyDelete     ()
+</programlisting>
+<variablelist role="params"><varlistentry><term><parameter>event_ids_length1</parameter>&#160;:</term>
+<listitem><simpara> length of the @event_ids array </simpara></listitem></varlistentry><varlistentry><term><parameter>time_range</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>event_ids</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara> callback to call when the request is satisfied </simpara></listitem></varlistentry><varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara> the data to pass to @_callback_ function </simpara></listitem></varlistentry></variablelist>
+</refsect2></refsect1></refentry>

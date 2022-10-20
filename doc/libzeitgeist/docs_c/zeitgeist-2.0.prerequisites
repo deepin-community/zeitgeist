@@ -1,0 +1,10 @@
+ZeitgeistConnmanManagerDBus GObject
+GDBusInterface GObject
+GInitable GObject
+GAsyncInitable GObject
+ZeitgeistRemoteMonitor GObject
+ZeitgeistNetworkManagerDBus GObject
+ZeitgeistRemoteLog GObject
+ZeitgeistRemoteRegistry GObject
+ZeitgeistRemoteSimpleIndexer GObject
+ZeitgeistResultSet GObject

@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="ZeitgeistSimpleResultSet">
+<refmeta>
+<refentrytitle role="top_of_page" id="ZeitgeistSimpleResultSet.top_of_page">ZeitgeistSimpleResultSet</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ZEITGEIST-2.0 Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ZeitgeistSimpleResultSet</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="ZeitgeistSimpleResultSet.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ZeitgeistSimpleResultSet"><returnvalue>ZeitgeistSimpleResultSet</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-simple-result-set-new">zeitgeist_simple_result_set_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistSimpleResultSet"><returnvalue>ZeitgeistSimpleResultSet</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-simple-result-set-new-with-num-matches">zeitgeist_simple_result_set_new_with_num_matches</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistSimpleResultSet.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-TYPE-SIMPLE-RESULT-SET:CAPS">ZEITGEIST_TYPE_SIMPLE_RESULT_SET</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistSimpleResultSet-struct">ZeitgeistSimpleResultSet</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistSimpleResultSetClass">ZeitgeistSimpleResultSetClass</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistSimpleResultSet.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ZeitgeistSimpleResultSet
+</screen>
+</refsect1>
+<refsect1 id="ZeitgeistSimpleResultSet.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+ZeitgeistSimpleResultSet implements
+ <link linkend="ZeitgeistResultSet">ZeitgeistResultSet</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="ZeitgeistSimpleResultSet.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ZeitgeistSimpleResultSet.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="zeitgeist-simple-result-set-new" role="function">
+<title>zeitgeist_simple_result_set_new&#160;()</title>
+<indexterm zone="zeitgeist-simple-result-set-new"><primary>zeitgeist_simple_result_set_new</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistSimpleResultSet"><returnvalue>ZeitgeistSimpleResultSet</returnvalue></link>&#160;*
+zeitgeist_simple_result_set_new (<parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *events</parameter>);</programlisting>
+<refsect3 id="zeitgeist-simple-result-set-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>events</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-simple-result-set-new-with-num-matches" role="function">
+<title>zeitgeist_simple_result_set_new_with_num_matches&#160;()</title>
+<indexterm zone="zeitgeist-simple-result-set-new-with-num-matches"><primary>zeitgeist_simple_result_set_new_with_num_matches</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistSimpleResultSet"><returnvalue>ZeitgeistSimpleResultSet</returnvalue></link>&#160;*
+zeitgeist_simple_result_set_new_with_num_matches
+                               (<parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *events</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> matches</parameter>);</programlisting>
+<refsect3 id="zeitgeist-simple-result-set-new-with-num-matches.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>events</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>matches</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistSimpleResultSet.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ZEITGEIST-TYPE-SIMPLE-RESULT-SET:CAPS" role="macro">
+<title>ZEITGEIST_TYPE_SIMPLE_RESULT_SET</title>
+<indexterm zone="ZEITGEIST-TYPE-SIMPLE-RESULT-SET:CAPS"><primary>ZEITGEIST_TYPE_SIMPLE_RESULT_SET</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_TYPE_SIMPLE_RESULT_SET (zeitgeist_simple_result_set_get_type ())
+</programlisting>
+<para>The type for <link linkend="ZeitgeistSimpleResultSet"><type>ZeitgeistSimpleResultSet</type></link>.</para>
+</refsect2>
+<refsect2 id="ZeitgeistSimpleResultSet-struct" role="struct">
+<title>struct ZeitgeistSimpleResultSet</title>
+<indexterm zone="ZeitgeistSimpleResultSet-struct"><primary>ZeitgeistSimpleResultSet</primary></indexterm>
+<programlisting language="C">struct ZeitgeistSimpleResultSet;</programlisting>
+</refsect2>
+<refsect2 id="ZeitgeistSimpleResultSetClass" role="struct">
+<title>struct ZeitgeistSimpleResultSetClass</title>
+<indexterm zone="ZeitgeistSimpleResultSetClass"><primary>ZeitgeistSimpleResultSetClass</primary></indexterm>
+<programlisting language="C">struct ZeitgeistSimpleResultSetClass {
+	GObjectClass parent_class;
+};
+</programlisting>
+<para>The class structure for <link linkend="ZEITGEIST-TYPE-SIMPLE-RESULT-SET:CAPS"><literal>ZEITGEIST_TYPE_SIMPLE_RESULT_SET</literal></link>. All the fields in this structure are private and should never be accessed directly.</para>
+<refsect3 id="ZeitgeistSimpleResultSetClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+
+</refentry>

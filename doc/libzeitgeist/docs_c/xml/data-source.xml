@@ -1,0 +1,670 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="zeitgeist-2.0-data-source">
+<refmeta>
+<refentrytitle role="top_of_page" id="zeitgeist-2.0-data-source.top_of_page">data-source</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ZEITGEIST-2.0 Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>data-source</refname>
+<refpurpose>Abstracts data sources used by the DataSourceRegistry extension</refpurpose>
+</refnamediv>
+
+<refsect1 id="zeitgeist-2.0-data-source.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-to-variant">zeitgeist_data_source_to_variant</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistDataSource"><returnvalue>ZeitgeistDataSource</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-new">zeitgeist_data_source_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistDataSource"><returnvalue>ZeitgeistDataSource</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-new-full">zeitgeist_data_source_new_full</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistDataSource"><returnvalue>ZeitgeistDataSource</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-new-from-variant">zeitgeist_data_source_new_from_variant</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-get-unique-id">zeitgeist_data_source_get_unique_id</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-set-unique-id">zeitgeist_data_source_set_unique_id</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-get-name">zeitgeist_data_source_get_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-set-name">zeitgeist_data_source_set_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-get-description">zeitgeist_data_source_get_description</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-set-description">zeitgeist_data_source_set_description</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-get-event-templates">zeitgeist_data_source_get_event_templates</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-set-event-templates">zeitgeist_data_source_set_event_templates</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-get-enabled">zeitgeist_data_source_get_enabled</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-set-enabled">zeitgeist_data_source_set_enabled</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-get-running">zeitgeist_data_source_get_running</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-set-running">zeitgeist_data_source_set_running</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-get-timestamp">zeitgeist_data_source_get_timestamp</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-set-timestamp">zeitgeist_data_source_set_timestamp</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-data-sources-from-variant">zeitgeist_data_sources_from_variant</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-data-sources-to-variant">zeitgeist_data_sources_to_variant</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="zeitgeist-2.0-data-source.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistDataSource--description">description</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="ZeitgeistDataSource--enabled">enabled</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistDataSource--event-templates">event-templates</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistDataSource--name">name</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="ZeitgeistDataSource--running">running</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint64"><type>gint64</type></link></entry><entry role="property_name"><link linkend="ZeitgeistDataSource--timestamp">timestamp</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistDataSource--unique-id">unique-id</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="ZeitgeistDataSource"/><refsect1 id="zeitgeist-2.0-data-source.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-TYPE-DATA-SOURCE:CAPS">ZEITGEIST_TYPE_DATA_SOURCE</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistDataSource-struct">ZeitgeistDataSource</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistDataSourceClass">ZeitgeistDataSourceClass</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-DATA-SOURCES-SIG-DATASOURCES:CAPS">ZEITGEIST_DATA_SOURCES_SIG_DATASOURCES</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="zeitgeist-2.0-data-source.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ZeitgeistDataSource
+</screen>
+</refsect1>
+
+
+<refsect1 id="zeitgeist-2.0-data-source.description" role="desc">
+<title role="desc.title">Description</title>
+<para>ZeitgeistDataSource represents a data source used to insert events into Zeitgeist. The data sources are identified using the unique_id property, and when querying the data source registry you get other interesting information like timestamp of the last action of the data source, flag whether it is currently running etc.</para>
+
+</refsect1>
+<refsect1 id="zeitgeist-2.0-data-source.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="zeitgeist-data-source-to-variant" role="function">
+<title>zeitgeist_data_source_to_variant&#160;()</title>
+<indexterm zone="zeitgeist-data-source-to-variant"><primary>zeitgeist_data_source_to_variant</primary></indexterm>
+<programlisting language="C"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+zeitgeist_data_source_to_variant (<parameter><link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> *self</parameter>);</programlisting>
+<refsect3 id="zeitgeist-data-source-to-variant.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-new" role="function">
+<title>zeitgeist_data_source_new&#160;()</title>
+<indexterm zone="zeitgeist-data-source-new"><primary>zeitgeist_data_source_new</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistDataSource"><returnvalue>ZeitgeistDataSource</returnvalue></link>&#160;*
+zeitgeist_data_source_new (<parameter><type>void</type></parameter>);</programlisting>
+<para>ZeitgeistDataSource</para>
+<para>Abstracts data sources used by the ZeitgeistDataSourceRegistry extension</para><para>ZeitgeistDataSource represents a data source used to insert events into Zeitgeist. The data sources are identified using the unique_id property, and when querying the data source registry you get other interesting information like timestamp of the last action of the data source, flag whether it is currently running etc.</para>
+</refsect2>
+<refsect2 id="zeitgeist-data-source-new-full" role="function">
+<title>zeitgeist_data_source_new_full&#160;()</title>
+<indexterm zone="zeitgeist-data-source-new-full"><primary>zeitgeist_data_source_new_full</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistDataSource"><returnvalue>ZeitgeistDataSource</returnvalue></link>&#160;*
+zeitgeist_data_source_new_full (<parameter>const <link linkend="gchar"><type>gchar</type></link> *unique_id</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *description</parameter>,
+                                <parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *templates</parameter>);</programlisting>
+<refsect3 id="zeitgeist-data-source-new-full.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>unique_id</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>description</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>templates</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-new-from-variant" role="function">
+<title>zeitgeist_data_source_new_from_variant&#160;()</title>
+<indexterm zone="zeitgeist-data-source-new-from-variant"><primary>zeitgeist_data_source_new_from_variant</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistDataSource"><returnvalue>ZeitgeistDataSource</returnvalue></link>&#160;*
+zeitgeist_data_source_new_from_variant
+                               (<parameter><link linkend="GVariant"><type>GVariant</type></link> *variant</parameter>,
+                                <parameter><link linkend="gboolean"><type>gboolean</type></link> reset_running</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="zeitgeist-data-source-new-from-variant.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>variant</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>reset_running</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>error-domains</acronym> ZeitgeistDataModelError]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-get-unique-id" role="function">
+<title>zeitgeist_data_source_get_unique_id&#160;()</title>
+<indexterm zone="zeitgeist-data-source-get-unique-id"><primary>zeitgeist_data_source_get_unique_id</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_data_source_get_unique_id (<parameter><link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistDataSource--unique-id"><type>"unique-id"</type></link> property.</para>
+<refsect3 id="zeitgeist-data-source-get-unique-id.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-data-source-get-unique-id.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistDataSource--unique-id"><type>"unique-id"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-set-unique-id" role="function">
+<title>zeitgeist_data_source_set_unique_id&#160;()</title>
+<indexterm zone="zeitgeist-data-source-set-unique-id"><primary>zeitgeist_data_source_set_unique_id</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_data_source_set_unique_id (<parameter><link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> *self</parameter>,
+                                     <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistDataSource--unique-id"><type>"unique-id"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-data-source-set-unique-id.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistDataSource--unique-id"><type>"unique-id"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-get-name" role="function">
+<title>zeitgeist_data_source_get_name&#160;()</title>
+<indexterm zone="zeitgeist-data-source-get-name"><primary>zeitgeist_data_source_get_name</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_data_source_get_name (<parameter><link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistDataSource--name"><type>"name"</type></link> property.</para>
+<refsect3 id="zeitgeist-data-source-get-name.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-data-source-get-name.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistDataSource--name"><type>"name"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-set-name" role="function">
+<title>zeitgeist_data_source_set_name&#160;()</title>
+<indexterm zone="zeitgeist-data-source-set-name"><primary>zeitgeist_data_source_set_name</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_data_source_set_name (<parameter><link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> *self</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistDataSource--name"><type>"name"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-data-source-set-name.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistDataSource--name"><type>"name"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-get-description" role="function">
+<title>zeitgeist_data_source_get_description&#160;()</title>
+<indexterm zone="zeitgeist-data-source-get-description"><primary>zeitgeist_data_source_get_description</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_data_source_get_description (<parameter><link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistDataSource--description"><type>"description"</type></link> property.</para>
+<refsect3 id="zeitgeist-data-source-get-description.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-data-source-get-description.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistDataSource--description"><type>"description"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-set-description" role="function">
+<title>zeitgeist_data_source_set_description&#160;()</title>
+<indexterm zone="zeitgeist-data-source-set-description"><primary>zeitgeist_data_source_set_description</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_data_source_set_description (<parameter><link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> *self</parameter>,
+                                       <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistDataSource--description"><type>"description"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-data-source-set-description.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistDataSource--description"><type>"description"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-get-event-templates" role="function">
+<title>zeitgeist_data_source_get_event_templates&#160;()</title>
+<indexterm zone="zeitgeist-data-source-get-event-templates"><primary>zeitgeist_data_source_get_event_templates</primary></indexterm>
+<programlisting language="C"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+zeitgeist_data_source_get_event_templates
+                               (<parameter><link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistDataSource--event-templates"><type>"event-templates"</type></link> property.</para>
+<refsect3 id="zeitgeist-data-source-get-event-templates.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-data-source-get-event-templates.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistDataSource--event-templates"><type>"event-templates"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-set-event-templates" role="function">
+<title>zeitgeist_data_source_set_event_templates&#160;()</title>
+<indexterm zone="zeitgeist-data-source-set-event-templates"><primary>zeitgeist_data_source_set_event_templates</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_data_source_set_event_templates
+                               (<parameter><link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> *self</parameter>,
+                                <parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistDataSource--event-templates"><type>"event-templates"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-data-source-set-event-templates.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistDataSource--event-templates"><type>"event-templates"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-get-enabled" role="function">
+<title>zeitgeist_data_source_get_enabled&#160;()</title>
+<indexterm zone="zeitgeist-data-source-get-enabled"><primary>zeitgeist_data_source_get_enabled</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+zeitgeist_data_source_get_enabled (<parameter><link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistDataSource--enabled"><type>"enabled"</type></link> property.</para>
+<refsect3 id="zeitgeist-data-source-get-enabled.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-data-source-get-enabled.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistDataSource--enabled"><type>"enabled"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-set-enabled" role="function">
+<title>zeitgeist_data_source_set_enabled&#160;()</title>
+<indexterm zone="zeitgeist-data-source-set-enabled"><primary>zeitgeist_data_source_set_enabled</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_data_source_set_enabled (<parameter><link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> *self</parameter>,
+                                   <parameter><link linkend="gboolean"><type>gboolean</type></link> value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistDataSource--enabled"><type>"enabled"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-data-source-set-enabled.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistDataSource--enabled"><type>"enabled"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-get-running" role="function">
+<title>zeitgeist_data_source_get_running&#160;()</title>
+<indexterm zone="zeitgeist-data-source-get-running"><primary>zeitgeist_data_source_get_running</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+zeitgeist_data_source_get_running (<parameter><link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistDataSource--running"><type>"running"</type></link> property.</para>
+<refsect3 id="zeitgeist-data-source-get-running.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-data-source-get-running.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistDataSource--running"><type>"running"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-set-running" role="function">
+<title>zeitgeist_data_source_set_running&#160;()</title>
+<indexterm zone="zeitgeist-data-source-set-running"><primary>zeitgeist_data_source_set_running</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_data_source_set_running (<parameter><link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> *self</parameter>,
+                                   <parameter><link linkend="gboolean"><type>gboolean</type></link> value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistDataSource--running"><type>"running"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-data-source-set-running.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistDataSource--running"><type>"running"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-get-timestamp" role="function">
+<title>zeitgeist_data_source_get_timestamp&#160;()</title>
+<indexterm zone="zeitgeist-data-source-get-timestamp"><primary>zeitgeist_data_source_get_timestamp</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+zeitgeist_data_source_get_timestamp (<parameter><link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistDataSource--timestamp"><type>"timestamp"</type></link> property.</para>
+<refsect3 id="zeitgeist-data-source-get-timestamp.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-data-source-get-timestamp.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistDataSource--timestamp"><type>"timestamp"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-set-timestamp" role="function">
+<title>zeitgeist_data_source_set_timestamp&#160;()</title>
+<indexterm zone="zeitgeist-data-source-set-timestamp"><primary>zeitgeist_data_source_set_timestamp</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_data_source_set_timestamp (<parameter><link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> *self</parameter>,
+                                     <parameter><link linkend="gint64"><type>gint64</type></link> value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistDataSource--timestamp"><type>"timestamp"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-data-source-set-timestamp.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistDataSource--timestamp"><type>"timestamp"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-sources-from-variant" role="function">
+<title>zeitgeist_data_sources_from_variant&#160;()</title>
+<indexterm zone="zeitgeist-data-sources-from-variant"><primary>zeitgeist_data_sources_from_variant</primary></indexterm>
+<programlisting language="C"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+zeitgeist_data_sources_from_variant (<parameter><link linkend="GVariant"><type>GVariant</type></link> *sources_variant</parameter>,
+                                     <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="zeitgeist-data-sources-from-variant.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sources_variant</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>error-domains</acronym> ZeitgeistDataModelError]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-sources-to-variant" role="function">
+<title>zeitgeist_data_sources_to_variant&#160;()</title>
+<indexterm zone="zeitgeist-data-sources-to-variant"><primary>zeitgeist_data_sources_to_variant</primary></indexterm>
+<programlisting language="C"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+zeitgeist_data_sources_to_variant (<parameter><link linkend="GHashTable"><type>GHashTable</type></link> *sources</parameter>);</programlisting>
+<refsect3 id="zeitgeist-data-sources-to-variant.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sources</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="zeitgeist-2.0-data-source.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ZEITGEIST-TYPE-DATA-SOURCE:CAPS" role="macro">
+<title>ZEITGEIST_TYPE_DATA_SOURCE</title>
+<indexterm zone="ZEITGEIST-TYPE-DATA-SOURCE:CAPS"><primary>ZEITGEIST_TYPE_DATA_SOURCE</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_TYPE_DATA_SOURCE (zeitgeist_data_source_get_type ())
+</programlisting>
+<para>The type for <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link>.</para>
+</refsect2>
+<refsect2 id="ZeitgeistDataSource-struct" role="struct">
+<title>struct ZeitgeistDataSource</title>
+<indexterm zone="ZeitgeistDataSource-struct"><primary>ZeitgeistDataSource</primary></indexterm>
+<programlisting language="C">struct ZeitgeistDataSource;</programlisting>
+</refsect2>
+<refsect2 id="ZeitgeistDataSourceClass" role="struct">
+<title>struct ZeitgeistDataSourceClass</title>
+<indexterm zone="ZeitgeistDataSourceClass"><primary>ZeitgeistDataSourceClass</primary></indexterm>
+<programlisting language="C">struct ZeitgeistDataSourceClass {
+	GObjectClass parent_class;
+};
+</programlisting>
+<para>The class structure for <link linkend="ZEITGEIST-TYPE-DATA-SOURCE:CAPS"><literal>ZEITGEIST_TYPE_DATA_SOURCE</literal></link>. All the fields in this structure are private and should never be accessed directly.</para>
+<refsect3 id="ZeitgeistDataSourceClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="ZEITGEIST-DATA-SOURCES-SIG-DATASOURCES:CAPS" role="macro">
+<title>ZEITGEIST_DATA_SOURCES_SIG_DATASOURCES</title>
+<indexterm zone="ZEITGEIST-DATA-SOURCES-SIG-DATASOURCES:CAPS"><primary>ZEITGEIST_DATA_SOURCES_SIG_DATASOURCES</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_DATA_SOURCES_SIG_DATASOURCES "a(sssa(" ZEITGEIST_UTILS_SIG_EVENT ")bxb)"
+</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="zeitgeist-2.0-data-source.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="ZeitgeistDataSource--description" role="property"><title>The <literal>“description”</literal> property</title>
+<indexterm zone="ZeitgeistDataSource--description"><primary>ZeitgeistDataSource:description</primary></indexterm>
+<programlisting>  “description”              <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>description.</para><para>Owner: ZeitgeistDataSource</para>
+<para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="ZeitgeistDataSource--enabled" role="property"><title>The <literal>“enabled”</literal> property</title>
+<indexterm zone="ZeitgeistDataSource--enabled"><primary>ZeitgeistDataSource:enabled</primary></indexterm>
+<programlisting>  “enabled”                  <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>enabled.</para><para>Owner: ZeitgeistDataSource</para>
+<para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="ZeitgeistDataSource--event-templates" role="property"><title>The <literal>“event-templates”</literal> property</title>
+<indexterm zone="ZeitgeistDataSource--event-templates"><primary>ZeitgeistDataSource:event-templates</primary></indexterm>
+<programlisting>  “event-templates”          <link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*</programlisting>
+<para>event-templates.</para><para>Owner: ZeitgeistDataSource</para>
+<para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="ZeitgeistDataSource--name" role="property"><title>The <literal>“name”</literal> property</title>
+<indexterm zone="ZeitgeistDataSource--name"><primary>ZeitgeistDataSource:name</primary></indexterm>
+<programlisting>  “name”                     <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>name.</para><para>Owner: ZeitgeistDataSource</para>
+<para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="ZeitgeistDataSource--running" role="property"><title>The <literal>“running”</literal> property</title>
+<indexterm zone="ZeitgeistDataSource--running"><primary>ZeitgeistDataSource:running</primary></indexterm>
+<programlisting>  “running”                  <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>running.</para><para>Owner: ZeitgeistDataSource</para>
+<para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="ZeitgeistDataSource--timestamp" role="property"><title>The <literal>“timestamp”</literal> property</title>
+<indexterm zone="ZeitgeistDataSource--timestamp"><primary>ZeitgeistDataSource:timestamp</primary></indexterm>
+<programlisting>  “timestamp”                <link linkend="gint64"><type>gint64</type></link></programlisting>
+<para>timestamp.</para><para>Owner: ZeitgeistDataSource</para>
+<para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="ZeitgeistDataSource--unique-id" role="property"><title>The <literal>“unique-id”</literal> property</title>
+<indexterm zone="ZeitgeistDataSource--unique-id"><primary>ZeitgeistDataSource:unique-id</primary></indexterm>
+<programlisting>  “unique-id”                <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>unique-id.</para><para>Owner: ZeitgeistDataSource</para>
+<para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

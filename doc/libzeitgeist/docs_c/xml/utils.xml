@@ -1,0 +1,421 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="zeitgeist-2.0-utils">
+<refmeta>
+<refentrytitle role="top_of_page" id="zeitgeist-2.0-utils.top_of_page">utils</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ZEITGEIST-2.0 Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>utils</refname>
+<refpurpose>Utility functions. FOR INTERNAL USE ONLY</refpurpose>
+</refnamediv>
+
+<refsect1 id="zeitgeist-2.0-utils.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-utils-get-data-path">zeitgeist_utils_get_data_path</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-utils-get-default-data-path">zeitgeist_utils_get_default_data_path</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-utils-get-database-file-path">zeitgeist_utils_get_database_file_path</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-utils-set-database-file-path">zeitgeist_utils_set_database_file_path</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-utils-get-database-file-backup-path">zeitgeist_utils_get_database_file_backup_path</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-utils-get-database-file-retire-name">zeitgeist_utils_get_database_file_retire_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-utils-get-local-extensions-path">zeitgeist_utils_get_local_extensions_path</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-utils-using-in-memory-database">zeitgeist_utils_using_in_memory_database</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-utils-backup-database">zeitgeist_utils_backup_database</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-utils-parse-negation">zeitgeist_utils_parse_negation</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-utils-parse-noexpand">zeitgeist_utils_parse_noexpand</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-utils-parse-wildcard">zeitgeist_utils_parse_wildcard</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-utils-is-empty-string">zeitgeist_utils_is_empty_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-utils-log-may-read-directly">zeitgeist_utils_log_may_read_directly</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="zeitgeist-2.0-utils.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-UTILS-ENGINE-DBUS-NAME:CAPS">ZEITGEIST_UTILS_ENGINE_DBUS_NAME</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-UTILS-ENGINE-DBUS-PATH:CAPS">ZEITGEIST_UTILS_ENGINE_DBUS_PATH</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-UTILS-SIG-EVENT:CAPS">ZEITGEIST_UTILS_SIG_EVENT</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-UTILS-MAX-DBUS-RESULT-SIZE:CAPS">ZEITGEIST_UTILS_MAX_DBUS_RESULT_SIZE</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-UTILS-CACHE-SIZE:CAPS">ZEITGEIST_UTILS_CACHE_SIZE</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="zeitgeist-2.0-utils.description" role="desc">
+<title role="desc.title">Description</title>
+<para>A set of funtions that if used would only affect libzeitgeist in the code it is used in.</para>
+
+</refsect1>
+<refsect1 id="zeitgeist-2.0-utils.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="zeitgeist-utils-get-data-path" role="function">
+<title>zeitgeist_utils_get_data_path&#160;()</title>
+<indexterm zone="zeitgeist-utils-get-data-path"><primary>zeitgeist_utils_get_data_path</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_utils_get_data_path (<parameter><type>void</type></parameter>);</programlisting>
+<refsect3 id="zeitgeist-utils-get-data-path.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-utils-get-data-path.returns" role="returns">
+<title>Returns</title>
+<para>. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-utils-get-default-data-path" role="function">
+<title>zeitgeist_utils_get_default_data_path&#160;()</title>
+<indexterm zone="zeitgeist-utils-get-default-data-path"><primary>zeitgeist_utils_get_default_data_path</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_utils_get_default_data_path (<parameter><type>void</type></parameter>);</programlisting>
+<refsect3 id="zeitgeist-utils-get-default-data-path.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-utils-get-database-file-path" role="function">
+<title>zeitgeist_utils_get_database_file_path&#160;()</title>
+<indexterm zone="zeitgeist-utils-get-database-file-path"><primary>zeitgeist_utils_get_database_file_path</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_utils_get_database_file_path
+                               (<parameter><type>void</type></parameter>);</programlisting>
+<refsect3 id="zeitgeist-utils-get-database-file-path.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-utils-get-database-file-path.returns" role="returns">
+<title>Returns</title>
+<para>. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-utils-set-database-file-path" role="function">
+<title>zeitgeist_utils_set_database_file_path&#160;()</title>
+<indexterm zone="zeitgeist-utils-set-database-file-path"><primary>zeitgeist_utils_set_database_file_path</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_utils_set_database_file_path
+                               (<parameter>const <link linkend="gchar"><type>gchar</type></link> *path</parameter>);</programlisting>
+<para>Sets the filepath of the database.</para>
+<refsect3 id="zeitgeist-utils-set-database-file-path.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>path</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>a <link linkend="gchar"><type>gchar</type></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-utils-get-database-file-backup-path" role="function">
+<title>zeitgeist_utils_get_database_file_backup_path&#160;()</title>
+<indexterm zone="zeitgeist-utils-get-database-file-backup-path"><primary>zeitgeist_utils_get_database_file_backup_path</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_utils_get_database_file_backup_path
+                               (<parameter><type>void</type></parameter>);</programlisting>
+<refsect3 id="zeitgeist-utils-get-database-file-backup-path.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-utils-get-database-file-backup-path.returns" role="returns">
+<title>Returns</title>
+<para>. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-utils-get-database-file-retire-name" role="function">
+<title>zeitgeist_utils_get_database_file_retire_name&#160;()</title>
+<indexterm zone="zeitgeist-utils-get-database-file-retire-name"><primary>zeitgeist_utils_get_database_file_retire_name</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_utils_get_database_file_retire_name
+                               (<parameter><type>void</type></parameter>);</programlisting>
+<refsect3 id="zeitgeist-utils-get-database-file-retire-name.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-utils-get-local-extensions-path" role="function">
+<title>zeitgeist_utils_get_local_extensions_path&#160;()</title>
+<indexterm zone="zeitgeist-utils-get-local-extensions-path"><primary>zeitgeist_utils_get_local_extensions_path</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_utils_get_local_extensions_path
+                               (<parameter><type>void</type></parameter>);</programlisting>
+<refsect3 id="zeitgeist-utils-get-local-extensions-path.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-utils-get-local-extensions-path.returns" role="returns">
+<title>Returns</title>
+<para>. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-utils-using-in-memory-database" role="function">
+<title>zeitgeist_utils_using_in_memory_database&#160;()</title>
+<indexterm zone="zeitgeist-utils-using-in-memory-database"><primary>zeitgeist_utils_using_in_memory_database</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+zeitgeist_utils_using_in_memory_database
+                               (<parameter><type>void</type></parameter>);</programlisting>
+<para>Whether a in-memory SQLite database is in use (vs. a file-based one).</para>
+<refsect3 id="zeitgeist-utils-using-in-memory-database.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-utils-backup-database" role="function">
+<title>zeitgeist_utils_backup_database&#160;()</title>
+<indexterm zone="zeitgeist-utils-backup-database"><primary>zeitgeist_utils_backup_database</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_utils_backup_database (<parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="zeitgeist-utils-backup-database.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-utils-parse-negation" role="function">
+<title>zeitgeist_utils_parse_negation&#160;()</title>
+<indexterm zone="zeitgeist-utils-parse-negation"><primary>zeitgeist_utils_parse_negation</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+zeitgeist_utils_parse_negation (<parameter><link linkend="gchar"><type>gchar</type></link> * *val</parameter>);</programlisting>
+<para>Check if the value starts with the negation operator. If it does, remove the operator from the value and return true. Otherwise, return false.</para>
+<refsect3 id="zeitgeist-utils-parse-negation.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>val</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>value to check </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>inout</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-utils-parse-noexpand" role="function">
+<title>zeitgeist_utils_parse_noexpand&#160;()</title>
+<indexterm zone="zeitgeist-utils-parse-noexpand"><primary>zeitgeist_utils_parse_noexpand</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+zeitgeist_utils_parse_noexpand (<parameter><link linkend="gchar"><type>gchar</type></link> * *val</parameter>);</programlisting>
+<para>Check if the value starts with the noexpand operator. If it does, remove the operator from the value and return true. Otherwise, return false.</para>
+<para>Check for the negation operator before calling this function.</para>
+<refsect3 id="zeitgeist-utils-parse-noexpand.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>val</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>value to check </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>inout</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-utils-parse-wildcard" role="function">
+<title>zeitgeist_utils_parse_wildcard&#160;()</title>
+<indexterm zone="zeitgeist-utils-parse-wildcard"><primary>zeitgeist_utils_parse_wildcard</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+zeitgeist_utils_parse_wildcard (<parameter><link linkend="gchar"><type>gchar</type></link> * *val</parameter>);</programlisting>
+<para>Check if the value ends with the wildcard character. If it does, remove the wildcard character from the value and return true. Otherwise, return false.</para>
+<refsect3 id="zeitgeist-utils-parse-wildcard.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>val</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>value to check </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>inout</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-utils-is-empty-string" role="function">
+<title>zeitgeist_utils_is_empty_string&#160;()</title>
+<indexterm zone="zeitgeist-utils-is-empty-string"><primary>zeitgeist_utils_is_empty_string</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+zeitgeist_utils_is_empty_string (<parameter>const <link linkend="gchar"><type>gchar</type></link> *s</parameter>);</programlisting>
+<para>Return true if a string is empty (null or containing just a null byte).</para>
+<refsect3 id="zeitgeist-utils-is-empty-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>s</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>string to check </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-utils-log-may-read-directly" role="function">
+<title>zeitgeist_utils_log_may_read_directly&#160;()</title>
+<indexterm zone="zeitgeist-utils-log-may-read-directly"><primary>zeitgeist_utils_log_may_read_directly</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+zeitgeist_utils_log_may_read_directly (<parameter><type>void</type></parameter>);</programlisting>
+<para>True if direct reading of the DB is enabled for Log, default is True.</para>
+<refsect3 id="zeitgeist-utils-log-may-read-directly.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="zeitgeist-2.0-utils.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ZEITGEIST-UTILS-ENGINE-DBUS-NAME:CAPS" role="macro">
+<title>ZEITGEIST_UTILS_ENGINE_DBUS_NAME</title>
+<indexterm zone="ZEITGEIST-UTILS-ENGINE-DBUS-NAME:CAPS"><primary>ZEITGEIST_UTILS_ENGINE_DBUS_NAME</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_UTILS_ENGINE_DBUS_NAME "org.gnome.zeitgeist.Engine"
+</programlisting>
+</refsect2>
+<refsect2 id="ZEITGEIST-UTILS-ENGINE-DBUS-PATH:CAPS" role="macro">
+<title>ZEITGEIST_UTILS_ENGINE_DBUS_PATH</title>
+<indexterm zone="ZEITGEIST-UTILS-ENGINE-DBUS-PATH:CAPS"><primary>ZEITGEIST_UTILS_ENGINE_DBUS_PATH</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_UTILS_ENGINE_DBUS_PATH "/org/gnome/zeitgeist/log/activity"
+</programlisting>
+</refsect2>
+<refsect2 id="ZEITGEIST-UTILS-SIG-EVENT:CAPS" role="macro">
+<title>ZEITGEIST_UTILS_SIG_EVENT</title>
+<indexterm zone="ZEITGEIST-UTILS-SIG-EVENT:CAPS"><primary>ZEITGEIST_UTILS_SIG_EVENT</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_UTILS_SIG_EVENT "asaasay"
+</programlisting>
+</refsect2>
+<refsect2 id="ZEITGEIST-UTILS-MAX-DBUS-RESULT-SIZE:CAPS" role="macro">
+<title>ZEITGEIST_UTILS_MAX_DBUS_RESULT_SIZE</title>
+<indexterm zone="ZEITGEIST-UTILS-MAX-DBUS-RESULT-SIZE:CAPS"><primary>ZEITGEIST_UTILS_MAX_DBUS_RESULT_SIZE</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_UTILS_MAX_DBUS_RESULT_SIZE ((gsize) ((4 * 1024) * 1024))
+</programlisting>
+</refsect2>
+<refsect2 id="ZEITGEIST-UTILS-CACHE-SIZE:CAPS" role="macro">
+<title>ZEITGEIST_UTILS_CACHE_SIZE</title>
+<indexterm zone="ZEITGEIST-UTILS-CACHE-SIZE:CAPS"><primary>ZEITGEIST_UTILS_CACHE_SIZE</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_UTILS_CACHE_SIZE ((guint) 0)
+</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

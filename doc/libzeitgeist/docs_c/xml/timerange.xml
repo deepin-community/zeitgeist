@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="ZeitgeistTimeRange">
+<refmeta>
+<refentrytitle role="top_of_page" id="ZeitgeistTimeRange.top_of_page">ZeitgeistTimeRange</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ZEITGEIST-2.0 Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ZeitgeistTimeRange</refname>
+<refpurpose>Immutable representation of an interval in time, marked by a beginning and an end</refpurpose>
+</refnamediv>
+
+<refsect1 id="ZeitgeistTimeRange.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-time-range-to-variant">zeitgeist_time_range_to_variant</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistTimeRange"><returnvalue>ZeitgeistTimeRange</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-time-range-intersect">zeitgeist_time_range_intersect</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistTimeRange"><returnvalue>ZeitgeistTimeRange</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-time-range-new">zeitgeist_time_range_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistTimeRange"><returnvalue>ZeitgeistTimeRange</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-time-range-new-anytime">zeitgeist_time_range_new_anytime</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistTimeRange"><returnvalue>ZeitgeistTimeRange</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-time-range-new-to-now">zeitgeist_time_range_new_to_now</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistTimeRange"><returnvalue>ZeitgeistTimeRange</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-time-range-new-from-now">zeitgeist_time_range_new_from_now</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistTimeRange"><returnvalue>ZeitgeistTimeRange</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-time-range-new-from-variant">zeitgeist_time_range_new_from_variant</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-time-range-get-start">zeitgeist_time_range_get_start</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-time-range-get-end">zeitgeist_time_range_get_end</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistTimeRange.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint64"><type>gint64</type></link></entry><entry role="property_name"><link linkend="ZeitgeistTimeRange--end">end</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gint64"><type>gint64</type></link></entry><entry role="property_name"><link linkend="ZeitgeistTimeRange--start">start</link></entry><entry role="property_flags">Read</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistTimeRange.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-TYPE-TIME-RANGE:CAPS">ZEITGEIST_TYPE_TIME_RANGE</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistTimeRange-struct">ZeitgeistTimeRange</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistTimeRangeClass">ZeitgeistTimeRangeClass</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistTimeRange.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ZeitgeistTimeRange
+</screen>
+</refsect1>
+
+
+<refsect1 id="ZeitgeistTimeRange.description" role="desc">
+<title role="desc.title">Description</title>
+<para>A light, immutable, encapsulation of an interval in time, marked by a beginning and an end.</para>
+
+</refsect1>
+<refsect1 id="ZeitgeistTimeRange.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="zeitgeist-time-range-to-variant" role="function">
+<title>zeitgeist_time_range_to_variant&#160;()</title>
+<indexterm zone="zeitgeist-time-range-to-variant"><primary>zeitgeist_time_range_to_variant</primary></indexterm>
+<programlisting language="C"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+zeitgeist_time_range_to_variant (<parameter><link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> *self</parameter>);</programlisting>
+<para>a new variant holding the time range</para>
+<refsect3 id="zeitgeist-time-range-to-variant.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-time-range-intersect" role="function">
+<title>zeitgeist_time_range_intersect&#160;()</title>
+<indexterm zone="zeitgeist-time-range-intersect"><primary>zeitgeist_time_range_intersect</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistTimeRange"><returnvalue>ZeitgeistTimeRange</returnvalue></link>&#160;*
+zeitgeist_time_range_intersect (<parameter><link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> *self</parameter>,
+                                <parameter><link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> *time_range</parameter>);</programlisting>
+<para>Check whether two time ranges are intersecting.</para>
+<refsect3 id="zeitgeist-time-range-intersect.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>time_range</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>the second time range to compare with </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-time-range-intersect.returns" role="returns">
+<title>Returns</title>
+<para>a new time range representing the intersection </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-time-range-new" role="function">
+<title>zeitgeist_time_range_new&#160;()</title>
+<indexterm zone="zeitgeist-time-range-new"><primary>zeitgeist_time_range_new</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistTimeRange"><returnvalue>ZeitgeistTimeRange</returnvalue></link>&#160;*
+zeitgeist_time_range_new (<parameter><link linkend="gint64"><type>gint64</type></link> start_msec</parameter>,
+                          <parameter><link linkend="gint64"><type>gint64</type></link> end_msec</parameter>);</programlisting>
+<para>starting timestamp in number of milliseconds since the Unix Epoch</para>
+<refsect3 id="zeitgeist-time-range-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>start_msec</para></entry>
+<entry role="parameter_description"><para>&nbsp;. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>end_msec</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>ending timestamp in number of milliseconds since the Unix Epoch </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-time-range-new.returns" role="returns">
+<title>Returns</title>
+<para>a newly allocated ZeitgeistTimeRange. Free with <link linkend="g-object-unref"><function>g_object_unref()</function></link> </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-time-range-new-anytime" role="function">
+<title>zeitgeist_time_range_new_anytime&#160;()</title>
+<indexterm zone="zeitgeist-time-range-new-anytime"><primary>zeitgeist_time_range_new_anytime</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistTimeRange"><returnvalue>ZeitgeistTimeRange</returnvalue></link>&#160;*
+zeitgeist_time_range_new_anytime (<parameter><type>void</type></parameter>);</programlisting>
+<para>a new time range starting from the beginning of the Unix Epoch stretching to the end of time</para>
+</refsect2>
+<refsect2 id="zeitgeist-time-range-new-to-now" role="function">
+<title>zeitgeist_time_range_new_to_now&#160;()</title>
+<indexterm zone="zeitgeist-time-range-new-to-now"><primary>zeitgeist_time_range_new_to_now</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistTimeRange"><returnvalue>ZeitgeistTimeRange</returnvalue></link>&#160;*
+zeitgeist_time_range_new_to_now (<parameter><type>void</type></parameter>);</programlisting>
+<para>a new time range starting from the beggining of the Unix Epoch ending a the moment of invocation</para>
+</refsect2>
+<refsect2 id="zeitgeist-time-range-new-from-now" role="function">
+<title>zeitgeist_time_range_new_from_now&#160;()</title>
+<indexterm zone="zeitgeist-time-range-new-from-now"><primary>zeitgeist_time_range_new_from_now</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistTimeRange"><returnvalue>ZeitgeistTimeRange</returnvalue></link>&#160;*
+zeitgeist_time_range_new_from_now (<parameter><type>void</type></parameter>);</programlisting>
+<para>a new time range starting from the moment of invocation to the end of time</para>
+</refsect2>
+<refsect2 id="zeitgeist-time-range-new-from-variant" role="function">
+<title>zeitgeist_time_range_new_from_variant&#160;()</title>
+<indexterm zone="zeitgeist-time-range-new-from-variant"><primary>zeitgeist_time_range_new_from_variant</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistTimeRange"><returnvalue>ZeitgeistTimeRange</returnvalue></link>&#160;*
+zeitgeist_time_range_new_from_variant (<parameter><link linkend="GVariant"><type>GVariant</type></link> *variant</parameter>,
+                                       <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Create a <link linkend="TimeRange"><type>TimeRange</type></link> from a variant.</para>
+<refsect3 id="zeitgeist-time-range-new-from-variant.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>variant</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>a variant representing a <link linkend="TimeRange"><type>TimeRange</type></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>error-domains</acronym> ZeitgeistDataModelError]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-time-range-new-from-variant.returns" role="returns">
+<title>Returns</title>
+<para>a new time range starting from the moment of invocation to the end of time </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-time-range-get-start" role="function">
+<title>zeitgeist_time_range_get_start&#160;()</title>
+<indexterm zone="zeitgeist-time-range-get-start"><primary>zeitgeist_time_range_get_start</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+zeitgeist_time_range_get_start (<parameter><link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistTimeRange--start"><type>"start"</type></link> property.</para>
+<refsect3 id="zeitgeist-time-range-get-start.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-time-range-get-start.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistTimeRange--start"><type>"start"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-time-range-get-end" role="function">
+<title>zeitgeist_time_range_get_end&#160;()</title>
+<indexterm zone="zeitgeist-time-range-get-end"><primary>zeitgeist_time_range_get_end</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+zeitgeist_time_range_get_end (<parameter><link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistTimeRange--end"><type>"end"</type></link> property.</para>
+<refsect3 id="zeitgeist-time-range-get-end.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-time-range-get-end.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistTimeRange--end"><type>"end"</type></link> property</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistTimeRange.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ZEITGEIST-TYPE-TIME-RANGE:CAPS" role="macro">
+<title>ZEITGEIST_TYPE_TIME_RANGE</title>
+<indexterm zone="ZEITGEIST-TYPE-TIME-RANGE:CAPS"><primary>ZEITGEIST_TYPE_TIME_RANGE</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_TYPE_TIME_RANGE (zeitgeist_time_range_get_type ())
+</programlisting>
+<para>The type for <link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link>.</para>
+</refsect2>
+<refsect2 id="ZeitgeistTimeRange-struct" role="struct">
+<title>struct ZeitgeistTimeRange</title>
+<indexterm zone="ZeitgeistTimeRange-struct"><primary>ZeitgeistTimeRange</primary></indexterm>
+<programlisting language="C">struct ZeitgeistTimeRange;</programlisting>
+<para>Immutable representation of an interval in time, marked by a beginning and an end</para>
+<para>A light, immutable, encapsulation of an interval in time, marked by a beginning and an end.</para>
+</refsect2>
+<refsect2 id="ZeitgeistTimeRangeClass" role="struct">
+<title>struct ZeitgeistTimeRangeClass</title>
+<indexterm zone="ZeitgeistTimeRangeClass"><primary>ZeitgeistTimeRangeClass</primary></indexterm>
+<programlisting language="C">struct ZeitgeistTimeRangeClass {
+	GObjectClass parent_class;
+};
+</programlisting>
+<para>The class structure for <link linkend="ZEITGEIST-TYPE-TIME-RANGE:CAPS"><literal>ZEITGEIST_TYPE_TIME_RANGE</literal></link>. All the fields in this structure are private and should never be accessed directly.</para>
+<refsect3 id="ZeitgeistTimeRangeClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistTimeRange.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="ZeitgeistTimeRange--end" role="property"><title>The <literal>“end”</literal> property</title>
+<indexterm zone="ZeitgeistTimeRange--end"><primary>ZeitgeistTimeRange:end</primary></indexterm>
+<programlisting>  “end”                      <link linkend="gint64"><type>gint64</type></link></programlisting>
+<para>end.</para><para>Owner: ZeitgeistTimeRange</para>
+<para>Flags: Read</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="ZeitgeistTimeRange--start" role="property"><title>The <literal>“start”</literal> property</title>
+<indexterm zone="ZeitgeistTimeRange--start"><primary>ZeitgeistTimeRange:start</primary></indexterm>
+<programlisting>  “start”                    <link linkend="gint64"><type>gint64</type></link></programlisting>
+<para>start.</para><para>Owner: ZeitgeistTimeRange</para>
+<para>Flags: Read</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,565 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZeitgeistMonitor: Zeitgeist Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="Zeitgeist Reference Manual">
+<link rel="up" href="ch01.html" title="Classes">
+<link rel="prev" href="ZeitgeistLog.html" title="ZeitgeistLog">
+<link rel="next" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistMonitor.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistMonitor.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistMonitor.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistMonitor.properties" class="shortcut">Properties</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistMonitor.signals" class="shortcut">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ZeitgeistLog.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ZeitgeistResultSet.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="ZeitgeistMonitor"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="ZeitgeistMonitor.top_of_page"></a>ZeitgeistMonitor</span></h2>
+<p>ZeitgeistMonitor — Listens for updates to the Zeitgeist event log</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="ZeitgeistMonitor.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="returnvalue">GPtrArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistMonitor.html#zeitgeist-monitor-get-templates" title="zeitgeist_monitor_get_templates ()">zeitgeist_monitor_get_templates</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistMonitor.html#zeitgeist-monitor-get-path" title="zeitgeist_monitor_get_path ()">zeitgeist_monitor_get_path</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="returnvalue">ZeitgeistMonitor</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistMonitor.html#zeitgeist-monitor-new" title="zeitgeist_monitor_new ()">zeitgeist_monitor_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="returnvalue">ZeitgeistTimeRange</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistMonitor.html#zeitgeist-monitor-get-time-range" title="zeitgeist_monitor_get_time_range ()">zeitgeist_monitor_get_time_range</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistMonitor.html#zeitgeist-monitor-set-time-range" title="zeitgeist_monitor_set_time_range ()">zeitgeist_monitor_set_time_range</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="returnvalue">GPtrArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistMonitor.html#zeitgeist-monitor-get-event-templates" title="zeitgeist_monitor_get_event_templates ()">zeitgeist_monitor_get_event_templates</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistMonitor.html#zeitgeist-monitor-set-event-templates" title="zeitgeist_monitor_set_event_templates ()">zeitgeist_monitor_set_event_templates</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistMonitor.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *</td>
+<td class="property_name"><a class="link" href="ZeitgeistMonitor.html#ZeitgeistMonitor--event-templates" title="The “event-templates” property">event-templates</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="type">ZeitgeistTimeRange</span></a> *</td>
+<td class="property_name"><a class="link" href="ZeitgeistMonitor.html#ZeitgeistMonitor--time-range" title="The “time-range” property">time-range</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistMonitor.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="ZeitgeistMonitor.html#ZeitgeistMonitor-events-deleted" title="The “events-deleted” signal">events-deleted</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="ZeitgeistMonitor.html#ZeitgeistMonitor-events-inserted" title="The “events-inserted” signal">events-inserted</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistMonitor.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="ZeitgeistMonitor.html#ZEITGEIST-TYPE-MONITOR:CAPS" title="ZEITGEIST_TYPE_MONITOR">ZEITGEIST_TYPE_MONITOR</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="ZeitgeistMonitor.html#ZeitgeistMonitor-struct" title="struct ZeitgeistMonitor">ZeitgeistMonitor</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="ZeitgeistMonitor.html#ZeitgeistMonitorClass" title="struct ZeitgeistMonitorClass">ZeitgeistMonitorClass</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistMonitor.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> ZeitgeistMonitor
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistMonitor.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+ZeitgeistMonitor implements
+ ZeitgeistRemoteMonitor.</p>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistMonitor.description"></a><h2>Description</h2>
+<p>A <span class="type">Monitor</span> listens for updates to the Zeitgeist event log matching a given set of templates and with timestamps in some predefined time range.</p>
+<p>A monitor must be installed into the running Zeitgeist daemon by calling <a class="link" href="ZeitgeistLog.html#zeitgeist-log-install-monitor" title="zeitgeist_log_install_monitor ()"><code class="function">zeitgeist_log_install_monitor()</code></a>. The monitor will not emit any of the ::events-added or ::events-deleted signals before this.</p>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistMonitor.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="zeitgeist-monitor-get-templates"></a><h3>zeitgeist_monitor_get_templates ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="returnvalue">GPtrArray</span></a> *
+zeitgeist_monitor_get_templates (<em class="parameter"><code><a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> *self</code></em>);</pre>
+<div class="refsect3">
+<a name="zeitgeist-monitor-get-templates.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-monitor-get-path"></a><h3>zeitgeist_monitor_get_path ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span> *
+zeitgeist_monitor_get_path (<em class="parameter"><code><a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> *self</code></em>);</pre>
+<div class="refsect3">
+<a name="zeitgeist-monitor-get-path.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-monitor-new"></a><h3>zeitgeist_monitor_new ()</h3>
+<pre class="programlisting"><a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="returnvalue">ZeitgeistMonitor</span></a> *
+zeitgeist_monitor_new (<em class="parameter"><code><a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="type">ZeitgeistTimeRange</span></a> *time_range</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *event_templates</code></em>);</pre>
+<p>zeitgeist_monitor_new</p>
+<p>Create a new monitor. Before you can receive signals from the monitor you need to install it in the running Zeitgeist daemon by calling <a class="link" href="ZeitgeistLog.html#zeitgeist-log-install-monitor" title="zeitgeist_log_install_monitor ()"><code class="function">zeitgeist_log_install_monitor()</code></a>.</p>
+<div class="refsect3">
+<a name="zeitgeist-monitor-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>time_range</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>The monitor will only listen for events with timestamps within this time range. Note that it is legal for applications to insert events that are "in the past". </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event_templates</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>A <a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a>&lt;!-- --&gt;s. Only listen for events that match any of these templates. </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-monitor-new.returns"></a><h4>Returns</h4>
+<p>A reference to a newly allocated monitor </p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-monitor-get-time-range"></a><h3>zeitgeist_monitor_get_time_range ()</h3>
+<pre class="programlisting"><a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="returnvalue">ZeitgeistTimeRange</span></a> *
+zeitgeist_monitor_get_time_range (<em class="parameter"><code><a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> *self</code></em>);</pre>
+<p>Get and return the current value of the <a class="link" href="ZeitgeistMonitor.html#ZeitgeistMonitor--time-range" title="The “time-range” property"><span class="type">"time-range"</span></a> property.</p>
+<div class="refsect3">
+<a name="zeitgeist-monitor-get-time-range.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> instance to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-monitor-get-time-range.returns"></a><h4>Returns</h4>
+<p> the value of the <a class="link" href="ZeitgeistMonitor.html#ZeitgeistMonitor--time-range" title="The “time-range” property"><span class="type">"time-range"</span></a> property</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-monitor-set-time-range"></a><h3>zeitgeist_monitor_set_time_range ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_monitor_set_time_range (<em class="parameter"><code><a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> *self</code></em>,
+                                  <em class="parameter"><code><a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="type">ZeitgeistTimeRange</span></a> *value</code></em>);</pre>
+<p>Set the value of the <a class="link" href="ZeitgeistMonitor.html#ZeitgeistMonitor--time-range" title="The “time-range” property"><span class="type">"time-range"</span></a> property to <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="zeitgeist-monitor-set-time-range.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> instance to modify</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the new value of the <a class="link" href="ZeitgeistMonitor.html#ZeitgeistMonitor--time-range" title="The “time-range” property"><span class="type">"time-range"</span></a> property</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-monitor-get-event-templates"></a><h3>zeitgeist_monitor_get_event_templates ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="returnvalue">GPtrArray</span></a> *
+zeitgeist_monitor_get_event_templates (<em class="parameter"><code><a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> *self</code></em>);</pre>
+<p>Get and return the current value of the <a class="link" href="ZeitgeistMonitor.html#ZeitgeistMonitor--event-templates" title="The “event-templates” property"><span class="type">"event-templates"</span></a> property.</p>
+<div class="refsect3">
+<a name="zeitgeist-monitor-get-event-templates.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> instance to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-monitor-get-event-templates.returns"></a><h4>Returns</h4>
+<p> the value of the <a class="link" href="ZeitgeistMonitor.html#ZeitgeistMonitor--event-templates" title="The “event-templates” property"><span class="type">"event-templates"</span></a> property</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-monitor-set-event-templates"></a><h3>zeitgeist_monitor_set_event_templates ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_monitor_set_event_templates (<em class="parameter"><code><a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> *self</code></em>,
+                                       <em class="parameter"><code><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *value</code></em>);</pre>
+<p>Set the value of the <a class="link" href="ZeitgeistMonitor.html#ZeitgeistMonitor--event-templates" title="The “event-templates” property"><span class="type">"event-templates"</span></a> property to <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="zeitgeist-monitor-set-event-templates.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> instance to modify</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the new value of the <a class="link" href="ZeitgeistMonitor.html#ZeitgeistMonitor--event-templates" title="The “event-templates” property"><span class="type">"event-templates"</span></a> property</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistMonitor.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="ZEITGEIST-TYPE-MONITOR:CAPS"></a><h3>ZEITGEIST_TYPE_MONITOR</h3>
+<pre class="programlisting">#define ZEITGEIST_TYPE_MONITOR (zeitgeist_monitor_get_type ())
+</pre>
+<p>The type for <a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistMonitor-struct"></a><h3>struct ZeitgeistMonitor</h3>
+<pre class="programlisting">struct ZeitgeistMonitor;</pre>
+<p>Listens for updates to the Zeitgeist event log</p>
+<p>A <span class="type">Monitor</span> listens for updates to the Zeitgeist event log matching a given set of templates and with timestamps in some predefined time range.</p>
+<p>A monitor must be installed into the running Zeitgeist daemon by calling <a class="link" href="ZeitgeistLog.html#zeitgeist-log-install-monitor" title="zeitgeist_log_install_monitor ()"><code class="function">zeitgeist_log_install_monitor()</code></a>. The monitor will not emit any of the ::events-added or ::events-deleted signals before this.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistMonitorClass"></a><h3>struct ZeitgeistMonitorClass</h3>
+<pre class="programlisting">struct ZeitgeistMonitorClass {
+	GObjectClass parent_class;
+};
+</pre>
+<p>The class structure for <a class="link" href="ZeitgeistMonitor.html#ZEITGEIST-TYPE-MONITOR:CAPS" title="ZEITGEIST_TYPE_MONITOR"><code class="literal">ZEITGEIST_TYPE_MONITOR</code></a>. All the fields in this structure are private and should never be accessed directly.</p>
+<div class="refsect3">
+<a name="ZeitgeistMonitorClass.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistMonitor.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="ZeitgeistMonitor--event-templates"></a><h3>The <code class="literal">“event-templates”</code> property</h3>
+<pre class="programlisting">  “event-templates”          <a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *</pre>
+<p>event-templates.</p>
+<p>Owner: ZeitgeistMonitor</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistMonitor--time-range"></a><h3>The <code class="literal">“time-range”</code> property</h3>
+<pre class="programlisting">  “time-range”               <a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="type">ZeitgeistTimeRange</span></a> *</pre>
+<p>time-range.</p>
+<p>Owner: ZeitgeistMonitor</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistMonitor.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="ZeitgeistMonitor-events-deleted"></a><h3>The <code class="literal">“events-deleted”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a>   *monitor,
+               <a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="type">ZeitgeistTimeRange</span></a> *event_ids_length1,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>            time_range,
+               <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                event_ids,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>            user_data)</pre>
+<p>ZeitgeistMonitor::events-deleted:</p>
+<p>Emitted when events with timestamps within the time range of this monitor have been deleted from the log. Note that the deleted events may not match the event templates for the monitor.</p>
+<div class="refsect3">
+<a name="ZeitgeistMonitor-events-deleted.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>monitor</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> instance that received the signal</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event_ids_length1</p></td>
+<td class="parameter_description"><p>length of the <em class="parameter"><code>event_ids</code></em>
+array</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>time_range</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>A <a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="type">ZeitgeistTimeRange</span></a> that specifies the minimum and maximum timestamps of the deleted events </p>
+<p></p>
+</td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event_ids</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>A <a href="../glib/glib-Arrays.html#GArray"><span class="type">GArray</span></a> of <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>&lt;!-- --&gt;s holding the IDs of the deleted events </p>
+<p></p>
+</td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistMonitor-events-inserted"></a><h3>The <code class="literal">“events-inserted”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a>   *monitor,
+               <a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="type">ZeitgeistTimeRange</span></a> *time_range,
+               <a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a> *events,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>            user_data)</pre>
+<p>ZeitgeistMonitor::events-inserted:</p>
+<p>Emitted when events matching the event templates and with timestamps within the time range of the monitor has been inserted into the log.</p>
+<div class="refsect3">
+<a name="ZeitgeistMonitor-events-inserted.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>monitor</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> instance that received the signal</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>time_range</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>A <a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="type">ZeitgeistTimeRange</span></a> that specifies the minimum and maximum of the timestamps in <em class="parameter"><code>events</code></em>
+</p>
+<p></p>
+</td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>events</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>A <a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a> holding the "ZeitgeistEvent"s that have been inserted into the log </p>
+<p></p>
+</td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.32.1</div>
+</body>
+</html>

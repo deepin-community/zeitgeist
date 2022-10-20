@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Zeitgeist.Timestamp &ndash; zeitgeist-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">Zeitgeist.Timestamp &ndash; zeitgeist-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">zeitgeist-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="Zeitgeist.html">Zeitgeist</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace">Timestamp</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="constant"><a href="Zeitgeist.Timestamp.DAY.html">DAY</a></li>
+          <li class="constant"><a href="Zeitgeist.Timestamp.HOUR.html">HOUR</a></li>
+          <li class="constant"><a href="Zeitgeist.Timestamp.MINUTE.html">MINUTE</a></li>
+          <li class="constant"><a href="Zeitgeist.Timestamp.SECOND.html">SECOND</a></li>
+          <li class="constant"><a href="Zeitgeist.Timestamp.WEEK.html">WEEK</a></li>
+          <li class="constant"><a href="Zeitgeist.Timestamp.YEAR.html">YEAR</a></li>
+          <li class="method"><a href="Zeitgeist.Timestamp.from_date.html">from_date</a></li>
+          <li class="method"><a href="Zeitgeist.Timestamp.from_dmy.html">from_dmy</a></li>
+          <li class="method"><a href="Zeitgeist.Timestamp.from_iso8601.html">from_iso8601</a></li>
+          <li class="method"><a href="Zeitgeist.Timestamp.from_now.html">from_now</a></li>
+          <li class="method"><a href="Zeitgeist.Timestamp.from_timeval.html">from_timeval</a></li>
+          <li class="method"><a href="Zeitgeist.Timestamp.next_midnight.html">next_midnight</a></li>
+          <li class="method"><a href="Zeitgeist.Timestamp.prev_midnight.html">prev_midnight</a></li>
+          <li class="method"><a href="Zeitgeist.Timestamp.to_date.html">to_date</a></li>
+          <li class="method"><a href="Zeitgeist.Timestamp.to_iso8601.html">to_iso8601</a></li>
+          <li class="method"><a href="Zeitgeist.Timestamp.to_timeval.html">to_timeval</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">Zeitgeist.Timestamp</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="description">
+          <p>Convenience functions for dealing with timestamps and dates</p>
+          <p>include: zeitgeist.h</p>
+          <p>A suite of convenience functions for dealing with timestamps and dates.</p>
+          <p>Zeitgeist timestamps are represented as <b>gint64</b>s with the number of milliseconds since the Unix Epoch.</p>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Constants:</h3>
+        <ul class="navi_inline">
+          <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_basic_type"><span class="struct">int64</span></span> <b><a href="Zeitgeist.Timestamp.DAY.html" class="constant">DAY</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A day represented as a Zeitgeist timestamp (ie. 86400000ms)</span>
+            </div></li>
+          <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_basic_type"><span class="struct">int64</span></span> <b><a href="Zeitgeist.Timestamp.HOUR.html" class="constant">HOUR</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">An hour represented as a Zeitgeist timestamp (ie. 3600000ms)</span>
+            </div></li>
+          <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_basic_type"><span class="struct">int64</span></span> <b><a href="Zeitgeist.Timestamp.MINUTE.html" class="constant">MINUTE</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A minute represented as a Zeitgeist timestamp (ie. 60000ms)</span>
+            </div></li>
+          <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_basic_type"><span class="struct">int64</span></span> <b><a href="Zeitgeist.Timestamp.SECOND.html" class="constant">SECOND</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A second represented as a Zeitgeist timestamp (ie. 1000ms)</span>
+            </div></li>
+          <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_basic_type"><span class="struct">int64</span></span> <b><a href="Zeitgeist.Timestamp.WEEK.html" class="constant">WEEK</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A week represented as a Zeitgeist timestamp (ie. 604800000ms)</span>
+            </div></li>
+          <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_basic_type"><span class="struct">int64</span></span> <b><a href="Zeitgeist.Timestamp.YEAR.html" class="constant">YEAR</a></b>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">A year represented as a Zeitgeist timestamp (ie. 31556952000ms). Be 
+                warned that a year is not 365 days, but in fact 365.2425 days, to account for leap years.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Functions:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int64</span></span> <b><a href="Zeitgeist.Timestamp.from_date.html" class="method">from_date</a></b> (<span class="main_type"><span class="struct">Date</span></span> date)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Convert a <b>GDate</b> to a Zeitgeist timestamp</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int64</span></span> <b><a href="Zeitgeist.Timestamp.from_dmy.html" class="method">from_dmy</a></b> (<span class="main_type"><span class="struct">DateDay</span></span> day, <span class="main_type"><span class="enum">DateMonth</span></span> month, <span class="main_type"><span class="struct">DateYear</span></span> year)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Convert a day, month, year tuple into a Zeitgeist timestamp</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int64</span></span> <b><a href="Zeitgeist.Timestamp.from_iso8601.html" class="method">from_iso8601</a></b> (<span class="main_basic_type"><span class="class">string</span></span> datetime)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Parse a timestamp from an ISO8601-encoded string.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int64</span></span> <b><a href="Zeitgeist.Timestamp.from_now.html" class="method">from_now</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Return the current timestamp in milliseconds.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int64</span></span> <b><a href="Zeitgeist.Timestamp.from_timeval.html" class="method">from_timeval</a></b> (<span class="main_type"><span class="struct">TimeVal</span></span> timeval)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Convert a <span class="struct">GLib.TimeVal</span> to an amount of 
+                milliseconds since the Unix Epoch</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int64</span></span> <b><a href="Zeitgeist.Timestamp.next_midnight.html" class="method">next_midnight</a></b> (<span class="main_basic_type"><span class="struct">int64</span></span> timestamp)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Calculate the timestamp for the next midnight after the given 
+                timestamp.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int64</span></span> <b><a href="Zeitgeist.Timestamp.prev_midnight.html" class="method">prev_midnight</a></b> (<span class="main_basic_type"><span class="struct">int64</span></span> timestamp)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Calculate the timestamp for the midnight just before the given 
+                timestamp.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="struct">Date</span></span> <b><a href="Zeitgeist.Timestamp.to_date.html" class="method">to_date</a></b> (<span class="main_basic_type"><span class="struct">int64</span></span> timestamp)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Write a timestamp to a <span class="struct">GLib.Date</span> structure
+              </span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Zeitgeist.Timestamp.to_iso8601.html" class="method">to_iso8601</a></b> (<span class="main_basic_type"><span class="struct">int64</span></span> timestamp)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Convert a timestamp to a human-readable ISO8601 format</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><span class="struct">TimeVal</span></span> <b><a href="Zeitgeist.Timestamp.to_timeval.html" class="method">to_timeval</a></b> (<span class="main_basic_type"><span class="struct">int64</span></span> timestamp)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Write a Zeitgeist timestamp to a <span class="struct">GLib.TimeVal
+                </span> instance. Note that Zeitgeist uses only a millisecond resolution, whereas <span class="struct">GLib.TimeVal</span> has 
+                microsecond resolution. This means that the lower three digits of @tv.tv_usec will always be 0.</span>
+            </div></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="https://wiki.gnome.org/Projects/Valadoc"><kbd>valadoc</kbd></a>
+    </div>
+  </body>
+</html>

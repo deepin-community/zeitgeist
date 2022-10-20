@@ -1,0 +1,108 @@
+<?xml version="1.0"?><!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">]>
+<refentry id="docs-org-gnome-zeitgeist-DataSourceRegistry">
+<refmeta>
+<refentrytitle role="top_of_page" id="docs-org-gnome-zeitgeist-DataSourceRegistry.top_of_page">org.gnome.zeitgeist.DataSourceRegistry</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+ZEITGEIST-2.0 D-Bus API
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>org.gnome.zeitgeist.DataSourceRegistry</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+<refsynopsisdiv id="docs-org-gnome-zeitgeist-DataSourceRegistry.synopsis" role="synopsis">
+<title role="synopsis.title">Methods</title>
+<synopsis>
+<link linkend="org-gnome-zeitgeist-DataSourceRegistry-GetDataSources">GetDataSources</link>           ()
+<link linkend="org-gnome-zeitgeist-DataSourceRegistry-RegisterDataSource">RegisterDataSource</link>       ()
+<link linkend="org-gnome-zeitgeist-DataSourceRegistry-SetDataSourceEnabled">SetDataSourceEnabled</link>     ()
+<link linkend="org-gnome-zeitgeist-DataSourceRegistry-GetDataSourceFromId">GetDataSourceFromId</link>      ()</synopsis></refsynopsisdiv>
+<refsynopsisdiv id="docs-org-gnome-zeitgeist-DataSourceRegistry.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+<link linkend="org-gnome-zeitgeist-DataSourceRegistry-DataSourceDisconnected">DataSourceDisconnected</link>     ()
+<link linkend="org-gnome-zeitgeist-DataSourceRegistry-DataSourceEnabled">DataSourceEnabled</link>          ()
+<link linkend="org-gnome-zeitgeist-DataSourceRegistry-DataSourceRegistered">DataSourceRegistered</link>       ()</synopsis></refsynopsisdiv>
+<refsect1 id="docs-org-gnome-zeitgeist-DataSourceRegistry.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="docs-org-gnome-zeitgeist-DataSourceRegistry.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="org-gnome-zeitgeist-DataSourceRegistry-GetDataSources" role="function">
+<title>GetDataSources ()</title>
+<programlisting>
+GetDataSources           ()
+</programlisting>
+<variablelist role="params"><varlistentry><term><parameter>cancellable</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara> callback to call when the request is satisfied </simpara></listitem></varlistentry><varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara> the data to pass to @_callback_ function </simpara></listitem></varlistentry></variablelist>
+</refsect2>
+<refsect2 id="org-gnome-zeitgeist-DataSourceRegistry-RegisterDataSource" role="function">
+<title>RegisterDataSource ()</title>
+<programlisting>
+RegisterDataSource       ()
+</programlisting>
+<variablelist role="params"><varlistentry><term><parameter>unique_id</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>name</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>description</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>event_templates</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>cancellable</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>sender</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara> callback to call when the request is satisfied </simpara></listitem></varlistentry><varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara> the data to pass to @_callback_ function </simpara></listitem></varlistentry></variablelist>
+</refsect2>
+<refsect2 id="org-gnome-zeitgeist-DataSourceRegistry-SetDataSourceEnabled" role="function">
+<title>SetDataSourceEnabled ()</title>
+<programlisting>
+SetDataSourceEnabled     ()
+</programlisting>
+<variablelist role="params"><varlistentry><term><parameter>unique_id</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>enabled</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>cancellable</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara> callback to call when the request is satisfied </simpara></listitem></varlistentry><varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara> the data to pass to @_callback_ function </simpara></listitem></varlistentry></variablelist>
+</refsect2>
+<refsect2 id="org-gnome-zeitgeist-DataSourceRegistry-GetDataSourceFromId" role="function">
+<title>GetDataSourceFromId ()</title>
+<programlisting>
+GetDataSourceFromId      ()
+</programlisting>
+<variablelist role="params"><varlistentry><term><parameter>unique_id</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>cancellable</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara> callback to call when the request is satisfied </simpara></listitem></varlistentry><varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara> the data to pass to @_callback_ function </simpara></listitem></varlistentry></variablelist>
+</refsect2></refsect1>
+<refsect1 id="docs-org-gnome-zeitgeist-DataSourceRegistry.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="org-gnome-zeitgeist-DataSourceRegistry-DataSourceDisconnected" role="signal">
+<title>The <literal>DataSourceDisconnected</literal> signal</title>
+<programlisting>
+DataSourceDisconnected     ()
+</programlisting>
+<variablelist role="params"><varlistentry><term><parameter>data_source</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry></variablelist>
+</refsect2>
+<refsect2 id="org-gnome-zeitgeist-DataSourceRegistry-DataSourceEnabled" role="signal">
+<title>The <literal>DataSourceEnabled</literal> signal</title>
+<programlisting>
+DataSourceEnabled          ()
+</programlisting>
+<variablelist role="params"><varlistentry><term><parameter>unique_id</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>enabled</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry></variablelist>
+</refsect2>
+<refsect2 id="org-gnome-zeitgeist-DataSourceRegistry-DataSourceRegistered" role="signal">
+<title>The <literal>DataSourceRegistered</literal> signal</title>
+<programlisting>
+DataSourceRegistered       ()
+</programlisting>
+<variablelist role="params"><varlistentry><term><parameter>data_source</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry></variablelist>
+</refsect2></refsect1></refentry>

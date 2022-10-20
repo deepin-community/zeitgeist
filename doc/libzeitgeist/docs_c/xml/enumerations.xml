@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="zeitgeist-2.0-enumerations">
+<refmeta>
+<refentrytitle role="top_of_page" id="zeitgeist-2.0-enumerations.top_of_page">enumerations</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ZEITGEIST-2.0 Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>enumerations</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="zeitgeist-2.0-enumerations.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-result-type-is-sort-order-asc">zeitgeist_result_type_is_sort_order_asc</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="zeitgeist-2.0-enumerations.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ZeitgeistResultType">ZeitgeistResultType</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ZeitgeistRelevantResultType">ZeitgeistRelevantResultType</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ZeitgeistStorageState">ZeitgeistStorageState</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ZeitgeistDataModelError">ZeitgeistDataModelError</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="zeitgeist-2.0-enumerations.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GEnum">GEnum</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> ZeitgeistRelevantResultType
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> ZeitgeistResultType
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ZeitgeistStorageState
+</screen>
+</refsect1>
+
+
+<refsect1 id="zeitgeist-2.0-enumerations.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="zeitgeist-2.0-enumerations.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="zeitgeist-result-type-is-sort-order-asc" role="function">
+<title>zeitgeist_result_type_is_sort_order_asc&#160;()</title>
+<indexterm zone="zeitgeist-result-type-is-sort-order-asc"><primary>zeitgeist_result_type_is_sort_order_asc</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+zeitgeist_result_type_is_sort_order_asc
+                               (<parameter><link linkend="ZeitgeistResultType"><type>ZeitgeistResultType</type></link> result_type</parameter>);</programlisting>
+<para>A <link linkend="ZeitgeistResultType"><type>ZeitgeistResultType</type></link></para>
+<refsect3 id="zeitgeist-result-type-is-sort-order-asc.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>result_type</para></entry>
+<entry role="parameter_description"><para>&nbsp;. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-result-type-is-sort-order-asc.returns" role="returns">
+<title>Returns</title>
+<para>true if the results for the given result_type will be sorted ascendantly by date, false if they&apos;ll be sorted descendingly. </para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="zeitgeist-2.0-enumerations.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ZeitgeistResultType" role="enum">
+<title>enum ZeitgeistResultType</title>
+<indexterm zone="ZeitgeistResultType"><primary>ZeitgeistResultType</primary></indexterm>
+<para>ZeitgeistResultType</para>
+<para>Used to control how the query results are grouped and sorted. See <link linkend="zeitgeist-log-find-events"><function>zeitgeist_log_find_events()</function></link>, <link linkend="zeitgeist-log-find-event-ids"><function>zeitgeist_log_find_event_ids()</function></link>, and <link linkend="zeitgeist-index-search"><function>zeitgeist_index_search()</function></link>.</para>
+<refsect3 id="ZeitgeistResultType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-MOST-RECENT-EVENTS:CAPS">ZEITGEIST_RESULT_TYPE_MOST_RECENT_EVENTS</para></entry>
+<entry role="enum_member_description"><para>All events with the most recent events first</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-LEAST-RECENT-EVENTS:CAPS">ZEITGEIST_RESULT_TYPE_LEAST_RECENT_EVENTS</para></entry>
+<entry role="enum_member_description"><para>All events with the oldest</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-MOST-RECENT-SUBJECTS:CAPS">ZEITGEIST_RESULT_TYPE_MOST_RECENT_SUBJECTS</para></entry>
+<entry role="enum_member_description"><para>One event for each subject only, ordered with the most recent events first</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-LEAST-RECENT-SUBJECTS:CAPS">ZEITGEIST_RESULT_TYPE_LEAST_RECENT_SUBJECTS</para></entry>
+<entry role="enum_member_description"><para>One event for each subject, only, ordered with oldest events first</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-MOST-POPULAR-SUBJECTS:CAPS">ZEITGEIST_RESULT_TYPE_MOST_POPULAR_SUBJECTS</para></entry>
+<entry role="enum_member_description"><para>One event for each subject only, ordered by the popularity of the subject</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-LEAST-POPULAR-SUBJECTS:CAPS">ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_SUBJECTS</para></entry>
+<entry role="enum_member_description"><para>One event for each subject only, ordered ascendingly by popularity of the subject</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-MOST-POPULAR-ACTOR:CAPS">ZEITGEIST_RESULT_TYPE_MOST_POPULAR_ACTOR</para></entry>
+<entry role="enum_member_description"><para>The last event of each different actor ordered by the popularity of the actor</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-LEAST-POPULAR-ACTOR:CAPS">ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_ACTOR</para></entry>
+<entry role="enum_member_description"><para>The last event of each different actor, ordered ascendingly by the popularity of the actor</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-MOST-RECENT-ACTOR:CAPS">ZEITGEIST_RESULT_TYPE_MOST_RECENT_ACTOR</para></entry>
+<entry role="enum_member_description"><para>The actor that has been used to most recently</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-LEAST-RECENT-ACTOR:CAPS">ZEITGEIST_RESULT_TYPE_LEAST_RECENT_ACTOR</para></entry>
+<entry role="enum_member_description"><para>The actor that has been used to least recently</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-MOST-RECENT-ORIGIN:CAPS">ZEITGEIST_RESULT_TYPE_MOST_RECENT_ORIGIN</para></entry>
+<entry role="enum_member_description"><para>The last event of each different subject origin.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-LEAST-RECENT-ORIGIN:CAPS">ZEITGEIST_RESULT_TYPE_LEAST_RECENT_ORIGIN</para></entry>
+<entry role="enum_member_description"><para>The last event of each different subject origin, ordered by least recently used first</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-MOST-POPULAR-ORIGIN:CAPS">ZEITGEIST_RESULT_TYPE_MOST_POPULAR_ORIGIN</para></entry>
+<entry role="enum_member_description"><para>The last event of each different subject origin, ordered by the popularity of the origins</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-LEAST-POPULAR-ORIGIN:CAPS">ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_ORIGIN</para></entry>
+<entry role="enum_member_description"><para>The last event of each different subject origin, ordered ascendingly by the popularity of the origin</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-OLDEST-ACTOR:CAPS">ZEITGEIST_RESULT_TYPE_OLDEST_ACTOR</para></entry>
+<entry role="enum_member_description"><para>The first event of each different actor</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-MOST-RECENT-SUBJECT-INTERPRETATION:CAPS">ZEITGEIST_RESULT_TYPE_MOST_RECENT_SUBJECT_INTERPRETATION</para></entry>
+<entry role="enum_member_description"><para>One event for each subject interpretation only, ordered with the most recent events first</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-LEAST-RECENT-SUBJECT-INTERPRETATION:CAPS">ZEITGEIST_RESULT_TYPE_LEAST_RECENT_SUBJECT_INTERPRETATION</para></entry>
+<entry role="enum_member_description"><para>One event for each subject interpretation only, ordered with the least recent events first</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-MOST-POPULAR-SUBJECT-INTERPRETATION:CAPS">ZEITGEIST_RESULT_TYPE_MOST_POPULAR_SUBJECT_INTERPRETATION</para></entry>
+<entry role="enum_member_description"><para>One event for each subject interpretation only, ordered by the popularity of the subject interpretation</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-LEAST-POPULAR-SUBJECT-INTERPRETATION:CAPS">ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_SUBJECT_INTERPRETATION</para></entry>
+<entry role="enum_member_description"><para>One event for each subject interpretation only, ordered ascendingly by popularity of the subject interpretation</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-MOST-RECENT-MIMETYPE:CAPS">ZEITGEIST_RESULT_TYPE_MOST_RECENT_MIMETYPE</para></entry>
+<entry role="enum_member_description"><para>One event for each mimetype only ordered with the most recent events first</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-LEAST-RECENT-MIMETYPE:CAPS">ZEITGEIST_RESULT_TYPE_LEAST_RECENT_MIMETYPE</para></entry>
+<entry role="enum_member_description"><para>One event for each mimetype only ordered with the least recent events first</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-MOST-POPULAR-MIMETYPE:CAPS">ZEITGEIST_RESULT_TYPE_MOST_POPULAR_MIMETYPE</para></entry>
+<entry role="enum_member_description"><para>One event for each mimetype only ordered by the popularity of the mimetype</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-LEAST-POPULAR-MIMETYPE:CAPS">ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_MIMETYPE</para></entry>
+<entry role="enum_member_description"><para>One event for each mimetype only ordered ascendingly by popularity of the mimetype</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-MOST-RECENT-CURRENT-URI:CAPS">ZEITGEIST_RESULT_TYPE_MOST_RECENT_CURRENT_URI</para></entry>
+<entry role="enum_member_description"><para>One event for each subject only by current_uri instead of uri ordered with the most recent events first</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-LEAST-RECENT-CURRENT-URI:CAPS">ZEITGEIST_RESULT_TYPE_LEAST_RECENT_CURRENT_URI</para></entry>
+<entry role="enum_member_description"><para>One event for each subject only by current_uri instead of uri ordered with oldest events first</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-MOST-POPULAR-CURRENT-URI:CAPS">ZEITGEIST_RESULT_TYPE_MOST_POPULAR_CURRENT_URI</para></entry>
+<entry role="enum_member_description"><para>One event for each subject only by current_uri instead of uri ordered by the popularity of the subject</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-LEAST-POPULAR-CURRENT-URI:CAPS">ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_CURRENT_URI</para></entry>
+<entry role="enum_member_description"><para>One event for each subject only by current_uri instead of uri ordered ascendingly by popularity of the subject</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-MOST-RECENT-EVENT-ORIGIN:CAPS">ZEITGEIST_RESULT_TYPE_MOST_RECENT_EVENT_ORIGIN</para></entry>
+<entry role="enum_member_description"><para>The last event of each different origin</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-LEAST-RECENT-EVENT-ORIGIN:CAPS">ZEITGEIST_RESULT_TYPE_LEAST_RECENT_EVENT_ORIGIN</para></entry>
+<entry role="enum_member_description"><para>The last event of each different origin, ordered by least recently used first</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-MOST-POPULAR-EVENT-ORIGIN:CAPS">ZEITGEIST_RESULT_TYPE_MOST_POPULAR_EVENT_ORIGIN</para></entry>
+<entry role="enum_member_description"><para>The last event of each different origin ordered by the popularity of the origins</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-LEAST-POPULAR-EVENT-ORIGIN:CAPS">ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_EVENT_ORIGIN</para></entry>
+<entry role="enum_member_description"><para>The last event of each different origin, ordered ascendingly by the popularity of the origin</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-MOST-RECENT-CURRENT-ORIGIN:CAPS">ZEITGEIST_RESULT_TYPE_MOST_RECENT_CURRENT_ORIGIN</para></entry>
+<entry role="enum_member_description"><para>The last event of each different subject origin.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-LEAST-RECENT-CURRENT-ORIGIN:CAPS">ZEITGEIST_RESULT_TYPE_LEAST_RECENT_CURRENT_ORIGIN</para></entry>
+<entry role="enum_member_description"><para>The last event of each different subject origin, ordered by least recently used first</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-MOST-POPULAR-CURRENT-ORIGIN:CAPS">ZEITGEIST_RESULT_TYPE_MOST_POPULAR_CURRENT_ORIGIN</para></entry>
+<entry role="enum_member_description"><para>The last event of each different subject origin, ordered by the popularity of the origins</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-LEAST-POPULAR-CURRENT-ORIGIN:CAPS">ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_CURRENT_ORIGIN</para></entry>
+<entry role="enum_member_description"><para>The last event of each different subject origin, ordered ascendingly by the popularity of the origin</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RESULT-TYPE-RELEVANCY:CAPS">ZEITGEIST_RESULT_TYPE_RELEVANCY</para></entry>
+<entry role="enum_member_description"><para>Only allowed on <link linkend="zeitgeist-index-search"><function>zeitgeist_index_search()</function></link>. Events are sorted by query relevancy</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="ZeitgeistRelevantResultType" role="enum">
+<title>enum ZeitgeistRelevantResultType</title>
+<indexterm zone="ZeitgeistRelevantResultType"><primary>ZeitgeistRelevantResultType</primary></indexterm>
+<refsect3 id="ZeitgeistRelevantResultType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RELEVANT-RESULT-TYPE-RECENT:CAPS">ZEITGEIST_RELEVANT_RESULT_TYPE_RECENT</para></entry>
+<entry role="enum_member_description"><para>All uris with the most recent uri first</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-RELEVANT-RESULT-TYPE-RELATED:CAPS">ZEITGEIST_RELEVANT_RESULT_TYPE_RELATED</para></entry>
+<entry role="enum_member_description"><para>All uris with the most related one first</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="ZeitgeistStorageState" role="enum">
+<title>enum ZeitgeistStorageState</title>
+<indexterm zone="ZeitgeistStorageState"><primary>ZeitgeistStorageState</primary></indexterm>
+<para>Enumeration class defining the possible values for the storage state of an event subject.</para>
+<para>The StorageState enumeration can be used to control whether or not matched events must have their subjects available to the user. Fx. not including deleted files, files on unplugged USB drives, files available only when a network is available etc.</para>
+<refsect3 id="ZeitgeistStorageState.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-STORAGE-STATE-NOT-AVAILABLE:CAPS">ZEITGEIST_STORAGE_STATE_NOT_AVAILABLE</para></entry>
+<entry role="enum_member_description"><para>The storage medium of the events subjects must not be available to the user</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-STORAGE-STATE-AVAILABLE:CAPS">ZEITGEIST_STORAGE_STATE_AVAILABLE</para></entry>
+<entry role="enum_member_description"><para>The storage medium of all event subjects must be immediately available to the user</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-STORAGE-STATE-ANY:CAPS">ZEITGEIST_STORAGE_STATE_ANY</para></entry>
+<entry role="enum_member_description"><para>The event subjects may or may not be available</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="ZeitgeistDataModelError" role="enum">
+<title>enum ZeitgeistDataModelError</title>
+<indexterm zone="ZeitgeistDataModelError"><primary>ZeitgeistDataModelError</primary></indexterm>
+<para>Errors which can be thrown when asynchronously querying for <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link>s.</para>
+<refsect3 id="ZeitgeistDataModelError.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-DATA-MODEL-ERROR-INVALID-SIGNATURE:CAPS">ZEITGEIST_DATA_MODEL_ERROR_INVALID_SIGNATURE</para></entry>
+<entry role="enum_member_description"><para>Signature sent over DBus is invalid.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-DATA-MODEL-ERROR-NULL-EVENT:CAPS">ZEITGEIST_DATA_MODEL_ERROR_NULL_EVENT</para></entry>
+<entry role="enum_member_description"><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> is NULL.
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-DATA-MODEL-ERROR-TOO-MANY-RESULTS:CAPS">ZEITGEIST_DATA_MODEL_ERROR_TOO_MANY_RESULTS</para></entry>
+<entry role="enum_member_description"><para>Query return too many <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link>s.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>

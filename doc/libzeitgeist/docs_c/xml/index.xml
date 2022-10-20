@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="ZeitgeistIndex">
+<refmeta>
+<refentrytitle role="top_of_page" id="ZeitgeistIndex.top_of_page">ZeitgeistIndex</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ZEITGEIST-2.0 Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ZeitgeistIndex</refname>
+<refpurpose>Query the Zeitgeist Full Text Search Extension</refpurpose>
+</refnamediv>
+
+<refsect1 id="ZeitgeistIndex.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-index-search">zeitgeist_index_search</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistResultSet"><returnvalue>ZeitgeistResultSet</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-index-search-finish">zeitgeist_index_search_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-index-search-with-relevancies">zeitgeist_index_search_with_relevancies</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistResultSet"><returnvalue>ZeitgeistResultSet</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-index-search-with-relevancies-finish">zeitgeist_index_search_with_relevancies_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistIndex"><returnvalue>ZeitgeistIndex</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-index-new">zeitgeist_index_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistIndex.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-TYPE-INDEX:CAPS">ZEITGEIST_TYPE_INDEX</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistIndex-struct">ZeitgeistIndex</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistIndexClass">ZeitgeistIndexClass</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistIndex.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ZeitgeistQueuedProxyWrapper">ZeitgeistQueuedProxyWrapper</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ZeitgeistIndex
+</screen>
+</refsect1>
+
+
+<refsect1 id="ZeitgeistIndex.description" role="desc">
+<title role="desc.title">Description</title>
+<para>include: zeitgeist.h</para>
+
+</refsect1>
+<refsect1 id="ZeitgeistIndex.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="zeitgeist-index-search" role="function">
+<title>zeitgeist_index_search&#160;()</title>
+<indexterm zone="zeitgeist-index-search"><primary>zeitgeist_index_search</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_index_search (<parameter><link linkend="ZeitgeistIndex"><type>ZeitgeistIndex</type></link> *self</parameter>,
+                        <parameter>const <link linkend="gchar"><type>gchar</type></link> *query</parameter>,
+                        <parameter><link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> *time_range</parameter>,
+                        <parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *event_templates</parameter>,
+                        <parameter><link linkend="guint32"><type>guint32</type></link> offset</parameter>,
+                        <parameter><link linkend="guint32"><type>guint32</type></link> num_events</parameter>,
+                        <parameter><link linkend="ZeitgeistResultType"><type>ZeitgeistResultType</type></link> result_type</parameter>,
+                        <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                        <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                        <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>Perform a full text search possibly restricted to a <link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> and/or set of event templates.</para>
+<para>The default boolean operator is <link linkend="AND:CAPS"><literal>AND</literal></link>. Thus the query <emphasis>foo bar</emphasis> will be interpreted as <emphasis>foo AND bar</emphasis>. To exclude a term from the result set prepend it with a minus sign - eg. <emphasis>foo -bar</emphasis>. Phrase queries can be done by double quoting the string <emphasis>&quot;foo is a bar&quot;</emphasis>. You can truncate terms by appending a *.</para><para>There are a few keys you can prefix to a term or phrase to search within a specific set of metadata. They are used like <emphasis>key:value</emphasis>. The keys <emphasis>name</emphasis> and <emphasis>title</emphasis> search strictly within the text field of the event subjects. The key <emphasis>app</emphasis> searches within the application name or description that is found in the actor attribute of the events. Lastly, you can use the <emphasis>site</emphasis> key to search within the domain name of subject URIs.</para><para>You can also control the results with the boolean operators <emphasis>AND</emphasis> and <emphasis>OR</emphasis> and you may use brackets, ( and ), to control the operator precedence.</para><para>FIXME: how do we put documentation into _finish? The total hit count of the query will be available via the returned result set by calling <link linkend="zeitgeist-result-set-estimated-matches"><function>zeitgeist_result_set_estimated_matches()</function></link>. This will often be bigger than the actual number of events held in the result set, which is limited by the <parameter>num_events</parameter> parameter passed to <link linkend="zeitgeist-index-search"><function>zeitgeist_index_search()</function></link>.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-index-search-finish"><function><link linkend="zeitgeist-index-search-finish"><function>zeitgeist_index_search_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-index-search.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistIndex"><type>ZeitgeistIndex</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>The search string to send to Zeitgeist </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>time_range</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>Restrict matched events to ones within this time range. If you are not interested in restricting the timerange pass <link linkend="zeitgeist-time-range-new-anytime"><function>zeitgeist_time_range_new_anytime()</function></link> as Zeitgeist will detect this and optimize the query accordingly </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>event_templates</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>Restrict matches events to ones matching these templates </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>Offset into the result set to read events from </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>num_events</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>Maximal number of events to retrieve </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>result_type</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>The <link linkend="ZeitgeistResultType"><type>ZeitgeistResultType</type></link> determining the sort order. You may pass <link linkend="ZEITGEIST-RESULT-TYPE-RELEVANCY"><type>ZEITGEIST_RESULT_TYPE_RELEVANCY</type></link> to this method to have the results ordered by relevancy calculated in relation to <parameter>query</parameter>
+</para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A <link linkend="GCancellable"><type>GCancellable</type></link> used to cancel the call or <link linkend="NULL:CAPS"><literal>NULL</literal></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-index-search-finish" role="function">
+<title>zeitgeist_index_search_finish&#160;()</title>
+<indexterm zone="zeitgeist-index-search-finish"><primary>zeitgeist_index_search_finish</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistResultSet"><returnvalue>ZeitgeistResultSet</returnvalue></link>&#160;*
+zeitgeist_index_search_finish (<parameter><link linkend="ZeitgeistIndex"><type>ZeitgeistIndex</type></link> *self</parameter>,
+                               <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                               <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Perform a full text search possibly restricted to a <link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> and/or set of event templates.</para>
+<para>The default boolean operator is <link linkend="AND:CAPS"><literal>AND</literal></link>. Thus the query <emphasis>foo bar</emphasis> will be interpreted as <emphasis>foo AND bar</emphasis>. To exclude a term from the result set prepend it with a minus sign - eg. <emphasis>foo -bar</emphasis>. Phrase queries can be done by double quoting the string <emphasis>&quot;foo is a bar&quot;</emphasis>. You can truncate terms by appending a *.</para><para>There are a few keys you can prefix to a term or phrase to search within a specific set of metadata. They are used like <emphasis>key:value</emphasis>. The keys <emphasis>name</emphasis> and <emphasis>title</emphasis> search strictly within the text field of the event subjects. The key <emphasis>app</emphasis> searches within the application name or description that is found in the actor attribute of the events. Lastly, you can use the <emphasis>site</emphasis> key to search within the domain name of subject URIs.</para><para>You can also control the results with the boolean operators <emphasis>AND</emphasis> and <emphasis>OR</emphasis> and you may use brackets, ( and ), to control the operator precedence.</para><para>FIXME: how do we put documentation into _finish? The total hit count of the query will be available via the returned result set by calling <link linkend="zeitgeist-result-set-estimated-matches"><function>zeitgeist_result_set_estimated_matches()</function></link>. This will often be bigger than the actual number of events held in the result set, which is limited by the <parameter>num_events</parameter> parameter passed to <link linkend="zeitgeist-index-search"><function>zeitgeist_index_search()</function></link>.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-index-search"><function><link linkend="zeitgeist-index-search"><function>zeitgeist_index_search()</function></link></function></link></para>
+<refsect3 id="zeitgeist-index-search-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistIndex"><type>ZeitgeistIndex</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-index-search-with-relevancies" role="function">
+<title>zeitgeist_index_search_with_relevancies&#160;()</title>
+<indexterm zone="zeitgeist-index-search-with-relevancies"><primary>zeitgeist_index_search_with_relevancies</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_index_search_with_relevancies
+                               (<parameter><link linkend="ZeitgeistIndex"><type>ZeitgeistIndex</type></link> *self</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *query</parameter>,
+                                <parameter><link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> *time_range</parameter>,
+                                <parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *event_templates</parameter>,
+                                <parameter><link linkend="ZeitgeistStorageState"><type>ZeitgeistStorageState</type></link> storage_state</parameter>,
+                                <parameter><link linkend="guint32"><type>guint32</type></link> offset</parameter>,
+                                <parameter><link linkend="guint32"><type>guint32</type></link> num_events</parameter>,
+                                <parameter><link linkend="ZeitgeistResultType"><type>ZeitgeistResultType</type></link> result_type</parameter>,
+                                <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>Perform a full text search possibly restricted to a <link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> and/or set of event templates. As opposed to <link linkend="zeitgeist-index-search"><function>zeitgeist_index_search()</function></link>, this call will also return numeric relevancies of the events in the <link linkend="ZeitgeistResultSet"><type>ZeitgeistResultSet</type></link>.</para>
+<para>See <link linkend="zeitgeist-index-search"><function>zeitgeist_index_search()</function></link> for more details on how to create the query.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-index-search-with-relevancies-finish"><function><link linkend="zeitgeist-index-search-with-relevancies-finish"><function>zeitgeist_index_search_with_relevancies_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-index-search-with-relevancies.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistIndex"><type>ZeitgeistIndex</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>The search string to send to Zeitgeist </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>time_range</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>Restrict matched events to ones within this time range. If you are not interested in restricting the timerange pass <link linkend="zeitgeist-time-range-new-anytime"><function>zeitgeist_time_range_new_anytime()</function></link> as Zeitgeist will detect this and optimize the query accordingly </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>event_templates</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>Restrict matched events to ones matching these templates </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>storage_state</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>Filter the events by availability of the storage medium. </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>Offset into the result set to read events from </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>num_events</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>Maximal number of events to retrieve </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>result_type</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>The <link linkend="ZeitgeistResultType"><type>ZeitgeistResultType</type></link> determining the sort order You may pass <link linkend="ZEITGEIST-RESULT-TYPE-RELEVANCY"><type>ZEITGEIST_RESULT_TYPE_RELEVANCY</type></link> to this method to have the results ordered by relevancy calculated in relation to &quot;query&quot; </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>a <link linkend="GCancellable"><type>GCancellable</type></link> to cancel the operation or <link linkend="NULL:CAPS"><literal>NULL</literal></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>relevancies</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>numeric relevancies of the events returned by result_set </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>array</acronym> length=relevancies_length1]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>relevancies_length1</para></entry>
+<entry role="parameter_description"><para>length of the <parameter>relevancies</parameter>
+array</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-index-search-with-relevancies-finish" role="function">
+<title>zeitgeist_index_search_with_relevancies_finish&#160;()</title>
+<indexterm zone="zeitgeist-index-search-with-relevancies-finish"><primary>zeitgeist_index_search_with_relevancies_finish</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistResultSet"><returnvalue>ZeitgeistResultSet</returnvalue></link>&#160;*
+zeitgeist_index_search_with_relevancies_finish
+                               (<parameter><link linkend="ZeitgeistIndex"><type>ZeitgeistIndex</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="gdouble"><type>gdouble</type></link> **relevancies</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> *relevancies_length1</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Perform a full text search possibly restricted to a <link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> and/or set of event templates. As opposed to <link linkend="zeitgeist-index-search"><function>zeitgeist_index_search()</function></link>, this call will also return numeric relevancies of the events in the <link linkend="ZeitgeistResultSet"><type>ZeitgeistResultSet</type></link>.</para>
+<para>See <link linkend="zeitgeist-index-search"><function>zeitgeist_index_search()</function></link> for more details on how to create the query.</para>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-index-search-with-relevancies"><function><link linkend="zeitgeist-index-search-with-relevancies"><function>zeitgeist_index_search_with_relevancies()</function></link></function></link></para>
+<refsect3 id="zeitgeist-index-search-with-relevancies-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistIndex"><type>ZeitgeistIndex</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-index-search-with-relevancies-finish.returns" role="returns">
+<title>Returns</title>
+<para><link linkend="ZeitgeistResultSet"><type>ZeitgeistResultSet</type></link> result_set. </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-index-new" role="function">
+<title>zeitgeist_index_new&#160;()</title>
+<indexterm zone="zeitgeist-index-new"><primary>zeitgeist_index_new</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistIndex"><returnvalue>ZeitgeistIndex</returnvalue></link>&#160;*
+zeitgeist_index_new (<parameter><type>void</type></parameter>);</programlisting>
+<para>Create a new index that interfaces with the default event index of the Zeitgeist daemon.</para>
+<para>Create a new <link linkend="zeitgeist-index-new"><function><link linkend="zeitgeist-index-new"><function>zeitgeist_index_new()</function></link></function></link> instance. The index will start to connect to Zeitgeist asynchronously. You can however start calling methods on the returned instance immediately, any method calls issued before the connection has been established will simply be queued and executed once the connection is up.</para><para>Returns: A reference to a newly allocated index. Free with <link linkend="g-object-unref"><function>g_object_unref()</function></link>.</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistIndex.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ZEITGEIST-TYPE-INDEX:CAPS" role="macro">
+<title>ZEITGEIST_TYPE_INDEX</title>
+<indexterm zone="ZEITGEIST-TYPE-INDEX:CAPS"><primary>ZEITGEIST_TYPE_INDEX</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_TYPE_INDEX (zeitgeist_index_get_type ())
+</programlisting>
+<para>The type for <link linkend="ZeitgeistIndex"><type>ZeitgeistIndex</type></link>.</para>
+</refsect2>
+<refsect2 id="ZeitgeistIndex-struct" role="struct">
+<title>struct ZeitgeistIndex</title>
+<indexterm zone="ZeitgeistIndex-struct"><primary>ZeitgeistIndex</primary></indexterm>
+<programlisting language="C">struct ZeitgeistIndex;</programlisting>
+<para>Query the Zeitgeist Full Text Search Extension</para>
+<para>include: zeitgeist.h</para>
+</refsect2>
+<refsect2 id="ZeitgeistIndexClass" role="struct">
+<title>struct ZeitgeistIndexClass</title>
+<indexterm zone="ZeitgeistIndexClass"><primary>ZeitgeistIndexClass</primary></indexterm>
+<programlisting language="C">struct ZeitgeistIndexClass {
+	ZeitgeistQueuedProxyWrapperClass parent_class;
+};
+</programlisting>
+<para>The class structure for <link linkend="ZEITGEIST-TYPE-INDEX:CAPS"><literal>ZEITGEIST_TYPE_INDEX</literal></link>. All the fields in this structure are private and should never be accessed directly.</para>
+<refsect3 id="ZeitgeistIndexClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+
+</refentry>

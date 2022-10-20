@@ -1,0 +1,205 @@
+Source: zeitgeist
+Section: utils
+Priority: optional
+Maintainer: Debian semweb Team <team+semweb@tracker.debian.org>
+Uploaders:
+ Jonas Smedegaard <dr@jones.dk>,
+Build-Depends:
+ bash-completion,
+ dbus-daemon <!nocheck>,
+ debhelper-compat (= 13),
+ dh-python,
+ gobject-introspection,
+ gtk-doc-tools,
+ libdee-dev,
+ libgirepository1.0-dev,
+ libglib2.0-dev,
+ libgtk-3-dev,
+ libjson-glib-dev,
+ libsqlite3-dev,
+ libtelepathy-glib-dev,
+ libxapian-dev,
+ pkg-kde-tools,
+ python3-gi,
+ python3-rdflib,
+ python3:any,
+ raptor2-utils,
+ valac,
+ valadoc,
+Homepage: https://zeitgeist.freedesktop.org/
+Standards-Version: 4.6.0
+Vcs-Git: https://salsa.debian.org/debian/zeitgeist.git
+Vcs-Browser: https://salsa.debian.org/debian/zeitgeist
+Rules-Requires-Root: no
+
+Package: gir1.2-zeitgeist-2.0
+Section: introspection
+Architecture: any
+Depends:
+ libzeitgeist-2.0-0 (= ${binary:Version}),
+ ${gir:Depends},
+ ${misc:Depends},
+Multi-Arch: same
+Description: library to access Zeitgeist - GObject introspection data
+ Zeitgeist is a service which logs the user's activities and events (files
+ opened, websites visited, conversations hold with other people, etc.) and
+ makes the relevant information available to other applications.
+ .
+ It serves as a comprehensive activity log and also makes it possible to
+ determine relationships between items based on usage patterns.
+ .
+ Libzeitgeist is a client library to access and manage the Zeitgeist event
+ log from languages such as C and Vala.
+ .
+ This package can be used by languages supporting the GIRepository format to
+ generate dynamic bindings.
+
+Package: libzeitgeist-2.0-0
+Section: libs
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Multi-Arch: same
+Pre-Depends:
+ ${misc:Pre-Depends},
+Suggests:
+ zeitgeist-core | zeitgeist,
+Description: library to access Zeitgeist - shared library
+ Zeitgeist is a service which logs the user's activities and events (files
+ opened, websites visited, conversations hold with other people, etc.) and
+ makes the relevant information available to other applications.
+ .
+ It serves as a comprehensive activity log and also makes it possible to
+ determine relationships between items based on usage patterns.
+ .
+ Libzeitgeist is a client library to access and manage the Zeitgeist event
+ log from languages such as C and Vala.
+ .
+ This package contains shared libraries to be used by applications.
+
+Package: libzeitgeist-2.0-dev
+Section: libdevel
+Architecture: any
+Depends:
+ gir1.2-zeitgeist-2.0 (= ${binary:Version}),
+ libglib2.0-dev,
+ libzeitgeist-2.0-0 (= ${binary:Version}),
+ ${misc:Depends},
+Suggests:
+ libzeitgeist-2.0-doc,
+Multi-Arch: same
+Description: library to access Zeitgeist - development files
+ Zeitgeist is a service which logs the user's activities and events (files
+ opened, websites visited, conversations hold with other people, etc.) and
+ makes the relevant information available to other applications.
+ .
+ It serves as a comprehensive activity log and also makes it possible to
+ determine relationships between items based on usage patterns.
+ .
+ Libzeitgeist is a client library to access and manage the Zeitgeist event
+ log from languages such as C and Vala.
+ .
+ This package contains files that are needed to build applications.
+
+Package: libzeitgeist-2.0-doc
+Section: doc
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+Suggests:
+ devhelp,
+Description: library to access Zeitgeist - documentation
+ Zeitgeist is a service which logs the user's activities and events (files
+ opened, websites visited, conversations hold with other people, etc.) and
+ makes the relevant information available to other applications.
+ .
+ It serves as a comprehensive activity log and also makes it possible to
+ determine relationships between items based on usage patterns.
+ .
+ Libzeitgeist is a client library to access and manage the Zeitgeist event
+ log from languages such as C and Vala.
+ .
+ This package contains the documentation.
+
+Package: python3-zeitgeist
+Architecture: all
+Section: python
+Depends:
+ python3-dbus,
+ python3-gi,
+ python3-xdg,
+ zeitgeist,
+ ${misc:Depends},
+ ${python3:Depends},
+Description: event logging framework - Python 3 bindings
+ Zeitgeist is a service which logs the user's activities and events (files
+ opened, websites visited, conversations held with other people, etc.) and
+ makes the relevant information available to other applications.
+ .
+ It serves as a comprehensive activity log and also makes it possible to
+ determine relationships between items based on usage patterns.
+ .
+ This package contains the Python 3 API.
+
+Package: zeitgeist
+Architecture: all
+Depends:
+ zeitgeist-core,
+ zeitgeist-datahub,
+ ${misc:Depends},
+Description: event logging framework
+ Zeitgeist is a service which logs the user's activities and events (files
+ opened, websites visited, conversations held with other people, etc.) and
+ makes the relevant information available to other applications.
+ .
+ It serves as a comprehensive activity log and also makes it possible to
+ determine relationships between items based on usage patterns.
+ .
+ This package depends on the Zeitgeist engine and a set of packages
+ (such as data providers) commonly used together with it,
+ and additionally provides the RDF ontologies used with Zeitgeist.
+
+Package: zeitgeist-core
+Architecture: any
+Pre-Depends:
+ ${misc:Pre-Depends},
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Suggests:
+ zeitgeist-datahub,
+Provides:
+ zeitgeist-extension-fts,
+Description: event logging framework - engine
+ Zeitgeist is a service which logs the user's activities and events (files
+ opened, websites visited, conversations held with other people, etc.) and
+ makes the relevant information available to other applications.
+ .
+ It serves as a comprehensive activity log and also makes it possible to
+ determine relationships between items based on usage patterns.
+ .
+ This package contains the main daemon (in its new Vala implementation,
+ codenamed "Bluebird"). It also includes the FTS (Full Text Search)
+ extension.
+
+Package: zeitgeist-datahub
+Architecture: any
+Depends:
+ zeitgeist-core,
+ ${misc:Depends},
+ ${shlibs:Depends},
+Enhances:
+ zeitgeist-core,
+Description: event logging framework - passive logging daemon
+ Zeitgeist is a service which logs the user's activities and events (files
+ opened, websites visited, conversations hold with other people, etc.) and
+ makes the relevant information available to other applications.
+ .
+ It serves as a comprehensive activity log and also makes it possible to
+ determine relationships between items based on usage patterns.
+ .
+ This package contains zeitgeist-datahub, a daemon which starts together with
+ the main engine and inserts information collected from GtkRecentlyUsed, KDE's
+ Recent Documents and several other sources into it.

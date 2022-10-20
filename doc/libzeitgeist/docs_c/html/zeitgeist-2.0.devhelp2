@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<book xmlns="http://www.devhelp.net/book" title="Zeitgeist Reference Manual" link="index.html" author="" name="zeitgeist-2.0" version="2" language="c">
+  <chapters>
+    <sub name="Classes" link="ch01.html">
+      <sub name="ZeitgeistEvent" link="ZeitgeistEvent.html"/>
+      <sub name="ZeitgeistLog" link="ZeitgeistLog.html"/>
+      <sub name="ZeitgeistMonitor" link="ZeitgeistMonitor.html"/>
+      <sub name="ZeitgeistResultSet" link="ZeitgeistResultSet.html"/>
+      <sub name="ZeitgeistSubject" link="ZeitgeistSubject.html"/>
+      <sub name="ZeitgeistTimeRange" link="ZeitgeistTimeRange.html"/>
+    </sub>
+    <sub name="Utility Functions" link="ch02.html">
+      <sub name="mimetype" link="zeitgeist-2.0-mimetype.html"/>
+      <sub name="timestamp" link="zeitgeist-2.0-timestamp.html"/>
+      <sub name="ontology" link="zeitgeist-2.0-ontology.html"/>
+    </sub>
+    <sub name="Enumerations and Macros" link="ch03.html">
+      <sub name="enumerations" link="zeitgeist-2.0-enumerations.html"/>
+      <sub name="ontology-uris" link="zeitgeist-2.0-ontology-uris.html"/>
+    </sub>
+    <sub name="API for Zeitgeist Extensions" link="ch04.html">
+      <sub name="ZeitgeistIndex" link="ZeitgeistIndex.html"/>
+      <sub name="data-source" link="zeitgeist-2.0-data-source.html"/>
+      <sub name="ZeitgeistDataSourceRegistry" link="ZeitgeistDataSourceRegistry.html"/>
+    </sub>
+    <sub name="Zeitgeist D-Bus API Reference" link="ch05.html">
+      <sub name="org.gnome.zeitgeist.Index" link="docs-org-gnome-zeitgeist-Index.html"/>
+      <sub name="org.gnome.zeitgeist.Monitor" link="docs-org-gnome-zeitgeist-Monitor.html"/>
+      <sub name="org.gnome.zeitgeist.Log" link="docs-org-gnome-zeitgeist-Log.html"/>
+      <sub name="org.gnome.zeitgeist.DataSourceRegistry" link="docs-org-gnome-zeitgeist-DataSourceRegistry.html"/>
+    </sub>
+    <sub name="Object Hierarchy" link="object-tree.html"/>
+    <sub name="API Index" link="api-index-full.html"/>
+    <sub name="Annotation Glossary" link="annotation-glossary.html"/>
+  </chapters>
+  <functions>
+    <keyword type="function" name="zeitgeist_event_get_subject ()" link="ZeitgeistEvent.html#zeitgeist-event-get-subject"/>
+    <keyword type="function" name="zeitgeist_event_num_subjects ()" link="ZeitgeistEvent.html#zeitgeist-event-num-subjects"/>
+    <keyword type="function" name="zeitgeist_event_add_subject ()" link="ZeitgeistEvent.html#zeitgeist-event-add-subject"/>
+    <keyword type="function" name="zeitgeist_event_take_subject ()" link="ZeitgeistEvent.html#zeitgeist-event-take-subject"/>
+    <keyword type="function" name="zeitgeist_event_set_actor_from_app_info ()" link="ZeitgeistEvent.html#zeitgeist-event-set-actor-from-app-info"/>
+    <keyword type="function" name="zeitgeist_event_to_variant ()" link="ZeitgeistEvent.html#zeitgeist-event-to-variant"/>
+    <keyword type="function" name="zeitgeist_event_debug_print ()" link="ZeitgeistEvent.html#zeitgeist-event-debug-print"/>
+    <keyword type="function" name="zeitgeist_event_matches_template ()" link="ZeitgeistEvent.html#zeitgeist-event-matches-template"/>
+    <keyword type="function" name="zeitgeist_event_new_full ()" link="ZeitgeistEvent.html#zeitgeist-event-new-full"/>
+    <keyword type="function" name="zeitgeist_event_new_from_variant ()" link="ZeitgeistEvent.html#zeitgeist-event-new-from-variant"/>
+    <keyword type="function" name="zeitgeist_event_new ()" link="ZeitgeistEvent.html#zeitgeist-event-new"/>
+    <keyword type="function" name="zeitgeist_event_get_id ()" link="ZeitgeistEvent.html#zeitgeist-event-get-id"/>
+    <keyword type="function" name="zeitgeist_event_set_id ()" link="ZeitgeistEvent.html#zeitgeist-event-set-id"/>
+    <keyword type="function" name="zeitgeist_event_get_timestamp ()" link="ZeitgeistEvent.html#zeitgeist-event-get-timestamp"/>
+    <keyword type="function" name="zeitgeist_event_set_timestamp ()" link="ZeitgeistEvent.html#zeitgeist-event-set-timestamp"/>
+    <keyword type="function" name="zeitgeist_event_get_origin ()" link="ZeitgeistEvent.html#zeitgeist-event-get-origin"/>
+    <keyword type="function" name="zeitgeist_event_set_origin ()" link="ZeitgeistEvent.html#zeitgeist-event-set-origin"/>
+    <keyword type="function" name="zeitgeist_event_get_actor ()" link="ZeitgeistEvent.html#zeitgeist-event-get-actor"/>
+    <keyword type="function" name="zeitgeist_event_set_actor ()" link="ZeitgeistEvent.html#zeitgeist-event-set-actor"/>
+    <keyword type="function" name="zeitgeist_event_get_interpretation ()" link="ZeitgeistEvent.html#zeitgeist-event-get-interpretation"/>
+    <keyword type="function" name="zeitgeist_event_set_interpretation ()" link="ZeitgeistEvent.html#zeitgeist-event-set-interpretation"/>
+    <keyword type="function" name="zeitgeist_event_get_manifestation ()" link="ZeitgeistEvent.html#zeitgeist-event-get-manifestation"/>
+    <keyword type="function" name="zeitgeist_event_set_manifestation ()" link="ZeitgeistEvent.html#zeitgeist-event-set-manifestation"/>
+    <keyword type="function" name="zeitgeist_event_get_subjects ()" link="ZeitgeistEvent.html#zeitgeist-event-get-subjects"/>
+    <keyword type="function" name="zeitgeist_event_set_subjects ()" link="ZeitgeistEvent.html#zeitgeist-event-set-subjects"/>
+    <keyword type="function" name="zeitgeist_event_get_payload ()" link="ZeitgeistEvent.html#zeitgeist-event-get-payload"/>
+    <keyword type="function" name="zeitgeist_event_set_payload ()" link="ZeitgeistEvent.html#zeitgeist-event-set-payload"/>
+    <keyword type="function" name="zeitgeist_events_from_variant ()" link="ZeitgeistEvent.html#zeitgeist-events-from-variant"/>
+    <keyword type="function" name="zeitgeist_events_to_variant ()" link="ZeitgeistEvent.html#zeitgeist-events-to-variant"/>
+    <keyword type="function" name="zeitgeist_events_to_variant_with_limit ()" link="ZeitgeistEvent.html#zeitgeist-events-to-variant-with-limit"/>
+    <keyword type="macro" name="ZEITGEIST_TYPE_EVENT" link="ZeitgeistEvent.html#ZEITGEIST-TYPE-EVENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_EVENT_SIGNATURE" link="ZeitgeistEvent.html#ZEITGEIST-EVENT-SIGNATURE:CAPS"/>
+    <keyword type="struct" name="struct ZeitgeistEvent" link="ZeitgeistEvent.html#ZeitgeistEvent-struct"/>
+    <keyword type="struct" name="struct ZeitgeistEventClass" link="ZeitgeistEvent.html#ZeitgeistEventClass"/>
+    <keyword type="property" name="The “actor” property" link="ZeitgeistEvent.html#ZeitgeistEvent--actor"/>
+    <keyword type="property" name="The “id” property" link="ZeitgeistEvent.html#ZeitgeistEvent--id"/>
+    <keyword type="property" name="The “interpretation” property" link="ZeitgeistEvent.html#ZeitgeistEvent--interpretation"/>
+    <keyword type="property" name="The “manifestation” property" link="ZeitgeistEvent.html#ZeitgeistEvent--manifestation"/>
+    <keyword type="property" name="The “origin” property" link="ZeitgeistEvent.html#ZeitgeistEvent--origin"/>
+    <keyword type="property" name="The “payload” property" link="ZeitgeistEvent.html#ZeitgeistEvent--payload"/>
+    <keyword type="property" name="The “subjects” property" link="ZeitgeistEvent.html#ZeitgeistEvent--subjects"/>
+    <keyword type="property" name="The “timestamp” property" link="ZeitgeistEvent.html#ZeitgeistEvent--timestamp"/>
+    <keyword type="function" name="zeitgeist_log_insert_event ()" link="ZeitgeistLog.html#zeitgeist-log-insert-event"/>
+    <keyword type="function" name="zeitgeist_log_insert_event_finish ()" link="ZeitgeistLog.html#zeitgeist-log-insert-event-finish"/>
+    <keyword type="function" name="zeitgeist_log_insert_events ()" link="ZeitgeistLog.html#zeitgeist-log-insert-events"/>
+    <keyword type="function" name="zeitgeist_log_insert_events_finish ()" link="ZeitgeistLog.html#zeitgeist-log-insert-events-finish"/>
+    <keyword type="function" name="zeitgeist_log_insert_event_no_reply ()" link="ZeitgeistLog.html#zeitgeist-log-insert-event-no-reply"/>
+    <keyword type="function" name="zeitgeist_log_insert_events_no_reply ()" link="ZeitgeistLog.html#zeitgeist-log-insert-events-no-reply"/>
+    <keyword type="function" name="zeitgeist_log_find_events ()" link="ZeitgeistLog.html#zeitgeist-log-find-events"/>
+    <keyword type="function" name="zeitgeist_log_find_events_finish ()" link="ZeitgeistLog.html#zeitgeist-log-find-events-finish"/>
+    <keyword type="function" name="zeitgeist_log_find_event_ids ()" link="ZeitgeistLog.html#zeitgeist-log-find-event-ids"/>
+    <keyword type="function" name="zeitgeist_log_find_event_ids_finish ()" link="ZeitgeistLog.html#zeitgeist-log-find-event-ids-finish"/>
+    <keyword type="function" name="zeitgeist_log_get_events ()" link="ZeitgeistLog.html#zeitgeist-log-get-events"/>
+    <keyword type="function" name="zeitgeist_log_get_events_finish ()" link="ZeitgeistLog.html#zeitgeist-log-get-events-finish"/>
+    <keyword type="function" name="zeitgeist_log_find_related_uris ()" link="ZeitgeistLog.html#zeitgeist-log-find-related-uris"/>
+    <keyword type="function" name="zeitgeist_log_find_related_uris_finish ()" link="ZeitgeistLog.html#zeitgeist-log-find-related-uris-finish"/>
+    <keyword type="function" name="zeitgeist_log_delete_events ()" link="ZeitgeistLog.html#zeitgeist-log-delete-events"/>
+    <keyword type="function" name="zeitgeist_log_delete_events_finish ()" link="ZeitgeistLog.html#zeitgeist-log-delete-events-finish"/>
+    <keyword type="function" name="zeitgeist_log_quit ()" link="ZeitgeistLog.html#zeitgeist-log-quit"/>
+    <keyword type="function" name="zeitgeist_log_quit_finish ()" link="ZeitgeistLog.html#zeitgeist-log-quit-finish"/>
+    <keyword type="function" name="zeitgeist_log_install_monitor ()" link="ZeitgeistLog.html#zeitgeist-log-install-monitor"/>
+    <keyword type="function" name="zeitgeist_log_remove_monitor ()" link="ZeitgeistLog.html#zeitgeist-log-remove-monitor"/>
+    <keyword type="function" name="zeitgeist_log_get_version ()" link="ZeitgeistLog.html#zeitgeist-log-get-version"/>
+    <keyword type="function" name="zeitgeist_log_get_extensions ()" link="ZeitgeistLog.html#zeitgeist-log-get-extensions"/>
+    <keyword type="function" name="zeitgeist_log_datapath ()" link="ZeitgeistLog.html#zeitgeist-log-datapath"/>
+    <keyword type="function" name="zeitgeist_log_new ()" link="ZeitgeistLog.html#zeitgeist-log-new"/>
+    <keyword type="function" name="zeitgeist_log_get_default ()" link="ZeitgeistLog.html#zeitgeist-log-get-default"/>
+    <keyword type="macro" name="ZEITGEIST_TYPE_LOG" link="ZeitgeistLog.html#ZEITGEIST-TYPE-LOG:CAPS"/>
+    <keyword type="struct" name="struct ZeitgeistLog" link="ZeitgeistLog.html#ZeitgeistLog-struct"/>
+    <keyword type="struct" name="struct ZeitgeistLogClass" link="ZeitgeistLog.html#ZeitgeistLogClass"/>
+    <keyword type="function" name="zeitgeist_monitor_get_templates ()" link="ZeitgeistMonitor.html#zeitgeist-monitor-get-templates"/>
+    <keyword type="function" name="zeitgeist_monitor_get_path ()" link="ZeitgeistMonitor.html#zeitgeist-monitor-get-path"/>
+    <keyword type="function" name="zeitgeist_monitor_new ()" link="ZeitgeistMonitor.html#zeitgeist-monitor-new"/>
+    <keyword type="function" name="zeitgeist_monitor_get_time_range ()" link="ZeitgeistMonitor.html#zeitgeist-monitor-get-time-range"/>
+    <keyword type="function" name="zeitgeist_monitor_set_time_range ()" link="ZeitgeistMonitor.html#zeitgeist-monitor-set-time-range"/>
+    <keyword type="function" name="zeitgeist_monitor_get_event_templates ()" link="ZeitgeistMonitor.html#zeitgeist-monitor-get-event-templates"/>
+    <keyword type="function" name="zeitgeist_monitor_set_event_templates ()" link="ZeitgeistMonitor.html#zeitgeist-monitor-set-event-templates"/>
+    <keyword type="macro" name="ZEITGEIST_TYPE_MONITOR" link="ZeitgeistMonitor.html#ZEITGEIST-TYPE-MONITOR:CAPS"/>
+    <keyword type="struct" name="struct ZeitgeistMonitor" link="ZeitgeistMonitor.html#ZeitgeistMonitor-struct"/>
+    <keyword type="struct" name="struct ZeitgeistMonitorClass" link="ZeitgeistMonitor.html#ZeitgeistMonitorClass"/>
+    <keyword type="property" name="The “event-templates” property" link="ZeitgeistMonitor.html#ZeitgeistMonitor--event-templates"/>
+    <keyword type="property" name="The “time-range” property" link="ZeitgeistMonitor.html#ZeitgeistMonitor--time-range"/>
+    <keyword type="signal" name="The “events-deleted” signal" link="ZeitgeistMonitor.html#ZeitgeistMonitor-events-deleted"/>
+    <keyword type="signal" name="The “events-inserted” signal" link="ZeitgeistMonitor.html#ZeitgeistMonitor-events-inserted"/>
+    <keyword type="function" name="zeitgeist_result_set_size ()" link="ZeitgeistResultSet.html#zeitgeist-result-set-size"/>
+    <keyword type="function" name="zeitgeist_result_set_estimated_matches ()" link="ZeitgeistResultSet.html#zeitgeist-result-set-estimated-matches"/>
+    <keyword type="function" name="zeitgeist_result_set_next_value ()" link="ZeitgeistResultSet.html#zeitgeist-result-set-next-value"/>
+    <keyword type="function" name="zeitgeist_result_set_has_next ()" link="ZeitgeistResultSet.html#zeitgeist-result-set-has-next"/>
+    <keyword type="function" name="zeitgeist_result_set_tell ()" link="ZeitgeistResultSet.html#zeitgeist-result-set-tell"/>
+    <keyword type="function" name="zeitgeist_result_set_reset ()" link="ZeitgeistResultSet.html#zeitgeist-result-set-reset"/>
+    <keyword type="function" name="zeitgeist_result_set_iterator ()" link="ZeitgeistResultSet.html#zeitgeist-result-set-iterator"/>
+    <keyword type="struct" name="ZeitgeistResultSet" link="ZeitgeistResultSet.html#ZeitgeistResultSet-struct"/>
+    <keyword type="struct" name="struct ZeitgeistResultSetIface" link="ZeitgeistResultSet.html#ZeitgeistResultSetIface"/>
+    <keyword type="function" name="zeitgeist_subject_to_variant ()" link="ZeitgeistSubject.html#zeitgeist-subject-to-variant"/>
+    <keyword type="function" name="zeitgeist_subject_matches_template ()" link="ZeitgeistSubject.html#zeitgeist-subject-matches-template"/>
+    <keyword type="function" name="zeitgeist_subject_new_full ()" link="ZeitgeistSubject.html#zeitgeist-subject-new-full"/>
+    <keyword type="function" name="zeitgeist_subject_new_move_event ()" link="ZeitgeistSubject.html#zeitgeist-subject-new-move-event"/>
+    <keyword type="function" name="zeitgeist_subject_new_from_variant ()" link="ZeitgeistSubject.html#zeitgeist-subject-new-from-variant"/>
+    <keyword type="function" name="zeitgeist_subject_new ()" link="ZeitgeistSubject.html#zeitgeist-subject-new"/>
+    <keyword type="function" name="zeitgeist_subject_get_uri ()" link="ZeitgeistSubject.html#zeitgeist-subject-get-uri"/>
+    <keyword type="function" name="zeitgeist_subject_set_uri ()" link="ZeitgeistSubject.html#zeitgeist-subject-set-uri"/>
+    <keyword type="function" name="zeitgeist_subject_get_origin ()" link="ZeitgeistSubject.html#zeitgeist-subject-get-origin"/>
+    <keyword type="function" name="zeitgeist_subject_set_origin ()" link="ZeitgeistSubject.html#zeitgeist-subject-set-origin"/>
+    <keyword type="function" name="zeitgeist_subject_get_text ()" link="ZeitgeistSubject.html#zeitgeist-subject-get-text"/>
+    <keyword type="function" name="zeitgeist_subject_set_text ()" link="ZeitgeistSubject.html#zeitgeist-subject-set-text"/>
+    <keyword type="function" name="zeitgeist_subject_get_storage ()" link="ZeitgeistSubject.html#zeitgeist-subject-get-storage"/>
+    <keyword type="function" name="zeitgeist_subject_set_storage ()" link="ZeitgeistSubject.html#zeitgeist-subject-set-storage"/>
+    <keyword type="function" name="zeitgeist_subject_get_current_uri ()" link="ZeitgeistSubject.html#zeitgeist-subject-get-current-uri"/>
+    <keyword type="function" name="zeitgeist_subject_set_current_uri ()" link="ZeitgeistSubject.html#zeitgeist-subject-set-current-uri"/>
+    <keyword type="function" name="zeitgeist_subject_get_current_origin ()" link="ZeitgeistSubject.html#zeitgeist-subject-get-current-origin"/>
+    <keyword type="function" name="zeitgeist_subject_set_current_origin ()" link="ZeitgeistSubject.html#zeitgeist-subject-set-current-origin"/>
+    <keyword type="function" name="zeitgeist_subject_get_mimetype ()" link="ZeitgeistSubject.html#zeitgeist-subject-get-mimetype"/>
+    <keyword type="function" name="zeitgeist_subject_set_mimetype ()" link="ZeitgeistSubject.html#zeitgeist-subject-set-mimetype"/>
+    <keyword type="function" name="zeitgeist_subject_get_interpretation ()" link="ZeitgeistSubject.html#zeitgeist-subject-get-interpretation"/>
+    <keyword type="function" name="zeitgeist_subject_set_interpretation ()" link="ZeitgeistSubject.html#zeitgeist-subject-set-interpretation"/>
+    <keyword type="function" name="zeitgeist_subject_get_manifestation ()" link="ZeitgeistSubject.html#zeitgeist-subject-get-manifestation"/>
+    <keyword type="function" name="zeitgeist_subject_set_manifestation ()" link="ZeitgeistSubject.html#zeitgeist-subject-set-manifestation"/>
+    <keyword type="macro" name="ZEITGEIST_TYPE_SUBJECT" link="ZeitgeistSubject.html#ZEITGEIST-TYPE-SUBJECT:CAPS"/>
+    <keyword type="struct" name="struct ZeitgeistSubject" link="ZeitgeistSubject.html#ZeitgeistSubject-struct"/>
+    <keyword type="struct" name="struct ZeitgeistSubjectClass" link="ZeitgeistSubject.html#ZeitgeistSubjectClass"/>
+    <keyword type="property" name="The “current-origin” property" link="ZeitgeistSubject.html#ZeitgeistSubject--current-origin"/>
+    <keyword type="property" name="The “current-uri” property" link="ZeitgeistSubject.html#ZeitgeistSubject--current-uri"/>
+    <keyword type="property" name="The “interpretation” property" link="ZeitgeistSubject.html#ZeitgeistSubject--interpretation"/>
+    <keyword type="property" name="The “manifestation” property" link="ZeitgeistSubject.html#ZeitgeistSubject--manifestation"/>
+    <keyword type="property" name="The “mimetype” property" link="ZeitgeistSubject.html#ZeitgeistSubject--mimetype"/>
+    <keyword type="property" name="The “origin” property" link="ZeitgeistSubject.html#ZeitgeistSubject--origin"/>
+    <keyword type="property" name="The “storage” property" link="ZeitgeistSubject.html#ZeitgeistSubject--storage"/>
+    <keyword type="property" name="The “text” property" link="ZeitgeistSubject.html#ZeitgeistSubject--text"/>
+    <keyword type="property" name="The “uri” property" link="ZeitgeistSubject.html#ZeitgeistSubject--uri"/>
+    <keyword type="function" name="zeitgeist_time_range_to_variant ()" link="ZeitgeistTimeRange.html#zeitgeist-time-range-to-variant"/>
+    <keyword type="function" name="zeitgeist_time_range_intersect ()" link="ZeitgeistTimeRange.html#zeitgeist-time-range-intersect"/>
+    <keyword type="function" name="zeitgeist_time_range_new ()" link="ZeitgeistTimeRange.html#zeitgeist-time-range-new"/>
+    <keyword type="function" name="zeitgeist_time_range_new_anytime ()" link="ZeitgeistTimeRange.html#zeitgeist-time-range-new-anytime"/>
+    <keyword type="function" name="zeitgeist_time_range_new_to_now ()" link="ZeitgeistTimeRange.html#zeitgeist-time-range-new-to-now"/>
+    <keyword type="function" name="zeitgeist_time_range_new_from_now ()" link="ZeitgeistTimeRange.html#zeitgeist-time-range-new-from-now"/>
+    <keyword type="function" name="zeitgeist_time_range_new_from_variant ()" link="ZeitgeistTimeRange.html#zeitgeist-time-range-new-from-variant"/>
+    <keyword type="function" name="zeitgeist_time_range_get_start ()" link="ZeitgeistTimeRange.html#zeitgeist-time-range-get-start"/>
+    <keyword type="function" name="zeitgeist_time_range_get_end ()" link="ZeitgeistTimeRange.html#zeitgeist-time-range-get-end"/>
+    <keyword type="macro" name="ZEITGEIST_TYPE_TIME_RANGE" link="ZeitgeistTimeRange.html#ZEITGEIST-TYPE-TIME-RANGE:CAPS"/>
+    <keyword type="struct" name="struct ZeitgeistTimeRange" link="ZeitgeistTimeRange.html#ZeitgeistTimeRange-struct"/>
+    <keyword type="struct" name="struct ZeitgeistTimeRangeClass" link="ZeitgeistTimeRange.html#ZeitgeistTimeRangeClass"/>
+    <keyword type="property" name="The “end” property" link="ZeitgeistTimeRange.html#ZeitgeistTimeRange--end"/>
+    <keyword type="property" name="The “start” property" link="ZeitgeistTimeRange.html#ZeitgeistTimeRange--start"/>
+    <keyword type="function" name="zeitgeist_register_mimetype ()" link="zeitgeist-2.0-mimetype.html#zeitgeist-register-mimetype"/>
+    <keyword type="function" name="zeitgeist_register_mimetype_regex ()" link="zeitgeist-2.0-mimetype.html#zeitgeist-register-mimetype-regex"/>
+    <keyword type="function" name="zeitgeist_interpretation_for_mimetype ()" link="zeitgeist-2.0-mimetype.html#zeitgeist-interpretation-for-mimetype"/>
+    <keyword type="function" name="zeitgeist_register_uri_scheme ()" link="zeitgeist-2.0-mimetype.html#zeitgeist-register-uri-scheme"/>
+    <keyword type="function" name="zeitgeist_manifestation_for_uri ()" link="zeitgeist-2.0-mimetype.html#zeitgeist-manifestation-for-uri"/>
+    <keyword type="function" name="zeitgeist_timestamp_from_timeval ()" link="zeitgeist-2.0-timestamp.html#zeitgeist-timestamp-from-timeval"/>
+    <keyword type="function" name="zeitgeist_timestamp_to_timeval ()" link="zeitgeist-2.0-timestamp.html#zeitgeist-timestamp-to-timeval"/>
+    <keyword type="function" name="zeitgeist_timestamp_from_now ()" link="zeitgeist-2.0-timestamp.html#zeitgeist-timestamp-from-now"/>
+    <keyword type="function" name="zeitgeist_timestamp_from_iso8601 ()" link="zeitgeist-2.0-timestamp.html#zeitgeist-timestamp-from-iso8601"/>
+    <keyword type="function" name="zeitgeist_timestamp_to_iso8601 ()" link="zeitgeist-2.0-timestamp.html#zeitgeist-timestamp-to-iso8601"/>
+    <keyword type="function" name="zeitgeist_timestamp_from_date ()" link="zeitgeist-2.0-timestamp.html#zeitgeist-timestamp-from-date"/>
+    <keyword type="function" name="zeitgeist_timestamp_from_dmy ()" link="zeitgeist-2.0-timestamp.html#zeitgeist-timestamp-from-dmy"/>
+    <keyword type="function" name="zeitgeist_timestamp_to_date ()" link="zeitgeist-2.0-timestamp.html#zeitgeist-timestamp-to-date"/>
+    <keyword type="function" name="zeitgeist_timestamp_next_midnight ()" link="zeitgeist-2.0-timestamp.html#zeitgeist-timestamp-next-midnight"/>
+    <keyword type="function" name="zeitgeist_timestamp_prev_midnight ()" link="zeitgeist-2.0-timestamp.html#zeitgeist-timestamp-prev-midnight"/>
+    <keyword type="macro" name="ZEITGEIST_TIMESTAMP_SECOND" link="zeitgeist-2.0-timestamp.html#ZEITGEIST-TIMESTAMP-SECOND:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_TIMESTAMP_MINUTE" link="zeitgeist-2.0-timestamp.html#ZEITGEIST-TIMESTAMP-MINUTE:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_TIMESTAMP_HOUR" link="zeitgeist-2.0-timestamp.html#ZEITGEIST-TIMESTAMP-HOUR:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_TIMESTAMP_DAY" link="zeitgeist-2.0-timestamp.html#ZEITGEIST-TIMESTAMP-DAY:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_TIMESTAMP_WEEK" link="zeitgeist-2.0-timestamp.html#ZEITGEIST-TIMESTAMP-WEEK:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_TIMESTAMP_YEAR" link="zeitgeist-2.0-timestamp.html#ZEITGEIST-TIMESTAMP-YEAR:CAPS"/>
+    <keyword type="function" name="zeitgeist_symbol_get_display_name ()" link="zeitgeist-2.0-ontology.html#zeitgeist-symbol-get-display-name"/>
+    <keyword type="function" name="zeitgeist_symbol_get_description ()" link="zeitgeist-2.0-ontology.html#zeitgeist-symbol-get-description"/>
+    <keyword type="function" name="zeitgeist_symbol_get_all_parents ()" link="zeitgeist-2.0-ontology.html#zeitgeist-symbol-get-all-parents"/>
+    <keyword type="function" name="zeitgeist_symbol_get_all_children ()" link="zeitgeist-2.0-ontology.html#zeitgeist-symbol-get-all-children"/>
+    <keyword type="function" name="zeitgeist_symbol_get_children ()" link="zeitgeist-2.0-ontology.html#zeitgeist-symbol-get-children"/>
+    <keyword type="function" name="zeitgeist_symbol_get_parents ()" link="zeitgeist-2.0-ontology.html#zeitgeist-symbol-get-parents"/>
+    <keyword type="function" name="zeitgeist_symbol_is_a ()" link="zeitgeist-2.0-ontology.html#zeitgeist-symbol-is-a"/>
+    <keyword type="function" name="zeitgeist_result_type_is_sort_order_asc ()" link="zeitgeist-2.0-enumerations.html#zeitgeist-result-type-is-sort-order-asc"/>
+    <keyword type="enum" name="enum ZeitgeistResultType" link="zeitgeist-2.0-enumerations.html#ZeitgeistResultType"/>
+    <keyword type="enum" name="enum ZeitgeistRelevantResultType" link="zeitgeist-2.0-enumerations.html#ZeitgeistRelevantResultType"/>
+    <keyword type="enum" name="enum ZeitgeistStorageState" link="zeitgeist-2.0-enumerations.html#ZeitgeistStorageState"/>
+    <keyword type="enum" name="enum ZeitgeistDataModelError" link="zeitgeist-2.0-enumerations.html#ZeitgeistDataModelError"/>
+    <keyword type="macro" name="ZEITGEIST_NCAL_ALARM" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NCAL-ALARM:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NCAL_ATTACHMENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NCAL-ATTACHMENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NCAL_CALENDAR" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NCAL-CALENDAR:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NCAL_CALENDAR_DATA_OBJECT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NCAL-CALENDAR-DATA-OBJECT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NCAL_EVENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NCAL-EVENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NCAL_FREEBUSY" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NCAL-FREEBUSY:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NCAL_JOURNAL" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NCAL-JOURNAL:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NCAL_TIMEZONE" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NCAL-TIMEZONE:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NCAL_TODO" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NCAL-TODO:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NCO_CONTACT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NCO-CONTACT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NCO_CONTACT_GROUP" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NCO-CONTACT-GROUP:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NCO_CONTACT_LIST" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NCO-CONTACT-LIST:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NCO_CONTACT_LIST_DATA_OBJECT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NCO-CONTACT-LIST-DATA-OBJECT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NCO_ORGANIZATION_CONTACT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NCO-ORGANIZATION-CONTACT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NCO_PERSON_CONTACT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NCO-PERSON-CONTACT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_APPLICATION" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-APPLICATION:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_ARCHIVE" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-ARCHIVE:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_ARCHIVE_ITEM" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-ARCHIVE-ITEM:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_ATTACHMENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-ATTACHMENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_AUDIO" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-AUDIO:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_BOOKMARK" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-BOOKMARK:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_BOOKMARK_FOLDER" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-BOOKMARK-FOLDER:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_CURSOR" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-CURSOR:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_DATA_CONTAINER" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-DATA-CONTAINER:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_DELETED_RESOURCE" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-DELETED-RESOURCE:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_DOCUMENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-DOCUMENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_EMBEDDED_FILE_DATA_OBJECT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-EMBEDDED-FILE-DATA-OBJECT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_EXECUTABLE" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-EXECUTABLE:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_FILESYSTEM" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-FILESYSTEM:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_FILESYSTEM_IMAGE" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-FILESYSTEM-IMAGE:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_FILE_DATA_OBJECT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-FILE-DATA-OBJECT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_FOLDER" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-FOLDER:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_FONT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-FONT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_HARD_DISK_PARTITION" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-HARD-DISK-PARTITION:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_HTML_DOCUMENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-HTML-DOCUMENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_ICON" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-ICON:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_IMAGE" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-IMAGE:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_MEDIA" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-MEDIA:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_MEDIA_LIST" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-MEDIA-LIST:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_MEDIA_STREAM" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-MEDIA-STREAM:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_MIND_MAP" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-MIND-MAP:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_OPERATING_SYSTEM" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-OPERATING-SYSTEM:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_PAGINATED_TEXT_DOCUMENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-PAGINATED-TEXT-DOCUMENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_PLAIN_TEXT_DOCUMENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-PLAIN-TEXT-DOCUMENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_PRESENTATION" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-PRESENTATION:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_RASTER_IMAGE" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-RASTER-IMAGE:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_REMOTE_DATA_OBJECT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-REMOTE-DATA-OBJECT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_REMOTE_PORT_ADDRESS" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-REMOTE-PORT-ADDRESS:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_SOFTWARE" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-SOFTWARE:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_SOFTWARE_ITEM" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-SOFTWARE-ITEM:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_SOFTWARE_SERVICE" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-SOFTWARE-SERVICE:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_SOURCE_CODE" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-SOURCE-CODE:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_SPREADSHEET" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-SPREADSHEET:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_TEXT_DOCUMENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-TEXT-DOCUMENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_TRASH" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-TRASH:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_VECTOR_IMAGE" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-VECTOR-IMAGE:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_VIDEO" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-VIDEO:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_VISUAL" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-VISUAL:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_WEBSITE" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-WEBSITE:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NFO_WEB_DATA_OBJECT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NFO-WEB-DATA-OBJECT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NIE_DATA_OBJECT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NIE-DATA-OBJECT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NIE_INFORMATION_ELEMENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NIE-INFORMATION-ELEMENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NMM_MOVIE" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NMM-MOVIE:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NMM_MUSIC_ALBUM" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NMM-MUSIC-ALBUM:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NMM_MUSIC_PIECE" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NMM-MUSIC-PIECE:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NMM_TVSERIES" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NMM-TVSERIES:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NMM_TVSHOW" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NMM-TVSHOW:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NMO_EMAIL" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NMO-EMAIL:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NMO_IMMESSAGE" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NMO-IMMESSAGE:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NMO_MAILBOX" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NMO-MAILBOX:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NMO_MAILBOX_DATA_OBJECT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NMO-MAILBOX-DATA-OBJECT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NMO_MESSAGE" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NMO-MESSAGE:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_NMO_MIME_ENTITY" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-NMO-MIME-ENTITY:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_ACCEPT_EVENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-ACCEPT-EVENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_ACCESS_EVENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-ACCESS-EVENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_APPLICATION_ACTION" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-APPLICATION-ACTION:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_CREATE_EVENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-CREATE-EVENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_DELETE_EVENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-DELETE-EVENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_DENY_EVENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-DENY-EVENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_EVENT_INTERPRETATION" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-EVENT-INTERPRETATION:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_EVENT_MANIFESTATION" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-EVENT-MANIFESTATION:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_EXPIRE_EVENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-EXPIRE-EVENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_HEURISTIC_ACTIVITY" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-HEURISTIC-ACTIVITY:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_LEAVE_EVENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-LEAVE-EVENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_MODIFY_EVENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-MODIFY-EVENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_MOVE_EVENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-MOVE-EVENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_RECEIVE_EVENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-RECEIVE-EVENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_SCHEDULED_ACTIVITY" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-SCHEDULED-ACTIVITY:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_SEND_EVENT" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-SEND-EVENT:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_SYSTEM_NOTIFICATION" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-SYSTEM-NOTIFICATION:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_USER_ACTIVITY" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-USER-ACTIVITY:CAPS"/>
+    <keyword type="macro" name="ZEITGEIST_ZG_WORLD_ACTIVITY" link="zeitgeist-2.0-ontology-uris.html#ZEITGEIST-ZG-WORLD-ACTIVITY:CAPS"/>
+    <keyword type="function" name="zeitgeist_index_search ()" link="ZeitgeistIndex.html#zeitgeist-index-search"/>
+    <keyword type="function" name="zeitgeist_index_search_finish ()" link="ZeitgeistIndex.html#zeitgeist-index-search-finish"/>
+    <keyword type="function" name="zeitgeist_index_search_with_relevancies ()" link="ZeitgeistIndex.html#zeitgeist-index-search-with-relevancies"/>
+    <keyword type="function" name="zeitgeist_index_search_with_relevancies_finish ()" link="ZeitgeistIndex.html#zeitgeist-index-search-with-relevancies-finish"/>
+    <keyword type="function" name="zeitgeist_index_new ()" link="ZeitgeistIndex.html#zeitgeist-index-new"/>
+    <keyword type="macro" name="ZEITGEIST_TYPE_INDEX" link="ZeitgeistIndex.html#ZEITGEIST-TYPE-INDEX:CAPS"/>
+    <keyword type="struct" name="struct ZeitgeistIndex" link="ZeitgeistIndex.html#ZeitgeistIndex-struct"/>
+    <keyword type="struct" name="struct ZeitgeistIndexClass" link="ZeitgeistIndex.html#ZeitgeistIndexClass"/>
+    <keyword type="function" name="zeitgeist_data_source_to_variant ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-to-variant"/>
+    <keyword type="function" name="zeitgeist_data_source_new ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-new"/>
+    <keyword type="function" name="zeitgeist_data_source_new_full ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-new-full"/>
+    <keyword type="function" name="zeitgeist_data_source_new_from_variant ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-new-from-variant"/>
+    <keyword type="function" name="zeitgeist_data_source_get_unique_id ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-get-unique-id"/>
+    <keyword type="function" name="zeitgeist_data_source_set_unique_id ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-set-unique-id"/>
+    <keyword type="function" name="zeitgeist_data_source_get_name ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-get-name"/>
+    <keyword type="function" name="zeitgeist_data_source_set_name ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-set-name"/>
+    <keyword type="function" name="zeitgeist_data_source_get_description ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-get-description"/>
+    <keyword type="function" name="zeitgeist_data_source_set_description ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-set-description"/>
+    <keyword type="function" name="zeitgeist_data_source_get_event_templates ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-get-event-templates"/>
+    <keyword type="function" name="zeitgeist_data_source_set_event_templates ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-set-event-templates"/>
+    <keyword type="function" name="zeitgeist_data_source_get_enabled ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-get-enabled"/>
+    <keyword type="function" name="zeitgeist_data_source_set_enabled ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-set-enabled"/>
+    <keyword type="function" name="zeitgeist_data_source_get_running ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-get-running"/>
+    <keyword type="function" name="zeitgeist_data_source_set_running ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-set-running"/>
+    <keyword type="function" name="zeitgeist_data_source_get_timestamp ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-get-timestamp"/>
+    <keyword type="function" name="zeitgeist_data_source_set_timestamp ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-source-set-timestamp"/>
+    <keyword type="function" name="zeitgeist_data_sources_from_variant ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-sources-from-variant"/>
+    <keyword type="function" name="zeitgeist_data_sources_to_variant ()" link="zeitgeist-2.0-data-source.html#zeitgeist-data-sources-to-variant"/>
+    <keyword type="macro" name="ZEITGEIST_TYPE_DATA_SOURCE" link="zeitgeist-2.0-data-source.html#ZEITGEIST-TYPE-DATA-SOURCE:CAPS"/>
+    <keyword type="struct" name="struct ZeitgeistDataSource" link="zeitgeist-2.0-data-source.html#ZeitgeistDataSource-struct"/>
+    <keyword type="struct" name="struct ZeitgeistDataSourceClass" link="zeitgeist-2.0-data-source.html#ZeitgeistDataSourceClass"/>
+    <keyword type="macro" name="ZEITGEIST_DATA_SOURCES_SIG_DATASOURCES" link="zeitgeist-2.0-data-source.html#ZEITGEIST-DATA-SOURCES-SIG-DATASOURCES:CAPS"/>
+    <keyword type="property" name="The “description” property" link="zeitgeist-2.0-data-source.html#ZeitgeistDataSource--description"/>
+    <keyword type="property" name="The “enabled” property" link="zeitgeist-2.0-data-source.html#ZeitgeistDataSource--enabled"/>
+    <keyword type="property" name="The “event-templates” property" link="zeitgeist-2.0-data-source.html#ZeitgeistDataSource--event-templates"/>
+    <keyword type="property" name="The “name” property" link="zeitgeist-2.0-data-source.html#ZeitgeistDataSource--name"/>
+    <keyword type="property" name="The “running” property" link="zeitgeist-2.0-data-source.html#ZeitgeistDataSource--running"/>
+    <keyword type="property" name="The “timestamp” property" link="zeitgeist-2.0-data-source.html#ZeitgeistDataSource--timestamp"/>
+    <keyword type="property" name="The “unique-id” property" link="zeitgeist-2.0-data-source.html#ZeitgeistDataSource--unique-id"/>
+    <keyword type="function" name="zeitgeist_data_source_registry_get_data_sources ()" link="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-get-data-sources"/>
+    <keyword type="function" name="zeitgeist_data_source_registry_get_data_sources_finish ()" link="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-get-data-sources-finish"/>
+    <keyword type="function" name="zeitgeist_data_source_registry_get_data_source_from_id ()" link="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-get-data-source-from-id"/>
+    <keyword type="function" name="zeitgeist_data_source_registry_get_data_source_from_id_finish ()" link="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-get-data-source-from-id-finish"/>
+    <keyword type="function" name="zeitgeist_data_source_registry_register_data_source ()" link="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-register-data-source"/>
+    <keyword type="function" name="zeitgeist_data_source_registry_register_data_source_finish ()" link="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-register-data-source-finish"/>
+    <keyword type="function" name="zeitgeist_data_source_registry_set_data_source_enabled ()" link="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-set-data-source-enabled"/>
+    <keyword type="function" name="zeitgeist_data_source_registry_set_data_source_enabled_finish ()" link="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-set-data-source-enabled-finish"/>
+    <keyword type="function" name="zeitgeist_data_source_registry_new ()" link="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-new"/>
+    <keyword type="function" name="zeitgeist_remote_registry_get_data_sources ()" link="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-get-data-sources"/>
+    <keyword type="function" name="zeitgeist_remote_registry_get_data_sources_finish ()" link="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-get-data-sources-finish"/>
+    <keyword type="function" name="zeitgeist_remote_registry_register_data_source ()" link="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-register-data-source"/>
+    <keyword type="function" name="zeitgeist_remote_registry_register_data_source_finish ()" link="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-register-data-source-finish"/>
+    <keyword type="function" name="zeitgeist_remote_registry_set_data_source_enabled ()" link="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-set-data-source-enabled"/>
+    <keyword type="function" name="zeitgeist_remote_registry_set_data_source_enabled_finish ()" link="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-set-data-source-enabled-finish"/>
+    <keyword type="function" name="zeitgeist_remote_registry_get_data_source_from_id ()" link="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-get-data-source-from-id"/>
+    <keyword type="function" name="zeitgeist_remote_registry_get_data_source_from_id_finish ()" link="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-get-data-source-from-id-finish"/>
+    <keyword type="macro" name="ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY" link="ZeitgeistDataSourceRegistry.html#ZEITGEIST-TYPE-DATA-SOURCE-REGISTRY:CAPS"/>
+    <keyword type="struct" name="struct ZeitgeistDataSourceRegistry" link="ZeitgeistDataSourceRegistry.html#ZeitgeistDataSourceRegistry-struct"/>
+    <keyword type="struct" name="struct ZeitgeistDataSourceRegistryClass" link="ZeitgeistDataSourceRegistry.html#ZeitgeistDataSourceRegistryClass"/>
+    <keyword type="struct" name="ZeitgeistRemoteRegistry" link="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry-struct"/>
+    <keyword type="struct" name="struct ZeitgeistRemoteRegistryIface" link="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistryIface"/>
+    <keyword type="signal" name="The “source-disconnected” signal" link="ZeitgeistDataSourceRegistry.html#ZeitgeistDataSourceRegistry-source-disconnected"/>
+    <keyword type="signal" name="The “source-enabled” signal" link="ZeitgeistDataSourceRegistry.html#ZeitgeistDataSourceRegistry-source-enabled"/>
+    <keyword type="signal" name="The “source-registered” signal" link="ZeitgeistDataSourceRegistry.html#ZeitgeistDataSourceRegistry-source-registered"/>
+    <keyword type="signal" name="The “data-source-disconnected” signal" link="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry-data-source-disconnected"/>
+    <keyword type="signal" name="The “data-source-enabled” signal" link="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry-data-source-enabled"/>
+    <keyword type="signal" name="The “data-source-registered” signal" link="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry-data-source-registered"/>
+    <keyword type="function" name="Search ()" link="docs-org-gnome-zeitgeist-Index.html#org-gnome-zeitgeist-Index-Search"/>
+    <keyword type="function" name="SearchWithRelevancies ()" link="docs-org-gnome-zeitgeist-Index.html#org-gnome-zeitgeist-Index-SearchWithRelevancies"/>
+    <keyword type="function" name="NotifyInsert ()" link="docs-org-gnome-zeitgeist-Monitor.html#org-gnome-zeitgeist-Monitor-NotifyInsert"/>
+    <keyword type="function" name="NotifyDelete ()" link="docs-org-gnome-zeitgeist-Monitor.html#org-gnome-zeitgeist-Monitor-NotifyDelete"/>
+    <keyword type="function" name="DeleteEvents ()" link="docs-org-gnome-zeitgeist-Log.html#org-gnome-zeitgeist-Log-DeleteEvents"/>
+    <keyword type="function" name="FindEventIds ()" link="docs-org-gnome-zeitgeist-Log.html#org-gnome-zeitgeist-Log-FindEventIds"/>
+    <keyword type="function" name="FindEvents ()" link="docs-org-gnome-zeitgeist-Log.html#org-gnome-zeitgeist-Log-FindEvents"/>
+    <keyword type="function" name="FindRelatedUris ()" link="docs-org-gnome-zeitgeist-Log.html#org-gnome-zeitgeist-Log-FindRelatedUris"/>
+    <keyword type="function" name="GetEvents ()" link="docs-org-gnome-zeitgeist-Log.html#org-gnome-zeitgeist-Log-GetEvents"/>
+    <keyword type="function" name="InsertEvents ()" link="docs-org-gnome-zeitgeist-Log.html#org-gnome-zeitgeist-Log-InsertEvents"/>
+    <keyword type="function" name="InstallMonitor ()" link="docs-org-gnome-zeitgeist-Log.html#org-gnome-zeitgeist-Log-InstallMonitor"/>
+    <keyword type="function" name="RemoveMonitor ()" link="docs-org-gnome-zeitgeist-Log.html#org-gnome-zeitgeist-Log-RemoveMonitor"/>
+    <keyword type="function" name="Quit ()" link="docs-org-gnome-zeitgeist-Log.html#org-gnome-zeitgeist-Log-Quit"/>
+    <keyword type="function" name="GetDataSources ()" link="docs-org-gnome-zeitgeist-DataSourceRegistry.html#org-gnome-zeitgeist-DataSourceRegistry-GetDataSources"/>
+    <keyword type="function" name="RegisterDataSource ()" link="docs-org-gnome-zeitgeist-DataSourceRegistry.html#org-gnome-zeitgeist-DataSourceRegistry-RegisterDataSource"/>
+    <keyword type="function" name="SetDataSourceEnabled ()" link="docs-org-gnome-zeitgeist-DataSourceRegistry.html#org-gnome-zeitgeist-DataSourceRegistry-SetDataSourceEnabled"/>
+    <keyword type="function" name="GetDataSourceFromId ()" link="docs-org-gnome-zeitgeist-DataSourceRegistry.html#org-gnome-zeitgeist-DataSourceRegistry-GetDataSourceFromId"/>
+    <keyword type="signal" name="The DataSourceDisconnected signal" link="docs-org-gnome-zeitgeist-DataSourceRegistry.html#org-gnome-zeitgeist-DataSourceRegistry-DataSourceDisconnected"/>
+    <keyword type="signal" name="The DataSourceEnabled signal" link="docs-org-gnome-zeitgeist-DataSourceRegistry.html#org-gnome-zeitgeist-DataSourceRegistry-DataSourceEnabled"/>
+    <keyword type="signal" name="The DataSourceRegistered signal" link="docs-org-gnome-zeitgeist-DataSourceRegistry.html#org-gnome-zeitgeist-DataSourceRegistry-DataSourceRegistered"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_MOST_RECENT_EVENTS" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-MOST-RECENT-EVENTS:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_LEAST_RECENT_EVENTS" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-LEAST-RECENT-EVENTS:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_MOST_RECENT_SUBJECTS" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-MOST-RECENT-SUBJECTS:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_LEAST_RECENT_SUBJECTS" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-LEAST-RECENT-SUBJECTS:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_MOST_POPULAR_SUBJECTS" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-MOST-POPULAR-SUBJECTS:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_SUBJECTS" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-LEAST-POPULAR-SUBJECTS:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_MOST_POPULAR_ACTOR" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-MOST-POPULAR-ACTOR:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_ACTOR" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-LEAST-POPULAR-ACTOR:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_MOST_RECENT_ACTOR" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-MOST-RECENT-ACTOR:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_LEAST_RECENT_ACTOR" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-LEAST-RECENT-ACTOR:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_MOST_RECENT_ORIGIN" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-MOST-RECENT-ORIGIN:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_LEAST_RECENT_ORIGIN" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-LEAST-RECENT-ORIGIN:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_MOST_POPULAR_ORIGIN" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-MOST-POPULAR-ORIGIN:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_ORIGIN" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-LEAST-POPULAR-ORIGIN:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_OLDEST_ACTOR" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-OLDEST-ACTOR:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_MOST_RECENT_SUBJECT_INTERPRETATION" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-MOST-RECENT-SUBJECT-INTERPRETATION:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_LEAST_RECENT_SUBJECT_INTERPRETATION" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-LEAST-RECENT-SUBJECT-INTERPRETATION:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_MOST_POPULAR_SUBJECT_INTERPRETATION" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-MOST-POPULAR-SUBJECT-INTERPRETATION:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_SUBJECT_INTERPRETATION" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-LEAST-POPULAR-SUBJECT-INTERPRETATION:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_MOST_RECENT_MIMETYPE" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-MOST-RECENT-MIMETYPE:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_LEAST_RECENT_MIMETYPE" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-LEAST-RECENT-MIMETYPE:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_MOST_POPULAR_MIMETYPE" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-MOST-POPULAR-MIMETYPE:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_MIMETYPE" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-LEAST-POPULAR-MIMETYPE:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_MOST_RECENT_CURRENT_URI" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-MOST-RECENT-CURRENT-URI:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_LEAST_RECENT_CURRENT_URI" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-LEAST-RECENT-CURRENT-URI:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_MOST_POPULAR_CURRENT_URI" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-MOST-POPULAR-CURRENT-URI:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_CURRENT_URI" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-LEAST-POPULAR-CURRENT-URI:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_MOST_RECENT_EVENT_ORIGIN" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-MOST-RECENT-EVENT-ORIGIN:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_LEAST_RECENT_EVENT_ORIGIN" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-LEAST-RECENT-EVENT-ORIGIN:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_MOST_POPULAR_EVENT_ORIGIN" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-MOST-POPULAR-EVENT-ORIGIN:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_EVENT_ORIGIN" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-LEAST-POPULAR-EVENT-ORIGIN:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_MOST_RECENT_CURRENT_ORIGIN" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-MOST-RECENT-CURRENT-ORIGIN:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_LEAST_RECENT_CURRENT_ORIGIN" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-LEAST-RECENT-CURRENT-ORIGIN:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_MOST_POPULAR_CURRENT_ORIGIN" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-MOST-POPULAR-CURRENT-ORIGIN:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_CURRENT_ORIGIN" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-LEAST-POPULAR-CURRENT-ORIGIN:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RESULT_TYPE_RELEVANCY" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RESULT-TYPE-RELEVANCY:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RELEVANT_RESULT_TYPE_RECENT" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RELEVANT-RESULT-TYPE-RECENT:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_RELEVANT_RESULT_TYPE_RELATED" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-RELEVANT-RESULT-TYPE-RELATED:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_STORAGE_STATE_NOT_AVAILABLE" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-STORAGE-STATE-NOT-AVAILABLE:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_STORAGE_STATE_AVAILABLE" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-STORAGE-STATE-AVAILABLE:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_STORAGE_STATE_ANY" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-STORAGE-STATE-ANY:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_DATA_MODEL_ERROR_INVALID_SIGNATURE" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-DATA-MODEL-ERROR-INVALID-SIGNATURE:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_DATA_MODEL_ERROR_NULL_EVENT" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-DATA-MODEL-ERROR-NULL-EVENT:CAPS"/>
+    <keyword type="constant" name="ZEITGEIST_DATA_MODEL_ERROR_TOO_MANY_RESULTS" link="zeitgeist-2.0-enumerations.html#ZEITGEIST-DATA-MODEL-ERROR-TOO-MANY-RESULTS:CAPS"/>
+    <keyword type="member" name="ZeitgeistResultSetIface.parent-iface" link="ZeitgeistResultSet.html#ZeitgeistResultSetIface.parent-iface"/>
+    <keyword type="member" name="ZeitgeistResultSetIface.size" link="ZeitgeistResultSet.html#ZeitgeistResultSetIface.size"/>
+    <keyword type="member" name="ZeitgeistResultSetIface.estimated-matches" link="ZeitgeistResultSet.html#ZeitgeistResultSetIface.estimated-matches"/>
+    <keyword type="member" name="ZeitgeistResultSetIface.next-value" link="ZeitgeistResultSet.html#ZeitgeistResultSetIface.next-value"/>
+    <keyword type="member" name="ZeitgeistResultSetIface.has-next" link="ZeitgeistResultSet.html#ZeitgeistResultSetIface.has-next"/>
+    <keyword type="member" name="ZeitgeistResultSetIface.tell" link="ZeitgeistResultSet.html#ZeitgeistResultSetIface.tell"/>
+    <keyword type="member" name="ZeitgeistResultSetIface.reset" link="ZeitgeistResultSet.html#ZeitgeistResultSetIface.reset"/>
+    <keyword type="member" name="ZeitgeistRemoteRegistryIface.parent-iface" link="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistryIface.parent-iface"/>
+    <keyword type="member" name="ZeitgeistRemoteRegistryIface.get-data-sources" link="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistryIface.get-data-sources"/>
+    <keyword type="member" name="ZeitgeistRemoteRegistryIface.get-data-sources-finish" link="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistryIface.get-data-sources-finish"/>
+    <keyword type="member" name="ZeitgeistRemoteRegistryIface.register-data-source" link="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistryIface.register-data-source"/>
+    <keyword type="member" name="ZeitgeistRemoteRegistryIface.register-data-source-finish" link="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistryIface.register-data-source-finish"/>
+    <keyword type="member" name="ZeitgeistRemoteRegistryIface.set-data-source-enabled" link="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistryIface.set-data-source-enabled"/>
+    <keyword type="member" name="ZeitgeistRemoteRegistryIface.set-data-source-enabled-finish" link="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistryIface.set-data-source-enabled-finish"/>
+    <keyword type="member" name="ZeitgeistRemoteRegistryIface.get-data-source-from-id" link="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistryIface.get-data-source-from-id"/>
+    <keyword type="member" name="ZeitgeistRemoteRegistryIface.get-data-source-from-id-finish" link="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistryIface.get-data-source-from-id-finish"/>
+  </functions>
+</book>

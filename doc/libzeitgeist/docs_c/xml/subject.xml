@@ -1,0 +1,824 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="ZeitgeistSubject">
+<refmeta>
+<refentrytitle role="top_of_page" id="ZeitgeistSubject.top_of_page">ZeitgeistSubject</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ZEITGEIST-2.0 Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ZeitgeistSubject</refname>
+<refpurpose>Subject objects abstract Zeitgeist subjects</refpurpose>
+</refnamediv>
+
+<refsect1 id="ZeitgeistSubject.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-to-variant">zeitgeist_subject_to_variant</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-matches-template">zeitgeist_subject_matches_template</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistSubject"><returnvalue>ZeitgeistSubject</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-new-full">zeitgeist_subject_new_full</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistSubject"><returnvalue>ZeitgeistSubject</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-new-move-event">zeitgeist_subject_new_move_event</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistSubject"><returnvalue>ZeitgeistSubject</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-new-from-variant">zeitgeist_subject_new_from_variant</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistSubject"><returnvalue>ZeitgeistSubject</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-new">zeitgeist_subject_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-get-uri">zeitgeist_subject_get_uri</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-set-uri">zeitgeist_subject_set_uri</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-get-origin">zeitgeist_subject_get_origin</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-set-origin">zeitgeist_subject_set_origin</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-get-text">zeitgeist_subject_get_text</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-set-text">zeitgeist_subject_set_text</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-get-storage">zeitgeist_subject_get_storage</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-set-storage">zeitgeist_subject_set_storage</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-get-current-uri">zeitgeist_subject_get_current_uri</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-set-current-uri">zeitgeist_subject_set_current_uri</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-get-current-origin">zeitgeist_subject_get_current_origin</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-set-current-origin">zeitgeist_subject_set_current_origin</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-get-mimetype">zeitgeist_subject_get_mimetype</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-set-mimetype">zeitgeist_subject_set_mimetype</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-get-interpretation">zeitgeist_subject_get_interpretation</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-set-interpretation">zeitgeist_subject_set_interpretation</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-get-manifestation">zeitgeist_subject_get_manifestation</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-subject-set-manifestation">zeitgeist_subject_set_manifestation</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistSubject.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistSubject--current-origin">current-origin</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistSubject--current-uri">current-uri</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistSubject--interpretation">interpretation</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistSubject--manifestation">manifestation</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistSubject--mimetype">mimetype</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistSubject--origin">origin</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistSubject--storage">storage</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistSubject--text">text</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistSubject--uri">uri</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistSubject.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-TYPE-SUBJECT:CAPS">ZEITGEIST_TYPE_SUBJECT</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistSubject-struct">ZeitgeistSubject</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistSubjectClass">ZeitgeistSubjectClass</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistSubject.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ZeitgeistSubject
+</screen>
+</refsect1>
+
+
+<refsect1 id="ZeitgeistSubject.description" role="desc">
+<title role="desc.title">Description</title>
+<para>In Zeitgeist terminology, a <emphasis>subject</emphasis> is something (a file, web page, person, conversation, etc.) that was somehow involved or affected by a <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link>.</para>
+
+</refsect1>
+<refsect1 id="ZeitgeistSubject.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="zeitgeist-subject-to-variant" role="function">
+<title>zeitgeist_subject_to_variant&#160;()</title>
+<indexterm zone="zeitgeist-subject-to-variant"><primary>zeitgeist_subject_to_variant</primary></indexterm>
+<programlisting language="C"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+zeitgeist_subject_to_variant (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>);</programlisting>
+<refsect3 id="zeitgeist-subject-to-variant.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-matches-template" role="function">
+<title>zeitgeist_subject_matches_template&#160;()</title>
+<indexterm zone="zeitgeist-subject-matches-template"><primary>zeitgeist_subject_matches_template</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+zeitgeist_subject_matches_template (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>,
+                                    <parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *template_subject</parameter>);</programlisting>
+<para>true if this Subject matches *subject_template*. Empty fields in the template are treated as wildcards. Interpretations and manifestations are also matched if they are children of the types specified in <literal>subject_template</literal>.</para>
+<refsect3 id="zeitgeist-subject-matches-template.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>template_subject</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>a <link linkend="zeitgeist-subject-new"><function><link linkend="zeitgeist-subject-new"><function>zeitgeist_subject_new()</function></link></function></link> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-new-full" role="function">
+<title>zeitgeist_subject_new_full&#160;()</title>
+<indexterm zone="zeitgeist-subject-new-full"><primary>zeitgeist_subject_new_full</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistSubject"><returnvalue>ZeitgeistSubject</returnvalue></link>&#160;*
+zeitgeist_subject_new_full (<parameter>const <link linkend="gchar"><type>gchar</type></link> *uri</parameter>,
+                            <parameter>const <link linkend="gchar"><type>gchar</type></link> *interpretation</parameter>,
+                            <parameter>const <link linkend="gchar"><type>gchar</type></link> *manifestation</parameter>,
+                            <parameter>const <link linkend="gchar"><type>gchar</type></link> *mimetype</parameter>,
+                            <parameter>const <link linkend="gchar"><type>gchar</type></link> *origin</parameter>,
+                            <parameter>const <link linkend="gchar"><type>gchar</type></link> *text</parameter>,
+                            <parameter>const <link linkend="gchar"><type>gchar</type></link> *storage</parameter>);</programlisting>
+<para>Create a new Subject structure with predefined data</para>
+<refsect3 id="zeitgeist-subject-new-full.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>uri</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>The URI or URL of the subject </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>interpretation</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>The interpretation type of the subject. </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>manifestation</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>The manifestation type of the subject. </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>mimetype</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>The mimetype of the subject. Eg. &lt;emphasis&gt;text/plain&lt;/emphasis&gt; </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>origin</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>The origin of the subject. </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>text</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A small textual representation of the subject suitable for display </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>storage</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>String identifier for the storage medium the subject is on. </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-subject-new-full.returns" role="returns">
+<title>Returns</title>
+<para>A newly create <link linkend="zeitgeist-subject-new"><function><link linkend="zeitgeist-subject-new"><function>zeitgeist_subject_new()</function></link></function></link> instance. The returned subject will have a floating reference which will be consumed if you pass the event to any of the methods provided by this library (like adding it to an event). </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-new-move-event" role="function">
+<title>zeitgeist_subject_new_move_event&#160;()</title>
+<indexterm zone="zeitgeist-subject-new-move-event"><primary>zeitgeist_subject_new_move_event</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistSubject"><returnvalue>ZeitgeistSubject</returnvalue></link>&#160;*
+zeitgeist_subject_new_move_event (<parameter>const <link linkend="gchar"><type>gchar</type></link> *source_uri</parameter>,
+                                  <parameter>const <link linkend="gchar"><type>gchar</type></link> *source_origin</parameter>,
+                                  <parameter>const <link linkend="gchar"><type>gchar</type></link> *destination_uri</parameter>,
+                                  <parameter>const <link linkend="gchar"><type>gchar</type></link> *destination_origin</parameter>,
+                                  <parameter>const <link linkend="gchar"><type>gchar</type></link> *interpretation</parameter>,
+                                  <parameter>const <link linkend="gchar"><type>gchar</type></link> *manifestation</parameter>,
+                                  <parameter>const <link linkend="gchar"><type>gchar</type></link> *mimetype</parameter>,
+                                  <parameter>const <link linkend="gchar"><type>gchar</type></link> *text</parameter>,
+                                  <parameter>const <link linkend="gchar"><type>gchar</type></link> *storage</parameter>);</programlisting>
+<para>Create a new Subject structure to describe a move event</para>
+<refsect3 id="zeitgeist-subject-new-move-event.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>source_uri</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>The URI or URL of the subject </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>source_origin</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>The URI or URL of the subject </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>destination_uri</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>The URI or URL of the subject </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>destination_origin</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>The URI or URL of the subject </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>interpretation</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>The interpretation type of the subject. </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>manifestation</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>The manifestation type of the subject. </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>mimetype</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>The mimetype of the subject. Eg. &lt;emphasis&gt;text/plain&lt;/emphasis&gt; </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>text</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A small textual representation of the subject suitable for display </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>storage</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>String identifier for the storage medium the subject is on. </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-subject-new-move-event.returns" role="returns">
+<title>Returns</title>
+<para>A newly create <link linkend="zeitgeist-subject-new"><function><link linkend="zeitgeist-subject-new"><function>zeitgeist_subject_new()</function></link></function></link> instance. The returned subject will have a floating reference which will be consumed if you pass the event to any of the methods provided by this library (like adding it to an event). </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-new-from-variant" role="function">
+<title>zeitgeist_subject_new_from_variant&#160;()</title>
+<indexterm zone="zeitgeist-subject-new-from-variant"><primary>zeitgeist_subject_new_from_variant</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistSubject"><returnvalue>ZeitgeistSubject</returnvalue></link>&#160;*
+zeitgeist_subject_new_from_variant (<parameter><link linkend="GVariant"><type>GVariant</type></link> *subject_variant</parameter>,
+                                    <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Create a new Subject structure from predefined <link linkend="GVariant"><type>GVariant</type></link> data</para>
+<refsect3 id="zeitgeist-subject-new-from-variant.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>subject_variant</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A <link linkend="GVariant"><type>GVariant</type></link> decscribing the subject data. </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>error-domains</acronym> ZeitgeistDataModelError]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-subject-new-from-variant.returns" role="returns">
+<title>Returns</title>
+<para>A newly create <link linkend="zeitgeist-subject-new"><function><link linkend="zeitgeist-subject-new"><function>zeitgeist_subject_new()</function></link></function></link> instance. The returned subject will have a floating reference which will be consumed if you pass the event to any of the methods provided by this library (like adding it to an event). </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-new" role="function">
+<title>zeitgeist_subject_new&#160;()</title>
+<indexterm zone="zeitgeist-subject-new"><primary>zeitgeist_subject_new</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistSubject"><returnvalue>ZeitgeistSubject</returnvalue></link>&#160;*
+zeitgeist_subject_new (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="zeitgeist-subject-get-uri" role="function">
+<title>zeitgeist_subject_get_uri&#160;()</title>
+<indexterm zone="zeitgeist-subject-get-uri"><primary>zeitgeist_subject_get_uri</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_subject_get_uri (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistSubject--uri"><type>"uri"</type></link> property.</para>
+<refsect3 id="zeitgeist-subject-get-uri.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-subject-get-uri.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistSubject--uri"><type>"uri"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-set-uri" role="function">
+<title>zeitgeist_subject_set_uri&#160;()</title>
+<indexterm zone="zeitgeist-subject-set-uri"><primary>zeitgeist_subject_set_uri</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_subject_set_uri (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>,
+                           <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistSubject--uri"><type>"uri"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-subject-set-uri.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistSubject--uri"><type>"uri"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-get-origin" role="function">
+<title>zeitgeist_subject_get_origin&#160;()</title>
+<indexterm zone="zeitgeist-subject-get-origin"><primary>zeitgeist_subject_get_origin</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_subject_get_origin (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistSubject--origin"><type>"origin"</type></link> property.</para>
+<refsect3 id="zeitgeist-subject-get-origin.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-subject-get-origin.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistSubject--origin"><type>"origin"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-set-origin" role="function">
+<title>zeitgeist_subject_set_origin&#160;()</title>
+<indexterm zone="zeitgeist-subject-set-origin"><primary>zeitgeist_subject_set_origin</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_subject_set_origin (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>,
+                              <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistSubject--origin"><type>"origin"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-subject-set-origin.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistSubject--origin"><type>"origin"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-get-text" role="function">
+<title>zeitgeist_subject_get_text&#160;()</title>
+<indexterm zone="zeitgeist-subject-get-text"><primary>zeitgeist_subject_get_text</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_subject_get_text (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistSubject--text"><type>"text"</type></link> property.</para>
+<refsect3 id="zeitgeist-subject-get-text.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-subject-get-text.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistSubject--text"><type>"text"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-set-text" role="function">
+<title>zeitgeist_subject_set_text&#160;()</title>
+<indexterm zone="zeitgeist-subject-set-text"><primary>zeitgeist_subject_set_text</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_subject_set_text (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>,
+                            <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistSubject--text"><type>"text"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-subject-set-text.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistSubject--text"><type>"text"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-get-storage" role="function">
+<title>zeitgeist_subject_get_storage&#160;()</title>
+<indexterm zone="zeitgeist-subject-get-storage"><primary>zeitgeist_subject_get_storage</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_subject_get_storage (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistSubject--storage"><type>"storage"</type></link> property.</para>
+<refsect3 id="zeitgeist-subject-get-storage.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-subject-get-storage.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistSubject--storage"><type>"storage"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-set-storage" role="function">
+<title>zeitgeist_subject_set_storage&#160;()</title>
+<indexterm zone="zeitgeist-subject-set-storage"><primary>zeitgeist_subject_set_storage</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_subject_set_storage (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>,
+                               <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistSubject--storage"><type>"storage"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-subject-set-storage.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistSubject--storage"><type>"storage"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-get-current-uri" role="function">
+<title>zeitgeist_subject_get_current_uri&#160;()</title>
+<indexterm zone="zeitgeist-subject-get-current-uri"><primary>zeitgeist_subject_get_current_uri</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_subject_get_current_uri (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistSubject--current-uri"><type>"current-uri"</type></link> property.</para>
+<refsect3 id="zeitgeist-subject-get-current-uri.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-subject-get-current-uri.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistSubject--current-uri"><type>"current-uri"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-set-current-uri" role="function">
+<title>zeitgeist_subject_set_current_uri&#160;()</title>
+<indexterm zone="zeitgeist-subject-set-current-uri"><primary>zeitgeist_subject_set_current_uri</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_subject_set_current_uri (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>,
+                                   <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistSubject--current-uri"><type>"current-uri"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-subject-set-current-uri.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistSubject--current-uri"><type>"current-uri"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-get-current-origin" role="function">
+<title>zeitgeist_subject_get_current_origin&#160;()</title>
+<indexterm zone="zeitgeist-subject-get-current-origin"><primary>zeitgeist_subject_get_current_origin</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_subject_get_current_origin (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistSubject--current-origin"><type>"current-origin"</type></link> property.</para>
+<refsect3 id="zeitgeist-subject-get-current-origin.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-subject-get-current-origin.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistSubject--current-origin"><type>"current-origin"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-set-current-origin" role="function">
+<title>zeitgeist_subject_set_current_origin&#160;()</title>
+<indexterm zone="zeitgeist-subject-set-current-origin"><primary>zeitgeist_subject_set_current_origin</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_subject_set_current_origin (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>,
+                                      <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistSubject--current-origin"><type>"current-origin"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-subject-set-current-origin.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistSubject--current-origin"><type>"current-origin"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-get-mimetype" role="function">
+<title>zeitgeist_subject_get_mimetype&#160;()</title>
+<indexterm zone="zeitgeist-subject-get-mimetype"><primary>zeitgeist_subject_get_mimetype</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_subject_get_mimetype (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistSubject--mimetype"><type>"mimetype"</type></link> property.</para>
+<refsect3 id="zeitgeist-subject-get-mimetype.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-subject-get-mimetype.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistSubject--mimetype"><type>"mimetype"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-set-mimetype" role="function">
+<title>zeitgeist_subject_set_mimetype&#160;()</title>
+<indexterm zone="zeitgeist-subject-set-mimetype"><primary>zeitgeist_subject_set_mimetype</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_subject_set_mimetype (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistSubject--mimetype"><type>"mimetype"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-subject-set-mimetype.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistSubject--mimetype"><type>"mimetype"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-get-interpretation" role="function">
+<title>zeitgeist_subject_get_interpretation&#160;()</title>
+<indexterm zone="zeitgeist-subject-get-interpretation"><primary>zeitgeist_subject_get_interpretation</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_subject_get_interpretation (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistSubject--interpretation"><type>"interpretation"</type></link> property.</para>
+<refsect3 id="zeitgeist-subject-get-interpretation.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-subject-get-interpretation.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistSubject--interpretation"><type>"interpretation"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-set-interpretation" role="function">
+<title>zeitgeist_subject_set_interpretation&#160;()</title>
+<indexterm zone="zeitgeist-subject-set-interpretation"><primary>zeitgeist_subject_set_interpretation</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_subject_set_interpretation (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>,
+                                      <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistSubject--interpretation"><type>"interpretation"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-subject-set-interpretation.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistSubject--interpretation"><type>"interpretation"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-get-manifestation" role="function">
+<title>zeitgeist_subject_get_manifestation&#160;()</title>
+<indexterm zone="zeitgeist-subject-get-manifestation"><primary>zeitgeist_subject_get_manifestation</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_subject_get_manifestation (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistSubject--manifestation"><type>"manifestation"</type></link> property.</para>
+<refsect3 id="zeitgeist-subject-get-manifestation.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-subject-get-manifestation.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistSubject--manifestation"><type>"manifestation"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-subject-set-manifestation" role="function">
+<title>zeitgeist_subject_set_manifestation&#160;()</title>
+<indexterm zone="zeitgeist-subject-set-manifestation"><primary>zeitgeist_subject_set_manifestation</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_subject_set_manifestation (<parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *self</parameter>,
+                                     <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistSubject--manifestation"><type>"manifestation"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-subject-set-manifestation.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistSubject--manifestation"><type>"manifestation"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistSubject.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ZEITGEIST-TYPE-SUBJECT:CAPS" role="macro">
+<title>ZEITGEIST_TYPE_SUBJECT</title>
+<indexterm zone="ZEITGEIST-TYPE-SUBJECT:CAPS"><primary>ZEITGEIST_TYPE_SUBJECT</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_TYPE_SUBJECT (zeitgeist_subject_get_type ())
+</programlisting>
+<para>The type for <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link>.</para>
+</refsect2>
+<refsect2 id="ZeitgeistSubject-struct" role="struct">
+<title>struct ZeitgeistSubject</title>
+<indexterm zone="ZeitgeistSubject-struct"><primary>ZeitgeistSubject</primary></indexterm>
+<programlisting language="C">struct ZeitgeistSubject;</programlisting>
+<para>Subject objects abstract Zeitgeist subjects</para>
+<para>In Zeitgeist terminology, a <emphasis>subject</emphasis> is something (a file, web page, person, conversation, etc.) that was somehow involved or affected by a <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link>.</para>
+</refsect2>
+<refsect2 id="ZeitgeistSubjectClass" role="struct">
+<title>struct ZeitgeistSubjectClass</title>
+<indexterm zone="ZeitgeistSubjectClass"><primary>ZeitgeistSubjectClass</primary></indexterm>
+<programlisting language="C">struct ZeitgeistSubjectClass {
+	GObjectClass parent_class;
+};
+</programlisting>
+<para>The class structure for <link linkend="ZEITGEIST-TYPE-SUBJECT:CAPS"><literal>ZEITGEIST_TYPE_SUBJECT</literal></link>. All the fields in this structure are private and should never be accessed directly.</para>
+<refsect3 id="ZeitgeistSubjectClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistSubject.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="ZeitgeistSubject--current-origin" role="property"><title>The <literal>“current-origin”</literal> property</title>
+<indexterm zone="ZeitgeistSubject--current-origin"><primary>ZeitgeistSubject:current-origin</primary></indexterm>
+<programlisting>  “current-origin”           <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>current-origin.</para><para>Owner: ZeitgeistSubject</para>
+<para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="ZeitgeistSubject--current-uri" role="property"><title>The <literal>“current-uri”</literal> property</title>
+<indexterm zone="ZeitgeistSubject--current-uri"><primary>ZeitgeistSubject:current-uri</primary></indexterm>
+<programlisting>  “current-uri”              <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>current-uri.</para><para>Owner: ZeitgeistSubject</para>
+<para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="ZeitgeistSubject--interpretation" role="property"><title>The <literal>“interpretation”</literal> property</title>
+<indexterm zone="ZeitgeistSubject--interpretation"><primary>ZeitgeistSubject:interpretation</primary></indexterm>
+<programlisting>  “interpretation”           <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>interpretation.</para><para>Owner: ZeitgeistSubject</para>
+<para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="ZeitgeistSubject--manifestation" role="property"><title>The <literal>“manifestation”</literal> property</title>
+<indexterm zone="ZeitgeistSubject--manifestation"><primary>ZeitgeistSubject:manifestation</primary></indexterm>
+<programlisting>  “manifestation”            <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>manifestation.</para><para>Owner: ZeitgeistSubject</para>
+<para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="ZeitgeistSubject--mimetype" role="property"><title>The <literal>“mimetype”</literal> property</title>
+<indexterm zone="ZeitgeistSubject--mimetype"><primary>ZeitgeistSubject:mimetype</primary></indexterm>
+<programlisting>  “mimetype”                 <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>mimetype.</para><para>Owner: ZeitgeistSubject</para>
+<para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="ZeitgeistSubject--origin" role="property"><title>The <literal>“origin”</literal> property</title>
+<indexterm zone="ZeitgeistSubject--origin"><primary>ZeitgeistSubject:origin</primary></indexterm>
+<programlisting>  “origin”                   <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>origin.</para><para>Owner: ZeitgeistSubject</para>
+<para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="ZeitgeistSubject--storage" role="property"><title>The <literal>“storage”</literal> property</title>
+<indexterm zone="ZeitgeistSubject--storage"><primary>ZeitgeistSubject:storage</primary></indexterm>
+<programlisting>  “storage”                  <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>storage.</para><para>Owner: ZeitgeistSubject</para>
+<para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="ZeitgeistSubject--text" role="property"><title>The <literal>“text”</literal> property</title>
+<indexterm zone="ZeitgeistSubject--text"><primary>ZeitgeistSubject:text</primary></indexterm>
+<programlisting>  “text”                     <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>text.</para><para>Owner: ZeitgeistSubject</para>
+<para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="ZeitgeistSubject--uri" role="property"><title>The <literal>“uri”</literal> property</title>
+<indexterm zone="ZeitgeistSubject--uri"><primary>ZeitgeistSubject:uri</primary></indexterm>
+<programlisting>  “uri”                      <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>uri.</para><para>Owner: ZeitgeistSubject</para>
+<para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

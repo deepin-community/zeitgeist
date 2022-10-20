@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="zeitgeist-2.0-timestamp">
+<refmeta>
+<refentrytitle role="top_of_page" id="zeitgeist-2.0-timestamp.top_of_page">timestamp</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ZEITGEIST-2.0 Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>timestamp</refname>
+<refpurpose>Convenience functions for dealing with timestamps and dates</refpurpose>
+</refnamediv>
+
+<refsect1 id="zeitgeist-2.0-timestamp.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-timestamp-from-timeval">zeitgeist_timestamp_from_timeval</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-timestamp-to-timeval">zeitgeist_timestamp_to_timeval</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-timestamp-from-now">zeitgeist_timestamp_from_now</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-timestamp-from-iso8601">zeitgeist_timestamp_from_iso8601</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-timestamp-to-iso8601">zeitgeist_timestamp_to_iso8601</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-timestamp-from-date">zeitgeist_timestamp_from_date</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-timestamp-from-dmy">zeitgeist_timestamp_from_dmy</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-timestamp-to-date">zeitgeist_timestamp_to_date</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-timestamp-next-midnight">zeitgeist_timestamp_next_midnight</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-timestamp-prev-midnight">zeitgeist_timestamp_prev_midnight</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="zeitgeist-2.0-timestamp.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-TIMESTAMP-SECOND:CAPS">ZEITGEIST_TIMESTAMP_SECOND</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-TIMESTAMP-MINUTE:CAPS">ZEITGEIST_TIMESTAMP_MINUTE</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-TIMESTAMP-HOUR:CAPS">ZEITGEIST_TIMESTAMP_HOUR</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-TIMESTAMP-DAY:CAPS">ZEITGEIST_TIMESTAMP_DAY</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-TIMESTAMP-WEEK:CAPS">ZEITGEIST_TIMESTAMP_WEEK</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-TIMESTAMP-YEAR:CAPS">ZEITGEIST_TIMESTAMP_YEAR</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="zeitgeist-2.0-timestamp.description" role="desc">
+<title role="desc.title">Description</title>
+<para>include: zeitgeist.h</para><para>A suite of convenience functions for dealing with timestamps and dates.</para><para>Zeitgeist timestamps are represented as <emphasis role="bold">gint64</emphasis>s with the number of milliseconds since the Unix Epoch.</para>
+
+</refsect1>
+<refsect1 id="zeitgeist-2.0-timestamp.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="zeitgeist-timestamp-from-timeval" role="function">
+<title>zeitgeist_timestamp_from_timeval&#160;()</title>
+<indexterm zone="zeitgeist-timestamp-from-timeval"><primary>zeitgeist_timestamp_from_timeval</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+zeitgeist_timestamp_from_timeval (<parameter><link linkend="GTimeVal"><type>GTimeVal</type></link> *timeval</parameter>);</programlisting>
+<para>Convert a <link linkend="GTimeVal"><type>GTimeVal</type></link> to an amount of milliseconds since the Unix Epoch</para>
+<refsect3 id="zeitgeist-timestamp-from-timeval.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>timeval</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>time to convert </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-timestamp-from-timeval.returns" role="returns">
+<title>Returns</title>
+<para>number of milliseconds since the Unix Epoch </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-timestamp-to-timeval" role="function">
+<title>zeitgeist_timestamp_to_timeval&#160;()</title>
+<indexterm zone="zeitgeist-timestamp-to-timeval"><primary>zeitgeist_timestamp_to_timeval</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_timestamp_to_timeval (<parameter><link linkend="gint64"><type>gint64</type></link> timestamp</parameter>,
+                                <parameter><link linkend="GTimeVal"><type>GTimeVal</type></link> *result</parameter>);</programlisting>
+<para>Write a Zeitgeist timestamp to a <link linkend="GTimeVal"><type>GTimeVal</type></link> instance. Note that Zeitgeist uses only a millisecond resolution, whereas <link linkend="GTimeVal"><type>GTimeVal</type></link> has microsecond resolution. This means that the lower three digits of <parameter>tv.tv_usec</parameter>
+ will always be 0.</para>
+<refsect3 id="zeitgeist-timestamp-to-timeval.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>timestamp</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>to convert </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-timestamp-to-timeval.returns" role="returns">
+<title>Returns</title>
+<para>the equivalent <link linkend="GTimeVal"><type>GTimeVal</type></link> instance. </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-timestamp-from-now" role="function">
+<title>zeitgeist_timestamp_from_now&#160;()</title>
+<indexterm zone="zeitgeist-timestamp-from-now"><primary>zeitgeist_timestamp_from_now</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+zeitgeist_timestamp_from_now (<parameter><type>void</type></parameter>);</programlisting>
+<para>Return the current timestamp in milliseconds.</para>
+<refsect3 id="zeitgeist-timestamp-from-now.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-timestamp-from-now.returns" role="returns">
+<title>Returns</title>
+<para>the timestamp for the current system time, in milliseconds since the Unix Epoch </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-timestamp-from-iso8601" role="function">
+<title>zeitgeist_timestamp_from_iso8601&#160;()</title>
+<indexterm zone="zeitgeist-timestamp-from-iso8601"><primary>zeitgeist_timestamp_from_iso8601</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+zeitgeist_timestamp_from_iso8601 (<parameter>const <link linkend="gchar"><type>gchar</type></link> *datetime</parameter>);</programlisting>
+<para>Parse a timestamp from an ISO8601-encoded string.</para>
+<refsect3 id="zeitgeist-timestamp-from-iso8601.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>datetime</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>a string containing an ISO8601-conforming datetime </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-timestamp-from-iso8601.returns" role="returns">
+<title>Returns</title>
+<para>the timestamp represented by the given string, or -1 if it can&apos;t be parsed </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-timestamp-to-iso8601" role="function">
+<title>zeitgeist_timestamp_to_iso8601&#160;()</title>
+<indexterm zone="zeitgeist-timestamp-to-iso8601"><primary>zeitgeist_timestamp_to_iso8601</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_timestamp_to_iso8601 (<parameter><link linkend="gint64"><type>gint64</type></link> timestamp</parameter>);</programlisting>
+<para>Convert a timestamp to a human-readable ISO8601 format</para>
+<refsect3 id="zeitgeist-timestamp-to-iso8601.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>timestamp</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>a timestamp in milliseconds since the Unix Epoch </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-timestamp-to-iso8601.returns" role="returns">
+<title>Returns</title>
+<para>a newly allocated string containing the ISO8601 version of the given timestamp </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-timestamp-from-date" role="function">
+<title>zeitgeist_timestamp_from_date&#160;()</title>
+<indexterm zone="zeitgeist-timestamp-from-date"><primary>zeitgeist_timestamp_from_date</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+zeitgeist_timestamp_from_date (<parameter><link linkend="GDate"><type>GDate</type></link> *date</parameter>);</programlisting>
+<para>Convert a <emphasis role="bold">GDate</emphasis> to a Zeitgeist timestamp</para>
+<refsect3 id="zeitgeist-timestamp-from-date.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>date</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>the date to convert </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-timestamp-from-date.returns" role="returns">
+<title>Returns</title>
+<para>the given date expressed as a timestamp in milliseconds since the Epoch. The timestamp is guaranteed to be roudned off to the midnight of the given date. </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-timestamp-from-dmy" role="function">
+<title>zeitgeist_timestamp_from_dmy&#160;()</title>
+<indexterm zone="zeitgeist-timestamp-from-dmy"><primary>zeitgeist_timestamp_from_dmy</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+zeitgeist_timestamp_from_dmy (<parameter><link linkend="GDateDay"><type>GDateDay</type></link> day</parameter>,
+                              <parameter><link linkend="GDateMonth"><type>GDateMonth</type></link> month</parameter>,
+                              <parameter><link linkend="GDateYear"><type>GDateYear</type></link> year</parameter>);</programlisting>
+<para>Convert a day, month, year tuple into a Zeitgeist timestamp</para>
+<refsect3 id="zeitgeist-timestamp-from-dmy.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>day</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>the day of the month </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>month</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>the month of the year </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>year</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>the year </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-timestamp-from-dmy.returns" role="returns">
+<title>Returns</title>
+<para>the given date (rounded off to the midnight), expressed as a timestamp in milliseconds since the Epoch, or -1 in case the provided parameters don&apos;t constitute a valid date. </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-timestamp-to-date" role="function">
+<title>zeitgeist_timestamp_to_date&#160;()</title>
+<indexterm zone="zeitgeist-timestamp-to-date"><primary>zeitgeist_timestamp_to_date</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_timestamp_to_date (<parameter><link linkend="gint64"><type>gint64</type></link> timestamp</parameter>,
+                             <parameter><link linkend="GDate"><type>GDate</type></link> *result</parameter>);</programlisting>
+<para>Write a timestamp to a <link linkend="GDate"><type>GDate</type></link> structure</para>
+<refsect3 id="zeitgeist-timestamp-to-date.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>timestamp</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>to convert </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-timestamp-to-date.returns" role="returns">
+<title>Returns</title>
+<para><link linkend="GDate"><type>GDate</type></link> initialized to the given timestamp </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-timestamp-next-midnight" role="function">
+<title>zeitgeist_timestamp_next_midnight&#160;()</title>
+<indexterm zone="zeitgeist-timestamp-next-midnight"><primary>zeitgeist_timestamp_next_midnight</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+zeitgeist_timestamp_next_midnight (<parameter><link linkend="gint64"><type>gint64</type></link> timestamp</parameter>);</programlisting>
+<para>Calculate the timestamp for the next midnight after the given timestamp.</para>
+<para>If is is already midnight (down to the millisecond), this method will return the value for the next midnight. In other words, you can call this method recursively in order to iterate, forwards in time, over midnights.</para>
+<refsect3 id="zeitgeist-timestamp-next-midnight.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>timestamp</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>the Zeitgeist timestamp to find the next midnight for </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-timestamp-next-midnight.returns" role="returns">
+<title>Returns</title>
+<para>the timestamp for the next midnight after the given timestamp </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-timestamp-prev-midnight" role="function">
+<title>zeitgeist_timestamp_prev_midnight&#160;()</title>
+<indexterm zone="zeitgeist-timestamp-prev-midnight"><primary>zeitgeist_timestamp_prev_midnight</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+zeitgeist_timestamp_prev_midnight (<parameter><link linkend="gint64"><type>gint64</type></link> timestamp</parameter>);</programlisting>
+<para>Calculate the timestamp for the midnight just before the given timestamp.</para>
+<para>If is is already midnight (down to the millisecond), this method will return the value for the previous midnight. In other words, you can call this method recursively in order to iterate, backwards in time, over midnights.</para>
+<refsect3 id="zeitgeist-timestamp-prev-midnight.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>timestamp</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>the Zeitgeist timestamp to find the previous midnight for </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-timestamp-prev-midnight.returns" role="returns">
+<title>Returns</title>
+<para>the timestamp for the midnight just before the given timestamp </para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="zeitgeist-2.0-timestamp.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ZEITGEIST-TIMESTAMP-SECOND:CAPS" role="macro">
+<title>ZEITGEIST_TIMESTAMP_SECOND</title>
+<indexterm zone="ZEITGEIST-TIMESTAMP-SECOND:CAPS"><primary>ZEITGEIST_TIMESTAMP_SECOND</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_TIMESTAMP_SECOND ((gint64) 1000)
+</programlisting>
+<para>A second represented as a Zeitgeist timestamp (ie. 1000ms)</para>
+</refsect2>
+<refsect2 id="ZEITGEIST-TIMESTAMP-MINUTE:CAPS" role="macro">
+<title>ZEITGEIST_TIMESTAMP_MINUTE</title>
+<indexterm zone="ZEITGEIST-TIMESTAMP-MINUTE:CAPS"><primary>ZEITGEIST_TIMESTAMP_MINUTE</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_TIMESTAMP_MINUTE ((gint64) 60000)
+</programlisting>
+<para>A minute represented as a Zeitgeist timestamp (ie. 60000ms)</para>
+</refsect2>
+<refsect2 id="ZEITGEIST-TIMESTAMP-HOUR:CAPS" role="macro">
+<title>ZEITGEIST_TIMESTAMP_HOUR</title>
+<indexterm zone="ZEITGEIST-TIMESTAMP-HOUR:CAPS"><primary>ZEITGEIST_TIMESTAMP_HOUR</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_TIMESTAMP_HOUR ((gint64) 3600000)
+</programlisting>
+<para>An hour represented as a Zeitgeist timestamp (ie. 3600000ms)</para>
+</refsect2>
+<refsect2 id="ZEITGEIST-TIMESTAMP-DAY:CAPS" role="macro">
+<title>ZEITGEIST_TIMESTAMP_DAY</title>
+<indexterm zone="ZEITGEIST-TIMESTAMP-DAY:CAPS"><primary>ZEITGEIST_TIMESTAMP_DAY</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_TIMESTAMP_DAY ((gint64) 86400000)
+</programlisting>
+<para>A day represented as a Zeitgeist timestamp (ie. 86400000ms)</para>
+</refsect2>
+<refsect2 id="ZEITGEIST-TIMESTAMP-WEEK:CAPS" role="macro">
+<title>ZEITGEIST_TIMESTAMP_WEEK</title>
+<indexterm zone="ZEITGEIST-TIMESTAMP-WEEK:CAPS"><primary>ZEITGEIST_TIMESTAMP_WEEK</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_TIMESTAMP_WEEK ((gint64) 604800000)
+</programlisting>
+<para>A week represented as a Zeitgeist timestamp (ie. 604800000ms)</para>
+</refsect2>
+<refsect2 id="ZEITGEIST-TIMESTAMP-YEAR:CAPS" role="macro">
+<title>ZEITGEIST_TIMESTAMP_YEAR</title>
+<indexterm zone="ZEITGEIST-TIMESTAMP-YEAR:CAPS"><primary>ZEITGEIST_TIMESTAMP_YEAR</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_TIMESTAMP_YEAR 31556952000LL
+</programlisting>
+<para>A year represented as a Zeitgeist timestamp (ie. 31556952000ms). Be warned that a year is not 365 days, but in fact 365.2425 days, to account for leap years.</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

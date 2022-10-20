@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>org.gnome.zeitgeist.DataSourceRegistry: Zeitgeist Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="Zeitgeist Reference Manual">
+<link rel="up" href="ch05.html" title="Zeitgeist D-Bus API Reference">
+<link rel="prev" href="docs-org-gnome-zeitgeist-Log.html" title="org.gnome.zeitgeist.Log">
+<link rel="next" href="object-tree.html" title="Object Hierarchy">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#docs-org-gnome-zeitgeist-DataSourceRegistry.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch05.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="docs-org-gnome-zeitgeist-Log.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="object-tree.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="docs-org-gnome-zeitgeist-DataSourceRegistry"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="docs-org-gnome-zeitgeist-DataSourceRegistry.top_of_page"></a>org.gnome.zeitgeist.DataSourceRegistry</span></h2>
+<p>org.gnome.zeitgeist.DataSourceRegistry</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="docs-org-gnome-zeitgeist-DataSourceRegistry.synopsis"></a><h2>Methods</h2>
+<pre class="synopsis">
+<a class="link" href="docs-org-gnome-zeitgeist-DataSourceRegistry.html#org-gnome-zeitgeist-DataSourceRegistry-GetDataSources" title="GetDataSources ()">GetDataSources</a>           ()
+<a class="link" href="docs-org-gnome-zeitgeist-DataSourceRegistry.html#org-gnome-zeitgeist-DataSourceRegistry-RegisterDataSource" title="RegisterDataSource ()">RegisterDataSource</a>       ()
+<a class="link" href="docs-org-gnome-zeitgeist-DataSourceRegistry.html#org-gnome-zeitgeist-DataSourceRegistry-SetDataSourceEnabled" title="SetDataSourceEnabled ()">SetDataSourceEnabled</a>     ()
+<a class="link" href="docs-org-gnome-zeitgeist-DataSourceRegistry.html#org-gnome-zeitgeist-DataSourceRegistry-GetDataSourceFromId" title="GetDataSourceFromId ()">GetDataSourceFromId</a>      ()</pre>
+</div>
+<div class="refsynopsisdiv">
+<a name="docs-org-gnome-zeitgeist-DataSourceRegistry.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+<a class="link" href="docs-org-gnome-zeitgeist-DataSourceRegistry.html#org-gnome-zeitgeist-DataSourceRegistry-DataSourceDisconnected" title="The DataSourceDisconnected signal">DataSourceDisconnected</a>     ()
+<a class="link" href="docs-org-gnome-zeitgeist-DataSourceRegistry.html#org-gnome-zeitgeist-DataSourceRegistry-DataSourceEnabled" title="The DataSourceEnabled signal">DataSourceEnabled</a>          ()
+<a class="link" href="docs-org-gnome-zeitgeist-DataSourceRegistry.html#org-gnome-zeitgeist-DataSourceRegistry-DataSourceRegistered" title="The DataSourceRegistered signal">DataSourceRegistered</a>       ()</pre>
+</div>
+<div class="refsect1">
+<a name="docs-org-gnome-zeitgeist-DataSourceRegistry.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="docs-org-gnome-zeitgeist-DataSourceRegistry.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="org-gnome-zeitgeist-DataSourceRegistry-GetDataSources"></a><h3>GetDataSources ()</h3>
+<pre class="programlisting">
+GetDataSources           ()
+</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>   </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_callback_</code></em> :</span></p></td>
+<td> callback to call when the request is satisfied </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_user_data_</code></em> :</span></p></td>
+<td> the data to pass to @_callback_ function </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="org-gnome-zeitgeist-DataSourceRegistry-RegisterDataSource"></a><h3>RegisterDataSource ()</h3>
+<pre class="programlisting">
+RegisterDataSource       ()
+</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>unique_id</code></em> :</span></p></td>
+<td>   </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>   </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>description</code></em> :</span></p></td>
+<td>   </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>event_templates</code></em> :</span></p></td>
+<td>   </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>   </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sender</code></em> :</span></p></td>
+<td>   </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_callback_</code></em> :</span></p></td>
+<td> callback to call when the request is satisfied </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_user_data_</code></em> :</span></p></td>
+<td> the data to pass to @_callback_ function </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="org-gnome-zeitgeist-DataSourceRegistry-SetDataSourceEnabled"></a><h3>SetDataSourceEnabled ()</h3>
+<pre class="programlisting">
+SetDataSourceEnabled     ()
+</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>unique_id</code></em> :</span></p></td>
+<td>   </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>enabled</code></em> :</span></p></td>
+<td>   </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>   </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_callback_</code></em> :</span></p></td>
+<td> callback to call when the request is satisfied </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_user_data_</code></em> :</span></p></td>
+<td> the data to pass to @_callback_ function </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="org-gnome-zeitgeist-DataSourceRegistry-GetDataSourceFromId"></a><h3>GetDataSourceFromId ()</h3>
+<pre class="programlisting">
+GetDataSourceFromId      ()
+</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>unique_id</code></em> :</span></p></td>
+<td>   </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>   </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_callback_</code></em> :</span></p></td>
+<td> callback to call when the request is satisfied </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_user_data_</code></em> :</span></p></td>
+<td> the data to pass to @_callback_ function </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="docs-org-gnome-zeitgeist-DataSourceRegistry.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="org-gnome-zeitgeist-DataSourceRegistry-DataSourceDisconnected"></a><h3>The <code class="literal">DataSourceDisconnected</code> signal</h3>
+<pre class="programlisting">
+DataSourceDisconnected     ()
+</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>data_source</code></em> :</span></p></td>
+<td>   </td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="org-gnome-zeitgeist-DataSourceRegistry-DataSourceEnabled"></a><h3>The <code class="literal">DataSourceEnabled</code> signal</h3>
+<pre class="programlisting">
+DataSourceEnabled          ()
+</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>unique_id</code></em> :</span></p></td>
+<td>   </td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>enabled</code></em> :</span></p></td>
+<td>   </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="org-gnome-zeitgeist-DataSourceRegistry-DataSourceRegistered"></a><h3>The <code class="literal">DataSourceRegistered</code> signal</h3>
+<pre class="programlisting">
+DataSourceRegistered       ()
+</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>data_source</code></em> :</span></p></td>
+<td>   </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.32.1</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<?xml version="1.0"?><!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">]>
+<refentry id="docs-org-gnome-zeitgeist-Index">
+<refmeta>
+<refentrytitle role="top_of_page" id="docs-org-gnome-zeitgeist-Index.top_of_page">org.gnome.zeitgeist.Index</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+ZEITGEIST-2.0 D-Bus API
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>org.gnome.zeitgeist.Index</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+<refsynopsisdiv id="docs-org-gnome-zeitgeist-Index.synopsis" role="synopsis">
+<title role="synopsis.title">Methods</title>
+<synopsis>
+<link linkend="org-gnome-zeitgeist-Index-Search">Search</link>                    ()
+<link linkend="org-gnome-zeitgeist-Index-SearchWithRelevancies">SearchWithRelevancies</link>     ()</synopsis></refsynopsisdiv>
+<refsect1 id="docs-org-gnome-zeitgeist-Index.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="docs-org-gnome-zeitgeist-Index.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="org-gnome-zeitgeist-Index-Search" role="function">
+<title>Search ()</title>
+<programlisting>
+Search                    ()
+</programlisting>
+<variablelist role="params"><varlistentry><term><parameter>query_string</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>time_range</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>filter_templates</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>offset</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>count</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>result_type</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>cancellable</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>events</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>matches</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara> callback to call when the request is satisfied </simpara></listitem></varlistentry><varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara> the data to pass to @_callback_ function </simpara></listitem></varlistentry></variablelist>
+</refsect2>
+<refsect2 id="org-gnome-zeitgeist-Index-SearchWithRelevancies" role="function">
+<title>SearchWithRelevancies ()</title>
+<programlisting>
+SearchWithRelevancies     ()
+</programlisting>
+<variablelist role="params"><varlistentry><term><parameter>relevancies_length1</parameter>&#160;:</term>
+<listitem><simpara> length of the @relevancies array </simpara></listitem></varlistentry><varlistentry><term><parameter>query_string</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>time_range</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>filter_templates</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>storage_state</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>offset</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>count</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>result_type</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>cancellable</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>events</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>relevancies</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>matches</parameter>&#160;:</term>
+<listitem><simpara> &nbsp; </simpara></listitem></varlistentry><varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara> callback to call when the request is satisfied </simpara></listitem></varlistentry><varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara> the data to pass to @_callback_ function </simpara></listitem></varlistentry></variablelist>
+</refsect2></refsect1></refentry>

@@ -1,0 +1,2713 @@
+<MACRO>
+<NAME>ZEITGEIST_TYPE_DATA_SOURCE</NAME>
+#define ZEITGEIST_TYPE_DATA_SOURCE (zeitgeist_data_source_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_DATA_SOURCE</NAME>
+#define ZEITGEIST_DATA_SOURCE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_TYPE_DATA_SOURCE, ZeitgeistDataSource))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_DATA_SOURCE_CLASS</NAME>
+#define ZEITGEIST_DATA_SOURCE_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), ZEITGEIST_TYPE_DATA_SOURCE, ZeitgeistDataSourceClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_DATA_SOURCE</NAME>
+#define ZEITGEIST_IS_DATA_SOURCE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_TYPE_DATA_SOURCE))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_DATA_SOURCE_CLASS</NAME>
+#define ZEITGEIST_IS_DATA_SOURCE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), ZEITGEIST_TYPE_DATA_SOURCE))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_DATA_SOURCE_GET_CLASS</NAME>
+#define ZEITGEIST_DATA_SOURCE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), ZEITGEIST_TYPE_DATA_SOURCE, ZeitgeistDataSourceClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_EVENT</NAME>
+#define ZEITGEIST_TYPE_EVENT (zeitgeist_event_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_EVENT</NAME>
+#define ZEITGEIST_EVENT(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_TYPE_EVENT, ZeitgeistEvent))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_EVENT_CLASS</NAME>
+#define ZEITGEIST_EVENT_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), ZEITGEIST_TYPE_EVENT, ZeitgeistEventClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_EVENT</NAME>
+#define ZEITGEIST_IS_EVENT(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_TYPE_EVENT))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_EVENT_CLASS</NAME>
+#define ZEITGEIST_IS_EVENT_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), ZEITGEIST_TYPE_EVENT))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_EVENT_GET_CLASS</NAME>
+#define ZEITGEIST_EVENT_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), ZEITGEIST_TYPE_EVENT, ZeitgeistEventClass))
+</MACRO>
+<ENUM>
+<NAME>ZeitgeistResultType</NAME>
+typedef enum  {
+	ZEITGEIST_RESULT_TYPE_MOST_RECENT_EVENTS = 0,
+	ZEITGEIST_RESULT_TYPE_LEAST_RECENT_EVENTS = 1,
+	ZEITGEIST_RESULT_TYPE_MOST_RECENT_SUBJECTS = 2,
+	ZEITGEIST_RESULT_TYPE_LEAST_RECENT_SUBJECTS = 3,
+	ZEITGEIST_RESULT_TYPE_MOST_POPULAR_SUBJECTS = 4,
+	ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_SUBJECTS = 5,
+	ZEITGEIST_RESULT_TYPE_MOST_POPULAR_ACTOR = 6,
+	ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_ACTOR = 7,
+	ZEITGEIST_RESULT_TYPE_MOST_RECENT_ACTOR = 8,
+	ZEITGEIST_RESULT_TYPE_LEAST_RECENT_ACTOR = 9,
+	ZEITGEIST_RESULT_TYPE_MOST_RECENT_ORIGIN = 10,
+	ZEITGEIST_RESULT_TYPE_LEAST_RECENT_ORIGIN = 11,
+	ZEITGEIST_RESULT_TYPE_MOST_POPULAR_ORIGIN = 12,
+	ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_ORIGIN = 13,
+	ZEITGEIST_RESULT_TYPE_OLDEST_ACTOR = 14,
+	ZEITGEIST_RESULT_TYPE_MOST_RECENT_SUBJECT_INTERPRETATION = 15,
+	ZEITGEIST_RESULT_TYPE_LEAST_RECENT_SUBJECT_INTERPRETATION = 16,
+	ZEITGEIST_RESULT_TYPE_MOST_POPULAR_SUBJECT_INTERPRETATION = 17,
+	ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_SUBJECT_INTERPRETATION = 18,
+	ZEITGEIST_RESULT_TYPE_MOST_RECENT_MIMETYPE = 19,
+	ZEITGEIST_RESULT_TYPE_LEAST_RECENT_MIMETYPE = 20,
+	ZEITGEIST_RESULT_TYPE_MOST_POPULAR_MIMETYPE = 21,
+	ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_MIMETYPE = 22,
+	ZEITGEIST_RESULT_TYPE_MOST_RECENT_CURRENT_URI = 23,
+	ZEITGEIST_RESULT_TYPE_LEAST_RECENT_CURRENT_URI = 24,
+	ZEITGEIST_RESULT_TYPE_MOST_POPULAR_CURRENT_URI = 25,
+	ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_CURRENT_URI = 26,
+	ZEITGEIST_RESULT_TYPE_MOST_RECENT_EVENT_ORIGIN = 27,
+	ZEITGEIST_RESULT_TYPE_LEAST_RECENT_EVENT_ORIGIN = 28,
+	ZEITGEIST_RESULT_TYPE_MOST_POPULAR_EVENT_ORIGIN = 29,
+	ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_EVENT_ORIGIN = 30,
+	ZEITGEIST_RESULT_TYPE_MOST_RECENT_CURRENT_ORIGIN = 31,
+	ZEITGEIST_RESULT_TYPE_LEAST_RECENT_CURRENT_ORIGIN = 32,
+	ZEITGEIST_RESULT_TYPE_MOST_POPULAR_CURRENT_ORIGIN = 33,
+	ZEITGEIST_RESULT_TYPE_LEAST_POPULAR_CURRENT_ORIGIN = 34,
+	ZEITGEIST_RESULT_TYPE_RELEVANCY = 100
+} ZeitgeistResultType;
+</ENUM>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_RESULT_TYPE</NAME>
+#define ZEITGEIST_TYPE_RESULT_TYPE (zeitgeist_result_type_get_type ())
+</MACRO>
+<ENUM>
+<NAME>ZeitgeistRelevantResultType</NAME>
+typedef enum  {
+	ZEITGEIST_RELEVANT_RESULT_TYPE_RECENT = 0,
+	ZEITGEIST_RELEVANT_RESULT_TYPE_RELATED = 1
+} ZeitgeistRelevantResultType;
+</ENUM>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_RELEVANT_RESULT_TYPE</NAME>
+#define ZEITGEIST_TYPE_RELEVANT_RESULT_TYPE (zeitgeist_relevant_result_type_get_type ())
+</MACRO>
+<ENUM>
+<NAME>ZeitgeistStorageState</NAME>
+typedef enum  {
+	ZEITGEIST_STORAGE_STATE_NOT_AVAILABLE = 0,
+	ZEITGEIST_STORAGE_STATE_AVAILABLE = 1,
+	ZEITGEIST_STORAGE_STATE_ANY = 2
+} ZeitgeistStorageState;
+</ENUM>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_STORAGE_STATE</NAME>
+#define ZEITGEIST_TYPE_STORAGE_STATE (zeitgeist_storage_state_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_SUBJECT</NAME>
+#define ZEITGEIST_TYPE_SUBJECT (zeitgeist_subject_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_SUBJECT</NAME>
+#define ZEITGEIST_SUBJECT(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_TYPE_SUBJECT, ZeitgeistSubject))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_SUBJECT_CLASS</NAME>
+#define ZEITGEIST_SUBJECT_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), ZEITGEIST_TYPE_SUBJECT, ZeitgeistSubjectClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_SUBJECT</NAME>
+#define ZEITGEIST_IS_SUBJECT(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_TYPE_SUBJECT))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_SUBJECT_CLASS</NAME>
+#define ZEITGEIST_IS_SUBJECT_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), ZEITGEIST_TYPE_SUBJECT))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_SUBJECT_GET_CLASS</NAME>
+#define ZEITGEIST_SUBJECT_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), ZEITGEIST_TYPE_SUBJECT, ZeitgeistSubjectClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_TIME_RANGE</NAME>
+#define ZEITGEIST_TYPE_TIME_RANGE (zeitgeist_time_range_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TIME_RANGE</NAME>
+#define ZEITGEIST_TIME_RANGE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_TYPE_TIME_RANGE, ZeitgeistTimeRange))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TIME_RANGE_CLASS</NAME>
+#define ZEITGEIST_TIME_RANGE_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), ZEITGEIST_TYPE_TIME_RANGE, ZeitgeistTimeRangeClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_TIME_RANGE</NAME>
+#define ZEITGEIST_IS_TIME_RANGE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_TYPE_TIME_RANGE))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_TIME_RANGE_CLASS</NAME>
+#define ZEITGEIST_IS_TIME_RANGE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), ZEITGEIST_TYPE_TIME_RANGE))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TIME_RANGE_GET_CLASS</NAME>
+#define ZEITGEIST_TIME_RANGE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), ZEITGEIST_TYPE_TIME_RANGE, ZeitgeistTimeRangeClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_RESULT_SET</NAME>
+#define ZEITGEIST_TYPE_RESULT_SET (zeitgeist_result_set_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_RESULT_SET</NAME>
+#define ZEITGEIST_RESULT_SET(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_TYPE_RESULT_SET, ZeitgeistResultSet))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_RESULT_SET</NAME>
+#define ZEITGEIST_IS_RESULT_SET(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_TYPE_RESULT_SET))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_RESULT_SET_GET_INTERFACE</NAME>
+#define ZEITGEIST_RESULT_SET_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), ZEITGEIST_TYPE_RESULT_SET, ZeitgeistResultSetIface))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_SIMPLE_RESULT_SET</NAME>
+#define ZEITGEIST_TYPE_SIMPLE_RESULT_SET (zeitgeist_simple_result_set_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_SIMPLE_RESULT_SET</NAME>
+#define ZEITGEIST_SIMPLE_RESULT_SET(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_TYPE_SIMPLE_RESULT_SET, ZeitgeistSimpleResultSet))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_SIMPLE_RESULT_SET_CLASS</NAME>
+#define ZEITGEIST_SIMPLE_RESULT_SET_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), ZEITGEIST_TYPE_SIMPLE_RESULT_SET, ZeitgeistSimpleResultSetClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_SIMPLE_RESULT_SET</NAME>
+#define ZEITGEIST_IS_SIMPLE_RESULT_SET(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_TYPE_SIMPLE_RESULT_SET))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_SIMPLE_RESULT_SET_CLASS</NAME>
+#define ZEITGEIST_IS_SIMPLE_RESULT_SET_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), ZEITGEIST_TYPE_SIMPLE_RESULT_SET))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_SIMPLE_RESULT_SET_GET_CLASS</NAME>
+#define ZEITGEIST_SIMPLE_RESULT_SET_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), ZEITGEIST_TYPE_SIMPLE_RESULT_SET, ZeitgeistSimpleResultSetClass))
+</MACRO>
+<STRUCT>
+<NAME>ZeitgeistDataSource</NAME>
+struct _ZeitgeistDataSource {
+	GObject parent_instance;
+	ZeitgeistDataSourcePrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistDataSourceClass</NAME>
+struct _ZeitgeistDataSourceClass {
+	GObjectClass parent_class;
+};
+</STRUCT>
+<ENUM>
+<NAME>ZeitgeistDataModelError</NAME>
+typedef enum  {
+	ZEITGEIST_DATA_MODEL_ERROR_INVALID_SIGNATURE,
+	ZEITGEIST_DATA_MODEL_ERROR_NULL_EVENT,
+	ZEITGEIST_DATA_MODEL_ERROR_TOO_MANY_RESULTS
+} ZeitgeistDataModelError;
+</ENUM>
+<MACRO>
+<NAME>ZEITGEIST_DATA_MODEL_ERROR</NAME>
+#define ZEITGEIST_DATA_MODEL_ERROR zeitgeist_data_model_error_quark ()
+</MACRO>
+<ENUM>
+<NAME>ZeitgeistEngineError</NAME>
+typedef enum  {
+	ZEITGEIST_ENGINE_ERROR_BACKUP_FAILED,
+	ZEITGEIST_ENGINE_ERROR_DATABASE_BUSY,
+	ZEITGEIST_ENGINE_ERROR_DATABASE_CANTOPEN,
+	ZEITGEIST_ENGINE_ERROR_DATABASE_CORRUPT,
+	ZEITGEIST_ENGINE_ERROR_DATABASE_ERROR,
+	ZEITGEIST_ENGINE_ERROR_DATABASE_RETIRE_FAILED,
+	ZEITGEIST_ENGINE_ERROR_EXISTING_INSTANCE,
+	ZEITGEIST_ENGINE_ERROR_INVALID_ARGUMENT,
+	ZEITGEIST_ENGINE_ERROR_INVALID_EVENT,
+	ZEITGEIST_ENGINE_ERROR_INVALID_KEY
+} ZeitgeistEngineError;
+</ENUM>
+<MACRO>
+<NAME>ZEITGEIST_ENGINE_ERROR</NAME>
+#define ZEITGEIST_ENGINE_ERROR zeitgeist_engine_error_quark ()
+</MACRO>
+<STRUCT>
+<NAME>ZeitgeistEvent</NAME>
+struct _ZeitgeistEvent {
+	GObject parent_instance;
+	ZeitgeistEventPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistEventClass</NAME>
+struct _ZeitgeistEventClass {
+	GObjectClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistSubject</NAME>
+struct _ZeitgeistSubject {
+	GObject parent_instance;
+	ZeitgeistSubjectPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistSubjectClass</NAME>
+struct _ZeitgeistSubjectClass {
+	GObjectClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistTimeRange</NAME>
+struct _ZeitgeistTimeRange {
+	GObject parent_instance;
+	ZeitgeistTimeRangePrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistTimeRangeClass</NAME>
+struct _ZeitgeistTimeRangeClass {
+	GObjectClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistResultSetIface</NAME>
+struct _ZeitgeistResultSetIface {
+	GTypeInterface parent_iface;
+	guint (*size) (ZeitgeistResultSet* self);
+	guint (*estimated_matches) (ZeitgeistResultSet* self);
+	ZeitgeistEvent* (*next_value) (ZeitgeistResultSet* self);
+	gboolean (*has_next) (ZeitgeistResultSet* self);
+	guint (*tell) (ZeitgeistResultSet* self);
+	void (*reset) (ZeitgeistResultSet* self);
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistSimpleResultSet</NAME>
+struct _ZeitgeistSimpleResultSet {
+	GObject parent_instance;
+	ZeitgeistSimpleResultSetPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistSimpleResultSetClass</NAME>
+struct _ZeitgeistSimpleResultSetClass {
+	GObjectClass parent_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>zeitgeist_data_source_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_new</NAME>
+<RETURNS>ZeitgeistDataSource *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_construct</NAME>
+<RETURNS>ZeitgeistDataSource *</RETURNS>
+GType object_type
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_new_full</NAME>
+<RETURNS>ZeitgeistDataSource *</RETURNS>
+const gchar* unique_id, const gchar* name, const gchar* description, GPtrArray* templates
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_construct_full</NAME>
+<RETURNS>ZeitgeistDataSource *</RETURNS>
+GType object_type, const gchar* unique_id, const gchar* name, const gchar* description, GPtrArray* templates
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_model_error_quark</NAME>
+<RETURNS>GQuark</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_new_from_variant</NAME>
+<RETURNS>ZeitgeistDataSource *</RETURNS>
+GVariant* variant, gboolean reset_running, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_construct_from_variant</NAME>
+<RETURNS>ZeitgeistDataSource *</RETURNS>
+GType object_type, GVariant* variant, gboolean reset_running, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_to_variant</NAME>
+<RETURNS>GVariant *</RETURNS>
+ZeitgeistDataSource* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_get_unique_id</NAME>
+<RETURNS>const gchar *</RETURNS>
+ZeitgeistDataSource* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_set_unique_id</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistDataSource* self, const gchar* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_get_name</NAME>
+<RETURNS>const gchar *</RETURNS>
+ZeitgeistDataSource* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_set_name</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistDataSource* self, const gchar* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_get_description</NAME>
+<RETURNS>const gchar *</RETURNS>
+ZeitgeistDataSource* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_set_description</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistDataSource* self, const gchar* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_get_event_templates</NAME>
+<RETURNS>GPtrArray *</RETURNS>
+ZeitgeistDataSource* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_set_event_templates</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistDataSource* self, GPtrArray* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_get_enabled</NAME>
+<RETURNS>gboolean</RETURNS>
+ZeitgeistDataSource* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_set_enabled</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistDataSource* self, gboolean value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_get_running</NAME>
+<RETURNS>gboolean</RETURNS>
+ZeitgeistDataSource* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_set_running</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistDataSource* self, gboolean value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_get_timestamp</NAME>
+<RETURNS>gint64</RETURNS>
+ZeitgeistDataSource* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_set_timestamp</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistDataSource* self, gint64 value
+</FUNCTION>
+<MACRO>
+<NAME>ZEITGEIST_DATA_SOURCES_SIG_DATASOURCES</NAME>
+#define ZEITGEIST_DATA_SOURCES_SIG_DATASOURCES "a(sssa(" ZEITGEIST_UTILS_SIG_EVENT ")bxb)"
+</MACRO>
+<FUNCTION>
+<NAME>zeitgeist_data_sources_from_variant</NAME>
+<RETURNS>GPtrArray *</RETURNS>
+GVariant* sources_variant, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_sources_to_variant</NAME>
+<RETURNS>GVariant *</RETURNS>
+GHashTable* sources
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_engine_error_quark</NAME>
+<RETURNS>GQuark</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_register_mimetype</NAME>
+<RETURNS>void</RETURNS>
+const gchar* mimetype, const gchar* interpretation_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_register_mimetype_regex</NAME>
+<RETURNS>void</RETURNS>
+const gchar* mimetype_regex, const gchar* interpretation_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_interpretation_for_mimetype</NAME>
+<RETURNS>const gchar *</RETURNS>
+const gchar* mimetype
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_register_uri_scheme</NAME>
+<RETURNS>void</RETURNS>
+const gchar* uri_scheme, const gchar* manifestation_type
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_manifestation_for_uri</NAME>
+<RETURNS>const gchar *</RETURNS>
+const gchar* uri
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_result_type_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_result_type_is_sort_order_asc</NAME>
+<RETURNS>gboolean</RETURNS>
+ZeitgeistResultType result_type
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_relevant_result_type_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_storage_state_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<MACRO>
+<NAME>ZEITGEIST_EVENT_SIGNATURE</NAME>
+#define ZEITGEIST_EVENT_SIGNATURE "asaasay"
+</MACRO>
+<FUNCTION>
+<NAME>zeitgeist_subject_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_get_subject</NAME>
+<RETURNS>ZeitgeistSubject *</RETURNS>
+ZeitgeistEvent* self, gint index
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_num_subjects</NAME>
+<RETURNS>gint</RETURNS>
+ZeitgeistEvent* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_add_subject</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistEvent* self, ZeitgeistSubject* subject
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_take_subject</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistEvent* self, ZeitgeistSubject* subject
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_new_full</NAME>
+<RETURNS>ZeitgeistEvent *</RETURNS>
+const gchar* interpretation, const gchar* manifestation, const gchar* actor, const gchar* origin, ...
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_construct_full</NAME>
+<RETURNS>ZeitgeistEvent *</RETURNS>
+GType object_type, const gchar* interpretation, const gchar* manifestation, const gchar* actor, const gchar* origin, ...
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_constructv_full</NAME>
+<RETURNS>ZeitgeistEvent *</RETURNS>
+GType object_type, const gchar* interpretation, const gchar* manifestation, const gchar* actor, const gchar* origin, va_list _vala_va_list
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_new_from_variant</NAME>
+<RETURNS>ZeitgeistEvent *</RETURNS>
+GVariant* event_variant, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_construct_from_variant</NAME>
+<RETURNS>ZeitgeistEvent *</RETURNS>
+GType object_type, GVariant* event_variant, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_set_actor_from_app_info</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistEvent* self, GAppInfo* info
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_to_variant</NAME>
+<RETURNS>GVariant *</RETURNS>
+ZeitgeistEvent* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_debug_print</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistEvent* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_matches_template</NAME>
+<RETURNS>gboolean</RETURNS>
+ZeitgeistEvent* self, ZeitgeistEvent* template_event
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_new</NAME>
+<RETURNS>ZeitgeistEvent *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_construct</NAME>
+<RETURNS>ZeitgeistEvent *</RETURNS>
+GType object_type
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_get_id</NAME>
+<RETURNS>guint32</RETURNS>
+ZeitgeistEvent* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_set_id</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistEvent* self, guint32 value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_get_timestamp</NAME>
+<RETURNS>gint64</RETURNS>
+ZeitgeistEvent* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_set_timestamp</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistEvent* self, gint64 value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_get_origin</NAME>
+<RETURNS>const gchar *</RETURNS>
+ZeitgeistEvent* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_set_origin</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistEvent* self, const gchar* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_get_actor</NAME>
+<RETURNS>const gchar *</RETURNS>
+ZeitgeistEvent* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_set_actor</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistEvent* self, const gchar* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_get_interpretation</NAME>
+<RETURNS>const gchar *</RETURNS>
+ZeitgeistEvent* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_set_interpretation</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistEvent* self, const gchar* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_get_manifestation</NAME>
+<RETURNS>const gchar *</RETURNS>
+ZeitgeistEvent* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_set_manifestation</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistEvent* self, const gchar* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_get_subjects</NAME>
+<RETURNS>GPtrArray *</RETURNS>
+ZeitgeistEvent* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_set_subjects</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistEvent* self, GPtrArray* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_get_payload</NAME>
+<RETURNS>GByteArray *</RETURNS>
+ZeitgeistEvent* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_event_set_payload</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistEvent* self, GByteArray* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_events_from_variant</NAME>
+<RETURNS>GPtrArray *</RETURNS>
+GVariant* vevents, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_events_to_variant</NAME>
+<RETURNS>GVariant *</RETURNS>
+GPtrArray* events
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_events_to_variant_with_limit</NAME>
+<RETURNS>GVariant *</RETURNS>
+GPtrArray* events, gsize limit, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_new_full</NAME>
+<RETURNS>ZeitgeistSubject *</RETURNS>
+const gchar* uri, const gchar* interpretation, const gchar* manifestation, const gchar* mimetype, const gchar* origin, const gchar* text, const gchar* storage
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_construct_full</NAME>
+<RETURNS>ZeitgeistSubject *</RETURNS>
+GType object_type, const gchar* uri, const gchar* interpretation, const gchar* manifestation, const gchar* mimetype, const gchar* origin, const gchar* text, const gchar* storage
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_new_move_event</NAME>
+<RETURNS>ZeitgeistSubject *</RETURNS>
+const gchar* source_uri, const gchar* source_origin, const gchar* destination_uri, const gchar* destination_origin, const gchar* interpretation, const gchar* manifestation, const gchar* mimetype, const gchar* text, const gchar* storage
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_construct_move_event</NAME>
+<RETURNS>ZeitgeistSubject *</RETURNS>
+GType object_type, const gchar* source_uri, const gchar* source_origin, const gchar* destination_uri, const gchar* destination_origin, const gchar* interpretation, const gchar* manifestation, const gchar* mimetype, const gchar* text, const gchar* storage
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_new_from_variant</NAME>
+<RETURNS>ZeitgeistSubject *</RETURNS>
+GVariant* subject_variant, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_construct_from_variant</NAME>
+<RETURNS>ZeitgeistSubject *</RETURNS>
+GType object_type, GVariant* subject_variant, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_to_variant</NAME>
+<RETURNS>GVariant *</RETURNS>
+ZeitgeistSubject* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_matches_template</NAME>
+<RETURNS>gboolean</RETURNS>
+ZeitgeistSubject* self, ZeitgeistSubject* template_subject
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_new</NAME>
+<RETURNS>ZeitgeistSubject *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_construct</NAME>
+<RETURNS>ZeitgeistSubject *</RETURNS>
+GType object_type
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_get_uri</NAME>
+<RETURNS>const gchar *</RETURNS>
+ZeitgeistSubject* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_set_uri</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistSubject* self, const gchar* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_get_origin</NAME>
+<RETURNS>const gchar *</RETURNS>
+ZeitgeistSubject* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_set_origin</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistSubject* self, const gchar* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_get_text</NAME>
+<RETURNS>const gchar *</RETURNS>
+ZeitgeistSubject* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_set_text</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistSubject* self, const gchar* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_get_storage</NAME>
+<RETURNS>const gchar *</RETURNS>
+ZeitgeistSubject* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_set_storage</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistSubject* self, const gchar* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_get_current_uri</NAME>
+<RETURNS>const gchar *</RETURNS>
+ZeitgeistSubject* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_set_current_uri</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistSubject* self, const gchar* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_get_current_origin</NAME>
+<RETURNS>const gchar *</RETURNS>
+ZeitgeistSubject* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_set_current_origin</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistSubject* self, const gchar* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_get_mimetype</NAME>
+<RETURNS>const gchar *</RETURNS>
+ZeitgeistSubject* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_set_mimetype</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistSubject* self, const gchar* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_get_interpretation</NAME>
+<RETURNS>const gchar *</RETURNS>
+ZeitgeistSubject* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_set_interpretation</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistSubject* self, const gchar* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_get_manifestation</NAME>
+<RETURNS>const gchar *</RETURNS>
+ZeitgeistSubject* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_subject_set_manifestation</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistSubject* self, const gchar* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_time_range_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_time_range_new</NAME>
+<RETURNS>ZeitgeistTimeRange *</RETURNS>
+gint64 start_msec, gint64 end_msec
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_time_range_construct</NAME>
+<RETURNS>ZeitgeistTimeRange *</RETURNS>
+GType object_type, gint64 start_msec, gint64 end_msec
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_time_range_new_anytime</NAME>
+<RETURNS>ZeitgeistTimeRange *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_time_range_construct_anytime</NAME>
+<RETURNS>ZeitgeistTimeRange *</RETURNS>
+GType object_type
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_time_range_new_to_now</NAME>
+<RETURNS>ZeitgeistTimeRange *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_time_range_construct_to_now</NAME>
+<RETURNS>ZeitgeistTimeRange *</RETURNS>
+GType object_type
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_time_range_new_from_now</NAME>
+<RETURNS>ZeitgeistTimeRange *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_time_range_construct_from_now</NAME>
+<RETURNS>ZeitgeistTimeRange *</RETURNS>
+GType object_type
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_time_range_new_from_variant</NAME>
+<RETURNS>ZeitgeistTimeRange *</RETURNS>
+GVariant* variant, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_time_range_construct_from_variant</NAME>
+<RETURNS>ZeitgeistTimeRange *</RETURNS>
+GType object_type, GVariant* variant, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_time_range_to_variant</NAME>
+<RETURNS>GVariant *</RETURNS>
+ZeitgeistTimeRange* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_time_range_intersect</NAME>
+<RETURNS>ZeitgeistTimeRange *</RETURNS>
+ZeitgeistTimeRange* self, ZeitgeistTimeRange* time_range
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_time_range_get_start</NAME>
+<RETURNS>gint64</RETURNS>
+ZeitgeistTimeRange* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_time_range_get_end</NAME>
+<RETURNS>gint64</RETURNS>
+ZeitgeistTimeRange* self
+</FUNCTION>
+<MACRO>
+<NAME>ZEITGEIST_TIMESTAMP_SECOND</NAME>
+#define ZEITGEIST_TIMESTAMP_SECOND ((gint64) 1000)
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TIMESTAMP_MINUTE</NAME>
+#define ZEITGEIST_TIMESTAMP_MINUTE ((gint64) 60000)
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TIMESTAMP_HOUR</NAME>
+#define ZEITGEIST_TIMESTAMP_HOUR ((gint64) 3600000)
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TIMESTAMP_DAY</NAME>
+#define ZEITGEIST_TIMESTAMP_DAY ((gint64) 86400000)
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TIMESTAMP_WEEK</NAME>
+#define ZEITGEIST_TIMESTAMP_WEEK ((gint64) 604800000)
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TIMESTAMP_YEAR</NAME>
+#define ZEITGEIST_TIMESTAMP_YEAR 31556952000LL
+</MACRO>
+<FUNCTION>
+<NAME>zeitgeist_timestamp_from_timeval</NAME>
+<RETURNS>gint64</RETURNS>
+GTimeVal* timeval
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_timestamp_to_timeval</NAME>
+<RETURNS>void</RETURNS>
+gint64 timestamp, GTimeVal* result
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_timestamp_from_now</NAME>
+<RETURNS>gint64</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_timestamp_from_iso8601</NAME>
+<RETURNS>gint64</RETURNS>
+const gchar* datetime
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_timestamp_to_iso8601</NAME>
+<RETURNS>gchar *</RETURNS>
+gint64 timestamp
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_timestamp_from_date</NAME>
+<RETURNS>gint64</RETURNS>
+GDate* date
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_timestamp_from_dmy</NAME>
+<RETURNS>gint64</RETURNS>
+GDateDay day, GDateMonth month, GDateYear year
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_timestamp_to_date</NAME>
+<RETURNS>void</RETURNS>
+gint64 timestamp, GDate* result
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_timestamp_next_midnight</NAME>
+<RETURNS>gint64</RETURNS>
+gint64 timestamp
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_timestamp_prev_midnight</NAME>
+<RETURNS>gint64</RETURNS>
+gint64 timestamp
+</FUNCTION>
+<MACRO>
+<NAME>ZEITGEIST_NCAL_ALARM</NAME>
+#define ZEITGEIST_NCAL_ALARM "http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Alarm"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NCAL_ATTACHMENT</NAME>
+#define ZEITGEIST_NCAL_ATTACHMENT "http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Attachment"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NCAL_CALENDAR</NAME>
+#define ZEITGEIST_NCAL_CALENDAR "http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Calendar"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NCAL_CALENDAR_DATA_OBJECT</NAME>
+#define ZEITGEIST_NCAL_CALENDAR_DATA_OBJECT "http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#CalendarData" \
+"Object"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NCAL_EVENT</NAME>
+#define ZEITGEIST_NCAL_EVENT "http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Event"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NCAL_FREEBUSY</NAME>
+#define ZEITGEIST_NCAL_FREEBUSY "http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Freebusy"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NCAL_JOURNAL</NAME>
+#define ZEITGEIST_NCAL_JOURNAL "http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Journal"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NCAL_TIMEZONE</NAME>
+#define ZEITGEIST_NCAL_TIMEZONE "http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Timezone"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NCAL_TODO</NAME>
+#define ZEITGEIST_NCAL_TODO "http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#Todo"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NCO_CONTACT</NAME>
+#define ZEITGEIST_NCO_CONTACT "http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NCO_CONTACT_GROUP</NAME>
+#define ZEITGEIST_NCO_CONTACT_GROUP "http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactGroup"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NCO_CONTACT_LIST</NAME>
+#define ZEITGEIST_NCO_CONTACT_LIST "http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactList"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NCO_CONTACT_LIST_DATA_OBJECT</NAME>
+#define ZEITGEIST_NCO_CONTACT_LIST_DATA_OBJECT "http://www.semanticdesktop.org/ontologies/2007/03/22/nco#ContactListDa" \
+"taObject"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NCO_ORGANIZATION_CONTACT</NAME>
+#define ZEITGEIST_NCO_ORGANIZATION_CONTACT "http://www.semanticdesktop.org/ontologies/2007/03/22/nco#OrganizationC" \
+"ontact"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NCO_PERSON_CONTACT</NAME>
+#define ZEITGEIST_NCO_PERSON_CONTACT "http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonContact"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_APPLICATION</NAME>
+#define ZEITGEIST_NFO_APPLICATION "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Application"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_ARCHIVE</NAME>
+#define ZEITGEIST_NFO_ARCHIVE "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Archive"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_ARCHIVE_ITEM</NAME>
+#define ZEITGEIST_NFO_ARCHIVE_ITEM "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#ArchiveItem"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_ATTACHMENT</NAME>
+#define ZEITGEIST_NFO_ATTACHMENT "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Attachment"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_AUDIO</NAME>
+#define ZEITGEIST_NFO_AUDIO "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Audio"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_BOOKMARK</NAME>
+#define ZEITGEIST_NFO_BOOKMARK "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Bookmark"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_BOOKMARK_FOLDER</NAME>
+#define ZEITGEIST_NFO_BOOKMARK_FOLDER "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#BookmarkFolde" \
+"r"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_CURSOR</NAME>
+#define ZEITGEIST_NFO_CURSOR "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Cursor"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_DATA_CONTAINER</NAME>
+#define ZEITGEIST_NFO_DATA_CONTAINER "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_DELETED_RESOURCE</NAME>
+#define ZEITGEIST_NFO_DELETED_RESOURCE "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DeletedResour" \
+"ce"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_DOCUMENT</NAME>
+#define ZEITGEIST_NFO_DOCUMENT "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Document"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_EMBEDDED_FILE_DATA_OBJECT</NAME>
+#define ZEITGEIST_NFO_EMBEDDED_FILE_DATA_OBJECT "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EmbeddedFileD" \
+"ataObject"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_EXECUTABLE</NAME>
+#define ZEITGEIST_NFO_EXECUTABLE "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Executable"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_FILESYSTEM</NAME>
+#define ZEITGEIST_NFO_FILESYSTEM "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_FILESYSTEM_IMAGE</NAME>
+#define ZEITGEIST_NFO_FILESYSTEM_IMAGE "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FilesystemIma" \
+"ge"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_FILE_DATA_OBJECT</NAME>
+#define ZEITGEIST_NFO_FILE_DATA_OBJECT "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObjec" \
+"t"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_FOLDER</NAME>
+#define ZEITGEIST_NFO_FOLDER "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Folder"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_FONT</NAME>
+#define ZEITGEIST_NFO_FONT "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Font"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_HARD_DISK_PARTITION</NAME>
+#define ZEITGEIST_NFO_HARD_DISK_PARTITION "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#HardDiskParti" \
+"tion"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_HTML_DOCUMENT</NAME>
+#define ZEITGEIST_NFO_HTML_DOCUMENT "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#HtmlDocument"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_ICON</NAME>
+#define ZEITGEIST_NFO_ICON "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Icon"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_IMAGE</NAME>
+#define ZEITGEIST_NFO_IMAGE "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_MEDIA</NAME>
+#define ZEITGEIST_NFO_MEDIA "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_MEDIA_LIST</NAME>
+#define ZEITGEIST_NFO_MEDIA_LIST "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaList"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_MEDIA_STREAM</NAME>
+#define ZEITGEIST_NFO_MEDIA_STREAM "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaStream"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_MIND_MAP</NAME>
+#define ZEITGEIST_NFO_MIND_MAP "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MindMap"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_OPERATING_SYSTEM</NAME>
+#define ZEITGEIST_NFO_OPERATING_SYSTEM "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#OperatingSyst" \
+"em"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_PAGINATED_TEXT_DOCUMENT</NAME>
+#define ZEITGEIST_NFO_PAGINATED_TEXT_DOCUMENT "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PaginatedText" \
+"Document"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_PLAIN_TEXT_DOCUMENT</NAME>
+#define ZEITGEIST_NFO_PLAIN_TEXT_DOCUMENT "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlainTextDocu" \
+"ment"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_PRESENTATION</NAME>
+#define ZEITGEIST_NFO_PRESENTATION "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Presentation"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_RASTER_IMAGE</NAME>
+#define ZEITGEIST_NFO_RASTER_IMAGE "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RasterImage"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_REMOTE_DATA_OBJECT</NAME>
+#define ZEITGEIST_NFO_REMOTE_DATA_OBJECT "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RemoteDataObj" \
+"ect"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_REMOTE_PORT_ADDRESS</NAME>
+#define ZEITGEIST_NFO_REMOTE_PORT_ADDRESS "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RemotePortAdd" \
+"ress"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_SOFTWARE</NAME>
+#define ZEITGEIST_NFO_SOFTWARE "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_SOFTWARE_ITEM</NAME>
+#define ZEITGEIST_NFO_SOFTWARE_ITEM "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SoftwareItem"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_SOFTWARE_SERVICE</NAME>
+#define ZEITGEIST_NFO_SOFTWARE_SERVICE "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SoftwareServi" \
+"ce"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_SOURCE_CODE</NAME>
+#define ZEITGEIST_NFO_SOURCE_CODE "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_SPREADSHEET</NAME>
+#define ZEITGEIST_NFO_SPREADSHEET "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Spreadsheet"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_TEXT_DOCUMENT</NAME>
+#define ZEITGEIST_NFO_TEXT_DOCUMENT "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#TextDocument"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_TRASH</NAME>
+#define ZEITGEIST_NFO_TRASH "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Trash"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_VECTOR_IMAGE</NAME>
+#define ZEITGEIST_NFO_VECTOR_IMAGE "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#VectorImage"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_VIDEO</NAME>
+#define ZEITGEIST_NFO_VIDEO "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Video"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_VISUAL</NAME>
+#define ZEITGEIST_NFO_VISUAL "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_WEBSITE</NAME>
+#define ZEITGEIST_NFO_WEBSITE "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Website"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NFO_WEB_DATA_OBJECT</NAME>
+#define ZEITGEIST_NFO_WEB_DATA_OBJECT "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#WebDataObject"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NIE_DATA_OBJECT</NAME>
+#define ZEITGEIST_NIE_DATA_OBJECT "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NIE_INFORMATION_ELEMENT</NAME>
+#define ZEITGEIST_NIE_INFORMATION_ELEMENT "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationEl" \
+"ement"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NMM_MOVIE</NAME>
+#define ZEITGEIST_NMM_MOVIE "http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#Movie"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NMM_MUSIC_ALBUM</NAME>
+#define ZEITGEIST_NMM_MUSIC_ALBUM "http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#MusicAlbum"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NMM_MUSIC_PIECE</NAME>
+#define ZEITGEIST_NMM_MUSIC_PIECE "http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#MusicPiece"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NMM_TVSERIES</NAME>
+#define ZEITGEIST_NMM_TVSERIES "http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#TVSeries"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NMM_TVSHOW</NAME>
+#define ZEITGEIST_NMM_TVSHOW "http://www.semanticdesktop.org/ontologies/2009/02/19/nmm#TVShow"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NMO_EMAIL</NAME>
+#define ZEITGEIST_NMO_EMAIL "http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Email"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NMO_IMMESSAGE</NAME>
+#define ZEITGEIST_NMO_IMMESSAGE "http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#IMMessage"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NMO_MAILBOX</NAME>
+#define ZEITGEIST_NMO_MAILBOX "http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Mailbox"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NMO_MAILBOX_DATA_OBJECT</NAME>
+#define ZEITGEIST_NMO_MAILBOX_DATA_OBJECT "http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MailboxDataOb" \
+"ject"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NMO_MESSAGE</NAME>
+#define ZEITGEIST_NMO_MESSAGE "http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#Message"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NMO_MIME_ENTITY</NAME>
+#define ZEITGEIST_NMO_MIME_ENTITY "http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#MimeEntity"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_ACCEPT_EVENT</NAME>
+#define ZEITGEIST_ZG_ACCEPT_EVENT "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#AcceptEvent"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_ACCESS_EVENT</NAME>
+#define ZEITGEIST_ZG_ACCESS_EVENT "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#AccessEvent"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_APPLICATION_ACTION</NAME>
+#define ZEITGEIST_ZG_APPLICATION_ACTION "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#ApplicationA" \
+"ction"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_CREATE_EVENT</NAME>
+#define ZEITGEIST_ZG_CREATE_EVENT "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#CreateEvent"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_DELETE_EVENT</NAME>
+#define ZEITGEIST_ZG_DELETE_EVENT "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#DeleteEvent"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_DENY_EVENT</NAME>
+#define ZEITGEIST_ZG_DENY_EVENT "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#DenyEvent"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_EVENT_INTERPRETATION</NAME>
+#define ZEITGEIST_ZG_EVENT_INTERPRETATION "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#EventInterpr" \
+"etation"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_EVENT_MANIFESTATION</NAME>
+#define ZEITGEIST_ZG_EVENT_MANIFESTATION "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#EventManifes" \
+"tation"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_EXPIRE_EVENT</NAME>
+#define ZEITGEIST_ZG_EXPIRE_EVENT "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#ExpireEvent"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_HEURISTIC_ACTIVITY</NAME>
+#define ZEITGEIST_ZG_HEURISTIC_ACTIVITY "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#HeuristicAct" \
+"ivity"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_LEAVE_EVENT</NAME>
+#define ZEITGEIST_ZG_LEAVE_EVENT "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#LeaveEvent"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_MODIFY_EVENT</NAME>
+#define ZEITGEIST_ZG_MODIFY_EVENT "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#ModifyEvent"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_MOVE_EVENT</NAME>
+#define ZEITGEIST_ZG_MOVE_EVENT "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#MoveEvent"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_RECEIVE_EVENT</NAME>
+#define ZEITGEIST_ZG_RECEIVE_EVENT "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#ReceiveEvent"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_SCHEDULED_ACTIVITY</NAME>
+#define ZEITGEIST_ZG_SCHEDULED_ACTIVITY "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#ScheduledAct" \
+"ivity"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_SEND_EVENT</NAME>
+#define ZEITGEIST_ZG_SEND_EVENT "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#SendEvent"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_SYSTEM_NOTIFICATION</NAME>
+#define ZEITGEIST_ZG_SYSTEM_NOTIFICATION "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#SystemNotifi" \
+"cation"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_USER_ACTIVITY</NAME>
+#define ZEITGEIST_ZG_USER_ACTIVITY "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#UserActivity"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_ZG_WORLD_ACTIVITY</NAME>
+#define ZEITGEIST_ZG_WORLD_ACTIVITY "http://www.zeitgeist-project.com/ontologies/2010/01/27/zg#WorldActivit" \
+"y"
+</MACRO>
+<FUNCTION>
+<NAME>zeitgeist_symbol_get_display_name</NAME>
+<RETURNS>const gchar *</RETURNS>
+const gchar* symbol_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_symbol_get_description</NAME>
+<RETURNS>const gchar *</RETURNS>
+const gchar* symbol_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_symbol_get_all_parents</NAME>
+<RETURNS>GList *</RETURNS>
+const gchar* symbol_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_symbol_get_all_children</NAME>
+<RETURNS>GList *</RETURNS>
+const gchar* symbol_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_symbol_get_children</NAME>
+<RETURNS>GList *</RETURNS>
+const gchar* symbol_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_symbol_get_parents</NAME>
+<RETURNS>GList *</RETURNS>
+const gchar* symbol_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_symbol_is_a</NAME>
+<RETURNS>gboolean</RETURNS>
+const gchar* symbol_uri, const gchar* parent_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_result_set_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_result_set_size</NAME>
+<RETURNS>guint</RETURNS>
+ZeitgeistResultSet* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_result_set_estimated_matches</NAME>
+<RETURNS>guint</RETURNS>
+ZeitgeistResultSet* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_result_set_next_value</NAME>
+<RETURNS>ZeitgeistEvent *</RETURNS>
+ZeitgeistResultSet* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_result_set_has_next</NAME>
+<RETURNS>gboolean</RETURNS>
+ZeitgeistResultSet* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_result_set_tell</NAME>
+<RETURNS>guint</RETURNS>
+ZeitgeistResultSet* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_result_set_reset</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistResultSet* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_result_set_iterator</NAME>
+<RETURNS>ZeitgeistResultSet *</RETURNS>
+ZeitgeistResultSet* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_simple_result_set_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_simple_result_set_new</NAME>
+<RETURNS>ZeitgeistSimpleResultSet *</RETURNS>
+GPtrArray* events
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_simple_result_set_construct</NAME>
+<RETURNS>ZeitgeistSimpleResultSet *</RETURNS>
+GType object_type, GPtrArray* events
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_simple_result_set_new_with_num_matches</NAME>
+<RETURNS>ZeitgeistSimpleResultSet *</RETURNS>
+GPtrArray* events, guint matches
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_simple_result_set_construct_with_num_matches</NAME>
+<RETURNS>ZeitgeistSimpleResultSet *</RETURNS>
+GType object_type, GPtrArray* events, guint matches
+</FUNCTION>
+<MACRO>
+<NAME>ZEITGEIST_UTILS_ENGINE_DBUS_NAME</NAME>
+#define ZEITGEIST_UTILS_ENGINE_DBUS_NAME "org.gnome.zeitgeist.Engine"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_UTILS_ENGINE_DBUS_PATH</NAME>
+#define ZEITGEIST_UTILS_ENGINE_DBUS_PATH "/org/gnome/zeitgeist/log/activity"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_UTILS_SIG_EVENT</NAME>
+#define ZEITGEIST_UTILS_SIG_EVENT "asaasay"
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_UTILS_MAX_DBUS_RESULT_SIZE</NAME>
+#define ZEITGEIST_UTILS_MAX_DBUS_RESULT_SIZE ((gsize) ((4 * 1024) * 1024))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_UTILS_CACHE_SIZE</NAME>
+#define ZEITGEIST_UTILS_CACHE_SIZE ((guint) 0)
+</MACRO>
+<FUNCTION>
+<NAME>zeitgeist_utils_get_data_path</NAME>
+<RETURNS>const gchar *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_utils_get_default_data_path</NAME>
+<RETURNS>gchar *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_utils_get_database_file_path</NAME>
+<RETURNS>const gchar *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_utils_set_database_file_path</NAME>
+<RETURNS>void</RETURNS>
+const gchar* path
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_utils_get_database_file_backup_path</NAME>
+<RETURNS>const gchar *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_utils_get_database_file_retire_name</NAME>
+<RETURNS>gchar *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_utils_get_local_extensions_path</NAME>
+<RETURNS>const gchar *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_utils_using_in_memory_database</NAME>
+<RETURNS>gboolean</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_utils_backup_database</NAME>
+<RETURNS>void</RETURNS>
+GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_utils_parse_negation</NAME>
+<RETURNS>gboolean</RETURNS>
+gchar* * val
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_utils_parse_noexpand</NAME>
+<RETURNS>gboolean</RETURNS>
+gchar* * val
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_utils_parse_wildcard</NAME>
+<RETURNS>gboolean</RETURNS>
+gchar* * val
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_utils_is_empty_string</NAME>
+<RETURNS>gboolean</RETURNS>
+const gchar* s
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_utils_log_may_read_directly</NAME>
+<RETURNS>gboolean</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ZeitgeistDataSourcePrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistEventPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistResultSet</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistSimpleResultSetPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistSubjectPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistTimeRangePrivate</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_REMOTE_REGISTRY</NAME>
+#define ZEITGEIST_TYPE_REMOTE_REGISTRY (zeitgeist_remote_registry_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_REMOTE_REGISTRY</NAME>
+#define ZEITGEIST_REMOTE_REGISTRY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_TYPE_REMOTE_REGISTRY, ZeitgeistRemoteRegistry))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_REMOTE_REGISTRY</NAME>
+#define ZEITGEIST_IS_REMOTE_REGISTRY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_TYPE_REMOTE_REGISTRY))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_REMOTE_REGISTRY_GET_INTERFACE</NAME>
+#define ZEITGEIST_REMOTE_REGISTRY_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), ZEITGEIST_TYPE_REMOTE_REGISTRY, ZeitgeistRemoteRegistryIface))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_REMOTE_REGISTRY_PROXY</NAME>
+#define ZEITGEIST_TYPE_REMOTE_REGISTRY_PROXY (zeitgeist_remote_registry_proxy_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_QUEUED_PROXY_WRAPPER</NAME>
+#define ZEITGEIST_TYPE_QUEUED_PROXY_WRAPPER (zeitgeist_queued_proxy_wrapper_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_QUEUED_PROXY_WRAPPER</NAME>
+#define ZEITGEIST_QUEUED_PROXY_WRAPPER(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_TYPE_QUEUED_PROXY_WRAPPER, ZeitgeistQueuedProxyWrapper))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_QUEUED_PROXY_WRAPPER_CLASS</NAME>
+#define ZEITGEIST_QUEUED_PROXY_WRAPPER_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), ZEITGEIST_TYPE_QUEUED_PROXY_WRAPPER, ZeitgeistQueuedProxyWrapperClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_QUEUED_PROXY_WRAPPER</NAME>
+#define ZEITGEIST_IS_QUEUED_PROXY_WRAPPER(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_TYPE_QUEUED_PROXY_WRAPPER))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_QUEUED_PROXY_WRAPPER_CLASS</NAME>
+#define ZEITGEIST_IS_QUEUED_PROXY_WRAPPER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), ZEITGEIST_TYPE_QUEUED_PROXY_WRAPPER))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_QUEUED_PROXY_WRAPPER_GET_CLASS</NAME>
+#define ZEITGEIST_QUEUED_PROXY_WRAPPER_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), ZEITGEIST_TYPE_QUEUED_PROXY_WRAPPER, ZeitgeistQueuedProxyWrapperClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY</NAME>
+#define ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY (zeitgeist_data_source_registry_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_DATA_SOURCE_REGISTRY</NAME>
+#define ZEITGEIST_DATA_SOURCE_REGISTRY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY, ZeitgeistDataSourceRegistry))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_DATA_SOURCE_REGISTRY_CLASS</NAME>
+#define ZEITGEIST_DATA_SOURCE_REGISTRY_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY, ZeitgeistDataSourceRegistryClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_DATA_SOURCE_REGISTRY</NAME>
+#define ZEITGEIST_IS_DATA_SOURCE_REGISTRY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_DATA_SOURCE_REGISTRY_CLASS</NAME>
+#define ZEITGEIST_IS_DATA_SOURCE_REGISTRY_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_DATA_SOURCE_REGISTRY_GET_CLASS</NAME>
+#define ZEITGEIST_DATA_SOURCE_REGISTRY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY, ZeitgeistDataSourceRegistryClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_INDEX</NAME>
+#define ZEITGEIST_TYPE_INDEX (zeitgeist_index_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_INDEX</NAME>
+#define ZEITGEIST_INDEX(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_TYPE_INDEX, ZeitgeistIndex))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_INDEX_CLASS</NAME>
+#define ZEITGEIST_INDEX_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), ZEITGEIST_TYPE_INDEX, ZeitgeistIndexClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_INDEX</NAME>
+#define ZEITGEIST_IS_INDEX(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_TYPE_INDEX))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_INDEX_CLASS</NAME>
+#define ZEITGEIST_IS_INDEX_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), ZEITGEIST_TYPE_INDEX))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_INDEX_GET_CLASS</NAME>
+#define ZEITGEIST_INDEX_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), ZEITGEIST_TYPE_INDEX, ZeitgeistIndexClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_LOG</NAME>
+#define ZEITGEIST_TYPE_LOG (zeitgeist_log_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_LOG</NAME>
+#define ZEITGEIST_LOG(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_TYPE_LOG, ZeitgeistLog))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_LOG_CLASS</NAME>
+#define ZEITGEIST_LOG_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), ZEITGEIST_TYPE_LOG, ZeitgeistLogClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_LOG</NAME>
+#define ZEITGEIST_IS_LOG(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_TYPE_LOG))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_LOG_CLASS</NAME>
+#define ZEITGEIST_IS_LOG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), ZEITGEIST_TYPE_LOG))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_LOG_GET_CLASS</NAME>
+#define ZEITGEIST_LOG_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), ZEITGEIST_TYPE_LOG, ZeitgeistLogClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_MONITOR</NAME>
+#define ZEITGEIST_TYPE_MONITOR (zeitgeist_monitor_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_MONITOR</NAME>
+#define ZEITGEIST_MONITOR(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_TYPE_MONITOR, ZeitgeistMonitor))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_MONITOR_CLASS</NAME>
+#define ZEITGEIST_MONITOR_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), ZEITGEIST_TYPE_MONITOR, ZeitgeistMonitorClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_MONITOR</NAME>
+#define ZEITGEIST_IS_MONITOR(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_TYPE_MONITOR))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_MONITOR_CLASS</NAME>
+#define ZEITGEIST_IS_MONITOR_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), ZEITGEIST_TYPE_MONITOR))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_MONITOR_GET_CLASS</NAME>
+#define ZEITGEIST_MONITOR_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), ZEITGEIST_TYPE_MONITOR, ZeitgeistMonitorClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_REMOTE_MONITOR</NAME>
+#define ZEITGEIST_TYPE_REMOTE_MONITOR (zeitgeist_remote_monitor_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_REMOTE_MONITOR</NAME>
+#define ZEITGEIST_REMOTE_MONITOR(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_TYPE_REMOTE_MONITOR, ZeitgeistRemoteMonitor))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_REMOTE_MONITOR</NAME>
+#define ZEITGEIST_IS_REMOTE_MONITOR(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_TYPE_REMOTE_MONITOR))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_REMOTE_MONITOR_GET_INTERFACE</NAME>
+#define ZEITGEIST_REMOTE_MONITOR_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), ZEITGEIST_TYPE_REMOTE_MONITOR, ZeitgeistRemoteMonitorIface))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_REMOTE_MONITOR_PROXY</NAME>
+#define ZEITGEIST_TYPE_REMOTE_MONITOR_PROXY (zeitgeist_remote_monitor_proxy_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD</NAME>
+#define ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD (zeitgeist_queued_proxy_wrapper_queued_method_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_QUEUED_PROXY_WRAPPER_QUEUED_METHOD</NAME>
+#define ZEITGEIST_QUEUED_PROXY_WRAPPER_QUEUED_METHOD(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD, ZeitgeistQueuedProxyWrapperQueuedMethod))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_QUEUED_PROXY_WRAPPER_QUEUED_METHOD_CLASS</NAME>
+#define ZEITGEIST_QUEUED_PROXY_WRAPPER_QUEUED_METHOD_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD, ZeitgeistQueuedProxyWrapperQueuedMethodClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_QUEUED_PROXY_WRAPPER_IS_QUEUED_METHOD</NAME>
+#define ZEITGEIST_QUEUED_PROXY_WRAPPER_IS_QUEUED_METHOD(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_QUEUED_PROXY_WRAPPER_IS_QUEUED_METHOD_CLASS</NAME>
+#define ZEITGEIST_QUEUED_PROXY_WRAPPER_IS_QUEUED_METHOD_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_QUEUED_PROXY_WRAPPER_QUEUED_METHOD_GET_CLASS</NAME>
+#define ZEITGEIST_QUEUED_PROXY_WRAPPER_QUEUED_METHOD_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD, ZeitgeistQueuedProxyWrapperQueuedMethodClass))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_VERSION_STRUCT</NAME>
+#define ZEITGEIST_TYPE_VERSION_STRUCT (zeitgeist_version_struct_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_REMOTE_LOG</NAME>
+#define ZEITGEIST_TYPE_REMOTE_LOG (zeitgeist_remote_log_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_REMOTE_LOG</NAME>
+#define ZEITGEIST_REMOTE_LOG(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_TYPE_REMOTE_LOG, ZeitgeistRemoteLog))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_REMOTE_LOG</NAME>
+#define ZEITGEIST_IS_REMOTE_LOG(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_TYPE_REMOTE_LOG))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_REMOTE_LOG_GET_INTERFACE</NAME>
+#define ZEITGEIST_REMOTE_LOG_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), ZEITGEIST_TYPE_REMOTE_LOG, ZeitgeistRemoteLogIface))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_REMOTE_LOG_PROXY</NAME>
+#define ZEITGEIST_TYPE_REMOTE_LOG_PROXY (zeitgeist_remote_log_proxy_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_REMOTE_SIMPLE_INDEXER</NAME>
+#define ZEITGEIST_TYPE_REMOTE_SIMPLE_INDEXER (zeitgeist_remote_simple_indexer_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_REMOTE_SIMPLE_INDEXER</NAME>
+#define ZEITGEIST_REMOTE_SIMPLE_INDEXER(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_TYPE_REMOTE_SIMPLE_INDEXER, ZeitgeistRemoteSimpleIndexer))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_REMOTE_SIMPLE_INDEXER</NAME>
+#define ZEITGEIST_IS_REMOTE_SIMPLE_INDEXER(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_TYPE_REMOTE_SIMPLE_INDEXER))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_REMOTE_SIMPLE_INDEXER_GET_INTERFACE</NAME>
+#define ZEITGEIST_REMOTE_SIMPLE_INDEXER_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), ZEITGEIST_TYPE_REMOTE_SIMPLE_INDEXER, ZeitgeistRemoteSimpleIndexerIface))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_REMOTE_SIMPLE_INDEXER_PROXY</NAME>
+#define ZEITGEIST_TYPE_REMOTE_SIMPLE_INDEXER_PROXY (zeitgeist_remote_simple_indexer_proxy_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_NETWORK_MANAGER_DBUS</NAME>
+#define ZEITGEIST_TYPE_NETWORK_MANAGER_DBUS (zeitgeist_network_manager_dbus_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NETWORK_MANAGER_DBUS</NAME>
+#define ZEITGEIST_NETWORK_MANAGER_DBUS(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_TYPE_NETWORK_MANAGER_DBUS, ZeitgeistNetworkManagerDBus))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_NETWORK_MANAGER_DBUS</NAME>
+#define ZEITGEIST_IS_NETWORK_MANAGER_DBUS(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_TYPE_NETWORK_MANAGER_DBUS))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_NETWORK_MANAGER_DBUS_GET_INTERFACE</NAME>
+#define ZEITGEIST_NETWORK_MANAGER_DBUS_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), ZEITGEIST_TYPE_NETWORK_MANAGER_DBUS, ZeitgeistNetworkManagerDBusIface))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_NETWORK_MANAGER_DBUS_PROXY</NAME>
+#define ZEITGEIST_TYPE_NETWORK_MANAGER_DBUS_PROXY (zeitgeist_network_manager_dbus_proxy_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_CONNMAN_MANAGER_DBUS</NAME>
+#define ZEITGEIST_TYPE_CONNMAN_MANAGER_DBUS (zeitgeist_connman_manager_dbus_get_type ())
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_CONNMAN_MANAGER_DBUS</NAME>
+#define ZEITGEIST_CONNMAN_MANAGER_DBUS(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), ZEITGEIST_TYPE_CONNMAN_MANAGER_DBUS, ZeitgeistConnmanManagerDBus))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_IS_CONNMAN_MANAGER_DBUS</NAME>
+#define ZEITGEIST_IS_CONNMAN_MANAGER_DBUS(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ZEITGEIST_TYPE_CONNMAN_MANAGER_DBUS))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_CONNMAN_MANAGER_DBUS_GET_INTERFACE</NAME>
+#define ZEITGEIST_CONNMAN_MANAGER_DBUS_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), ZEITGEIST_TYPE_CONNMAN_MANAGER_DBUS, ZeitgeistConnmanManagerDBusIface))
+</MACRO>
+<MACRO>
+<NAME>ZEITGEIST_TYPE_CONNMAN_MANAGER_DBUS_PROXY</NAME>
+#define ZEITGEIST_TYPE_CONNMAN_MANAGER_DBUS_PROXY (zeitgeist_connman_manager_dbus_proxy_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ZeitgeistRemoteRegistryIface</NAME>
+struct _ZeitgeistRemoteRegistryIface {
+	GTypeInterface parent_iface;
+	void (*get_data_sources) (ZeitgeistRemoteRegistry* self, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	GVariant* (*get_data_sources_finish) (ZeitgeistRemoteRegistry* self, GAsyncResult* _res_, GError** error);
+	void (*register_data_source) (ZeitgeistRemoteRegistry* self, const gchar* unique_id, const gchar* name, const gchar* description, GVariant* event_templates, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	gboolean (*register_data_source_finish) (ZeitgeistRemoteRegistry* self, GAsyncResult* _res_, GError** error);
+	void (*set_data_source_enabled) (ZeitgeistRemoteRegistry* self, const gchar* unique_id, gboolean enabled, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*set_data_source_enabled_finish) (ZeitgeistRemoteRegistry* self, GAsyncResult* _res_, GError** error);
+	void (*get_data_source_from_id) (ZeitgeistRemoteRegistry* self, const gchar* unique_id, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	GVariant* (*get_data_source_from_id_finish) (ZeitgeistRemoteRegistry* self, GAsyncResult* _res_, GError** error);
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistQueuedProxyWrapper</NAME>
+struct _ZeitgeistQueuedProxyWrapper {
+	GObject parent_instance;
+	ZeitgeistQueuedProxyWrapperPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistQueuedProxyWrapperClass</NAME>
+struct _ZeitgeistQueuedProxyWrapperClass {
+	GObjectClass parent_class;
+	void (*on_connection_established) (ZeitgeistQueuedProxyWrapper* self);
+	void (*on_connection_lost) (ZeitgeistQueuedProxyWrapper* self);
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistDataSourceRegistry</NAME>
+struct _ZeitgeistDataSourceRegistry {
+	ZeitgeistQueuedProxyWrapper parent_instance;
+	ZeitgeistDataSourceRegistryPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistDataSourceRegistryClass</NAME>
+struct _ZeitgeistDataSourceRegistryClass {
+	ZeitgeistQueuedProxyWrapperClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistIndex</NAME>
+struct _ZeitgeistIndex {
+	ZeitgeistQueuedProxyWrapper parent_instance;
+	ZeitgeistIndexPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistIndexClass</NAME>
+struct _ZeitgeistIndexClass {
+	ZeitgeistQueuedProxyWrapperClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistLog</NAME>
+struct _ZeitgeistLog {
+	ZeitgeistQueuedProxyWrapper parent_instance;
+	ZeitgeistLogPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistLogClass</NAME>
+struct _ZeitgeistLogClass {
+	ZeitgeistQueuedProxyWrapperClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistRemoteMonitorIface</NAME>
+struct _ZeitgeistRemoteMonitorIface {
+	GTypeInterface parent_iface;
+	void (*notify_insert) (ZeitgeistRemoteMonitor* self, GVariant* time_range, GVariant* events, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*notify_insert_finish) (ZeitgeistRemoteMonitor* self, GAsyncResult* _res_, GError** error);
+	void (*notify_delete) (ZeitgeistRemoteMonitor* self, GVariant* time_range, guint32* event_ids, gint event_ids_length1, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*notify_delete_finish) (ZeitgeistRemoteMonitor* self, GAsyncResult* _res_, GError** error);
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistMonitor</NAME>
+struct _ZeitgeistMonitor {
+	GObject parent_instance;
+	ZeitgeistMonitorPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistMonitorClass</NAME>
+struct _ZeitgeistMonitorClass {
+	GObjectClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistQueuedProxyWrapperQueuedMethod</NAME>
+struct _ZeitgeistQueuedProxyWrapperQueuedMethod {
+	GTypeInstance parent_instance;
+	volatile int ref_count;
+	ZeitgeistQueuedProxyWrapperQueuedMethodPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistQueuedProxyWrapperQueuedMethodClass</NAME>
+struct _ZeitgeistQueuedProxyWrapperQueuedMethodClass {
+	GTypeClass parent_class;
+	void (*finalize) (ZeitgeistQueuedProxyWrapperQueuedMethod *self);
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistVersionStruct</NAME>
+struct _ZeitgeistVersionStruct {
+	gint major;
+	gint minor;
+	gint micro;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistRemoteLogIface</NAME>
+struct _ZeitgeistRemoteLogIface {
+	GTypeInterface parent_iface;
+	void (*delete_events) (ZeitgeistRemoteLog* self, guint32* event_ids, gint event_ids_length1, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	GVariant* (*delete_events_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error);
+	void (*find_event_ids) (ZeitgeistRemoteLog* self, GVariant* time_range, GVariant* event_templates, guint storage_state, guint num_events, guint result_type, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	guint32* (*find_event_ids_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, gint* result_length1, GError** error);
+	void (*find_events) (ZeitgeistRemoteLog* self, GVariant* time_range, GVariant* event_templates, guint storage_state, guint num_events, guint result_type, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	GVariant* (*find_events_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error);
+	void (*find_related_uris) (ZeitgeistRemoteLog* self, GVariant* time_range, GVariant* event_templates, GVariant* result_event_templates, guint storage_state, guint num_events, guint result_type, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	gchar** (*find_related_uris_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, gint* result_length1, GError** error);
+	void (*get_events) (ZeitgeistRemoteLog* self, guint32* event_ids, gint event_ids_length1, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	GVariant* (*get_events_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error);
+	void (*insert_events) (ZeitgeistRemoteLog* self, GVariant* events, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	guint32* (*insert_events_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, gint* result_length1, GError** error);
+	void (*install_monitor) (ZeitgeistRemoteLog* self, const char* monitor_path, GVariant* time_range, GVariant* event_templates, const char* owner, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*install_monitor_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error);
+	void (*remove_monitor) (ZeitgeistRemoteLog* self, const char* monitor_path, const char* owner, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*remove_monitor_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error);
+	void (*quit) (ZeitgeistRemoteLog* self, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*quit_finish) (ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error);
+	gchar** (*get_extensions) (ZeitgeistRemoteLog* self, gint* result_length1);
+	void (*get_version) (ZeitgeistRemoteLog* self, ZeitgeistVersionStruct * result);
+	gchar* (*get_datapath) (ZeitgeistRemoteLog* self);
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistRemoteSimpleIndexerIface</NAME>
+struct _ZeitgeistRemoteSimpleIndexerIface {
+	GTypeInterface parent_iface;
+	void (*search) (ZeitgeistRemoteSimpleIndexer* self, const gchar* query_string, GVariant* time_range, GVariant* filter_templates, guint offset, guint count, guint result_type, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*search_finish) (ZeitgeistRemoteSimpleIndexer* self, GAsyncResult* _res_, GVariant* * events, guint* matches, GError** error);
+	void (*search_with_relevancies) (ZeitgeistRemoteSimpleIndexer* self, const gchar* query_string, GVariant* time_range, GVariant* filter_templates, guint storage_state, guint offset, guint count, guint result_type, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*search_with_relevancies_finish) (ZeitgeistRemoteSimpleIndexer* self, GAsyncResult* _res_, GVariant* * events, gdouble** relevancies, gint* relevancies_length1, guint* matches, GError** error);
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistNetworkManagerDBusIface</NAME>
+struct _ZeitgeistNetworkManagerDBusIface {
+	GTypeInterface parent_iface;
+	guint32 (*state) (ZeitgeistNetworkManagerDBus* self, GError** error);
+};
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistConnmanManagerDBusIface</NAME>
+struct _ZeitgeistConnmanManagerDBusIface {
+	GTypeInterface parent_iface;
+	gchar* (*get_state) (ZeitgeistConnmanManagerDBus* self, GError** error);
+};
+</STRUCT>
+<FUNCTION>
+<NAME>zeitgeist_remote_registry_proxy_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_registry_register_object</NAME>
+<RETURNS>guint</RETURNS>
+void* object, GDBusConnection* connection, const gchar* path, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_registry_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_registry_get_data_sources</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteRegistry* self, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_registry_get_data_sources_finish</NAME>
+<RETURNS>GVariant *</RETURNS>
+ZeitgeistRemoteRegistry* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_registry_register_data_source</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteRegistry* self, const gchar* unique_id, const gchar* name, const gchar* description, GVariant* event_templates, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_registry_register_data_source_finish</NAME>
+<RETURNS>gboolean</RETURNS>
+ZeitgeistRemoteRegistry* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_registry_set_data_source_enabled</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteRegistry* self, const gchar* unique_id, gboolean enabled, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_registry_set_data_source_enabled_finish</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteRegistry* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_registry_get_data_source_from_id</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteRegistry* self, const gchar* unique_id, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_registry_get_data_source_from_id_finish</NAME>
+<RETURNS>GVariant *</RETURNS>
+ZeitgeistRemoteRegistry* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_registry_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_registry_new</NAME>
+<RETURNS>ZeitgeistDataSourceRegistry *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_registry_construct</NAME>
+<RETURNS>ZeitgeistDataSourceRegistry *</RETURNS>
+GType object_type
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_registry_get_data_sources</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistDataSourceRegistry* self, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_registry_get_data_sources_finish</NAME>
+<RETURNS>GPtrArray *</RETURNS>
+ZeitgeistDataSourceRegistry* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_registry_get_data_source_from_id</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistDataSourceRegistry* self, const gchar* unique_id, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_registry_get_data_source_from_id_finish</NAME>
+<RETURNS>ZeitgeistDataSource *</RETURNS>
+ZeitgeistDataSourceRegistry* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_registry_register_data_source</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistDataSourceRegistry* self, ZeitgeistDataSource* data_source, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_registry_register_data_source_finish</NAME>
+<RETURNS>gboolean</RETURNS>
+ZeitgeistDataSourceRegistry* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_registry_set_data_source_enabled</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistDataSourceRegistry* self, const gchar* unique_id, gboolean enabled, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_data_source_registry_set_data_source_enabled_finish</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistDataSourceRegistry* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_index_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_index_new</NAME>
+<RETURNS>ZeitgeistIndex *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_index_construct</NAME>
+<RETURNS>ZeitgeistIndex *</RETURNS>
+GType object_type
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_index_search</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistIndex* self, const gchar* query, ZeitgeistTimeRange* time_range, GPtrArray* event_templates, guint32 offset, guint32 num_events, ZeitgeistResultType result_type, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_index_search_finish</NAME>
+<RETURNS>ZeitgeistResultSet *</RETURNS>
+ZeitgeistIndex* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_index_search_with_relevancies</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistIndex* self, const gchar* query, ZeitgeistTimeRange* time_range, GPtrArray* event_templates, ZeitgeistStorageState storage_state, guint32 offset, guint32 num_events, ZeitgeistResultType result_type, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_index_search_with_relevancies_finish</NAME>
+<RETURNS>ZeitgeistResultSet *</RETURNS>
+ZeitgeistIndex* self, GAsyncResult* _res_, gdouble** relevancies, gint* relevancies_length1, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_new</NAME>
+<RETURNS>ZeitgeistLog *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_construct</NAME>
+<RETURNS>ZeitgeistLog *</RETURNS>
+GType object_type
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_get_default</NAME>
+<RETURNS>ZeitgeistLog *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_insert_event</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistLog* self, ZeitgeistEvent* event, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_insert_event_finish</NAME>
+<RETURNS>GArray *</RETURNS>
+ZeitgeistLog* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_insert_events</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistLog* self, GPtrArray* events, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_insert_events_finish</NAME>
+<RETURNS>GArray *</RETURNS>
+ZeitgeistLog* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_insert_event_no_reply</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistLog* self, ZeitgeistEvent* event, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_insert_events_no_reply</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistLog* self, GPtrArray* events, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_find_events</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistLog* self, ZeitgeistTimeRange* time_range, GPtrArray* event_templates, ZeitgeistStorageState storage_state, guint32 num_events, ZeitgeistResultType result_type, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_find_events_finish</NAME>
+<RETURNS>ZeitgeistResultSet *</RETURNS>
+ZeitgeistLog* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_find_event_ids</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistLog* self, ZeitgeistTimeRange* time_range, GPtrArray* event_templates, ZeitgeistStorageState storage_state, guint32 num_events, ZeitgeistResultType result_type, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_find_event_ids_finish</NAME>
+<RETURNS>guint32 *</RETURNS>
+ZeitgeistLog* self, GAsyncResult* _res_, gint* result_length1, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_get_events</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistLog* self, GArray* event_ids, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_get_events_finish</NAME>
+<RETURNS>ZeitgeistResultSet *</RETURNS>
+ZeitgeistLog* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_find_related_uris</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistLog* self, ZeitgeistTimeRange* time_range, GPtrArray* event_templates, GPtrArray* result_event_templates, ZeitgeistStorageState storage_state, guint32 num_events, ZeitgeistRelevantResultType result_type, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_find_related_uris_finish</NAME>
+<RETURNS>gchar **</RETURNS>
+ZeitgeistLog* self, GAsyncResult* _res_, gint* result_length1, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_delete_events</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistLog* self, GArray* event_ids, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_delete_events_finish</NAME>
+<RETURNS>ZeitgeistTimeRange *</RETURNS>
+ZeitgeistLog* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_quit</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistLog* self, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_quit_finish</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistLog* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_monitor_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_install_monitor</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistLog* self, ZeitgeistMonitor* monitor, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_remove_monitor</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistLog* self, ZeitgeistMonitor* monitor, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_get_version</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistLog* self, gint* major, gint* minor, gint* micro
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_get_extensions</NAME>
+<RETURNS>gchar **</RETURNS>
+ZeitgeistLog* self, gint* result_length1
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_log_datapath</NAME>
+<RETURNS>gchar *</RETURNS>
+ZeitgeistLog* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_monitor_proxy_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_monitor_register_object</NAME>
+<RETURNS>guint</RETURNS>
+void* object, GDBusConnection* connection, const gchar* path, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_monitor_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_monitor_new</NAME>
+<RETURNS>ZeitgeistMonitor *</RETURNS>
+ZeitgeistTimeRange* time_range, GPtrArray* event_templates
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_monitor_construct</NAME>
+<RETURNS>ZeitgeistMonitor *</RETURNS>
+GType object_type, ZeitgeistTimeRange* time_range, GPtrArray* event_templates
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_monitor_get_templates</NAME>
+<RETURNS>GPtrArray *</RETURNS>
+ZeitgeistMonitor* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_monitor_get_path</NAME>
+<RETURNS>char *</RETURNS>
+ZeitgeistMonitor* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_monitor_get_time_range</NAME>
+<RETURNS>ZeitgeistTimeRange *</RETURNS>
+ZeitgeistMonitor* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_monitor_set_time_range</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistMonitor* self, ZeitgeistTimeRange* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_monitor_get_event_templates</NAME>
+<RETURNS>GPtrArray *</RETURNS>
+ZeitgeistMonitor* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_monitor_set_event_templates</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistMonitor* self, GPtrArray* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_proxy_acquired</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistQueuedProxyWrapper* self, GObject* proxy
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_proxy_unavailable</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistQueuedProxyWrapper* self, GError* err
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_process_queued_methods</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistQueuedProxyWrapper* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_name_owner_changed</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistQueuedProxyWrapper* self, GParamSpec* pspec
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_on_connection_established</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistQueuedProxyWrapper* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_on_connection_lost</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistQueuedProxyWrapper* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_wait_for_proxy</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistQueuedProxyWrapper* self, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_wait_for_proxy_finish</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistQueuedProxyWrapper* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_construct</NAME>
+<RETURNS>ZeitgeistQueuedProxyWrapper *</RETURNS>
+GType object_type
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_get_proxy_created</NAME>
+<RETURNS>gboolean</RETURNS>
+ZeitgeistQueuedProxyWrapper* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_get_is_connected</NAME>
+<RETURNS>gboolean</RETURNS>
+ZeitgeistQueuedProxyWrapper* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_queued_method_ref</NAME>
+<RETURNS>gpointer</RETURNS>
+gpointer instance
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_queued_method_unref</NAME>
+<RETURNS>void</RETURNS>
+gpointer instance
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_param_spec_queued_method</NAME>
+<RETURNS>GParamSpec *</RETURNS>
+const gchar* name, const gchar* nick, const gchar* blurb, GType object_type, GParamFlags flags
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_value_set_queued_method</NAME>
+<RETURNS>void</RETURNS>
+GValue* value, gpointer v_object
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_value_take_queued_method</NAME>
+<RETURNS>void</RETURNS>
+GValue* value, gpointer v_object
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_value_get_queued_method</NAME>
+<RETURNS>gpointer</RETURNS>
+const GValue* value
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_queued_method_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_queued_method_new</NAME>
+<RETURNS>ZeitgeistQueuedProxyWrapperQueuedMethod *</RETURNS>
+GSourceFunc callback, gpointer callback_target, GDestroyNotify callback_target_destroy_notify
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_queued_method_construct</NAME>
+<RETURNS>ZeitgeistQueuedProxyWrapperQueuedMethod *</RETURNS>
+GType object_type, GSourceFunc callback, gpointer callback_target, GDestroyNotify callback_target_destroy_notify
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_queued_proxy_wrapper_queued_method_get_queued_method</NAME>
+<RETURNS>GSourceFunc</RETURNS>
+ZeitgeistQueuedProxyWrapperQueuedMethod* self, gpointer* result_target
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_version_struct_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_version_struct_dup</NAME>
+<RETURNS>ZeitgeistVersionStruct *</RETURNS>
+const ZeitgeistVersionStruct* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_version_struct_free</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistVersionStruct* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_proxy_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_register_object</NAME>
+<RETURNS>guint</RETURNS>
+void* object, GDBusConnection* connection, const gchar* path, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_delete_events</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteLog* self, guint32* event_ids, gint event_ids_length1, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_delete_events_finish</NAME>
+<RETURNS>GVariant *</RETURNS>
+ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_find_event_ids</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteLog* self, GVariant* time_range, GVariant* event_templates, guint storage_state, guint num_events, guint result_type, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_find_event_ids_finish</NAME>
+<RETURNS>guint32 *</RETURNS>
+ZeitgeistRemoteLog* self, GAsyncResult* _res_, gint* result_length1, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_find_events</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteLog* self, GVariant* time_range, GVariant* event_templates, guint storage_state, guint num_events, guint result_type, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_find_events_finish</NAME>
+<RETURNS>GVariant *</RETURNS>
+ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_find_related_uris</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteLog* self, GVariant* time_range, GVariant* event_templates, GVariant* result_event_templates, guint storage_state, guint num_events, guint result_type, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_find_related_uris_finish</NAME>
+<RETURNS>gchar **</RETURNS>
+ZeitgeistRemoteLog* self, GAsyncResult* _res_, gint* result_length1, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_get_events</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteLog* self, guint32* event_ids, gint event_ids_length1, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_get_events_finish</NAME>
+<RETURNS>GVariant *</RETURNS>
+ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_insert_events</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteLog* self, GVariant* events, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_insert_events_finish</NAME>
+<RETURNS>guint32 *</RETURNS>
+ZeitgeistRemoteLog* self, GAsyncResult* _res_, gint* result_length1, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_install_monitor</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteLog* self, const char* monitor_path, GVariant* time_range, GVariant* event_templates, const char* owner, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_install_monitor_finish</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_remove_monitor</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteLog* self, const char* monitor_path, const char* owner, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_remove_monitor_finish</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_quit</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteLog* self, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_quit_finish</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteLog* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_get_extensions</NAME>
+<RETURNS>gchar **</RETURNS>
+ZeitgeistRemoteLog* self, gint* result_length1
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_get_version</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteLog* self, ZeitgeistVersionStruct * result
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_log_get_datapath</NAME>
+<RETURNS>gchar *</RETURNS>
+ZeitgeistRemoteLog* self
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_monitor_notify_insert</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteMonitor* self, GVariant* time_range, GVariant* events, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_monitor_notify_insert_finish</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteMonitor* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_monitor_notify_delete</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteMonitor* self, GVariant* time_range, guint32* event_ids, gint event_ids_length1, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_monitor_notify_delete_finish</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteMonitor* self, GAsyncResult* _res_, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_simple_indexer_proxy_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_simple_indexer_register_object</NAME>
+<RETURNS>guint</RETURNS>
+void* object, GDBusConnection* connection, const gchar* path, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_simple_indexer_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_simple_indexer_search</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteSimpleIndexer* self, const gchar* query_string, GVariant* time_range, GVariant* filter_templates, guint offset, guint count, guint result_type, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_simple_indexer_search_finish</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteSimpleIndexer* self, GAsyncResult* _res_, GVariant* * events, guint* matches, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_simple_indexer_search_with_relevancies</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteSimpleIndexer* self, const gchar* query_string, GVariant* time_range, GVariant* filter_templates, guint storage_state, guint offset, guint count, guint result_type, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_remote_simple_indexer_search_with_relevancies_finish</NAME>
+<RETURNS>void</RETURNS>
+ZeitgeistRemoteSimpleIndexer* self, GAsyncResult* _res_, GVariant* * events, gdouble** relevancies, gint* relevancies_length1, guint* matches, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_network_manager_dbus_proxy_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_network_manager_dbus_register_object</NAME>
+<RETURNS>guint</RETURNS>
+void* object, GDBusConnection* connection, const gchar* path, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_network_manager_dbus_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_network_manager_dbus_state</NAME>
+<RETURNS>guint32</RETURNS>
+ZeitgeistNetworkManagerDBus* self, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_connman_manager_dbus_proxy_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_connman_manager_dbus_register_object</NAME>
+<RETURNS>guint</RETURNS>
+void* object, GDBusConnection* connection, const gchar* path, GError** error
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_connman_manager_dbus_get_type</NAME>
+<RETURNS>GType</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>zeitgeist_connman_manager_dbus_get_state</NAME>
+<RETURNS>gchar *</RETURNS>
+ZeitgeistConnmanManagerDBus* self, GError** error
+</FUNCTION>
+<STRUCT>
+<NAME>ZeitgeistConnmanManagerDBus</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistDataSourceRegistryPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistIndexPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistLogPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistMonitorPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistNetworkManagerDBus</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistQueuedProxyWrapperPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistQueuedProxyWrapperQueuedMethodPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistRemoteLog</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistRemoteMonitor</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistRemoteRegistry</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ZeitgeistRemoteSimpleIndexer</NAME>
+</STRUCT>

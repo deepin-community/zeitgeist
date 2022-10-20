@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE informaltable PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colwidth="1*"/>
+<colspec colwidth="1*"/>
+<colspec colwidth="1*"/>
+<tbody>
+<row>
+<entry><link linkend="GBoxed">GBoxed</link></entry>
+<entry><link linkend="GEnum">GEnum</link></entry>
+<entry><link linkend="GInterface">GInterface</link></entry>
+</row>
+<row>
+<entry><link linkend="GObject">GObject</link></entry>
+<entry><link linkend="ZeitgeistConnmanManagerDBus">ZeitgeistConnmanManagerDBus</link></entry>
+<entry><link linkend="ZeitgeistDataSource">ZeitgeistDataSource</link></entry>
+</row>
+<row>
+<entry><link linkend="ZeitgeistDataSourceRegistry">ZeitgeistDataSourceRegistry</link></entry>
+<entry><link linkend="ZeitgeistEvent">ZeitgeistEvent</link></entry>
+<entry><link linkend="ZeitgeistIndex">ZeitgeistIndex</link></entry>
+</row>
+<row>
+<entry><link linkend="ZeitgeistLog">ZeitgeistLog</link></entry>
+<entry><link linkend="ZeitgeistMonitor">ZeitgeistMonitor</link></entry>
+<entry><link linkend="ZeitgeistNetworkManagerDBus">ZeitgeistNetworkManagerDBus</link></entry>
+</row>
+<row>
+<entry><link linkend="ZeitgeistQueuedProxyWrapper">ZeitgeistQueuedProxyWrapper</link></entry>
+<entry><link linkend="ZeitgeistQueuedProxyWrapperQueuedMethod">ZeitgeistQueuedProxyWrapperQueuedMethod</link></entry>
+<entry><link linkend="ZeitgeistRelevantResultType">ZeitgeistRelevantResultType</link></entry>
+</row>
+<row>
+<entry><link linkend="ZeitgeistRemoteLog">ZeitgeistRemoteLog</link></entry>
+<entry><link linkend="ZeitgeistRemoteMonitor">ZeitgeistRemoteMonitor</link></entry>
+<entry><link linkend="ZeitgeistRemoteRegistry">ZeitgeistRemoteRegistry</link></entry>
+</row>
+<row>
+<entry><link linkend="ZeitgeistRemoteSimpleIndexer">ZeitgeistRemoteSimpleIndexer</link></entry>
+<entry><link linkend="ZeitgeistResultSet">ZeitgeistResultSet</link></entry>
+<entry><link linkend="ZeitgeistResultType">ZeitgeistResultType</link></entry>
+</row>
+<row>
+<entry><link linkend="ZeitgeistSimpleResultSet">ZeitgeistSimpleResultSet</link></entry>
+<entry><link linkend="ZeitgeistStorageState">ZeitgeistStorageState</link></entry>
+<entry><link linkend="ZeitgeistSubject">ZeitgeistSubject</link></entry>
+</row>
+<row>
+<entry><link linkend="ZeitgeistTimeRange">ZeitgeistTimeRange</link></entry>
+<entry><link linkend="ZeitgeistVersionStruct">ZeitgeistVersionStruct</link></entry>
+</row>
+</tbody></tgroup></informaltable>

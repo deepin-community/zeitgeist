@@ -1,0 +1,917 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="ZeitgeistEvent">
+<refmeta>
+<refentrytitle role="top_of_page" id="ZeitgeistEvent.top_of_page">ZeitgeistEvent</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ZEITGEIST-2.0 Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ZeitgeistEvent</refname>
+<refpurpose>Event objects abstract Zeitgeist events</refpurpose>
+</refnamediv>
+
+<refsect1 id="ZeitgeistEvent.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ZeitgeistSubject"><returnvalue>ZeitgeistSubject</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-event-get-subject">zeitgeist_event_get_subject</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-event-num-subjects">zeitgeist_event_num_subjects</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-event-add-subject">zeitgeist_event_add_subject</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-event-take-subject">zeitgeist_event_take_subject</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-event-set-actor-from-app-info">zeitgeist_event_set_actor_from_app_info</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-event-to-variant">zeitgeist_event_to_variant</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-event-debug-print">zeitgeist_event_debug_print</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-event-matches-template">zeitgeist_event_matches_template</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistEvent"><returnvalue>ZeitgeistEvent</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-event-new-full">zeitgeist_event_new_full</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistEvent"><returnvalue>ZeitgeistEvent</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-event-new-from-variant">zeitgeist_event_new_from_variant</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistEvent"><returnvalue>ZeitgeistEvent</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-event-new">zeitgeist_event_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-event-get-id">zeitgeist_event_get_id</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-event-set-id">zeitgeist_event_set_id</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-event-get-timestamp">zeitgeist_event_get_timestamp</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-event-set-timestamp">zeitgeist_event_set_timestamp</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-event-get-origin">zeitgeist_event_get_origin</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-event-set-origin">zeitgeist_event_set_origin</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-event-get-actor">zeitgeist_event_get_actor</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-event-set-actor">zeitgeist_event_set_actor</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-event-get-interpretation">zeitgeist_event_get_interpretation</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-event-set-interpretation">zeitgeist_event_set_interpretation</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-event-get-manifestation">zeitgeist_event_get_manifestation</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-event-set-manifestation">zeitgeist_event_set_manifestation</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-event-get-subjects">zeitgeist_event_get_subjects</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-event-set-subjects">zeitgeist_event_set_subjects</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GByteArray"><returnvalue>GByteArray</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-event-get-payload">zeitgeist_event_get_payload</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-event-set-payload">zeitgeist_event_set_payload</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-events-from-variant">zeitgeist_events_from_variant</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-events-to-variant">zeitgeist_events_to_variant</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-events-to-variant-with-limit">zeitgeist_events_to_variant_with_limit</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistEvent.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistEvent--actor">actor</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="ZeitgeistEvent--id">id</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistEvent--interpretation">interpretation</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistEvent--manifestation">manifestation</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistEvent--origin">origin</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GByteArray"><type>GByteArray</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistEvent--payload">payload</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistEvent--subjects">subjects</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint64"><type>gint64</type></link></entry><entry role="property_name"><link linkend="ZeitgeistEvent--timestamp">timestamp</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistEvent.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-TYPE-EVENT:CAPS">ZEITGEIST_TYPE_EVENT</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-EVENT-SIGNATURE:CAPS">ZEITGEIST_EVENT_SIGNATURE</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistEvent-struct">ZeitgeistEvent</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistEventClass">ZeitgeistEventClass</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistEvent.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ZeitgeistEvent
+</screen>
+</refsect1>
+
+
+<refsect1 id="ZeitgeistEvent.description" role="desc">
+<title role="desc.title">Description</title>
+<para>The Event class is one of the primary elements for communicating with the Zeitgeist daemon. Events serve two purposes Unsurprisingly, they represent events that have happened, but they can also act as templates. See also <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link>.</para><para>An event in the Zeitgeist world is characterized by two main properties. &quot;What happened&quot;, also called the interpretation, and &quot;How did it happen&quot;, also called the manifestation. Besides these properties, an event also has an actor which identifies the party responsible for triggering the event which in most cases will be an application. Lastly there is an event timestamp and an event ID. The timestamp is calculated as the number of milliseconds since the Unix epoch and the event ID is a number assigned to the event by the Zeitgeist engine when it&apos;s logged. These five properties are collectively known as the event metadata.</para><para>An event must also describe what it happened to. For this we have event subjects. Most events have one subject, but they may also have more. The metadata of the subjects are recorded at the time of logging, and are encapsulated by the <link linkend="Subject"><type>Subject</type></link> class. It&apos;s important to understand that it&apos;s just the subject metadata at the time of logging, not necessarily the subject metadata as it exists right now.</para><para>In addition to the listed properties, events may also carry a free form binary payload. The usage of this is application specific and is generally useless unless you have some contextual information to figure out what&apos;s in it.</para><para>A large part of the Zeitgeist query and monitoring API revolves around a concept of template matching. A query is simply a list of event templates that you want to look for in the log. An unset property on an event template indicates that anything is allowed in that field. If the property is set it indicates that the property must be an exact match, unless a special operator is used.</para>
+
+</refsect1>
+<refsect1 id="ZeitgeistEvent.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="zeitgeist-event-get-subject" role="function">
+<title>zeitgeist_event_get_subject&#160;()</title>
+<indexterm zone="zeitgeist-event-get-subject"><primary>zeitgeist_event_get_subject</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistSubject"><returnvalue>ZeitgeistSubject</returnvalue></link>&#160;*
+zeitgeist_event_get_subject (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>,
+                             <parameter><link linkend="gint"><type>gint</type></link> index</parameter>);</programlisting>
+<refsect3 id="zeitgeist-event-get-subject.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>index</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-num-subjects" role="function">
+<title>zeitgeist_event_num_subjects&#160;()</title>
+<indexterm zone="zeitgeist-event-num-subjects"><primary>zeitgeist_event_num_subjects</primary></indexterm>
+<programlisting language="C"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+zeitgeist_event_num_subjects (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>);</programlisting>
+<refsect3 id="zeitgeist-event-num-subjects.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-add-subject" role="function">
+<title>zeitgeist_event_add_subject&#160;()</title>
+<indexterm zone="zeitgeist-event-add-subject"><primary>zeitgeist_event_add_subject</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_event_add_subject (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>,
+                             <parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *subject</parameter>);</programlisting>
+<refsect3 id="zeitgeist-event-add-subject.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>subject</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-take-subject" role="function">
+<title>zeitgeist_event_take_subject&#160;()</title>
+<indexterm zone="zeitgeist-event-take-subject"><primary>zeitgeist_event_take_subject</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_event_take_subject (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>,
+                              <parameter><link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link> *subject</parameter>);</programlisting>
+<refsect3 id="zeitgeist-event-take-subject.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>subject</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-set-actor-from-app-info" role="function">
+<title>zeitgeist_event_set_actor_from_app_info&#160;()</title>
+<indexterm zone="zeitgeist-event-set-actor-from-app-info"><primary>zeitgeist_event_set_actor_from_app_info</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_event_set_actor_from_app_info
+                               (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>,
+                                <parameter><link linkend="GAppInfo"><type>GAppInfo</type></link> *info</parameter>);</programlisting>
+<refsect3 id="zeitgeist-event-set-actor-from-app-info.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>info</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-to-variant" role="function">
+<title>zeitgeist_event_to_variant&#160;()</title>
+<indexterm zone="zeitgeist-event-to-variant"><primary>zeitgeist_event_to_variant</primary></indexterm>
+<programlisting language="C"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+zeitgeist_event_to_variant (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>);</programlisting>
+<refsect3 id="zeitgeist-event-to-variant.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-debug-print" role="function">
+<title>zeitgeist_event_debug_print&#160;()</title>
+<indexterm zone="zeitgeist-event-debug-print"><primary>zeitgeist_event_debug_print</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_event_debug_print (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>);</programlisting>
+<refsect3 id="zeitgeist-event-debug-print.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-matches-template" role="function">
+<title>zeitgeist_event_matches_template&#160;()</title>
+<indexterm zone="zeitgeist-event-matches-template"><primary>zeitgeist_event_matches_template</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+zeitgeist_event_matches_template (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>,
+                                  <parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *template_event</parameter>);</programlisting>
+<refsect3 id="zeitgeist-event-matches-template.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>template_event</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-new-full" role="function">
+<title>zeitgeist_event_new_full&#160;()</title>
+<indexterm zone="zeitgeist-event-new-full"><primary>zeitgeist_event_new_full</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistEvent"><returnvalue>ZeitgeistEvent</returnvalue></link>&#160;*
+zeitgeist_event_new_full (<parameter>const <link linkend="gchar"><type>gchar</type></link> *interpretation</parameter>,
+                          <parameter>const <link linkend="gchar"><type>gchar</type></link> *manifestation</parameter>,
+                          <parameter>const <link linkend="gchar"><type>gchar</type></link> *actor</parameter>,
+                          <parameter>const <link linkend="gchar"><type>gchar</type></link> *origin</parameter>,
+                          <parameter>...</parameter>);</programlisting>
+<refsect3 id="zeitgeist-event-new-full.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>interpretation</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>manifestation</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>actor</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>origin</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>...</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-new-from-variant" role="function">
+<title>zeitgeist_event_new_from_variant&#160;()</title>
+<indexterm zone="zeitgeist-event-new-from-variant"><primary>zeitgeist_event_new_from_variant</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistEvent"><returnvalue>ZeitgeistEvent</returnvalue></link>&#160;*
+zeitgeist_event_new_from_variant (<parameter><link linkend="GVariant"><type>GVariant</type></link> *event_variant</parameter>,
+                                  <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="zeitgeist-event-new-from-variant.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>event_variant</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>error-domains</acronym> ZeitgeistDataModelError]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-new" role="function">
+<title>zeitgeist_event_new&#160;()</title>
+<indexterm zone="zeitgeist-event-new"><primary>zeitgeist_event_new</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistEvent"><returnvalue>ZeitgeistEvent</returnvalue></link>&#160;*
+zeitgeist_event_new (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="zeitgeist-event-get-id" role="function">
+<title>zeitgeist_event_get_id&#160;()</title>
+<indexterm zone="zeitgeist-event-get-id"><primary>zeitgeist_event_get_id</primary></indexterm>
+<programlisting language="C"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>
+zeitgeist_event_get_id (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistEvent--id"><type>"id"</type></link> property.</para>
+<refsect3 id="zeitgeist-event-get-id.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-event-get-id.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistEvent--id"><type>"id"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-set-id" role="function">
+<title>zeitgeist_event_set_id&#160;()</title>
+<indexterm zone="zeitgeist-event-set-id"><primary>zeitgeist_event_set_id</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_event_set_id (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>,
+                        <parameter><link linkend="guint32"><type>guint32</type></link> value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistEvent--id"><type>"id"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-event-set-id.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistEvent--id"><type>"id"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-get-timestamp" role="function">
+<title>zeitgeist_event_get_timestamp&#160;()</title>
+<indexterm zone="zeitgeist-event-get-timestamp"><primary>zeitgeist_event_get_timestamp</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+zeitgeist_event_get_timestamp (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistEvent--timestamp"><type>"timestamp"</type></link> property.</para>
+<refsect3 id="zeitgeist-event-get-timestamp.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-event-get-timestamp.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistEvent--timestamp"><type>"timestamp"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-set-timestamp" role="function">
+<title>zeitgeist_event_set_timestamp&#160;()</title>
+<indexterm zone="zeitgeist-event-set-timestamp"><primary>zeitgeist_event_set_timestamp</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_event_set_timestamp (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>,
+                               <parameter><link linkend="gint64"><type>gint64</type></link> value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistEvent--timestamp"><type>"timestamp"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-event-set-timestamp.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistEvent--timestamp"><type>"timestamp"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-get-origin" role="function">
+<title>zeitgeist_event_get_origin&#160;()</title>
+<indexterm zone="zeitgeist-event-get-origin"><primary>zeitgeist_event_get_origin</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_event_get_origin (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistEvent--origin"><type>"origin"</type></link> property.</para>
+<refsect3 id="zeitgeist-event-get-origin.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-event-get-origin.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistEvent--origin"><type>"origin"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-set-origin" role="function">
+<title>zeitgeist_event_set_origin&#160;()</title>
+<indexterm zone="zeitgeist-event-set-origin"><primary>zeitgeist_event_set_origin</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_event_set_origin (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>,
+                            <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistEvent--origin"><type>"origin"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-event-set-origin.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistEvent--origin"><type>"origin"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-get-actor" role="function">
+<title>zeitgeist_event_get_actor&#160;()</title>
+<indexterm zone="zeitgeist-event-get-actor"><primary>zeitgeist_event_get_actor</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_event_get_actor (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistEvent--actor"><type>"actor"</type></link> property.</para>
+<refsect3 id="zeitgeist-event-get-actor.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-event-get-actor.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistEvent--actor"><type>"actor"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-set-actor" role="function">
+<title>zeitgeist_event_set_actor&#160;()</title>
+<indexterm zone="zeitgeist-event-set-actor"><primary>zeitgeist_event_set_actor</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_event_set_actor (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>,
+                           <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistEvent--actor"><type>"actor"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-event-set-actor.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistEvent--actor"><type>"actor"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-get-interpretation" role="function">
+<title>zeitgeist_event_get_interpretation&#160;()</title>
+<indexterm zone="zeitgeist-event-get-interpretation"><primary>zeitgeist_event_get_interpretation</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_event_get_interpretation (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistEvent--interpretation"><type>"interpretation"</type></link> property.</para>
+<refsect3 id="zeitgeist-event-get-interpretation.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-event-get-interpretation.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistEvent--interpretation"><type>"interpretation"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-set-interpretation" role="function">
+<title>zeitgeist_event_set_interpretation&#160;()</title>
+<indexterm zone="zeitgeist-event-set-interpretation"><primary>zeitgeist_event_set_interpretation</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_event_set_interpretation (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>,
+                                    <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistEvent--interpretation"><type>"interpretation"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-event-set-interpretation.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistEvent--interpretation"><type>"interpretation"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-get-manifestation" role="function">
+<title>zeitgeist_event_get_manifestation&#160;()</title>
+<indexterm zone="zeitgeist-event-get-manifestation"><primary>zeitgeist_event_get_manifestation</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_event_get_manifestation (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistEvent--manifestation"><type>"manifestation"</type></link> property.</para>
+<refsect3 id="zeitgeist-event-get-manifestation.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-event-get-manifestation.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistEvent--manifestation"><type>"manifestation"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-set-manifestation" role="function">
+<title>zeitgeist_event_set_manifestation&#160;()</title>
+<indexterm zone="zeitgeist-event-set-manifestation"><primary>zeitgeist_event_set_manifestation</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_event_set_manifestation (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>,
+                                   <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistEvent--manifestation"><type>"manifestation"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-event-set-manifestation.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistEvent--manifestation"><type>"manifestation"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-get-subjects" role="function">
+<title>zeitgeist_event_get_subjects&#160;()</title>
+<indexterm zone="zeitgeist-event-get-subjects"><primary>zeitgeist_event_get_subjects</primary></indexterm>
+<programlisting language="C"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+zeitgeist_event_get_subjects (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistEvent--subjects"><type>"subjects"</type></link> property.</para>
+<refsect3 id="zeitgeist-event-get-subjects.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-event-get-subjects.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistEvent--subjects"><type>"subjects"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-set-subjects" role="function">
+<title>zeitgeist_event_set_subjects&#160;()</title>
+<indexterm zone="zeitgeist-event-set-subjects"><primary>zeitgeist_event_set_subjects</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_event_set_subjects (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>,
+                              <parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistEvent--subjects"><type>"subjects"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-event-set-subjects.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistEvent--subjects"><type>"subjects"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-get-payload" role="function">
+<title>zeitgeist_event_get_payload&#160;()</title>
+<indexterm zone="zeitgeist-event-get-payload"><primary>zeitgeist_event_get_payload</primary></indexterm>
+<programlisting language="C"><link linkend="GByteArray"><returnvalue>GByteArray</returnvalue></link>&#160;*
+zeitgeist_event_get_payload (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistEvent--payload"><type>"payload"</type></link> property.</para>
+<refsect3 id="zeitgeist-event-get-payload.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-event-get-payload.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistEvent--payload"><type>"payload"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-event-set-payload" role="function">
+<title>zeitgeist_event_set_payload&#160;()</title>
+<indexterm zone="zeitgeist-event-set-payload"><primary>zeitgeist_event_set_payload</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_event_set_payload (<parameter><link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> *self</parameter>,
+                             <parameter><link linkend="GByteArray"><type>GByteArray</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistEvent--payload"><type>"payload"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-event-set-payload.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistEvent--payload"><type>"payload"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-events-from-variant" role="function">
+<title>zeitgeist_events_from_variant&#160;()</title>
+<indexterm zone="zeitgeist-events-from-variant"><primary>zeitgeist_events_from_variant</primary></indexterm>
+<programlisting language="C"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+zeitgeist_events_from_variant (<parameter><link linkend="GVariant"><type>GVariant</type></link> *vevents</parameter>,
+                               <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="zeitgeist-events-from-variant.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>vevents</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>error-domains</acronym> ZeitgeistDataModelError]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-events-to-variant" role="function">
+<title>zeitgeist_events_to_variant&#160;()</title>
+<indexterm zone="zeitgeist-events-to-variant"><primary>zeitgeist_events_to_variant</primary></indexterm>
+<programlisting language="C"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+zeitgeist_events_to_variant (<parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *events</parameter>);</programlisting>
+<refsect3 id="zeitgeist-events-to-variant.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>events</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-events-to-variant-with-limit" role="function">
+<title>zeitgeist_events_to_variant_with_limit&#160;()</title>
+<indexterm zone="zeitgeist-events-to-variant-with-limit"><primary>zeitgeist_events_to_variant_with_limit</primary></indexterm>
+<programlisting language="C"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+zeitgeist_events_to_variant_with_limit
+                               (<parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *events</parameter>,
+                                <parameter><link linkend="gsize"><type>gsize</type></link> limit</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="zeitgeist-events-to-variant-with-limit.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>events</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>limit</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>error-domains</acronym> ZeitgeistDataModelError]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistEvent.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ZEITGEIST-TYPE-EVENT:CAPS" role="macro">
+<title>ZEITGEIST_TYPE_EVENT</title>
+<indexterm zone="ZEITGEIST-TYPE-EVENT:CAPS"><primary>ZEITGEIST_TYPE_EVENT</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_TYPE_EVENT (zeitgeist_event_get_type ())
+</programlisting>
+<para>The type for <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link>.</para>
+</refsect2>
+<refsect2 id="ZEITGEIST-EVENT-SIGNATURE:CAPS" role="macro">
+<title>ZEITGEIST_EVENT_SIGNATURE</title>
+<indexterm zone="ZEITGEIST-EVENT-SIGNATURE:CAPS"><primary>ZEITGEIST_EVENT_SIGNATURE</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_EVENT_SIGNATURE "asaasay"
+</programlisting>
+</refsect2>
+<refsect2 id="ZeitgeistEvent-struct" role="struct">
+<title>struct ZeitgeistEvent</title>
+<indexterm zone="ZeitgeistEvent-struct"><primary>ZeitgeistEvent</primary></indexterm>
+<programlisting language="C">struct ZeitgeistEvent;</programlisting>
+<para>Event objects abstract Zeitgeist events</para>
+<para>The Event class is one of the primary elements for communicating with the Zeitgeist daemon. Events serve two purposes Unsurprisingly, they represent events that have happened, but they can also act as templates. See also <link linkend="ZeitgeistSubject"><type>ZeitgeistSubject</type></link>.</para><para>An event in the Zeitgeist world is characterized by two main properties. &quot;What happened&quot;, also called the interpretation, and &quot;How did it happen&quot;, also called the manifestation. Besides these properties, an event also has an actor which identifies the party responsible for triggering the event which in most cases will be an application. Lastly there is an event timestamp and an event ID. The timestamp is calculated as the number of milliseconds since the Unix epoch and the event ID is a number assigned to the event by the Zeitgeist engine when it&apos;s logged. These five properties are collectively known as the event metadata.</para><para>An event must also describe what it happened to. For this we have event subjects. Most events have one subject, but they may also have more. The metadata of the subjects are recorded at the time of logging, and are encapsulated by the <link linkend="Subject"><type>Subject</type></link> class. It&apos;s important to understand that it&apos;s just the subject metadata at the time of logging, not necessarily the subject metadata as it exists right now.</para><para>In addition to the listed properties, events may also carry a free form binary payload. The usage of this is application specific and is generally useless unless you have some contextual information to figure out what&apos;s in it.</para><para>A large part of the Zeitgeist query and monitoring API revolves around a concept of template matching. A query is simply a list of event templates that you want to look for in the log. An unset property on an event template indicates that anything is allowed in that field. If the property is set it indicates that the property must be an exact match, unless a special operator is used.</para>
+</refsect2>
+<refsect2 id="ZeitgeistEventClass" role="struct">
+<title>struct ZeitgeistEventClass</title>
+<indexterm zone="ZeitgeistEventClass"><primary>ZeitgeistEventClass</primary></indexterm>
+<programlisting language="C">struct ZeitgeistEventClass {
+	GObjectClass parent_class;
+};
+</programlisting>
+<para>The class structure for <link linkend="ZEITGEIST-TYPE-EVENT:CAPS"><literal>ZEITGEIST_TYPE_EVENT</literal></link>. All the fields in this structure are private and should never be accessed directly.</para>
+<refsect3 id="ZeitgeistEventClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistEvent.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="ZeitgeistEvent--actor" role="property"><title>The <literal>“actor”</literal> property</title>
+<indexterm zone="ZeitgeistEvent--actor"><primary>ZeitgeistEvent:actor</primary></indexterm>
+<programlisting>  “actor”                    <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>actor.</para><para>Owner: ZeitgeistEvent</para>
+<para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="ZeitgeistEvent--id" role="property"><title>The <literal>“id”</literal> property</title>
+<indexterm zone="ZeitgeistEvent--id"><primary>ZeitgeistEvent:id</primary></indexterm>
+<programlisting>  “id”                       <link linkend="guint"><type>guint</type></link></programlisting>
+<para>id.</para><para>Owner: ZeitgeistEvent</para>
+<para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="ZeitgeistEvent--interpretation" role="property"><title>The <literal>“interpretation”</literal> property</title>
+<indexterm zone="ZeitgeistEvent--interpretation"><primary>ZeitgeistEvent:interpretation</primary></indexterm>
+<programlisting>  “interpretation”           <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>interpretation.</para><para>Owner: ZeitgeistEvent</para>
+<para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="ZeitgeistEvent--manifestation" role="property"><title>The <literal>“manifestation”</literal> property</title>
+<indexterm zone="ZeitgeistEvent--manifestation"><primary>ZeitgeistEvent:manifestation</primary></indexterm>
+<programlisting>  “manifestation”            <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>manifestation.</para><para>Owner: ZeitgeistEvent</para>
+<para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="ZeitgeistEvent--origin" role="property"><title>The <literal>“origin”</literal> property</title>
+<indexterm zone="ZeitgeistEvent--origin"><primary>ZeitgeistEvent:origin</primary></indexterm>
+<programlisting>  “origin”                   <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>origin.</para><para>Owner: ZeitgeistEvent</para>
+<para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="ZeitgeistEvent--payload" role="property"><title>The <literal>“payload”</literal> property</title>
+<indexterm zone="ZeitgeistEvent--payload"><primary>ZeitgeistEvent:payload</primary></indexterm>
+<programlisting>  “payload”                  <link linkend="GByteArray"><type>GByteArray</type></link>&#160;*</programlisting>
+<para>payload.</para><para>Owner: ZeitgeistEvent</para>
+<para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="ZeitgeistEvent--subjects" role="property"><title>The <literal>“subjects”</literal> property</title>
+<indexterm zone="ZeitgeistEvent--subjects"><primary>ZeitgeistEvent:subjects</primary></indexterm>
+<programlisting>  “subjects”                 <link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*</programlisting>
+<para>subjects.</para><para>Owner: ZeitgeistEvent</para>
+<para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="ZeitgeistEvent--timestamp" role="property"><title>The <literal>“timestamp”</literal> property</title>
+<indexterm zone="ZeitgeistEvent--timestamp"><primary>ZeitgeistEvent:timestamp</primary></indexterm>
+<programlisting>  “timestamp”                <link linkend="gint64"><type>gint64</type></link></programlisting>
+<para>timestamp.</para><para>Owner: ZeitgeistEvent</para>
+<para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

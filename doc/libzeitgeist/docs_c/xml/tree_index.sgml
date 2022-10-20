@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE screen PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<screen>
+    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistDataSource">ZeitgeistDataSource</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistQueuedProxyWrapper">ZeitgeistQueuedProxyWrapper</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistDataSourceRegistry">ZeitgeistDataSourceRegistry</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistIndex">ZeitgeistIndex</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ZeitgeistLog">ZeitgeistLog</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistEvent">ZeitgeistEvent</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistMonitor">ZeitgeistMonitor</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistSimpleResultSet">ZeitgeistSimpleResultSet</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistSubject">ZeitgeistSubject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ZeitgeistTimeRange">ZeitgeistTimeRange</link>
+    <link linkend="GInterface">GInterface</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistConnmanManagerDBus">ZeitgeistConnmanManagerDBus</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistRemoteMonitor">ZeitgeistRemoteMonitor</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistNetworkManagerDBus">ZeitgeistNetworkManagerDBus</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistRemoteLog">ZeitgeistRemoteLog</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistRemoteRegistry">ZeitgeistRemoteRegistry</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistRemoteSimpleIndexer">ZeitgeistRemoteSimpleIndexer</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ZeitgeistResultSet">ZeitgeistResultSet</link>
+    <link linkend="ZeitgeistQueuedProxyWrapperQueuedMethod">ZeitgeistQueuedProxyWrapperQueuedMethod</link>
+    <link linkend="GEnum">GEnum</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistRelevantResultType">ZeitgeistRelevantResultType</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistResultType">ZeitgeistResultType</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ZeitgeistStorageState">ZeitgeistStorageState</link>
+    <link linkend="GBoxed">GBoxed</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ZeitgeistVersionStruct">ZeitgeistVersionStruct</link>
+</screen>

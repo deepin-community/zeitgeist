@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Zeitgeist.Log &ndash; zeitgeist-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">Zeitgeist.Log &ndash; zeitgeist-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">zeitgeist-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="Zeitgeist.html">Zeitgeist</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">Log</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="static_method"><a href="Zeitgeist.Log.get_default.html">get_default</a></li>
+          <li class="creation_method"><a href="Zeitgeist.Log.Log.html">Log</a></li>
+          <li class="method"><a href="Zeitgeist.Log.datapath.html">datapath</a></li>
+          <li class="method"><a href="Zeitgeist.Log.delete_events.html">delete_events</a></li>
+          <li class="method"><a href="Zeitgeist.Log.find_event_ids.html">find_event_ids</a></li>
+          <li class="method"><a href="Zeitgeist.Log.find_events.html">find_events</a></li>
+          <li class="method"><a href="Zeitgeist.Log.find_related_uris.html">find_related_uris</a></li>
+          <li class="method"><a href="Zeitgeist.Log.get_events.html">get_events</a></li>
+          <li class="method"><a href="Zeitgeist.Log.get_extensions.html">get_extensions</a></li>
+          <li class="method"><a href="Zeitgeist.Log.get_version.html">get_version</a></li>
+          <li class="method"><a href="Zeitgeist.Log.insert_event.html">insert_event</a></li>
+          <li class="method"><a href="Zeitgeist.Log.insert_event_no_reply.html">insert_event_no_reply</a></li>
+          <li class="method"><a href="Zeitgeist.Log.insert_events.html">insert_events</a></li>
+          <li class="method"><a href="Zeitgeist.Log.insert_events_no_reply.html">insert_events_no_reply</a></li>
+          <li class="method"><a href="Zeitgeist.Log.install_monitor.html">install_monitor</a></li>
+          <li class="virtual_method"><a href="Zeitgeist.Log.on_connection_established.html">on_connection_established</a></li>
+          <li class="virtual_method"><a href="Zeitgeist.Log.on_connection_lost.html">on_connection_lost</a></li>
+          <li class="method"><a href="Zeitgeist.Log.quit.html">quit</a></li>
+          <li class="method"><a href="Zeitgeist.Log.remove_monitor.html">remove_monitor</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">Log</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#Zeitgeist.Log" alt="Object hierarchy for Log" src="img/Zeitgeist.Log.png"/>
+
+      <map id="Zeitgeist.Log" name="Zeitgeist.Log">
+<area shape="rect" id="node1" href="Zeitgeist.Log.html" title="Zeitgeist.Log" alt="" coords="72,197,193,245"/>
+<area shape="rect" id="node2" href="Zeitgeist.QueuedProxyWrapper.html" title="Zeitgeist.QueuedProxyWrapper" alt="" coords="5,101,260,149"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span class="class">Log</span></b> : <span class="main_type"><a href="Zeitgeist.QueuedProxyWrapper.html" class="abstract_class">QueuedProxyWrapper</a></span>
+        </div>
+        <div class="description">
+          <p>Primary access point for talking to the Zeitgeist daemon</p>
+          <p><a href="Zeitgeist.Log.Log.html" class="creation_method">Log</a> encapsulates the low level access to the Zeitgeist daemon. You can use 
+            it to manage the log by inserting and deleting entries as well as do queries on the logged data.</p>
+          <p>It's important to realize that the #ZeitgeistLog class does not expose any API that does synchronous communications with the message bus 
+            - everything is asynchronous. To ease development some of the methods have variants that are "fire and forget" ignoring the normal return 
+            value, so that callbacks does not have to be set up.</p>
+        </div><br/>
+        <div class="namespace_note"><b>Namespace:</b> <a href="Zeitgeist.html">Zeitgeist</a>
+        </div>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">zeitgeist-2.0</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Static methods:</h3>
+        <ul class="navi_inline">
+          <li class="static_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">static</span> <span class="main_type"><span class="class">Log</span></span> <b><a href="Zeitgeist.Log.get_default.html" class="static_method">get_default</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Get a unique instance of #ZeitgeistLog, that you can share in your 
+                application without caring about memory management.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="Zeitgeist.Log.Log.html" class="creation_method">Log</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Zeitgeist.Log.datapath.html" class="method">datapath</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets datapath of the running Zeitgeist daemon.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_type"><a href="Zeitgeist.TimeRange.html" class="class">TimeRange</a></span> <b><a href="Zeitgeist.Log.delete_events.html" class="method">delete_events</a></b> (<span class="main_type"><span class="class">Array</span></span>&lt;<span class="main_basic_type"><span class="struct">uint32</span></span>&gt; event_ids, <span class="main_type"><span class="class">Cancellable</span></span>? cancellable = <span class="main_literal">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><span class="class">Error</span></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Delete a collection of events from the zeitgeist log given their event
+                ids.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_basic_type"><span class="struct">uint32</span></span>[] <b><a href="Zeitgeist.Log.find_event_ids.html" class="method">find_event_ids</a></b> (<span class="main_type"><a href="Zeitgeist.TimeRange.html" class="class">TimeRange</a></span> time_range, <span class="main_type"><span class="class">GenericArray</span></span>&lt;<span class="main_type"><a href="Zeitgeist.Event.html" class="class">Event</a></span>&gt; event_templates, <span class="main_type"><a href="Zeitgeist.StorageState.html" class="enum">StorageState</a></span> storage_state, <span class="main_basic_type"><span class="struct">uint32</span></span> num_events, <span class="main_type"><a href="Zeitgeist.ResultType.html" class="enum">ResultType</a></span> result_type, <span class="main_type"><span class="class">Cancellable</span></span>? cancellable = <span class="main_literal">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><span class="class">Error</span></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Send a query matching a collection of 
+                <a href="Zeitgeist.Event.html" class="class">Event</a> templates to the <a href="Zeitgeist.Log.Log.html" class="creation_method">Log
+                </a>. The query will match if an event matches any of the templates. If an event template has more than one 
+                <a href="Zeitgeist.Subject.html" class="class">Subject</a> the query will match if any one of the 
+                <a href="Zeitgeist.Subject.html" class="class">Subject</a>s templates match.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_type"><a href="Zeitgeist.ResultSet.html" class="interface">ResultSet</a></span> <b><a href="Zeitgeist.Log.find_events.html" class="method">find_events</a></b> (<span class="main_type"><a href="Zeitgeist.TimeRange.html" class="class">TimeRange</a></span> time_range, <span class="main_type"><span class="class">GenericArray</span></span>&lt;<span class="main_type"><a href="Zeitgeist.Event.html" class="class">Event</a></span>&gt; event_templates, <span class="main_type"><a href="Zeitgeist.StorageState.html" class="enum">StorageState</a></span> storage_state, <span class="main_basic_type"><span class="struct">uint32</span></span> num_events, <span class="main_type"><a href="Zeitgeist.ResultType.html" class="enum">ResultType</a></span> result_type, <span class="main_type"><span class="class">Cancellable</span></span>? cancellable = <span class="main_literal">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><span class="class">Error</span></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Send a query matching a collection of 
+                <a href="Zeitgeist.Event.html" class="class">Event</a> templates to the <a href="Zeitgeist.Log.Log.html" class="creation_method">Log
+                </a>. The query will match if an event matches any of the templates. If an event template has more than one 
+                <a href="Zeitgeist.Subject.html" class="class">Subject</a> the query will match if any one of the 
+                <a href="Zeitgeist.Subject.html" class="class">Subject</a>s templates match.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_basic_type"><span class="class">string</span></span>[] <b><a href="Zeitgeist.Log.find_related_uris.html" class="method">find_related_uris</a></b> (<span class="main_type"><a href="Zeitgeist.TimeRange.html" class="class">TimeRange</a></span> time_range, <span class="main_type"><span class="class">GenericArray</span></span>&lt;<span class="main_type"><a href="Zeitgeist.Event.html" class="class">Event</a></span>&gt; event_templates, <span class="main_type"><span class="class">GenericArray</span></span>&lt;<span class="main_type"><a href="Zeitgeist.Event.html" class="class">Event</a></span>&gt; result_event_templates, <span class="main_type"><a href="Zeitgeist.StorageState.html" class="enum">StorageState</a></span> storage_state, <span class="main_basic_type"><span class="struct">uint32</span></span> num_events, <span class="main_type"><a href="Zeitgeist.RelevantResultType.html" class="enum">RelevantResultType</a></span> result_type, <span class="main_type"><span class="class">Cancellable</span></span>? cancellable = <span class="main_literal">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><span class="class">Error</span></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Get a list of URIs of subjects which frequently occur together with 
+                events matching event_templates. Possibly restricting to time_range or to URIs that occur as subject of events matching 
+                result_event_templates.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_type"><a href="Zeitgeist.ResultSet.html" class="interface">ResultSet</a></span> <b><a href="Zeitgeist.Log.get_events.html" class="method">get_events</a></b> (<span class="main_type"><span class="class">Array</span></span>&lt;<span class="main_basic_type"><span class="struct">uint32</span></span>&gt; event_ids, <span class="main_type"><span class="class">Cancellable</span></span>? cancellable = <span class="main_literal">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><span class="class">Error</span></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Look up a collection of <a href="Zeitgeist.Event.html" class="class">
+                  Event</a> in the <a href="Zeitgeist.Log.Log.html" class="creation_method">Log</a> given a collection of event ids. This is useful 
+                for looking up the event data for events found with the find_event_ids_* family of functions.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="class">string</span></span>[] <b><a href="Zeitgeist.Log.get_extensions.html" class="method">get_extensions</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets extensions of the running Zeitgeist daemon.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="Zeitgeist.Log.get_version.html" class="method">get_version</a></b> (<span class="main_keyword">out</span> <span class="main_basic_type"><span class="struct">int</span></span> major, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="struct">int</span></span> minor, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="struct">int</span></span> micro)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Gets version of currently running Zeitgeist daemon.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_type"><span class="class">Array</span></span>&lt;<span class="main_basic_type"><span class="struct">uint32</span></span>&gt; <b><a href="Zeitgeist.Log.insert_event.html" class="method">insert_event</a></b> (<span class="main_type"><a href="Zeitgeist.Event.html" class="class">Event</a></span> event, <span class="main_type"><span class="class">Cancellable</span></span>? cancellable = <span class="main_literal">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><span class="class">Error</span></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Asynchronously send a set of events to the Zeitgeist daemon, 
+                requesting they be inserted into the log.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="Zeitgeist.Log.insert_event_no_reply.html" class="method">insert_event_no_reply</a></b> (<span class="main_type"><a href="Zeitgeist.Event.html" class="class">Event</a></span> event) <span class="main_keyword">throws</span> <span class="main_type"><span class="class">Error</span></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Asynchronously send a set of events to the Zeitgeist daemon, 
+                requesting they be inserted into the log. This method is &amp;quot;fire and forget&amp;quot; and the caller will never know whether 
+                the events was successfully inserted or not.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_type"><span class="class">Array</span></span>&lt;<span class="main_basic_type"><span class="struct">uint32</span></span>&gt; <b><a href="Zeitgeist.Log.insert_events.html" class="method">insert_events</a></b> (<span class="main_type"><span class="class">GenericArray</span></span>&lt;<span class="main_type"><a href="Zeitgeist.Event.html" class="class">Event</a></span>&gt; events, <span class="main_type"><span class="class">Cancellable</span></span>? cancellable = <span class="main_literal">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><span class="class">Error</span></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Asynchronously send a set of events to the Zeitgeist daemon, 
+                requesting they be inserted into the log.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="Zeitgeist.Log.insert_events_no_reply.html" class="method">insert_events_no_reply</a></b> (<span class="main_type"><span class="class">GenericArray</span></span>&lt;<span class="main_type"><a href="Zeitgeist.Event.html" class="class">Event</a></span>&gt; events) <span class="main_keyword">throws</span> <span class="main_type"><span class="class">Error</span></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Asynchronously send a set of events to the Zeitgeist daemon, 
+                requesting they be inserted into the log. This method is &amp;quot;fire and forget&amp;quot; and the caller will never know whether 
+                the events was successfully inserted or not.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="Zeitgeist.Log.install_monitor.html" class="method">install_monitor</a></b> (<span class="main_type"><a href="Zeitgeist.Monitor.html" class="class">Monitor</a></span> monitor) <span class="main_keyword">throws</span> <span class="main_type"><span class="class">Error</span></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Install a monitor in the Zeitgeist engine that calls back when events 
+                matching event_templates are logged. The matching is done exactly as in the find_* family of methods and in Event.matches_template. 
+                Furthermore matched events must also have timestamps lying in time_range.</span>
+            </div></li>
+          <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">protected</span> <span class="main_keyword">override</span> <span class="main_keyword">void</span> <b><a href="Zeitgeist.Log.on_connection_established.html" class="virtual_method">on_connection_established</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="virtual_method"><span class="leaf_code_definition"><span class="main_keyword">protected</span> <span class="main_keyword">override</span> <span class="main_keyword">void</span> <b><a href="Zeitgeist.Log.on_connection_lost.html" class="virtual_method">on_connection_lost</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_keyword">void</span> <b><a href="Zeitgeist.Log.quit.html" class="method">quit</a></b> (<span class="main_type"><span class="class">Cancellable</span></span>? cancellable = <span class="main_literal">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><span class="class">Error</span></span>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="Zeitgeist.Log.remove_monitor.html" class="method">remove_monitor</a></b> (<span class="main_keyword">owned</span> <span class="main_type"><a href="Zeitgeist.Monitor.html" class="class">Monitor</a></span> monitor) <span class="main_keyword">throws</span> <span class="main_type"><span class="class">Error</span></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Remove a monitor from Zeitgeist engine that calls back when events 
+                matching event_templates are logged.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Inherited Members:</h3>
+        <div class="box">
+          <div class="headline" onclick="toggle_box (this, 'box-content-8')">All known members inherited from class Zeitgeist.QueuedProxyWrapper</div>
+          <div class="content" id="box-content-8">
+            <div class="column">
+              <ul class="navi_inline">
+                <li class="property"><a href="Zeitgeist.QueuedProxyWrapper.is_connected.html">is_connected</a></li>
+                <li class="method"><a href="Zeitgeist.QueuedProxyWrapper.name_owner_changed.html">name_owner_changed</a></li>
+                <li class="abstract_method"><a href="Zeitgeist.QueuedProxyWrapper.on_connection_established.html">on_connection_established</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul class="navi_inline">
+                <li class="abstract_method"><a href="Zeitgeist.QueuedProxyWrapper.on_connection_lost.html">on_connection_lost</a></li>
+                <li class="method"><a href="Zeitgeist.QueuedProxyWrapper.process_queued_methods.html">process_queued_methods</a></li>
+                <li class="method"><a href="Zeitgeist.QueuedProxyWrapper.proxy_acquired.html">proxy_acquired</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul class="navi_inline">
+                <li class="property"><a href="Zeitgeist.QueuedProxyWrapper.proxy_created.html">proxy_created</a></li>
+                <li class="method"><a href="Zeitgeist.QueuedProxyWrapper.proxy_unavailable.html">proxy_unavailable</a></li>
+                <li class="method"><a href="Zeitgeist.QueuedProxyWrapper.wait_for_proxy.html">wait_for_proxy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="headline" onclick="toggle_box (this, 'box-content-9')">All known members inherited from class GLib.Object</div>
+          <div class="content" id="box-content-9">
+            <div class="column">
+              <ul class="navi_inline">
+                <li class="method">@get</li>
+                <li class="static_method">@new</li>
+                <li class="method">@ref</li>
+                <li class="method">@set</li>
+                <li class="method">add_toggle_ref</li>
+                <li class="method">add_weak_pointer</li>
+                <li class="method">bind_property</li>
+                <li class="method">connect</li>
+                <li class="virtual_method">constructed</li>
+                <li class="method">disconnect</li>
+                <li class="virtual_method">dispose</li>
+                <li class="method">dup_data</li>
+                <li class="method">dup_qdata</li>
+                <li class="method">force_floating</li>
+                <li class="method">freeze_notify</li>
+                <li class="method">get_class</li>
+                <li class="method">get_data</li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul class="navi_inline">
+                <li class="method">get_property</li>
+                <li class="method">get_qdata</li>
+                <li class="method">get_type</li>
+                <li class="method">getv</li>
+                <li class="static_method">interface_find_property</li>
+                <li class="static_method">interface_install_property</li>
+                <li class="static_method">interface_list_properties</li>
+                <li class="method">is_floating</li>
+                <li class="static_method">new_valist</li>
+                <li class="static_method">new_with_properties</li>
+                <li class="static_method">newv</li>
+                <li class="signal">notify</li>
+                <li class="method">notify_property</li>
+                <li class="field">ref_count</li>
+                <li class="method">ref_sink</li>
+                <li class="method">remove_toggle_ref</li>
+                <li class="method">remove_weak_pointer</li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul class="navi_inline">
+                <li class="method">replace_data</li>
+                <li class="method">replace_qdata</li>
+                <li class="method">set_data</li>
+                <li class="method">set_data_full</li>
+                <li class="method">set_property</li>
+                <li class="method">set_qdata</li>
+                <li class="method">set_qdata_full</li>
+                <li class="method">set_valist</li>
+                <li class="method">setv</li>
+                <li class="method">steal_data</li>
+                <li class="method">steal_qdata</li>
+                <li class="method">thaw_notify</li>
+                <li class="method">unref</li>
+                <li class="method">watch_closure</li>
+                <li class="method">weak_ref</li>
+                <li class="method">weak_unref</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="https://wiki.gnome.org/Projects/Valadoc"><kbd>valadoc</kbd></a>
+    </div>
+  </body>
+</html>

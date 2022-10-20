@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="zeitgeist-2.0-mimetype">
+<refmeta>
+<refentrytitle role="top_of_page" id="zeitgeist-2.0-mimetype.top_of_page">mimetype</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ZEITGEIST-2.0 Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>mimetype</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="zeitgeist-2.0-mimetype.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-register-mimetype">zeitgeist_register_mimetype</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-register-mimetype-regex">zeitgeist_register_mimetype_regex</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-interpretation-for-mimetype">zeitgeist_interpretation_for_mimetype</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-register-uri-scheme">zeitgeist_register_uri_scheme</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-manifestation-for-uri">zeitgeist_manifestation_for_uri</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="zeitgeist-2.0-mimetype.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="zeitgeist-2.0-mimetype.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="zeitgeist-register-mimetype" role="function">
+<title>zeitgeist_register_mimetype&#160;()</title>
+<indexterm zone="zeitgeist-register-mimetype"><primary>zeitgeist_register_mimetype</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_register_mimetype (<parameter>const <link linkend="gchar"><type>gchar</type></link> *mimetype</parameter>,
+                             <parameter>const <link linkend="gchar"><type>gchar</type></link> *interpretation_uri</parameter>);</programlisting>
+<para>zeitgeist_register_mimetype:</para>
+<para>Associate a MIME-type with a given interpretation type. Registered MIME-types can be looked up with <link linkend="zeitgeist-interpretation-for-mimetype"><function>zeitgeist_interpretation_for_mimetype()</function></link>.</para><para>You can register a regular expression as mimetype if instead of this function you invoke <link linkend="zeitgeist-register-mimetype-regex"><function>zeitgeist_register_mimetype_regex()</function></link>.</para><para>MIME-types are first looked up by their exact name and then if none is found the regular expressions will be checked as fallbacks.</para><para>This library will install a wide range a common mimetypes for you, so unless you have very specific needs you will normally not have to call this function.</para>
+<refsect3 id="zeitgeist-register-mimetype.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>mimetype</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A MIME-type string. Eg. <emphasis>text/plain</emphasis> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>interpretation_uri</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A URI defining the subject interpretation type to associate with &quot;mimetype&quot; </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-register-mimetype-regex" role="function">
+<title>zeitgeist_register_mimetype_regex&#160;()</title>
+<indexterm zone="zeitgeist-register-mimetype-regex"><primary>zeitgeist_register_mimetype_regex</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_register_mimetype_regex (<parameter>const <link linkend="gchar"><type>gchar</type></link> *mimetype_regex</parameter>,
+                                   <parameter>const <link linkend="gchar"><type>gchar</type></link> *interpretation_uri</parameter>);</programlisting>
+<para>zeitgeist_register_mimetype_regex:</para>
+<para>Associate a range of MIME-types with a given interpretation type. Registered MIME-types can be looked up with <link linkend="zeitgeist-interpretation-for-mimetype"><function>zeitgeist_interpretation_for_mimetype()</function></link>.</para><para>If you only need to register one specific MIME-type, it is more efficient to use <link linkend="zeitgeist-register-mimetype"><function>zeitgeist_register_mimetype()</function></link> instead of this function.</para><para>MIME-types are first looked up by their exact name and then if none is found the regular expressions will be checked as fallbacks.</para><para>This library will install a wide range a common mimetypes for you, so unless you have very specific needs you will normally not have to call this function.</para>
+<refsect3 id="zeitgeist-register-mimetype-regex.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>mimetype_regex</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A regular expression matching a certain range of mimetypes. Eg. <emphasis>text/.* </emphasis> to match all <emphasis>text</emphasis> subtypes. </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>interpretation_uri</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A URI defining the subject interpretation type to associate with the matched MIME-types </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-interpretation-for-mimetype" role="function">
+<title>zeitgeist_interpretation_for_mimetype&#160;()</title>
+<indexterm zone="zeitgeist-interpretation-for-mimetype"><primary>zeitgeist_interpretation_for_mimetype</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_interpretation_for_mimetype (<parameter>const <link linkend="gchar"><type>gchar</type></link> *mimetype</parameter>);</programlisting>
+<para>zeitgeist_interpretation_for_mimetype:</para>
+<para>Look up the subject interpretation type associated with <parameter>mimetype</parameter>.</para>
+<refsect3 id="zeitgeist-interpretation-for-mimetype.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>mimetype</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A MIME-type string. Eg. <emphasis>text/plain</emphasis> </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-interpretation-for-mimetype.returns" role="returns">
+<title>Returns</title>
+<para>A URI defining the subject interpretation type associated with &quot;mimetype&quot; or <link linkend="NULL:CAPS"><literal>NULL</literal></link> in case &quot;mimetype&quot; is unknown </para>.
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-register-uri-scheme" role="function">
+<title>zeitgeist_register_uri_scheme&#160;()</title>
+<indexterm zone="zeitgeist-register-uri-scheme"><primary>zeitgeist_register_uri_scheme</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_register_uri_scheme (<parameter>const <link linkend="gchar"><type>gchar</type></link> *uri_scheme</parameter>,
+                               <parameter>const <link linkend="gchar"><type>gchar</type></link> *manifestation_type</parameter>);</programlisting>
+<para>zeitgeist_register_uri_scheme:</para>
+<para>Associate a URI scheme with a given subject manifestation type. You can find the manifestation type of a given URI by passing it to <link linkend="zeitgeist-manifestation-for-uri"><function>zeitgeist_manifestation_for_uri()</function></link>.</para><para>This library will install a range a common URI schemes for you, so unless you have very specific needs you will normally not have to call this function.</para>
+<refsect3 id="zeitgeist-register-uri-scheme.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>uri_scheme</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A URI scheme such as <emphasis>http:\/\</emphasis>/ </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>manifestation_type</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A URI defining the subject manifestation type to associate with &quot;uri_scheme&quot; </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-manifestation-for-uri" role="function">
+<title>zeitgeist_manifestation_for_uri&#160;()</title>
+<indexterm zone="zeitgeist-manifestation-for-uri"><primary>zeitgeist_manifestation_for_uri</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_manifestation_for_uri (<parameter>const <link linkend="gchar"><type>gchar</type></link> *uri</parameter>);</programlisting>
+<para>zeitgeist_manifestation_for_uri</para>
+<para>Look up a subject manifestation type for a given URI. Eg. if you pass in <emphasis>file:\/\/\/tmp/foo.txt</emphasis> you will get back ZEITGEIST_NFO_FILE_DATA_OBJECT.</para>
+<refsect3 id="zeitgeist-manifestation-for-uri.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>uri</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>An URI </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-manifestation-for-uri.returns" role="returns">
+<title>Returns</title>
+<para>A subject manifestation type for <parameter>uri</parameter> or <link linkend="NULL:CAPS"><literal>NULL</literal></link> in case no suitable manifestation type is known </para>.
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>

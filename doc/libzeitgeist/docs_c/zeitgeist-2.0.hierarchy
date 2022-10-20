@@ -1,0 +1,44 @@
+GObject
+  GDBusProxy
+    ZeitgeistConnmanManagerDBusProxy
+    ZeitgeistNetworkManagerDBusProxy
+    ZeitgeistRemoteLogProxy
+    ZeitgeistRemoteMonitorProxy
+    ZeitgeistRemoteRegistryProxy
+    ZeitgeistRemoteSimpleIndexerProxy
+  ZeitgeistDataSource
+  ZeitgeistQueuedProxyWrapper
+    ZeitgeistDataSourceRegistry
+    ZeitgeistIndex
+    ZeitgeistLog
+  ZeitgeistEvent
+  ZeitgeistMonitor
+  ZeitgeistSimpleResultSet
+  ZeitgeistSubject
+  ZeitgeistTimeRange
+  GDBusConnection
+GInterface
+  GTypePlugin
+  ZeitgeistConnmanManagerDBus
+  GDBusInterface
+  GInitable
+  GAsyncInitable
+  ZeitgeistRemoteMonitor
+  ZeitgeistNetworkManagerDBus
+  ZeitgeistRemoteLog
+  ZeitgeistRemoteRegistry
+  ZeitgeistRemoteSimpleIndexer
+  ZeitgeistResultSet
+ZeitgeistQueuedProxyWrapperQueuedMethod
+GEnum
+  ZeitgeistRelevantResultType
+  ZeitgeistResultType
+  ZeitgeistStorageState
+  GBusType
+GBoxed
+  GValueArray
+  ZeitgeistVersionStruct
+  GDBusInterfaceInfo
+  GStrv
+  GPtrArray
+  GByteArray

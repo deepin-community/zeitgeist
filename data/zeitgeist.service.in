@@ -1,0 +1,9 @@
+[Unit]
+Description=Zeitgeist activity log service
+PartOf=graphical-session.target
+
+[Service]
+Type=dbus
+BusName=org.gnome.zeitgeist.Engine
+ExecStart=@bindir@/zeitgeist-daemon
+Slice=session.slice

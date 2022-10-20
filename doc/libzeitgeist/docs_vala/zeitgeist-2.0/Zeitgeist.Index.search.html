@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Zeitgeist.Index.search &ndash; zeitgeist-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">Zeitgeist.Index.search &ndash; zeitgeist-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">zeitgeist-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="Zeitgeist.html">Zeitgeist</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="Zeitgeist.Index.html">Index</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="Zeitgeist.Index.Index.html">Index</a></li>
+          <li class="virtual_method"><a href="Zeitgeist.Index.on_connection_established.html">on_connection_established</a></li>
+          <li class="virtual_method"><a href="Zeitgeist.Index.on_connection_lost.html">on_connection_lost</a></li>
+          <li class="method">search</li>
+          <li class="method"><a href="Zeitgeist.Index.search_with_relevancies.html">search_with_relevancies</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">search</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_type"><a href="Zeitgeist.ResultSet.html" class="interface">ResultSet</a></span> <b><span class="method">search</span></b> (<span class="main_basic_type"><span class="class">string</span></span> query, <span class="main_type"><a href="Zeitgeist.TimeRange.html" class="class">TimeRange</a></span> time_range, <span class="main_type"><span class="class">GenericArray</span></span>&lt;<span class="main_type"><a href="Zeitgeist.Event.html" class="class">Event</a></span>&gt; event_templates, <span class="main_basic_type"><span class="struct">uint32</span></span> offset, <span class="main_basic_type"><span class="struct">uint32</span></span> num_events, <span class="main_type"><a href="Zeitgeist.ResultType.html" class="enum">ResultType</a></span> result_type, <span class="main_type"><span class="class">Cancellable</span></span>? cancellable = <span class="main_literal">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><span class="class">Error</span></span>
+        </div>
+        <div class="description">
+          <p>Perform a full text search possibly restricted to a <a href="Zeitgeist.TimeRange.html" class="class">TimeRange</a> and/or set of event 
+            templates.</p>
+          <p>The default boolean operator is %AND. Thus the query <i>foo bar</i> will be interpreted as <i>foo AND bar</i>. To exclude a term from the
+            result set prepend it with a minus sign - eg. <i>foo -bar</i>. Phrase queries can be done by double quoting the string <i>"foo is a bar"
+            </i>. You can truncate terms by appending a *.</p>
+          <p>There are a few keys you can prefix to a term or phrase to search within a specific set of metadata. They are used like <i>key:value</i>.
+            The keys <i>name</i> and <i>title</i> search strictly within the text field of the event subjects. The key <i>app</i> searches within the 
+            application name or description that is found in the actor attribute of the events. Lastly, you can use the <i>site</i> key to search 
+            within the domain name of subject URIs.</p>
+          <p>You can also control the results with the boolean operators <i>AND</i> and <i>OR</i> and you may use brackets, ( and ), to control the 
+            operator precedence.</p>
+          <p>FIXME: how do we put documentation into _finish? The total hit count of the query will be available via the returned result set by 
+            calling zeitgeist_result_set_estimated_matches(). This will often be bigger than the actual number of events held in the result set, which
+            is limited by the @num_events parameter passed to zeitgeist_index_search().</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">query</td>
+              <td>
+                <p>The search string to send to Zeitgeist </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">time_range</td>
+              <td>
+                <p>Restrict matched events to ones within this time range. If you are not interested in restricting the timerange pass 
+                  zeitgeist_time_range_new_anytime() as Zeitgeist will detect this and optimize the query accordingly </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">event_templates</td>
+              <td>
+                <p>Restrict matches events to ones matching these templates </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">offset</td>
+              <td>
+                <p>Offset into the result set to read events from </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">num_events</td>
+              <td>
+                <p>Maximal number of events to retrieve </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">result_type</td>
+              <td>
+                <p>The <a href="Zeitgeist.ResultType.html" class="enum">ResultType</a> determining the sort order. You may pass 
+                  <a href="Zeitgeist.ResultType.RELEVANCY.html" class="enumvalue">ResultType.RELEVANCY</a> to this method to have the results ordered 
+                  by relevancy calculated in relation to @query </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">cancellable</td>
+              <td>
+                <p>A <span class="class">GLib.Cancellable</span> used to cancel the call or %NULL </p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="https://wiki.gnome.org/Projects/Valadoc"><kbd>valadoc</kbd></a>
+    </div>
+  </body>
+</html>

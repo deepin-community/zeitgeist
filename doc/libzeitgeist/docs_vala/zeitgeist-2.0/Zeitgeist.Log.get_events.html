@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Zeitgeist.Log.get_events &ndash; zeitgeist-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">Zeitgeist.Log.get_events &ndash; zeitgeist-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">zeitgeist-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="Zeitgeist.html">Zeitgeist</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class"><a href="Zeitgeist.Log.html">Log</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="static_method"><a href="Zeitgeist.Log.get_default.html">get_default</a></li>
+          <li class="creation_method"><a href="Zeitgeist.Log.Log.html">Log</a></li>
+          <li class="method"><a href="Zeitgeist.Log.datapath.html">datapath</a></li>
+          <li class="method"><a href="Zeitgeist.Log.delete_events.html">delete_events</a></li>
+          <li class="method"><a href="Zeitgeist.Log.find_event_ids.html">find_event_ids</a></li>
+          <li class="method"><a href="Zeitgeist.Log.find_events.html">find_events</a></li>
+          <li class="method"><a href="Zeitgeist.Log.find_related_uris.html">find_related_uris</a></li>
+          <li class="method">get_events</li>
+          <li class="method"><a href="Zeitgeist.Log.get_extensions.html">get_extensions</a></li>
+          <li class="method"><a href="Zeitgeist.Log.get_version.html">get_version</a></li>
+          <li class="method"><a href="Zeitgeist.Log.insert_event.html">insert_event</a></li>
+          <li class="method"><a href="Zeitgeist.Log.insert_event_no_reply.html">insert_event_no_reply</a></li>
+          <li class="method"><a href="Zeitgeist.Log.insert_events.html">insert_events</a></li>
+          <li class="method"><a href="Zeitgeist.Log.insert_events_no_reply.html">insert_events_no_reply</a></li>
+          <li class="method"><a href="Zeitgeist.Log.install_monitor.html">install_monitor</a></li>
+          <li class="virtual_method"><a href="Zeitgeist.Log.on_connection_established.html">on_connection_established</a></li>
+          <li class="virtual_method"><a href="Zeitgeist.Log.on_connection_lost.html">on_connection_lost</a></li>
+          <li class="method"><a href="Zeitgeist.Log.quit.html">quit</a></li>
+          <li class="method"><a href="Zeitgeist.Log.remove_monitor.html">remove_monitor</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">get_events</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_type"><a href="Zeitgeist.ResultSet.html" class="interface">ResultSet</a></span> <b><span class="method">get_events</span></b> (<span class="main_type"><span class="class">Array</span></span>&lt;<span class="main_basic_type"><span class="struct">uint32</span></span>&gt; event_ids, <span class="main_type"><span class="class">Cancellable</span></span>? cancellable = <span class="main_literal">null</span>) <span class="main_keyword">throws</span> <span class="main_type"><span class="class">Error</span></span>
+        </div>
+        <div class="description">
+          <p>Look up a collection of <a href="Zeitgeist.Event.html" class="class">Event</a> in the 
+            <a href="Zeitgeist.Log.Log.html" class="creation_method">Log</a> given a collection of event ids. This is useful for looking up the event 
+            data for events found with the find_event_ids_* family of functions.</p>
+          <p>Each <a href="Zeitgeist.Event.html" class="class">Event</a> which is not found in the 
+            <a href="Zeitgeist.Log.Log.html" class="creation_method">Log</a> is represented by NULL in the resulting collection. The query will be 
+            done via an asynchronous DBus call and this method will return immediately. The returned events will be passed to callback as a list of 
+            <a href="Zeitgeist.Event.html" class="class">Event</a>s, which must be the only argument of the function.</p>
+          <p>In order to use this method there needs to be a mainloop runnning.</p>
+          <h2 class="main_title">Parameters:</h2>
+          <table class="main_parameter_table">
+            <tr>
+              <td class="main_parameter_table_name">event_ids</td>
+              <td>
+                <p>a <span class="class">GLib.Array</span> of <a href="Zeitgeist.Event.html" class="class">Event</a> ids </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="main_parameter_table_name">cancellable</td>
+              <td>
+                <p>a <span class="class">GLib.Cancellable</span> to cancel the operation or %NULL </p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="https://wiki.gnome.org/Projects/Valadoc"><kbd>valadoc</kbd></a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZeitgeistResultSet: Zeitgeist Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="Zeitgeist Reference Manual">
+<link rel="up" href="ch01.html" title="Classes">
+<link rel="prev" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor">
+<link rel="next" href="ZeitgeistSubject.html" title="ZeitgeistSubject">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistResultSet.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistResultSet.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_prerequisites">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistResultSet.prerequisites" class="shortcut">Prerequisites</a></span><span id="nav_implementations">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistResultSet.implementations" class="shortcut">Known Implementations</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ZeitgeistMonitor.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ZeitgeistSubject.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="ZeitgeistResultSet"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="ZeitgeistResultSet.top_of_page"></a>ZeitgeistResultSet</span></h2>
+<p>ZeitgeistResultSet — Cursor-like interface for results sets</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="ZeitgeistResultSet.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistResultSet.html#zeitgeist-result-set-size" title="zeitgeist_result_set_size ()">zeitgeist_result_set_size</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistResultSet.html#zeitgeist-result-set-estimated-matches" title="zeitgeist_result_set_estimated_matches ()">zeitgeist_result_set_estimated_matches</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="returnvalue">ZeitgeistEvent</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistResultSet.html#zeitgeist-result-set-next-value" title="zeitgeist_result_set_next_value ()">zeitgeist_result_set_next_value</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistResultSet.html#zeitgeist-result-set-has-next" title="zeitgeist_result_set_has_next ()">zeitgeist_result_set_has_next</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistResultSet.html#zeitgeist-result-set-tell" title="zeitgeist_result_set_tell ()">zeitgeist_result_set_tell</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistResultSet.html#zeitgeist-result-set-reset" title="zeitgeist_result_set_reset ()">zeitgeist_result_set_reset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="returnvalue">ZeitgeistResultSet</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistResultSet.html#zeitgeist-result-set-iterator" title="zeitgeist_result_set_iterator ()">zeitgeist_result_set_iterator</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistResultSet.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="ZeitgeistResultSet.html#ZeitgeistResultSet-struct" title="ZeitgeistResultSet">ZeitgeistResultSet</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="ZeitgeistResultSet.html#ZeitgeistResultSetIface" title="struct ZeitgeistResultSetIface">ZeitgeistResultSetIface</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistResultSet.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/GTypeModule.html">GInterface</a>
+    <span class="lineart">╰──</span> ZeitgeistResultSet
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistResultSet.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+ZeitgeistResultSet requires
+ <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>.</p>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistResultSet.implementations"></a><h2>Known Implementations</h2>
+<p>
+ZeitgeistResultSet is implemented by
+ ZeitgeistSimpleResultSet.</p>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistResultSet.description"></a><h2>Description</h2>
+<p>include: zeitgeist.h</p>
+<p>Interface for results returned by <a class="link" href="ZeitgeistLog.html#zeitgeist-log-find-events" title="zeitgeist_log_find_events ()"><code class="function">zeitgeist_log_find_events()</code></a>, <a class="link" href="ZeitgeistLog.html#zeitgeist-log-get-events" title="zeitgeist_log_get_events ()"><code class="function">zeitgeist_log_get_events()</code></a>, and <a class="link" href="ZeitgeistIndex.html#zeitgeist-index-search" title="zeitgeist_index_search ()"><code class="function">zeitgeist_index_search()</code></a>.</p>
+<p>This interface utilizes a cursor-like metaphor. You advance the cursor by calling <code class="function">zeitgeist_result_set_next()</code> or adjust it manually by calling <code class="function">zeitgeist_result_set_seek()</code>.</p>
+<p>Calling <code class="function">zeitgeist_result_set_next()</code> will also return the event at the current cursor position. You may retrieve the current event without advancing the cursor by calling <code class="function">zeitgeist_result_set_peek()</code>.</p>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistResultSet.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="zeitgeist-result-set-size"></a><h3>zeitgeist_result_set_size ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+zeitgeist_result_set_size (<em class="parameter"><code><a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a> *self</code></em>);</pre>
+<p>Get the number of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a>&lt;!-- --&gt;s held in a <a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a>. Unlike the number obtained from <a class="link" href="ZeitgeistResultSet.html#zeitgeist-result-set-estimated-matches" title="zeitgeist_result_set_estimated_matches ()"><code class="function">zeitgeist_result_set_estimated_matches()</code></a> the size of the result set is always equal to the number of times you can call <code class="function">zeitgeist_result_set_next()</code>.</p>
+<div class="refsect3">
+<a name="zeitgeist-result-set-size.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-result-set-size.returns"></a><h4>Returns</h4>
+<p>The number of events held in the result set </p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-result-set-estimated-matches"></a><h3>zeitgeist_result_set_estimated_matches ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+zeitgeist_result_set_estimated_matches
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a> *self</code></em>);</pre>
+<p>Get the total number of matches that would have been for the query that generated the result set had it not been restricted in size. For FTS the number of matches is estimated.</p>
+<p>For <a class="link" href="ZeitgeistLog.html#zeitgeist-log-find-events" title="zeitgeist_log_find_events ()"><code class="function">zeitgeist_log_find_events()</code></a> and <a class="link" href="ZeitgeistLog.html#zeitgeist-log-get-events" title="zeitgeist_log_get_events ()"><code class="function">zeitgeist_log_get_events()</code></a> this will always be the same as <a class="link" href="ZeitgeistResultSet.html#zeitgeist-result-set-size" title="zeitgeist_result_set_size ()"><code class="function">zeitgeist_result_set_size()</code></a>. For cases like <a class="link" href="ZeitgeistIndex.html#zeitgeist-index-search" title="zeitgeist_index_search ()"><code class="function">zeitgeist_index_search()</code></a> where you specify a subset of the hits to retrieve the estimated match count will often be bigger than the result set size.</p>
+<div class="refsect3">
+<a name="zeitgeist-result-set-estimated-matches.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-result-set-estimated-matches.returns"></a><h4>Returns</h4>
+<p>The number of events that matched the query </p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-result-set-next-value"></a><h3>zeitgeist_result_set_next_value ()</h3>
+<pre class="programlisting"><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="returnvalue">ZeitgeistEvent</span></a> *
+zeitgeist_result_set_next_value (<em class="parameter"><code><a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a> *self</code></em>);</pre>
+<p>Get the current event from the result set and advance the cursor. To ensure that calls to this method will succeed you can call <a class="link" href="ZeitgeistResultSet.html#zeitgeist-result-set-has-next" title="zeitgeist_result_set_has_next ()"><code class="function">zeitgeist_result_set_has_next()</code></a>.</p>
+<div class="refsect3">
+<a name="zeitgeist-result-set-next-value.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-result-set-next-value.returns"></a><h4>Returns</h4>
+<p>The <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> at the current cursor position, or NULL if there are no events left. </p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-result-set-has-next"></a><h3>zeitgeist_result_set_has_next ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+zeitgeist_result_set_has_next (<em class="parameter"><code><a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a> *self</code></em>);</pre>
+<p>Check if a call to <code class="function">zeitgeist_result_set_next()</code> will succeed.</p>
+<div class="refsect3">
+<a name="zeitgeist-result-set-has-next.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-result-set-has-next.returns"></a><h4>Returns</h4>
+<p>TRUE if and only if more events can be retrieved by calling <code class="function">zeitgeist_result_set_next()</code> </p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-result-set-tell"></a><h3>zeitgeist_result_set_tell ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+zeitgeist_result_set_tell (<em class="parameter"><code><a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a> *self</code></em>);</pre>
+<p>Get the current position of the cursor.</p>
+<div class="refsect3">
+<a name="zeitgeist-result-set-tell.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-result-set-tell.returns"></a><h4>Returns</h4>
+<p>The current position of the cursor </p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-result-set-reset"></a><h3>zeitgeist_result_set_reset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_result_set_reset (<em class="parameter"><code><a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a> *self</code></em>);</pre>
+<p>Resets the result set to start iterating it again from scratch.</p>
+<div class="refsect3">
+<a name="zeitgeist-result-set-reset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-result-set-iterator"></a><h3>zeitgeist_result_set_iterator ()</h3>
+<pre class="programlisting"><a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="returnvalue">ZeitgeistResultSet</span></a> *
+zeitgeist_result_set_iterator (<em class="parameter"><code><a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a> *self</code></em>);</pre>
+<p>Do not use this method! It is only for use by Vala.</p>
+<div class="refsect3">
+<a name="zeitgeist-result-set-iterator.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistResultSet.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="ZeitgeistResultSet-struct"></a><h3>ZeitgeistResultSet</h3>
+<pre class="programlisting">typedef struct _ZeitgeistResultSet ZeitgeistResultSet;</pre>
+<p>Cursor-like interface for results sets</p>
+<p>include: zeitgeist.h</p>
+<p>Interface for results returned by <a class="link" href="ZeitgeistLog.html#zeitgeist-log-find-events" title="zeitgeist_log_find_events ()"><code class="function">zeitgeist_log_find_events()</code></a>, <a class="link" href="ZeitgeistLog.html#zeitgeist-log-get-events" title="zeitgeist_log_get_events ()"><code class="function">zeitgeist_log_get_events()</code></a>, and <a class="link" href="ZeitgeistIndex.html#zeitgeist-index-search" title="zeitgeist_index_search ()"><code class="function">zeitgeist_index_search()</code></a>.</p>
+<p>This interface utilizes a cursor-like metaphor. You advance the cursor by calling <code class="function">zeitgeist_result_set_next()</code> or adjust it manually by calling <code class="function">zeitgeist_result_set_seek()</code>.</p>
+<p>Calling <code class="function">zeitgeist_result_set_next()</code> will also return the event at the current cursor position. You may retrieve the current event without advancing the cursor by calling <code class="function">zeitgeist_result_set_peek()</code>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistResultSetIface"></a><h3>struct ZeitgeistResultSetIface</h3>
+<pre class="programlisting">struct ZeitgeistResultSetIface {
+	GTypeInterface parent_iface;
+	guint (*size) (ZeitgeistResultSet* self);
+	guint (*estimated_matches) (ZeitgeistResultSet* self);
+	ZeitgeistEvent* (*next_value) (ZeitgeistResultSet* self);
+	gboolean (*has_next) (ZeitgeistResultSet* self);
+	guint (*tell) (ZeitgeistResultSet* self);
+	void (*reset) (ZeitgeistResultSet* self);
+};
+</pre>
+<p>Interface for creating <a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="type">ZeitgeistResultSet</span></a> implementations.</p>
+<div class="refsect3">
+<a name="ZeitgeistResultSetIface.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="../gobject/gobject-Type-Information.html#GTypeInterface"><span class="type">GTypeInterface</span></a> <em class="structfield"><code><a name="ZeitgeistResultSetIface.parent-iface"></a>parent_iface</code></em>;</p></td>
+<td class="struct_member_description"><p>the parent interface structure</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="ZeitgeistResultSetIface.size"></a>size</code></em> ()</p></td>
+<td class="struct_member_description"><p>virtual method called by <a class="link" href="ZeitgeistResultSet.html#zeitgeist-result-set-size" title="zeitgeist_result_set_size ()"><code class="function">zeitgeist_result_set_size()</code></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="ZeitgeistResultSetIface.estimated-matches"></a>estimated_matches</code></em> ()</p></td>
+<td class="struct_member_description"><p>virtual method called by <a class="link" href="ZeitgeistResultSet.html#zeitgeist-result-set-estimated-matches" title="zeitgeist_result_set_estimated_matches ()"><code class="function">zeitgeist_result_set_estimated_matches()</code></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="ZeitgeistResultSetIface.next-value"></a>next_value</code></em> ()</p></td>
+<td class="struct_member_description"><p>virtual method called by <a class="link" href="ZeitgeistResultSet.html#zeitgeist-result-set-next-value" title="zeitgeist_result_set_next_value ()"><code class="function">zeitgeist_result_set_next_value()</code></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="ZeitgeistResultSetIface.has-next"></a>has_next</code></em> ()</p></td>
+<td class="struct_member_description"><p>virtual method called by <a class="link" href="ZeitgeistResultSet.html#zeitgeist-result-set-has-next" title="zeitgeist_result_set_has_next ()"><code class="function">zeitgeist_result_set_has_next()</code></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="ZeitgeistResultSetIface.tell"></a>tell</code></em> ()</p></td>
+<td class="struct_member_description"><p>virtual method called by <a class="link" href="ZeitgeistResultSet.html#zeitgeist-result-set-tell" title="zeitgeist_result_set_tell ()"><code class="function">zeitgeist_result_set_tell()</code></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="ZeitgeistResultSetIface.reset"></a>reset</code></em> ()</p></td>
+<td class="struct_member_description"><p>virtual method called by <a class="link" href="ZeitgeistResultSet.html#zeitgeist-result-set-reset" title="zeitgeist_result_set_reset ()"><code class="function">zeitgeist_result_set_reset()</code></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.32.1</div>
+</body>
+</html>

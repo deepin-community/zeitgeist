@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Zeitgeist.Utils &ndash; zeitgeist-2.0 &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">Zeitgeist.Utils &ndash; zeitgeist-2.0 Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">zeitgeist-2.0</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="Zeitgeist.html">Zeitgeist</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace">Utils</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="constant"><a href="Zeitgeist.Utils.CACHE_SIZE.html">CACHE_SIZE</a></li>
+          <li class="constant"><a href="Zeitgeist.Utils.ENGINE_DBUS_NAME.html">ENGINE_DBUS_NAME</a></li>
+          <li class="constant"><a href="Zeitgeist.Utils.ENGINE_DBUS_PATH.html">ENGINE_DBUS_PATH</a></li>
+          <li class="constant"><a href="Zeitgeist.Utils.MAX_DBUS_RESULT_SIZE.html">MAX_DBUS_RESULT_SIZE</a></li>
+          <li class="constant"><a href="Zeitgeist.Utils.SIG_EVENT.html">SIG_EVENT</a></li>
+          <li class="method"><a href="Zeitgeist.Utils.backup_database.html">backup_database</a></li>
+          <li class="method"><a href="Zeitgeist.Utils.get_data_path.html">get_data_path</a></li>
+          <li class="method"><a href="Zeitgeist.Utils.get_database_file_backup_path.html">get_database_file_backup_path</a></li>
+          <li class="method"><a href="Zeitgeist.Utils.get_database_file_path.html">get_database_file_path</a></li>
+          <li class="method"><a href="Zeitgeist.Utils.get_database_file_retire_name.html">get_database_file_retire_name</a></li>
+          <li class="method"><a href="Zeitgeist.Utils.get_default_data_path.html">get_default_data_path</a></li>
+          <li class="method"><a href="Zeitgeist.Utils.get_local_extensions_path.html">get_local_extensions_path</a></li>
+          <li class="method"><a href="Zeitgeist.Utils.is_empty_string.html">is_empty_string</a></li>
+          <li class="method"><a href="Zeitgeist.Utils.log_may_read_directly.html">log_may_read_directly</a></li>
+          <li class="method"><a href="Zeitgeist.Utils.parse_negation.html">parse_negation</a></li>
+          <li class="method"><a href="Zeitgeist.Utils.parse_noexpand.html">parse_noexpand</a></li>
+          <li class="method"><a href="Zeitgeist.Utils.parse_wildcard.html">parse_wildcard</a></li>
+          <li class="method"><a href="Zeitgeist.Utils.set_database_file_path.html">set_database_file_path</a></li>
+          <li class="method"><a href="Zeitgeist.Utils.using_in_memory_database.html">using_in_memory_database</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">Zeitgeist.Utils</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <div class="description">
+          <p>Utility functions. FOR INTERNAL USE ONLY</p>
+          <p>A set of funtions that if used would only affect libzeitgeist in the code it is used in.</p>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Constants:</h3>
+        <ul class="navi_inline">
+          <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_basic_type"><span class="struct">uint</span></span> <b><a href="Zeitgeist.Utils.CACHE_SIZE.html" class="constant">CACHE_SIZE</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Zeitgeist.Utils.ENGINE_DBUS_NAME.html" class="constant">ENGINE_DBUS_NAME</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Zeitgeist.Utils.ENGINE_DBUS_PATH.html" class="constant">ENGINE_DBUS_PATH</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_basic_type"><span class="struct">size_t</span></span> <b><a href="Zeitgeist.Utils.MAX_DBUS_RESULT_SIZE.html" class="constant">MAX_DBUS_RESULT_SIZE</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Zeitgeist.Utils.SIG_EVENT.html" class="constant">SIG_EVENT</a></b>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+        <h3 class="main_title">Functions:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="Zeitgeist.Utils.backup_database.html" class="method">backup_database</a></b> () <span class="main_keyword">throws</span> <span class="main_type"><span class="class">Error</span></span>
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Zeitgeist.Utils.get_data_path.html" class="method">get_data_path</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Zeitgeist.Utils.get_database_file_backup_path.html" class="method">get_database_file_backup_path</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Zeitgeist.Utils.get_database_file_path.html" class="method">get_database_file_path</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Zeitgeist.Utils.get_database_file_retire_name.html" class="method">get_database_file_retire_name</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Zeitgeist.Utils.get_default_data_path.html" class="method">get_default_data_path</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><span class="class">string</span></span> <b><a href="Zeitgeist.Utils.get_local_extensions_path.html" class="method">get_local_extensions_path</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="Zeitgeist.Utils.is_empty_string.html" class="method">is_empty_string</a></b> (<span class="main_basic_type"><span class="class">string</span></span>? s)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Return true if a string is empty (null or containing just a null 
+                byte).</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="Zeitgeist.Utils.log_may_read_directly.html" class="method">log_may_read_directly</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="Zeitgeist.Utils.parse_negation.html" class="method">parse_negation</a></b> (<span class="main_keyword">ref</span> <span class="main_basic_type"><span class="class">string</span></span> val)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Check if the value starts with the negation operator. If it does, 
+                remove the operator from the value and return true. Otherwise, return false.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="Zeitgeist.Utils.parse_noexpand.html" class="method">parse_noexpand</a></b> (<span class="main_keyword">ref</span> <span class="main_basic_type"><span class="class">string</span></span> val)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Check if the value starts with the noexpand operator. If it does, 
+                remove the operator from the value and return true. Otherwise, return false.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="Zeitgeist.Utils.parse_wildcard.html" class="method">parse_wildcard</a></b> (<span class="main_keyword">ref</span> <span class="main_basic_type"><span class="class">string</span></span> val)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Check if the value ends with the wildcard character. If it does, 
+                remove the wildcard character from the value and return true. Otherwise, return false.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="Zeitgeist.Utils.set_database_file_path.html" class="method">set_database_file_path</a></b> (<span class="main_basic_type"><span class="class">string</span></span> path)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Sets the filepath of the database.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="Zeitgeist.Utils.using_in_memory_database.html" class="method">using_in_memory_database</a></b> ()
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="https://wiki.gnome.org/Projects/Valadoc"><kbd>valadoc</kbd></a>
+    </div>
+  </body>
+</html>

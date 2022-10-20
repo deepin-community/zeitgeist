@@ -1,0 +1,85 @@
+<SIGNAL>
+<NAME>ZeitgeistConnmanManagerDBus::state-changed</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+ZeitgeistConnmanManagerDBus *zeitgeistconnmanmanagerdbus
+gchar *arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>ZeitgeistDataSourceRegistry::source-disconnected</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+ZeitgeistDataSourceRegistry *zeitgeistdatasourceregistry
+ZeitgeistDataSource *arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>ZeitgeistDataSourceRegistry::source-enabled</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+ZeitgeistDataSourceRegistry *zeitgeistdatasourceregistry
+gchar *arg1
+gboolean  arg2
+</SIGNAL>
+
+<SIGNAL>
+<NAME>ZeitgeistDataSourceRegistry::source-registered</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+ZeitgeistDataSourceRegistry *zeitgeistdatasourceregistry
+ZeitgeistDataSource *arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>ZeitgeistMonitor::events-deleted</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+ZeitgeistMonitor *zeitgeistmonitor
+ZeitgeistTimeRange *arg1
+gpointer  arg2
+gint  arg3
+</SIGNAL>
+
+<SIGNAL>
+<NAME>ZeitgeistMonitor::events-inserted</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+ZeitgeistMonitor *zeitgeistmonitor
+ZeitgeistTimeRange *arg1
+ZeitgeistResultSet *arg2
+</SIGNAL>
+
+<SIGNAL>
+<NAME>ZeitgeistNetworkManagerDBus::state-changed</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+ZeitgeistNetworkManagerDBus *zeitgeistnetworkmanagerdbus
+guint  arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>ZeitgeistRemoteRegistry::data-source-disconnected</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+ZeitgeistRemoteRegistry *zeitgeistremoteregistry
+GVariant *arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>ZeitgeistRemoteRegistry::data-source-enabled</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+ZeitgeistRemoteRegistry *zeitgeistremoteregistry
+gchar *arg1
+gboolean  arg2
+</SIGNAL>
+
+<SIGNAL>
+<NAME>ZeitgeistRemoteRegistry::data-source-registered</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+ZeitgeistRemoteRegistry *zeitgeistremoteregistry
+GVariant *arg1
+</SIGNAL>
+

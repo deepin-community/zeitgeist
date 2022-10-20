@@ -1,0 +1,2 @@
+zeitgeist_version_struct_copy
+zeitgeist_version_struct_destroy

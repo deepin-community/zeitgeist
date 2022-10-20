@@ -1,0 +1,1353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZeitgeistDataSourceRegistry: Zeitgeist Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="Zeitgeist Reference Manual">
+<link rel="up" href="ch04.html" title="API for Zeitgeist Extensions">
+<link rel="prev" href="zeitgeist-2.0-data-source.html" title="data-source">
+<link rel="next" href="ch05.html" title="Zeitgeist D-Bus API Reference">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistDataSourceRegistry.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistDataSourceRegistry.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_prerequisites">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistDataSourceRegistry.prerequisites" class="shortcut">Prerequisites</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistDataSourceRegistry.signals" class="shortcut">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch04.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="zeitgeist-2.0-data-source.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ch05.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="ZeitgeistDataSourceRegistry"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="ZeitgeistDataSourceRegistry.top_of_page"></a>ZeitgeistDataSourceRegistry</span></h2>
+<p>ZeitgeistDataSourceRegistry — Query the Zeitgeist Data-Source Registry extension</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="ZeitgeistDataSourceRegistry.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-get-data-sources" title="zeitgeist_data_source_registry_get_data_sources ()">zeitgeist_data_source_registry_get_data_sources</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="returnvalue">GPtrArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-get-data-sources-finish" title="zeitgeist_data_source_registry_get_data_sources_finish ()">zeitgeist_data_source_registry_get_data_sources_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-get-data-source-from-id" title="zeitgeist_data_source_registry_get_data_source_from_id ()">zeitgeist_data_source_registry_get_data_source_from_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="zeitgeist-2.0-data-source.html#ZeitgeistDataSource"><span class="returnvalue">ZeitgeistDataSource</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-get-data-source-from-id-finish" title="zeitgeist_data_source_registry_get_data_source_from_id_finish ()">zeitgeist_data_source_registry_get_data_source_from_id_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-register-data-source" title="zeitgeist_data_source_registry_register_data_source ()">zeitgeist_data_source_registry_register_data_source</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-register-data-source-finish" title="zeitgeist_data_source_registry_register_data_source_finish ()">zeitgeist_data_source_registry_register_data_source_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-set-data-source-enabled" title="zeitgeist_data_source_registry_set_data_source_enabled ()">zeitgeist_data_source_registry_set_data_source_enabled</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-set-data-source-enabled-finish" title="zeitgeist_data_source_registry_set_data_source_enabled_finish ()">zeitgeist_data_source_registry_set_data_source_enabled_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="returnvalue">ZeitgeistDataSourceRegistry</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-new" title="zeitgeist_data_source_registry_new ()">zeitgeist_data_source_registry_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-get-data-sources" title="zeitgeist_remote_registry_get_data_sources ()">zeitgeist_remote_registry_get_data_sources</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-get-data-sources-finish" title="zeitgeist_remote_registry_get_data_sources_finish ()">zeitgeist_remote_registry_get_data_sources_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-register-data-source" title="zeitgeist_remote_registry_register_data_source ()">zeitgeist_remote_registry_register_data_source</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-register-data-source-finish" title="zeitgeist_remote_registry_register_data_source_finish ()">zeitgeist_remote_registry_register_data_source_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-set-data-source-enabled" title="zeitgeist_remote_registry_set_data_source_enabled ()">zeitgeist_remote_registry_set_data_source_enabled</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-set-data-source-enabled-finish" title="zeitgeist_remote_registry_set_data_source_enabled_finish ()">zeitgeist_remote_registry_set_data_source_enabled_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-get-data-source-from-id" title="zeitgeist_remote_registry_get_data_source_from_id ()">zeitgeist_remote_registry_get_data_source_from_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-get-data-source-from-id-finish" title="zeitgeist_remote_registry_get_data_source_from_id_finish ()">zeitgeist_remote_registry_get_data_source_from_id_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistDataSourceRegistry.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistDataSourceRegistry-source-disconnected" title="The “source-disconnected” signal">source-disconnected</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistDataSourceRegistry-source-enabled" title="The “source-enabled” signal">source-enabled</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistDataSourceRegistry-source-registered" title="The “source-registered” signal">source-registered</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry-data-source-disconnected" title="The “data-source-disconnected” signal">data-source-disconnected</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry-data-source-enabled" title="The “data-source-enabled” signal">data-source-enabled</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry-data-source-registered" title="The “data-source-registered” signal">data-source-registered</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="ZeitgeistRemoteRegistry"></a><div class="refsect1">
+<a name="ZeitgeistDataSourceRegistry.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="ZeitgeistDataSourceRegistry.html#ZEITGEIST-TYPE-DATA-SOURCE-REGISTRY:CAPS" title="ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY">ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistDataSourceRegistry-struct" title="struct ZeitgeistDataSourceRegistry">ZeitgeistDataSourceRegistry</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistDataSourceRegistryClass" title="struct ZeitgeistDataSourceRegistryClass">ZeitgeistDataSourceRegistryClass</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry-struct" title="ZeitgeistRemoteRegistry">ZeitgeistRemoteRegistry</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistryIface" title="struct ZeitgeistRemoteRegistryIface">ZeitgeistRemoteRegistryIface</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistDataSourceRegistry.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/GTypeModule.html">GInterface</a>
+    <span class="lineart">╰──</span> ZeitgeistRemoteRegistry
+    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> ZeitgeistQueuedProxyWrapper
+        <span class="lineart">╰──</span> ZeitgeistDataSourceRegistry
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistDataSourceRegistry.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+ZeitgeistRemoteRegistry requires
+ <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>.</p>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistDataSourceRegistry.description"></a><h2>Description</h2>
+<p>The Zeitgeist engine maintains a publicly available list of recognized data-sources (components inserting information into Zeitgeist). ZeitgeistDataSourceRegistry is used to register new data sources, get information about them and gives the ability to enable or disable the data sources.</p>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistDataSourceRegistry.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="zeitgeist-data-source-registry-get-data-sources"></a><h3>zeitgeist_data_source_registry_get_data_sources ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_data_source_registry_get_data_sources
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-get-data-sources-finish" title="zeitgeist_data_source_registry_get_data_sources_finish ()"><code class="function">zeitgeist_data_source_registry_get_data_sources_finish()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-data-source-registry-get-data-sources.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_callback_</p></td>
+<td class="parameter_description"><p>callback to call when the request is satisfied. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_user_data_</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>_callback_</code></em>
+function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-data-source-registry-get-data-sources-finish"></a><h3>zeitgeist_data_source_registry_get_data_sources_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="returnvalue">GPtrArray</span></a> *
+zeitgeist_data_source_registry_get_data_sources_finish
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-get-data-sources" title="zeitgeist_data_source_registry_get_data_sources ()"><code class="function">zeitgeist_data_source_registry_get_data_sources()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-data-source-registry-get-data-sources-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_res_</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-data-source-registry-get-data-source-from-id"></a><h3>zeitgeist_data_source_registry_get_data_source_from_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_data_source_registry_get_data_source_from_id
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *unique_id</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-get-data-source-from-id-finish" title="zeitgeist_data_source_registry_get_data_source_from_id_finish ()"><code class="function">zeitgeist_data_source_registry_get_data_source_from_id_finish()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-data-source-registry-get-data-source-from-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>unique_id</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_callback_</p></td>
+<td class="parameter_description"><p>callback to call when the request is satisfied. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_user_data_</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>_callback_</code></em>
+function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-data-source-registry-get-data-source-from-id-finish"></a><h3>zeitgeist_data_source_registry_get_data_source_from_id_finish ()</h3>
+<pre class="programlisting"><a class="link" href="zeitgeist-2.0-data-source.html#ZeitgeistDataSource"><span class="returnvalue">ZeitgeistDataSource</span></a> *
+zeitgeist_data_source_registry_get_data_source_from_id_finish
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-get-data-source-from-id" title="zeitgeist_data_source_registry_get_data_source_from_id ()"><code class="function">zeitgeist_data_source_registry_get_data_source_from_id()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-data-source-registry-get-data-source-from-id-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_res_</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-data-source-registry-register-data-source"></a><h3>zeitgeist_data_source_registry_register_data_source ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_data_source_registry_register_data_source
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> *self</code></em>,
+                                <em class="parameter"><code><a class="link" href="zeitgeist-2.0-data-source.html#ZeitgeistDataSource"><span class="type">ZeitgeistDataSource</span></a> *data_source</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-register-data-source-finish" title="zeitgeist_data_source_registry_register_data_source_finish ()"><code class="function">zeitgeist_data_source_registry_register_data_source_finish()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-data-source-registry-register-data-source.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_source</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_callback_</p></td>
+<td class="parameter_description"><p>callback to call when the request is satisfied. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_user_data_</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>_callback_</code></em>
+function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-data-source-registry-register-data-source-finish"></a><h3>zeitgeist_data_source_registry_register_data_source_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+zeitgeist_data_source_registry_register_data_source_finish
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-register-data-source" title="zeitgeist_data_source_registry_register_data_source ()"><code class="function">zeitgeist_data_source_registry_register_data_source()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-data-source-registry-register-data-source-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_res_</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-data-source-registry-set-data-source-enabled"></a><h3>zeitgeist_data_source_registry_set_data_source_enabled ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_data_source_registry_set_data_source_enabled
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *unique_id</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> enabled</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-set-data-source-enabled-finish" title="zeitgeist_data_source_registry_set_data_source_enabled_finish ()"><code class="function">zeitgeist_data_source_registry_set_data_source_enabled_finish()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-data-source-registry-set-data-source-enabled.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>unique_id</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>enabled</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_callback_</p></td>
+<td class="parameter_description"><p>callback to call when the request is satisfied. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_user_data_</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>_callback_</code></em>
+function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-data-source-registry-set-data-source-enabled-finish"></a><h3>zeitgeist_data_source_registry_set_data_source_enabled_finish ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_data_source_registry_set_data_source_enabled_finish
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-data-source-registry-set-data-source-enabled" title="zeitgeist_data_source_registry_set_data_source_enabled ()"><code class="function">zeitgeist_data_source_registry_set_data_source_enabled()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-data-source-registry-set-data-source-enabled-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_res_</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-data-source-registry-new"></a><h3>zeitgeist_data_source_registry_new ()</h3>
+<pre class="programlisting"><a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="returnvalue">ZeitgeistDataSourceRegistry</span></a> *
+zeitgeist_data_source_registry_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-remote-registry-get-data-sources"></a><h3>zeitgeist_remote_registry_get_data_sources ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_remote_registry_get_data_sources
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-get-data-sources-finish" title="zeitgeist_remote_registry_get_data_sources_finish ()"><code class="function">zeitgeist_remote_registry_get_data_sources_finish()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-remote-registry-get-data-sources.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_callback_</p></td>
+<td class="parameter_description"><p>callback to call when the request is satisfied. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_user_data_</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>_callback_</code></em>
+function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-remote-registry-get-data-sources-finish"></a><h3>zeitgeist_remote_registry_get_data_sources_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+zeitgeist_remote_registry_get_data_sources_finish
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-get-data-sources" title="zeitgeist_remote_registry_get_data_sources ()"><code class="function">zeitgeist_remote_registry_get_data_sources()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-remote-registry-get-data-sources-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_res_</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-remote-registry-register-data-source"></a><h3>zeitgeist_remote_registry_register_data_source ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_remote_registry_register_data_source
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *unique_id</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *description</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *event_templates</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *sender</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-register-data-source-finish" title="zeitgeist_remote_registry_register_data_source_finish ()"><code class="function">zeitgeist_remote_registry_register_data_source_finish()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-remote-registry-register-data-source.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>unique_id</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>description</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event_templates</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sender</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_callback_</p></td>
+<td class="parameter_description"><p>callback to call when the request is satisfied. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_user_data_</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>_callback_</code></em>
+function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-remote-registry-register-data-source-finish"></a><h3>zeitgeist_remote_registry_register_data_source_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+zeitgeist_remote_registry_register_data_source_finish
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-register-data-source" title="zeitgeist_remote_registry_register_data_source ()"><code class="function">zeitgeist_remote_registry_register_data_source()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-remote-registry-register-data-source-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_res_</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-remote-registry-set-data-source-enabled"></a><h3>zeitgeist_remote_registry_set_data_source_enabled ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_remote_registry_set_data_source_enabled
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *unique_id</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> enabled</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-set-data-source-enabled-finish" title="zeitgeist_remote_registry_set_data_source_enabled_finish ()"><code class="function">zeitgeist_remote_registry_set_data_source_enabled_finish()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-remote-registry-set-data-source-enabled.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>unique_id</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>enabled</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_callback_</p></td>
+<td class="parameter_description"><p>callback to call when the request is satisfied. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_user_data_</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>_callback_</code></em>
+function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-remote-registry-set-data-source-enabled-finish"></a><h3>zeitgeist_remote_registry_set_data_source_enabled_finish ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_remote_registry_set_data_source_enabled_finish
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-set-data-source-enabled" title="zeitgeist_remote_registry_set_data_source_enabled ()"><code class="function">zeitgeist_remote_registry_set_data_source_enabled()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-remote-registry-set-data-source-enabled-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_res_</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-remote-registry-get-data-source-from-id"></a><h3>zeitgeist_remote_registry_get_data_source_from_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_remote_registry_get_data_source_from_id
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *unique_id</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-get-data-source-from-id-finish" title="zeitgeist_remote_registry_get_data_source_from_id_finish ()"><code class="function">zeitgeist_remote_registry_get_data_source_from_id_finish()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-remote-registry-get-data-source-from-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>unique_id</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_callback_</p></td>
+<td class="parameter_description"><p>callback to call when the request is satisfied. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_user_data_</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>_callback_</code></em>
+function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-remote-registry-get-data-source-from-id-finish"></a><h3>zeitgeist_remote_registry_get_data_source_from_id_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+zeitgeist_remote_registry_get_data_source_from_id_finish
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-get-data-source-from-id" title="zeitgeist_remote_registry_get_data_source_from_id ()"><code class="function">zeitgeist_remote_registry_get_data_source_from_id()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-remote-registry-get-data-source-from-id-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_res_</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistDataSourceRegistry.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="ZEITGEIST-TYPE-DATA-SOURCE-REGISTRY:CAPS"></a><h3>ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY</h3>
+<pre class="programlisting">#define ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY (zeitgeist_data_source_registry_get_type ())
+</pre>
+<p>The type for <a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistDataSourceRegistry-struct"></a><h3>struct ZeitgeistDataSourceRegistry</h3>
+<pre class="programlisting">struct ZeitgeistDataSourceRegistry;</pre>
+<p>Query the Zeitgeist Data-Source Registry extension</p>
+<p>The Zeitgeist engine maintains a publicly available list of recognized data-sources (components inserting information into Zeitgeist). ZeitgeistDataSourceRegistry is used to register new data sources, get information about them and gives the ability to enable or disable the data sources.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistDataSourceRegistryClass"></a><h3>struct ZeitgeistDataSourceRegistryClass</h3>
+<pre class="programlisting">struct ZeitgeistDataSourceRegistryClass {
+	ZeitgeistQueuedProxyWrapperClass parent_class;
+};
+</pre>
+<p>The class structure for <a class="link" href="ZeitgeistDataSourceRegistry.html#ZEITGEIST-TYPE-DATA-SOURCE-REGISTRY:CAPS" title="ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY"><code class="literal">ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY</code></a>. All the fields in this structure are private and should never be accessed directly.</p>
+<div class="refsect3">
+<a name="ZeitgeistDataSourceRegistryClass.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistRemoteRegistry-struct"></a><h3>ZeitgeistRemoteRegistry</h3>
+<pre class="programlisting">typedef struct _ZeitgeistRemoteRegistry ZeitgeistRemoteRegistry;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistRemoteRegistryIface"></a><h3>struct ZeitgeistRemoteRegistryIface</h3>
+<pre class="programlisting">struct ZeitgeistRemoteRegistryIface {
+	GTypeInterface parent_iface;
+	void (*get_data_sources) (ZeitgeistRemoteRegistry* self, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	GVariant* (*get_data_sources_finish) (ZeitgeistRemoteRegistry* self, GAsyncResult* _res_, GError** error);
+	void (*register_data_source) (ZeitgeistRemoteRegistry* self, const gchar* unique_id, const gchar* name, const gchar* description, GVariant* event_templates, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	gboolean (*register_data_source_finish) (ZeitgeistRemoteRegistry* self, GAsyncResult* _res_, GError** error);
+	void (*set_data_source_enabled) (ZeitgeistRemoteRegistry* self, const gchar* unique_id, gboolean enabled, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*set_data_source_enabled_finish) (ZeitgeistRemoteRegistry* self, GAsyncResult* _res_, GError** error);
+	void (*get_data_source_from_id) (ZeitgeistRemoteRegistry* self, const gchar* unique_id, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	GVariant* (*get_data_source_from_id_finish) (ZeitgeistRemoteRegistry* self, GAsyncResult* _res_, GError** error);
+};
+</pre>
+<p>Interface for creating <a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> implementations.</p>
+<div class="refsect3">
+<a name="ZeitgeistRemoteRegistryIface.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="../gobject/gobject-Type-Information.html#GTypeInterface"><span class="type">GTypeInterface</span></a> <em class="structfield"><code><a name="ZeitgeistRemoteRegistryIface.parent-iface"></a>parent_iface</code></em>;</p></td>
+<td class="struct_member_description"><p>the parent interface structure</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="ZeitgeistRemoteRegistryIface.get-data-sources"></a>get_data_sources</code></em> ()</p></td>
+<td class="struct_member_description"><p>virtual method called by <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-get-data-sources" title="zeitgeist_remote_registry_get_data_sources ()"><code class="function">zeitgeist_remote_registry_get_data_sources()</code></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="ZeitgeistRemoteRegistryIface.get-data-sources-finish"></a>get_data_sources_finish</code></em> ()</p></td>
+<td class="struct_member_description"><p>asynchronous finish function for <em class="structfield"><code>get_data_sources</code></em>, called by <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-get-data-sources" title="zeitgeist_remote_registry_get_data_sources ()"><code class="function">zeitgeist_remote_registry_get_data_sources()</code></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="ZeitgeistRemoteRegistryIface.register-data-source"></a>register_data_source</code></em> ()</p></td>
+<td class="struct_member_description"><p>virtual method called by <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-register-data-source" title="zeitgeist_remote_registry_register_data_source ()"><code class="function">zeitgeist_remote_registry_register_data_source()</code></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="ZeitgeistRemoteRegistryIface.register-data-source-finish"></a>register_data_source_finish</code></em> ()</p></td>
+<td class="struct_member_description"><p>asynchronous finish function for <em class="structfield"><code>register_data_source</code></em>, called by <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-register-data-source" title="zeitgeist_remote_registry_register_data_source ()"><code class="function">zeitgeist_remote_registry_register_data_source()</code></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="ZeitgeistRemoteRegistryIface.set-data-source-enabled"></a>set_data_source_enabled</code></em> ()</p></td>
+<td class="struct_member_description"><p>virtual method called by <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-set-data-source-enabled" title="zeitgeist_remote_registry_set_data_source_enabled ()"><code class="function">zeitgeist_remote_registry_set_data_source_enabled()</code></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="ZeitgeistRemoteRegistryIface.set-data-source-enabled-finish"></a>set_data_source_enabled_finish</code></em> ()</p></td>
+<td class="struct_member_description"><p>asynchronous finish function for <em class="structfield"><code>set_data_source_enabled</code></em>, called by <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-set-data-source-enabled" title="zeitgeist_remote_registry_set_data_source_enabled ()"><code class="function">zeitgeist_remote_registry_set_data_source_enabled()</code></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="ZeitgeistRemoteRegistryIface.get-data-source-from-id"></a>get_data_source_from_id</code></em> ()</p></td>
+<td class="struct_member_description"><p>virtual method called by <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-get-data-source-from-id" title="zeitgeist_remote_registry_get_data_source_from_id ()"><code class="function">zeitgeist_remote_registry_get_data_source_from_id()</code></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="ZeitgeistRemoteRegistryIface.get-data-source-from-id-finish"></a>get_data_source_from_id_finish</code></em> ()</p></td>
+<td class="struct_member_description"><p>asynchronous finish function for <em class="structfield"><code>get_data_source_from_id</code></em>, called by <a class="link" href="ZeitgeistDataSourceRegistry.html#zeitgeist-remote-registry-get-data-source-from-id" title="zeitgeist_remote_registry_get_data_source_from_id ()"><code class="function">zeitgeist_remote_registry_get_data_source_from_id()</code></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistDataSourceRegistry.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="ZeitgeistDataSourceRegistry-source-disconnected"></a><h3>The <code class="literal">“source-disconnected”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> *data_source_registry,
+               <a class="link" href="zeitgeist-2.0-data-source.html#ZeitgeistDataSource"><span class="type">ZeitgeistDataSource</span></a>         *data_source,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                     user_data)</pre>
+<div class="refsect3">
+<a name="ZeitgeistDataSourceRegistry-source-disconnected.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data_source_registry</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> instance that received the signal</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_source</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistDataSourceRegistry-source-enabled"></a><h3>The <code class="literal">“source-enabled”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> *data_source_registry,
+               <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>                       *unique_id,
+               <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>                     enabled,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                     user_data)</pre>
+<div class="refsect3">
+<a name="ZeitgeistDataSourceRegistry-source-enabled.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data_source_registry</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> instance that received the signal</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>unique_id</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>enabled</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistDataSourceRegistry-source-registered"></a><h3>The <code class="literal">“source-registered”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> *data_source_registry,
+               <a class="link" href="zeitgeist-2.0-data-source.html#ZeitgeistDataSource"><span class="type">ZeitgeistDataSource</span></a>         *data_source,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                     user_data)</pre>
+<div class="refsect3">
+<a name="ZeitgeistDataSourceRegistry-source-registered.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data_source_registry</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html" title="ZeitgeistDataSourceRegistry"><span class="type">ZeitgeistDataSourceRegistry</span></a> instance that received the signal</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_source</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistRemoteRegistry-data-source-disconnected"></a><h3>The <code class="literal">“data-source-disconnected”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> *remote_registry,
+               <a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>                *data_source,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                 user_data)</pre>
+<div class="refsect3">
+<a name="ZeitgeistRemoteRegistry-data-source-disconnected.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>remote_registry</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> instance that received the signal</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_source</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistRemoteRegistry-data-source-enabled"></a><h3>The <code class="literal">“data-source-enabled”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> *remote_registry,
+               <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>                   *unique_id,
+               <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>                 enabled,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                 user_data)</pre>
+<div class="refsect3">
+<a name="ZeitgeistRemoteRegistry-data-source-enabled.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>remote_registry</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> instance that received the signal</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>unique_id</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>enabled</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistRemoteRegistry-data-source-registered"></a><h3>The <code class="literal">“data-source-registered”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> *remote_registry,
+               <a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>                *data_source,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                 user_data)</pre>
+<div class="refsect3">
+<a name="ZeitgeistRemoteRegistry-data-source-registered.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>remote_registry</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistDataSourceRegistry.html#ZeitgeistRemoteRegistry"><span class="type">ZeitgeistRemoteRegistry</span></a> instance that received the signal</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_source</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.32.1</div>
+</body>
+</html>

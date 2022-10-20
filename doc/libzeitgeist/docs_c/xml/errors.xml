@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="zeitgeist-2.0-errors">
+<refmeta>
+<refentrytitle role="top_of_page" id="zeitgeist-2.0-errors.top_of_page">errors</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ZEITGEIST-2.0 Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>errors</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="zeitgeist-2.0-errors.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ZeitgeistEngineError">ZeitgeistEngineError</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="zeitgeist-2.0-errors.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="zeitgeist-2.0-errors.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="zeitgeist-2.0-errors.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ZeitgeistEngineError" role="enum">
+<title>enum ZeitgeistEngineError</title>
+<indexterm zone="ZeitgeistEngineError"><primary>ZeitgeistEngineError</primary></indexterm>
+<refsect3 id="ZeitgeistEngineError.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-ENGINE-ERROR-BACKUP-FAILED:CAPS">ZEITGEIST_ENGINE_ERROR_BACKUP_FAILED</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-ENGINE-ERROR-DATABASE-BUSY:CAPS">ZEITGEIST_ENGINE_ERROR_DATABASE_BUSY</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-ENGINE-ERROR-DATABASE-CANTOPEN:CAPS">ZEITGEIST_ENGINE_ERROR_DATABASE_CANTOPEN</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-ENGINE-ERROR-DATABASE-CORRUPT:CAPS">ZEITGEIST_ENGINE_ERROR_DATABASE_CORRUPT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-ENGINE-ERROR-DATABASE-ERROR:CAPS">ZEITGEIST_ENGINE_ERROR_DATABASE_ERROR</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-ENGINE-ERROR-DATABASE-RETIRE-FAILED:CAPS">ZEITGEIST_ENGINE_ERROR_DATABASE_RETIRE_FAILED</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-ENGINE-ERROR-EXISTING-INSTANCE:CAPS">ZEITGEIST_ENGINE_ERROR_EXISTING_INSTANCE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-ENGINE-ERROR-INVALID-ARGUMENT:CAPS">ZEITGEIST_ENGINE_ERROR_INVALID_ARGUMENT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-ENGINE-ERROR-INVALID-EVENT:CAPS">ZEITGEIST_ENGINE_ERROR_INVALID_EVENT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ZEITGEIST-ENGINE-ERROR-INVALID-KEY:CAPS">ZEITGEIST_ENGINE_ERROR_INVALID_KEY</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>

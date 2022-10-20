@@ -1,0 +1,1509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZeitgeistLog: Zeitgeist Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="Zeitgeist Reference Manual">
+<link rel="up" href="ch01.html" title="Classes">
+<link rel="prev" href="ZeitgeistEvent.html" title="ZeitgeistEvent">
+<link rel="next" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistLog.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistLog.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ZeitgeistEvent.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ZeitgeistMonitor.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="ZeitgeistLog"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="ZeitgeistLog.top_of_page"></a>ZeitgeistLog</span></h2>
+<p>ZeitgeistLog — Primary access point for talking to the Zeitgeist daemon</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="ZeitgeistLog.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-insert-event" title="zeitgeist_log_insert_event ()">zeitgeist_log_insert_event</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-insert-event-finish" title="zeitgeist_log_insert_event_finish ()">zeitgeist_log_insert_event_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-insert-events" title="zeitgeist_log_insert_events ()">zeitgeist_log_insert_events</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-insert-events-finish" title="zeitgeist_log_insert_events_finish ()">zeitgeist_log_insert_events_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-insert-event-no-reply" title="zeitgeist_log_insert_event_no_reply ()">zeitgeist_log_insert_event_no_reply</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-insert-events-no-reply" title="zeitgeist_log_insert_events_no_reply ()">zeitgeist_log_insert_events_no_reply</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-find-events" title="zeitgeist_log_find_events ()">zeitgeist_log_find_events</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="returnvalue">ZeitgeistResultSet</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-find-events-finish" title="zeitgeist_log_find_events_finish ()">zeitgeist_log_find_events_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-find-event-ids" title="zeitgeist_log_find_event_ids ()">zeitgeist_log_find_event_ids</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-find-event-ids-finish" title="zeitgeist_log_find_event_ids_finish ()">zeitgeist_log_find_event_ids_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-get-events" title="zeitgeist_log_get_events ()">zeitgeist_log_get_events</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="returnvalue">ZeitgeistResultSet</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-get-events-finish" title="zeitgeist_log_get_events_finish ()">zeitgeist_log_get_events_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-find-related-uris" title="zeitgeist_log_find_related_uris ()">zeitgeist_log_find_related_uris</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-find-related-uris-finish" title="zeitgeist_log_find_related_uris_finish ()">zeitgeist_log_find_related_uris_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-delete-events" title="zeitgeist_log_delete_events ()">zeitgeist_log_delete_events</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="returnvalue">ZeitgeistTimeRange</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-delete-events-finish" title="zeitgeist_log_delete_events_finish ()">zeitgeist_log_delete_events_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-quit" title="zeitgeist_log_quit ()">zeitgeist_log_quit</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-quit-finish" title="zeitgeist_log_quit_finish ()">zeitgeist_log_quit_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-install-monitor" title="zeitgeist_log_install_monitor ()">zeitgeist_log_install_monitor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-remove-monitor" title="zeitgeist_log_remove_monitor ()">zeitgeist_log_remove_monitor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-get-version" title="zeitgeist_log_get_version ()">zeitgeist_log_get_version</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-get-extensions" title="zeitgeist_log_get_extensions ()">zeitgeist_log_get_extensions</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-datapath" title="zeitgeist_log_datapath ()">zeitgeist_log_datapath</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="returnvalue">ZeitgeistLog</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-new" title="zeitgeist_log_new ()">zeitgeist_log_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="returnvalue">ZeitgeistLog</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistLog.html#zeitgeist-log-get-default" title="zeitgeist_log_get_default ()">zeitgeist_log_get_default</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistLog.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="ZeitgeistLog.html#ZEITGEIST-TYPE-LOG:CAPS" title="ZEITGEIST_TYPE_LOG">ZEITGEIST_TYPE_LOG</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="ZeitgeistLog.html#ZeitgeistLog-struct" title="struct ZeitgeistLog">ZeitgeistLog</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="ZeitgeistLog.html#ZeitgeistLogClass" title="struct ZeitgeistLogClass">ZeitgeistLogClass</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistLog.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> ZeitgeistQueuedProxyWrapper
+        <span class="lineart">╰──</span> ZeitgeistLog
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistLog.description"></a><h2>Description</h2>
+<p><a class="link" href="ZeitgeistLog.html#zeitgeist-log-new" title="zeitgeist_log_new ()"><code class="function">zeitgeist_log_new()</code></a> encapsulates the low level access to the Zeitgeist daemon. You can use it to manage the log by inserting and deleting entries as well as do queries on the logged data.</p>
+<p>It's important to realize that the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> class does not expose any API that does synchronous communications with the message bus - everything is asynchronous. To ease development some of the methods have variants that are "fire and forget" ignoring the normal return value, so that callbacks does not have to be set up.</p>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistLog.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="zeitgeist-log-insert-event"></a><h3>zeitgeist_log_insert_event ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_log_insert_event (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                            <em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *event</code></em>,
+                            <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                            <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>Asynchronously send a set of events to the Zeitgeist daemon, requesting they be inserted into the log.</p>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistLog.html#zeitgeist-log-insert-event-finish" title="zeitgeist_log_insert_event_finish ()"><code class="function">zeitgeist_log_insert_event_finish()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-log-insert-event.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>A <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>a <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> to cancel the operation or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_callback_</p></td>
+<td class="parameter_description"><p>callback to call when the request is satisfied. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_user_data_</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>_callback_</code></em>
+function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-insert-event-finish"></a><h3>zeitgeist_log_insert_event_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
+zeitgeist_log_insert_event_finish (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                                   <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                   <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Asynchronously send a set of events to the Zeitgeist daemon, requesting they be inserted into the log.</p>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistLog.html#zeitgeist-log-insert-event" title="zeitgeist_log_insert_event ()"><code class="function">zeitgeist_log_insert_event()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-log-insert-event-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_res_</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-insert-events"></a><h3>zeitgeist_log_insert_events ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_log_insert_events (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *events</code></em>,
+                             <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                             <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>Asynchronously send a set of events to the Zeitgeist daemon, requesting they be inserted into the log.</p>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistLog.html#zeitgeist-log-insert-events-finish" title="zeitgeist_log_insert_events_finish ()"><code class="function">zeitgeist_log_insert_events_finish()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-log-insert-events.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>events</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>An <a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>a <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> to cancel the operation or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_callback_</p></td>
+<td class="parameter_description"><p>callback to call when the request is satisfied. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_user_data_</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>_callback_</code></em>
+function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-insert-events-finish"></a><h3>zeitgeist_log_insert_events_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
+zeitgeist_log_insert_events_finish (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                                    <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                    <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Asynchronously send a set of events to the Zeitgeist daemon, requesting they be inserted into the log.</p>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistLog.html#zeitgeist-log-insert-events" title="zeitgeist_log_insert_events ()"><code class="function">zeitgeist_log_insert_events()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-log-insert-events-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_res_</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-insert-event-no-reply"></a><h3>zeitgeist_log_insert_event_no_reply ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_log_insert_event_no_reply (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                                     <em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *event</code></em>,
+                                     <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Asynchronously send a set of events to the Zeitgeist daemon, requesting they be inserted into the log. This method is &amp;quot;fire and forget&amp;quot; and the caller will never know whether the events was successfully inserted or not.</p>
+<p>This method is exactly equivalent to calling <a class="link" href="ZeitgeistLog.html#zeitgeist-log-insert-event" title="zeitgeist_log_insert_event ()"><code class="function">zeitgeist_log_insert_event()</code></a> with NULL set as <em class="parameter"><code>cancellable</code></em>, <em class="parameter"><code>callback</code></em>, and <em class="parameter"><code>user_data</code></em>.</p>
+<div class="refsect3">
+<a name="zeitgeist-log-insert-event-no-reply.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>A <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-insert-events-no-reply"></a><h3>zeitgeist_log_insert_events_no_reply ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_log_insert_events_no_reply (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *events</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Asynchronously send a set of events to the Zeitgeist daemon, requesting they be inserted into the log. This method is &amp;quot;fire and forget&amp;quot; and the caller will never know whether the events was successfully inserted or not.</p>
+<p>This method is exactly equivalent to calling <a class="link" href="ZeitgeistLog.html#zeitgeist-log-insert-event" title="zeitgeist_log_insert_event ()"><code class="function">zeitgeist_log_insert_event()</code></a> with NULL set as <em class="parameter"><code>cancellable</code></em>, <em class="parameter"><code>callback</code></em>, and <em class="parameter"><code>user_data</code></em>.</p>
+<div class="refsect3">
+<a name="zeitgeist-log-insert-events-no-reply.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>events</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>An <a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-find-events"></a><h3>zeitgeist_log_find_events ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_log_find_events (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                           <em class="parameter"><code><a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="type">ZeitgeistTimeRange</span></a> *time_range</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *event_templates</code></em>,
+                           <em class="parameter"><code><a class="link" href="zeitgeist-2.0-enumerations.html#ZeitgeistStorageState" title="enum ZeitgeistStorageState"><span class="type">ZeitgeistStorageState</span></a> storage_state</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> num_events</code></em>,
+                           <em class="parameter"><code><a class="link" href="zeitgeist-2.0-enumerations.html#ZeitgeistResultType" title="enum ZeitgeistResultType"><span class="type">ZeitgeistResultType</span></a> result_type</code></em>,
+                           <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                           <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>Send a query matching a collection of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> templates to the <a class="link" href="ZeitgeistLog.html#zeitgeist-log-new" title="zeitgeist_log_new ()"><code class="function">zeitgeist_log_new()</code></a>. The query will match if an event matches any of the templates. If an event template has more than one <a class="link" href="ZeitgeistSubject.html" title="ZeitgeistSubject"><span class="type">ZeitgeistSubject</span></a> the query will match if any one of the <a class="link" href="ZeitgeistSubject.html" title="ZeitgeistSubject"><span class="type">ZeitgeistSubject</span></a>s templates match.</p>
+<p>The query will be done via an asynchronous DBus call and this method will return immediately. The return value will be passed to callback as a list of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a>s. This list must be the sole argument for the callback.</p>
+<p>If you need to do a query yielding a large (or unpredictable) result set and you only want to show some of the results at the same time (eg., by paging them), consider using <a class="link" href="ZeitgeistLog.html#zeitgeist-log-find-event-ids" title="zeitgeist_log_find_event_ids ()"><code class="function">zeitgeist_log_find_event_ids()</code></a>.</p>
+<p>In order to use this method there needs to be a mainloop runnning. Both Qt and GLib mainloops are supported.</p>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistLog.html#zeitgeist-log-find-events-finish" title="zeitgeist_log_find_events_finish ()"><code class="function">zeitgeist_log_find_events_finish()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-log-find-events.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>time_range</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p><a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="type">ZeitgeistTimeRange</span></a> A time range in which the events should be considered in </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event_templates</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>An <a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>storage_state</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p><a class="link" href="zeitgeist-2.0-enumerations.html#ZeitgeistStorageState" title="enum ZeitgeistStorageState"><span class="type">ZeitgeistStorageState</span></a> storage state </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>num_events</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>int represteing the number of events that should be returned </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>result_type</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p><a class="link" href="zeitgeist-2.0-enumerations.html#ZeitgeistResultType" title="enum ZeitgeistResultType"><span class="type">ZeitgeistResultType</span></a> how the events should be grouped and sorted </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>a <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> to cancel the operation or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_callback_</p></td>
+<td class="parameter_description"><p>callback to call when the request is satisfied. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_user_data_</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>_callback_</code></em>
+function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-find-events-finish"></a><h3>zeitgeist_log_find_events_finish ()</h3>
+<pre class="programlisting"><a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="returnvalue">ZeitgeistResultSet</span></a> *
+zeitgeist_log_find_events_finish (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                                  <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Send a query matching a collection of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> templates to the <a class="link" href="ZeitgeistLog.html#zeitgeist-log-new" title="zeitgeist_log_new ()"><code class="function">zeitgeist_log_new()</code></a>. The query will match if an event matches any of the templates. If an event template has more than one <a class="link" href="ZeitgeistSubject.html" title="ZeitgeistSubject"><span class="type">ZeitgeistSubject</span></a> the query will match if any one of the <a class="link" href="ZeitgeistSubject.html" title="ZeitgeistSubject"><span class="type">ZeitgeistSubject</span></a>s templates match.</p>
+<p>The query will be done via an asynchronous DBus call and this method will return immediately. The return value will be passed to callback as a list of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a>s. This list must be the sole argument for the callback.</p>
+<p>If you need to do a query yielding a large (or unpredictable) result set and you only want to show some of the results at the same time (eg., by paging them), consider using <a class="link" href="ZeitgeistLog.html#zeitgeist-log-find-event-ids" title="zeitgeist_log_find_event_ids ()"><code class="function">zeitgeist_log_find_event_ids()</code></a>.</p>
+<p>In order to use this method there needs to be a mainloop runnning. Both Qt and GLib mainloops are supported.</p>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistLog.html#zeitgeist-log-find-events" title="zeitgeist_log_find_events ()"><code class="function">zeitgeist_log_find_events()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-log-find-events-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_res_</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-find-event-ids"></a><h3>zeitgeist_log_find_event_ids ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_log_find_event_ids (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                              <em class="parameter"><code><a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="type">ZeitgeistTimeRange</span></a> *time_range</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *event_templates</code></em>,
+                              <em class="parameter"><code><a class="link" href="zeitgeist-2.0-enumerations.html#ZeitgeistStorageState" title="enum ZeitgeistStorageState"><span class="type">ZeitgeistStorageState</span></a> storage_state</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> num_events</code></em>,
+                              <em class="parameter"><code><a class="link" href="zeitgeist-2.0-enumerations.html#ZeitgeistResultType" title="enum ZeitgeistResultType"><span class="type">ZeitgeistResultType</span></a> result_type</code></em>,
+                              <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                              <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>Send a query matching a collection of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> templates to the <a class="link" href="ZeitgeistLog.html#zeitgeist-log-new" title="zeitgeist_log_new ()"><code class="function">zeitgeist_log_new()</code></a>. The query will match if an event matches any of the templates. If an event template has more than one <a class="link" href="ZeitgeistSubject.html" title="ZeitgeistSubject"><span class="type">ZeitgeistSubject</span></a> the query will match if any one of the <a class="link" href="ZeitgeistSubject.html" title="ZeitgeistSubject"><span class="type">ZeitgeistSubject</span></a>s templates match.</p>
+<p>The query will be done via an asynchronous DBus call and this method will return immediately. The return value will be passed to callback as a list of intergers represrting <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> id's. This list must be the sole argument for the callback.</p>
+<p>In order to use this method there needs to be a mainloop runnning. Both Qt and GLib mainloops are supported.</p>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistLog.html#zeitgeist-log-find-event-ids-finish" title="zeitgeist_log_find_event_ids_finish ()"><code class="function">zeitgeist_log_find_event_ids_finish()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-log-find-event-ids.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>time_range</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p><a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="type">ZeitgeistTimeRange</span></a> A time range in which the events should be considered in </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event_templates</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>An <a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>storage_state</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p><a class="link" href="zeitgeist-2.0-enumerations.html#ZeitgeistStorageState" title="enum ZeitgeistStorageState"><span class="type">ZeitgeistStorageState</span></a> storage state </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>num_events</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>int represteing the number of events that should be returned </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>result_type</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p><a class="link" href="zeitgeist-2.0-enumerations.html#ZeitgeistResultType" title="enum ZeitgeistResultType"><span class="type">ZeitgeistResultType</span></a> how the events should be grouped and sorted </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>a <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> to cancel the operation or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_callback_</p></td>
+<td class="parameter_description"><p>callback to call when the request is satisfied. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_user_data_</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>_callback_</code></em>
+function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-find-event-ids-finish"></a><h3>zeitgeist_log_find_event_ids_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a> *
+zeitgeist_log_find_event_ids_finish (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                                     <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *result_length1</code></em>,
+                                     <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Send a query matching a collection of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> templates to the <a class="link" href="ZeitgeistLog.html#zeitgeist-log-new" title="zeitgeist_log_new ()"><code class="function">zeitgeist_log_new()</code></a>. The query will match if an event matches any of the templates. If an event template has more than one <a class="link" href="ZeitgeistSubject.html" title="ZeitgeistSubject"><span class="type">ZeitgeistSubject</span></a> the query will match if any one of the <a class="link" href="ZeitgeistSubject.html" title="ZeitgeistSubject"><span class="type">ZeitgeistSubject</span></a>s templates match.</p>
+<p>The query will be done via an asynchronous DBus call and this method will return immediately. The return value will be passed to callback as a list of intergers represrting <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> id's. This list must be the sole argument for the callback.</p>
+<p>In order to use this method there needs to be a mainloop runnning. Both Qt and GLib mainloops are supported.</p>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistLog.html#zeitgeist-log-find-event-ids" title="zeitgeist_log_find_event_ids ()"><code class="function">zeitgeist_log_find_event_ids()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-log-find-event-ids-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_res_</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-get-events"></a><h3>zeitgeist_log_get_events ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_log_get_events (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Arrays.html#GArray"><span class="type">GArray</span></a> *event_ids</code></em>,
+                          <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                          <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>Look up a collection of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> in the <a class="link" href="ZeitgeistLog.html#zeitgeist-log-new" title="zeitgeist_log_new ()"><code class="function">zeitgeist_log_new()</code></a> given a collection of event ids. This is useful for looking up the event data for events found with the find_event_ids_* family of functions.</p>
+<p>Each <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> which is not found in the <a class="link" href="ZeitgeistLog.html#zeitgeist-log-new" title="zeitgeist_log_new ()"><code class="function">zeitgeist_log_new()</code></a> is represented by NULL in the resulting collection. The query will be done via an asynchronous DBus call and this method will return immediately. The returned events will be passed to callback as a list of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a>s, which must be the only argument of the function.</p>
+<p>In order to use this method there needs to be a mainloop runnning.</p>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistLog.html#zeitgeist-log-get-events-finish" title="zeitgeist_log_get_events_finish ()"><code class="function">zeitgeist_log_get_events_finish()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-log-get-events.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event_ids</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>a <a href="../glib/glib-Arrays.html#GArray"><span class="type">GArray</span></a> of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> ids </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>a <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> to cancel the operation or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_callback_</p></td>
+<td class="parameter_description"><p>callback to call when the request is satisfied. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_user_data_</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>_callback_</code></em>
+function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-get-events-finish"></a><h3>zeitgeist_log_get_events_finish ()</h3>
+<pre class="programlisting"><a class="link" href="ZeitgeistResultSet.html" title="ZeitgeistResultSet"><span class="returnvalue">ZeitgeistResultSet</span></a> *
+zeitgeist_log_get_events_finish (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                                 <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Look up a collection of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> in the <a class="link" href="ZeitgeistLog.html#zeitgeist-log-new" title="zeitgeist_log_new ()"><code class="function">zeitgeist_log_new()</code></a> given a collection of event ids. This is useful for looking up the event data for events found with the find_event_ids_* family of functions.</p>
+<p>Each <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> which is not found in the <a class="link" href="ZeitgeistLog.html#zeitgeist-log-new" title="zeitgeist_log_new ()"><code class="function">zeitgeist_log_new()</code></a> is represented by NULL in the resulting collection. The query will be done via an asynchronous DBus call and this method will return immediately. The returned events will be passed to callback as a list of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a>s, which must be the only argument of the function.</p>
+<p>In order to use this method there needs to be a mainloop runnning.</p>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistLog.html#zeitgeist-log-get-events" title="zeitgeist_log_get_events ()"><code class="function">zeitgeist_log_get_events()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-log-get-events-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_res_</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-find-related-uris"></a><h3>zeitgeist_log_find_related_uris ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_log_find_related_uris (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                                 <em class="parameter"><code><a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="type">ZeitgeistTimeRange</span></a> *time_range</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *event_templates</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *result_event_templates</code></em>,
+                                 <em class="parameter"><code><a class="link" href="zeitgeist-2.0-enumerations.html#ZeitgeistStorageState" title="enum ZeitgeistStorageState"><span class="type">ZeitgeistStorageState</span></a> storage_state</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> num_events</code></em>,
+                                 <em class="parameter"><code><a class="link" href="zeitgeist-2.0-enumerations.html#ZeitgeistRelevantResultType" title="enum ZeitgeistRelevantResultType"><span class="type">ZeitgeistRelevantResultType</span></a> result_type</code></em>,
+                                 <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                 <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>Get a list of URIs of subjects which frequently occur together with events matching event_templates. Possibly restricting to time_range or to URIs that occur as subject of events matching result_event_templates.</p>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistLog.html#zeitgeist-log-find-related-uris-finish" title="zeitgeist_log_find_related_uris_finish ()"><code class="function">zeitgeist_log_find_related_uris_finish()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-log-find-related-uris.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>time_range</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p><a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="type">ZeitgeistTimeRange</span></a> A time range in which the events should be considered in </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event_templates</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>An <a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> describing the events to relate to </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>result_event_templates</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>An <a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> of <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> desrcibing the result to be returned </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>storage_state</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p><a class="link" href="zeitgeist-2.0-enumerations.html#ZeitgeistStorageState" title="enum ZeitgeistStorageState"><span class="type">ZeitgeistStorageState</span></a> storage state </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>num_events</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>int represteing the number of events that should be returned </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>result_type</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p><a class="link" href="zeitgeist-2.0-enumerations.html#ZeitgeistResultType" title="enum ZeitgeistResultType"><span class="type">ZeitgeistResultType</span></a> how the events should be grouped and sorted </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>a <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> to cancel the operation or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_callback_</p></td>
+<td class="parameter_description"><p>callback to call when the request is satisfied. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_user_data_</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>_callback_</code></em>
+function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-find-related-uris-finish"></a><h3>zeitgeist_log_find_related_uris_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+zeitgeist_log_find_related_uris_finish
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *result_length1</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get a list of URIs of subjects which frequently occur together with events matching event_templates. Possibly restricting to time_range or to URIs that occur as subject of events matching result_event_templates.</p>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistLog.html#zeitgeist-log-find-related-uris" title="zeitgeist_log_find_related_uris ()"><code class="function">zeitgeist_log_find_related_uris()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-log-find-related-uris-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_res_</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-delete-events"></a><h3>zeitgeist_log_delete_events ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_log_delete_events (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Arrays.html#GArray"><span class="type">GArray</span></a> *event_ids</code></em>,
+                             <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                             <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>Delete a collection of events from the zeitgeist log given their event ids.</p>
+<p>The deletion will be done asynchronously, and this method returns immediately.</p>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistLog.html#zeitgeist-log-delete-events-finish" title="zeitgeist_log_delete_events_finish ()"><code class="function">zeitgeist_log_delete_events_finish()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-log-delete-events.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event_ids</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>Array&lt;uint32&gt; </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>a <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> to cancel the operation or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_callback_</p></td>
+<td class="parameter_description"><p>callback to call when the request is satisfied. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_user_data_</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>_callback_</code></em>
+function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-delete-events-finish"></a><h3>zeitgeist_log_delete_events_finish ()</h3>
+<pre class="programlisting"><a class="link" href="ZeitgeistTimeRange.html" title="ZeitgeistTimeRange"><span class="returnvalue">ZeitgeistTimeRange</span></a> *
+zeitgeist_log_delete_events_finish (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                                    <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                    <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Delete a collection of events from the zeitgeist log given their event ids.</p>
+<p>The deletion will be done asynchronously, and this method returns immediately.</p>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistLog.html#zeitgeist-log-delete-events" title="zeitgeist_log_delete_events ()"><code class="function">zeitgeist_log_delete_events()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-log-delete-events-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_res_</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-quit"></a><h3>zeitgeist_log_quit ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_log_quit (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                    <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                    <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>a <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> to cancel the operation or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> </p>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistLog.html#zeitgeist-log-quit-finish" title="zeitgeist_log_quit_finish ()"><code class="function">zeitgeist_log_quit_finish()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-log-quit.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p> . </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_callback_</p></td>
+<td class="parameter_description"><p>callback to call when the request is satisfied. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_user_data_</p></td>
+<td class="parameter_description"><p>the data to pass to <em class="parameter"><code>_callback_</code></em>
+function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-quit-finish"></a><h3>zeitgeist_log_quit_finish ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_log_quit_finish (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                           <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>a <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> to cancel the operation or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> </p>
+<p><span class="emphasis"><em>See also</em></span>: <a class="link" href="ZeitgeistLog.html#zeitgeist-log-quit" title="zeitgeist_log_quit ()"><code class="function">zeitgeist_log_quit()</code></a></p>
+<div class="refsect3">
+<a name="zeitgeist-log-quit-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>_res_</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-install-monitor"></a><h3>zeitgeist_log_install_monitor ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_log_install_monitor (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                               <em class="parameter"><code><a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> *monitor</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Install a monitor in the Zeitgeist engine that calls back when events matching event_templates are logged. The matching is done exactly as in the find_* family of methods and in Event.matches_template. Furthermore matched events must also have timestamps lying in time_range.</p>
+<p>To remove a monitor call <code class="function">remove_monitor()</code> on the returned Monitor instance.</p>
+<div class="refsect3">
+<a name="zeitgeist-log-install-monitor.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>monitor</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>A <a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> to report back inserts and deletes </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-remove-monitor"></a><h3>zeitgeist_log_remove_monitor ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_log_remove_monitor (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                              <em class="parameter"><code><a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> *monitor</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Remove a monitor from Zeitgeist engine that calls back when events matching event_templates are logged.</p>
+<div class="refsect3">
+<a name="zeitgeist-log-remove-monitor.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>monitor</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>A <a class="link" href="ZeitgeistMonitor.html" title="ZeitgeistMonitor"><span class="type">ZeitgeistMonitor</span></a> to report back inserts and deletes </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-get-version"></a><h3>zeitgeist_log_get_version ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_log_get_version (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *major</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *minor</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *micro</code></em>);</pre>
+<p>Gets version of currently running Zeitgeist daemon.</p>
+<p>This method will return the version of Zeitgeist daemon this instance is connected to. If you call this method right after <a class="link" href="ZeitgeistLog.html#zeitgeist-log-new" title="zeitgeist_log_new ()"><code class="function">zeitgeist_log_new()</code></a>, only zeros will be returned, a valid version number will only be returned once this instance successfully connected to the Zeitgeist daemon - ie. the value of the "is-connected" property must be TRUE (you can connect to the "notify::is-connected" signal otherwise).</p>
+<div class="refsect3">
+<a name="zeitgeist-log-get-version.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>major</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>Location for the major version </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>minor</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>Location for the minor version </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>micro</p></td>
+<td class="parameter_description">
+<p> .  </p>
+<p>Location for the micro version </p>
+<p>. </p>
+</td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-get-extensions"></a><h3>zeitgeist_log_get_extensions ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+zeitgeist_log_get_extensions (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *result_length1</code></em>);</pre>
+<p>Gets extensions of the running Zeitgeist daemon.</p>
+<div class="refsect3">
+<a name="zeitgeist-log-get-extensions.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-log-get-extensions.returns"></a><h4>Returns</h4>
+<p>array of extenstions names strings </p>.
+<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=result_length1]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-datapath"></a><h3>zeitgeist_log_datapath ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+zeitgeist_log_datapath (<em class="parameter"><code><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> *self</code></em>);</pre>
+<p>Gets datapath of the running Zeitgeist daemon.</p>
+<div class="refsect3">
+<a name="zeitgeist-log-datapath.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-log-datapath.returns"></a><h4>Returns</h4>
+<p>string datapath </p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-new"></a><h3>zeitgeist_log_new ()</h3>
+<pre class="programlisting"><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="returnvalue">ZeitgeistLog</span></a> *
+zeitgeist_log_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-log-get-default"></a><h3>zeitgeist_log_get_default ()</h3>
+<pre class="programlisting"><a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="returnvalue">ZeitgeistLog</span></a> *
+zeitgeist_log_get_default (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Get a unique instance of <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a>, that you can share in your application without caring about memory management.</p>
+<p>See <a class="link" href="ZeitgeistLog.html#zeitgeist-log-new" title="zeitgeist_log_new ()"><code class="function">zeitgeist_log_new()</code></a> for more information.</p>
+<div class="refsect3">
+<a name="zeitgeist-log-get-default.returns"></a><h4>Returns</h4>
+<p>ZeitgeistLog. </p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistLog.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="ZEITGEIST-TYPE-LOG:CAPS"></a><h3>ZEITGEIST_TYPE_LOG</h3>
+<pre class="programlisting">#define ZEITGEIST_TYPE_LOG (zeitgeist_log_get_type ())
+</pre>
+<p>The type for <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistLog-struct"></a><h3>struct ZeitgeistLog</h3>
+<pre class="programlisting">struct ZeitgeistLog;</pre>
+<p>Primary access point for talking to the Zeitgeist daemon</p>
+<p><a class="link" href="ZeitgeistLog.html#zeitgeist-log-new" title="zeitgeist_log_new ()"><code class="function">zeitgeist_log_new()</code></a> encapsulates the low level access to the Zeitgeist daemon. You can use it to manage the log by inserting and deleting entries as well as do queries on the logged data.</p>
+<p>It's important to realize that the <a class="link" href="ZeitgeistLog.html" title="ZeitgeistLog"><span class="type">ZeitgeistLog</span></a> class does not expose any API that does synchronous communications with the message bus - everything is asynchronous. To ease development some of the methods have variants that are "fire and forget" ignoring the normal return value, so that callbacks does not have to be set up.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistLogClass"></a><h3>struct ZeitgeistLogClass</h3>
+<pre class="programlisting">struct ZeitgeistLogClass {
+	ZeitgeistQueuedProxyWrapperClass parent_class;
+};
+</pre>
+<p>The class structure for <a class="link" href="ZeitgeistLog.html#ZEITGEIST-TYPE-LOG:CAPS" title="ZEITGEIST_TYPE_LOG"><code class="literal">ZEITGEIST_TYPE_LOG</code></a>. All the fields in this structure are private and should never be accessed directly.</p>
+<div class="refsect3">
+<a name="ZeitgeistLogClass.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody></tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.32.1</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+etc/xdg/autostart/zeitgeist-datahub.desktop
+usr/bin/zeitgeist-datahub
+usr/share/locale/de/LC_MESSAGES/zeitgeist.mo
+usr/share/man/man1/zeitgeist-datahub.1

@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="zeitgeist-2.0-ontology">
+<refmeta>
+<refentrytitle role="top_of_page" id="zeitgeist-2.0-ontology.top_of_page">ontology</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ZEITGEIST-2.0 Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ontology</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="zeitgeist-2.0-ontology.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-symbol-get-display-name">zeitgeist_symbol_get_display_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-symbol-get-description">zeitgeist_symbol_get_description</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GList"><returnvalue>GList</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-symbol-get-all-parents">zeitgeist_symbol_get_all_parents</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GList"><returnvalue>GList</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-symbol-get-all-children">zeitgeist_symbol_get_all_children</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GList"><returnvalue>GList</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-symbol-get-children">zeitgeist_symbol_get_children</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GList"><returnvalue>GList</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-symbol-get-parents">zeitgeist_symbol_get_parents</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-symbol-is-a">zeitgeist_symbol_is_a</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="zeitgeist-2.0-ontology.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="zeitgeist-2.0-ontology.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="zeitgeist-symbol-get-display-name" role="function">
+<title>zeitgeist_symbol_get_display_name&#160;()</title>
+<indexterm zone="zeitgeist-symbol-get-display-name"><primary>zeitgeist_symbol_get_display_name</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_symbol_get_display_name (<parameter>const <link linkend="gchar"><type>gchar</type></link> *symbol_uri</parameter>);</programlisting>
+<refsect3 id="zeitgeist-symbol-get-display-name.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>symbol_uri</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-symbol-get-display-name.returns" role="returns">
+<title>Returns</title>
+<para>. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-symbol-get-description" role="function">
+<title>zeitgeist_symbol_get_description&#160;()</title>
+<indexterm zone="zeitgeist-symbol-get-description"><primary>zeitgeist_symbol_get_description</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+zeitgeist_symbol_get_description (<parameter>const <link linkend="gchar"><type>gchar</type></link> *symbol_uri</parameter>);</programlisting>
+<refsect3 id="zeitgeist-symbol-get-description.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>symbol_uri</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-symbol-get-description.returns" role="returns">
+<title>Returns</title>
+<para>. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-symbol-get-all-parents" role="function">
+<title>zeitgeist_symbol_get_all_parents&#160;()</title>
+<indexterm zone="zeitgeist-symbol-get-all-parents"><primary>zeitgeist_symbol_get_all_parents</primary></indexterm>
+<programlisting language="C"><link linkend="GList"><returnvalue>GList</returnvalue></link>&#160;*
+zeitgeist_symbol_get_all_parents (<parameter>const <link linkend="gchar"><type>gchar</type></link> *symbol_uri</parameter>);</programlisting>
+<refsect3 id="zeitgeist-symbol-get-all-parents.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>symbol_uri</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-symbol-get-all-children" role="function">
+<title>zeitgeist_symbol_get_all_children&#160;()</title>
+<indexterm zone="zeitgeist-symbol-get-all-children"><primary>zeitgeist_symbol_get_all_children</primary></indexterm>
+<programlisting language="C"><link linkend="GList"><returnvalue>GList</returnvalue></link>&#160;*
+zeitgeist_symbol_get_all_children (<parameter>const <link linkend="gchar"><type>gchar</type></link> *symbol_uri</parameter>);</programlisting>
+<refsect3 id="zeitgeist-symbol-get-all-children.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>symbol_uri</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-symbol-get-children" role="function">
+<title>zeitgeist_symbol_get_children&#160;()</title>
+<indexterm zone="zeitgeist-symbol-get-children"><primary>zeitgeist_symbol_get_children</primary></indexterm>
+<programlisting language="C"><link linkend="GList"><returnvalue>GList</returnvalue></link>&#160;*
+zeitgeist_symbol_get_children (<parameter>const <link linkend="gchar"><type>gchar</type></link> *symbol_uri</parameter>);</programlisting>
+<refsect3 id="zeitgeist-symbol-get-children.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>symbol_uri</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-symbol-get-parents" role="function">
+<title>zeitgeist_symbol_get_parents&#160;()</title>
+<indexterm zone="zeitgeist-symbol-get-parents"><primary>zeitgeist_symbol_get_parents</primary></indexterm>
+<programlisting language="C"><link linkend="GList"><returnvalue>GList</returnvalue></link>&#160;*
+zeitgeist_symbol_get_parents (<parameter>const <link linkend="gchar"><type>gchar</type></link> *symbol_uri</parameter>);</programlisting>
+<refsect3 id="zeitgeist-symbol-get-parents.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>symbol_uri</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-symbol-is-a" role="function">
+<title>zeitgeist_symbol_is_a&#160;()</title>
+<indexterm zone="zeitgeist-symbol-is-a"><primary>zeitgeist_symbol_is_a</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+zeitgeist_symbol_is_a (<parameter>const <link linkend="gchar"><type>gchar</type></link> *symbol_uri</parameter>,
+                       <parameter>const <link linkend="gchar"><type>gchar</type></link> *parent_uri</parameter>);</programlisting>
+<refsect3 id="zeitgeist-symbol-is-a.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the (null) instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>symbol_uri</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>parent_uri</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>

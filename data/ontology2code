@@ -1,0 +1,426 @@
+#! /usr/bin/env python3
+# -.- coding: utf-8 -.-
+
+# Zeitgeist
+#
+# Copyright © 2009-2010 Markus Korn <thekorn@gmx.de>
+# Copyright © 2010 Mikkel Kamstrup Erlandsen <mikkel.kamstrup@gmail.com>
+# Copyright © 2010 Canonical Ltd.
+#             By Mikkel Kamstrup Erlandsen <mikkel.kamstrup@gmail.com>
+# Copyright © 2011 Collabora Ltd.
+#             By Siegfried-Angel Gevatter Pujals <siegfried@gevatter.com>
+#             By Seif Lotfy <seif@lotfy.com>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Lesser General Public License as published by
+# the Free Software Foundation, either version 2.1 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+import os
+import re
+import sys
+import glob
+import codecs
+from io import StringIO
+import collections
+import argparse
+
+import rdflib
+from rdflib import RDF, RDFS
+from rdflib.plugin import register
+
+from rdflib.serializer import Serializer
+from rdflib.parser import StringInputSource
+from rdflib.namespace import Namespace
+
+NIENS = Namespace("http://www.semanticdesktop.org/ontologies/2007/01/19/nie#")
+
+class SymbolCollection(dict):
+
+	closed = False
+
+	_by_namespace = None
+
+	def __init__(self):
+		self._by_namespace = collections.defaultdict(lambda: [])
+
+	def register(self, uri, parents, display_name, doc):
+		assert not self.closed
+		symbol = Symbol(self, uri, parents, display_name, doc)
+		self[uri] = symbol
+
+	def post_process(self):
+		self.closed = True
+		symbols = list(self.values())
+		for symbol in symbols:
+			for (i, parent) in enumerate(symbol.parents):
+				symbol.parents[i] = self[parent]
+			self._by_namespace[symbol.namespace].append(symbol)
+
+	def iter_by_namespace(self):
+		return list(self._by_namespace.items())
+
+	def debug_print(self):
+		symbols = list(self.registered_symbols.values())
+		for symbol in symbols:
+			symbol.debug_print()
+			print()
+
+class Symbol(object):
+
+	name = None
+	namespace = None
+	uri = None
+	parents = None
+	display_name = None
+	doc = None
+
+	_collection = None
+	_children = None
+	_all_children = None
+
+	def __init__(self, collection, uri, parents, display_name, doc):
+		self._collection = collection
+		self.uri = str(uri)
+		self.namespace, self.name = self.uri[self.uri.rfind('/')+1:].split('#')
+		self.name = Utils.camel2upper(self.name)
+		self.namespace = self.namespace.upper()
+		self.parents = [str(parent) for parent in parents]
+		self.display_name = str(display_name) if display_name is not None \
+			else self.name
+		self.doc = str(doc)
+
+	@property
+	def children(self):
+		""" Return all direct children of this Symbol. """
+		if self._children is None:
+			childs = set()
+			values = list(self._collection.values())
+			for symbol in values:
+				if self in symbol.parents:
+					childs.add(symbol)
+			self._children = childs
+		return self._children
+
+	@property
+	def all_children(self):
+		""" Return all children of this Symbol, recursively. """
+		if self._all_children is None:
+			all_children = set()
+			for symbol in self.children:
+				all_children.update([symbol])
+				all_children.update(symbol.all_children)
+			self._all_children = all_children
+		return self._all_children
+
+	def debug_print(self):
+		print("Name: %s" % self.name)
+		print("  URI: %s" % self.uri)
+		print("  Display Name: %s" % self.display_name)
+		print("  Parents: %s" % ', '.join([str(p) for p in self.parents]))
+		doc = self.doc if len(self.doc) <= 50 else "%s..." % self.doc[:47]
+		print("  Description: %s" % doc)
+
+	def __str__(self):
+		return self.name
+
+	def __doc__(self):
+		return self.doc
+
+	def __cmp__(self, other):
+		return cmp(self.namespace, other.namespace) or \
+			cmp(self.name, other.name)
+
+	def __lt__(self, other):
+		return self.name < other.name
+
+	def __hash__(self):
+		return self.uri.__hash__()
+
+class Utils(object):
+
+	@staticmethod
+	def escape_chars(text, quotes='"', strip=True):
+		assert len(quotes) == 1
+		text = text.replace('%s' % quotes, '\\%s' % quotes)
+		if strip:
+			text = text.strip()
+		return text
+
+	@staticmethod
+	def camel2upper(name):
+		"""
+		Convert CamelCase to CAMEL_CASE
+		"""
+		result = ""
+		for i in range(len(name) - 1) :
+			if name[i].islower() and name[i+1].isupper():
+				result += name[i].upper() + "_"
+			else:
+				result += name[i].upper()
+		result += name[-1].upper()
+		return result
+
+	@staticmethod
+	def replace_items(item_set, item_map):
+		if not item_set:
+			return
+		for item, value in list(item_map.items()):
+			try:
+				item_set.remove(item)
+			except KeyError:
+				# item is not in set
+				continue
+			else:
+				# item was in set, replace it with value
+				item_set.add(value)
+
+	@staticmethod
+	def indent(text, indentation):
+		return re.sub(r'(?m)^(.+)$', r'%s\1' % indentation, text)
+
+class OntologyParser(object):
+
+	symbols = None
+
+	def __init__(self, directory):
+		if not os.path.isdir(directory):
+			raise SystemExit('Directory doesn\'t exist: %s' % directory)
+		self.symbols = self._parse(glob.glob(os.path.join(directory, '*.trig')))
+
+	def _parse(self, trig_files):
+		"""
+		Parse an RDFXML stream into a SymbolCollection.
+		"""
+		
+		ontology = rdflib.ConjunctiveGraph()
+		for trig_path in trig_files:
+			with open(trig_path, "r") as trig_file:
+				ontology.parse(trig_file, format='trig')
+		
+		def _get_all_classes(*super_classes):
+			for cls in super_classes:
+				for subclass in ontology.subjects(RDFS.subClassOf, cls):
+					yield subclass
+					for x in _get_all_classes(subclass):
+						yield x
+		
+		parent_classes = [NIENS['InformationElement'], NIENS['DataObject']]
+		symbol_classes = set(_get_all_classes(*parent_classes))
+		all_symbols = symbol_classes.union(parent_classes)
+		
+		symbols = SymbolCollection()
+		for symbol in sorted(all_symbols):
+			# URI
+			uri = str(symbol)
+
+			# Description
+			comments = list(ontology.objects(symbol, RDFS.comment))
+			doc = comments[0] if comments else ''
+
+			# Display name
+			labels = list(ontology.objects(symbol, RDFS.label))
+			display_name = (labels[0]) if labels else None
+
+			# Parents
+			parents = set(ontology.objects(symbol, RDFS.subClassOf)
+				).intersection(all_symbols)
+
+			if symbol in symbol_classes:
+				assert parents
+
+			# And we have a new Symbol!
+			symbols.register(uri, parents, display_name, doc)
+
+		symbols.post_process()
+		return symbols
+
+class GenericSerializer(object):
+
+	parser = None
+	symbols = None
+
+	def __init__(self, parser):
+		self.parser = parser
+		self.symbols = parser.symbols
+
+class PythonSerializer(GenericSerializer):
+
+	def dump(self):
+		for symbol in sorted(self.symbols.values()):
+			parents = set((symbol.uri for symbol in symbol.parents))
+			Utils.replace_items(parents, {
+				str(NIENS['InformationElement']): 'Interpretation',
+				str(NIENS['DataObject']): 'Manifestation' })
+			print("Symbol('%s', parent=%r, uri='%s', display_name='%s', " \
+				"doc='%s', auto_resolve=False)" % (symbol.name, parents,
+				symbol.uri, Utils.escape_chars(symbol.display_name, '\''),
+				Utils.escape_chars(symbol.doc, '\'')))
+
+class ValaSerializer(GenericSerializer):
+
+	@staticmethod
+	def symbol_link(symbol):
+		return '%s.%s' % (symbol.namespace, symbol.name)
+
+	@classmethod
+	def build_doc(cls, symbol, doc_prefix=""):
+		"""
+		Build a C-style docstring for gtk-doc processing.
+		"""
+		uri_link = '[[%s]]' % (symbol.uri)
+		doc = symbol.doc
+
+		# List children
+		children = [cls.symbol_link(child) for child in symbol.children]
+		if children:
+			doc += '\n\n Children: %s' % ', '.join('{@link %s}' % child
+				for child in children)
+		else:
+			doc += '\n\n Children: None'
+
+		# List parents
+		parents = [cls.symbol_link(parent) for parent in symbol.parents]
+		if parents:
+			doc += '\n\n Parents: %s' % ', '.join('{@link %s}' % parent
+				for parent in parents)
+		else:
+			doc += '\n\n Parents: None'
+	
+		# Convert docstring to gtk-doc style C comment
+		doc = doc.replace('\n', '\n *')
+		doc = '/**\n * %s:\n *\n * %s%s\n *\n * %s\n */' % (
+			symbol.name, doc_prefix, uri_link, doc)
+		return doc
+
+	def dump_uris(self, dest):
+		dest.write('namespace Zeitgeist\n{\n')
+		for namespace, symbols in sorted(self.symbols.iter_by_namespace()):
+			dest.write('\n    namespace %s\n    {\n\n' % namespace)
+			for symbol in sorted(symbols):
+				# FIXME: (event/subject) interpretation/manifestation ??
+				doc = self.build_doc(symbol,
+					doc_prefix='Macro defining the interpretation type ')
+				dest.write('	    %s\n' % doc.replace('\n', '\n	    '
+					).strip())
+				dest.write('	    public const string %s = "%s";\n\n' % (
+					symbol.name, symbol.uri))
+			dest.write('    }\n')
+		dest.write('}\n')
+
+	def dump_symbols(self, dest):
+		dest.write('string uri, display_name, description;\n')
+		dest.write('string[] parents, children, all_children;\n\n')
+		for namespace, symbols in sorted(self.symbols.iter_by_namespace()):
+			for symbol in sorted(symbols):
+				parent_uris = ', '.join('%s.%s' % (s.namespace, s.name) for
+					s in symbol.parents)
+				children_uris = ', '.join('%s.%s' % (s.namespace, s.name)
+					for s in symbol.children)
+				all_children_uris = ', '.join('%s.%s' % (s.namespace,
+					s.name) for s in symbol.all_children)
+				dest.write('uri = Zeitgeist.%s.%s;\n' % (symbol.namespace,
+					symbol.name))
+				dest.write('description = "%s";\n' % Utils.escape_chars(
+					symbol.doc, '"'));
+				dest.write('display_name = "%s";\n' % Utils.escape_chars(
+					symbol.display_name, '"'))
+				dest.write('parents = { %s };\n' % parent_uris)
+				dest.write('children = { %s };\n' % children_uris)
+				dest.write('all_children = { %s };\n' % all_children_uris)
+				dest.write('Symbol.Info.register (uri, display_name, description, ' \
+					'parents, children, all_children);\n\n')
+
+class OntologyCodeGenerator(object):
+
+	_INSERTION_MARK = '// *insert-auto-generated-code*'
+
+	_selfpath = None
+	_parser = None
+	_python_serializer = None
+	_vala_serializer = None
+
+	def __init__(self):
+		self._selfpath = os.path.dirname(os.path.abspath(__file__))
+		self._parser = OntologyParser(os.path.join(self._selfpath, 'ontology'))
+		self._python_serializer = PythonSerializer(self._parser)
+		self._vala_serializer = ValaSerializer(self._parser)
+
+	def generate_python(self):
+		self._python_serializer.dump()
+
+	def generate_vala(self, uris_tpl, symbols_tpl, uris_out, symbols_out):
+		self._write_file(uris_tpl, uris_out,
+			self._vala_serializer.dump_uris, 'vala')
+		self._write_file(symbols_tpl, symbols_out,
+			self._vala_serializer.dump_symbols, 'vala')
+
+	def _write_file(self, tplfilename, outfilename, content_generator, _type):
+		sys.stderr.write("Generating %s..." % os.path.basename(outfilename))
+
+		# Read template file
+		if not os.path.isabs (tplfilename):
+			tplfilename = os.path.join(os.getcwd(), tplfilename)
+
+		template = open(tplfilename).read()
+
+		# Generate output
+		content = StringIO()
+		content_generator(content)
+		content = content.getvalue().strip('\n')
+
+		# Write header
+		output = StringIO()
+		self._write_header(output, _type)
+
+		# Write template, insert the generated output into the correct
+		# position (marked by "// *insert-auto-generated-code*").
+		insertion_pos = template.find(self._INSERTION_MARK)
+		indentation = insertion_pos - template.rfind('\n', 0, insertion_pos) - 1
+		start_pos = template.rfind('\n', 0, insertion_pos) + 1
+		continue_pos = insertion_pos
+		output.write(template[:start_pos])
+		output.write(Utils.indent(content, ' ' * indentation))
+		output.write(template[continue_pos+len(self._INSERTION_MARK):])
+
+		# Write everything to the result file
+		if os.path.isabs (outfilename):
+			outpath = outfilename
+		else:
+			outpath = os.path.join(os.getcwd(), outfilename)
+
+		open(outpath, 'w').write(output.getvalue())
+
+	def _write_header(self, dest, _type):
+		if _type == 'vala':
+			dest.write('// This file has been auto-generated by the ' \
+				'ontology2code script.\n')
+			dest.write('// Do not modify it directly.\n\n')
+		else:
+			raise NotImplementedError
+
+	def _generate_vala_uris(self, dest):
+		pass
+
+if __name__ == "__main__":
+	parser = argparse.ArgumentParser()
+	parser.add_argument('--vala', nargs=4, metavar=('URI_TEMPLATE', 'SYMBOLS_TEMPLATE', 'URI_DESTINATION', 'SYMBOLS_DESTINATION'))
+	parser.add_argument('--dump-python', action='store_true')
+
+	args = parser.parse_args()
+
+	generator = OntologyCodeGenerator()
+	if args.vala:
+		generator.generate_vala(args.vala[0], args.vala[1], args.vala[2], args.vala[3])
+	elif args.dump_python:
+		generator.generate_python()
+
+# vim:noexpandtab:ts=4:sw=4

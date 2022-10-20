@@ -1,0 +1,30 @@
+#!/usr/bin/make -f
+
+# see FEATURE AREAS in dpkg-buildflags(1)
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@ --with python3,gir,pkgkde_symbolshelper
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		--libexecdir=/usr/lib \
+		--enable-datahub \
+		--enable-fts \
+		--enable-telepathy \
+		--enable-docs
+	cd po && $(MAKE) update-gmo
+
+override_dh_auto_test:
+	mkdir -p debian/tmp-xdg-runtime-dir
+	HOME=$(CURDIR)/debian/build XDG_RUNTIME_DIR=$(CURDIR)/debian/tmp-xdg-runtime-dir dbus-run-session -- make check VERBOSE=1
+
+override_dh_installdocs:
+	dh_installdocs README.md
+
+override_dh_installchangelogs:
+	dh_installchangelogs NEWS
+
+execute_before_dh_clean:
+	rm -f po/*.gmo
+	rm -rf debian/tmp-xdg-runtime-dir

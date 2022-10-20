@@ -1,0 +1,1356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZeitgeistEvent: Zeitgeist Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="Zeitgeist Reference Manual">
+<link rel="up" href="ch01.html" title="Classes">
+<link rel="prev" href="ch01.html" title="Classes">
+<link rel="next" href="ZeitgeistLog.html" title="ZeitgeistLog">
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistEvent.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistEvent.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#ZeitgeistEvent.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch01.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ZeitgeistLog.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="ZeitgeistEvent"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="ZeitgeistEvent.top_of_page"></a>ZeitgeistEvent</span></h2>
+<p>ZeitgeistEvent — Event objects abstract Zeitgeist events</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="ZeitgeistEvent.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="ZeitgeistSubject.html" title="ZeitgeistSubject"><span class="returnvalue">ZeitgeistSubject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-get-subject" title="zeitgeist_event_get_subject ()">zeitgeist_event_get_subject</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-num-subjects" title="zeitgeist_event_num_subjects ()">zeitgeist_event_num_subjects</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-add-subject" title="zeitgeist_event_add_subject ()">zeitgeist_event_add_subject</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-take-subject" title="zeitgeist_event_take_subject ()">zeitgeist_event_take_subject</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-set-actor-from-app-info" title="zeitgeist_event_set_actor_from_app_info ()">zeitgeist_event_set_actor_from_app_info</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-to-variant" title="zeitgeist_event_to_variant ()">zeitgeist_event_to_variant</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-debug-print" title="zeitgeist_event_debug_print ()">zeitgeist_event_debug_print</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-matches-template" title="zeitgeist_event_matches_template ()">zeitgeist_event_matches_template</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="returnvalue">ZeitgeistEvent</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-new-full" title="zeitgeist_event_new_full ()">zeitgeist_event_new_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="returnvalue">ZeitgeistEvent</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-new-from-variant" title="zeitgeist_event_new_from_variant ()">zeitgeist_event_new_from_variant</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="returnvalue">ZeitgeistEvent</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-new" title="zeitgeist_event_new ()">zeitgeist_event_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-get-id" title="zeitgeist_event_get_id ()">zeitgeist_event_get_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-set-id" title="zeitgeist_event_set_id ()">zeitgeist_event_set_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gint64"><span class="returnvalue">gint64</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-get-timestamp" title="zeitgeist_event_get_timestamp ()">zeitgeist_event_get_timestamp</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-set-timestamp" title="zeitgeist_event_set_timestamp ()">zeitgeist_event_set_timestamp</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-get-origin" title="zeitgeist_event_get_origin ()">zeitgeist_event_get_origin</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-set-origin" title="zeitgeist_event_set_origin ()">zeitgeist_event_set_origin</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-get-actor" title="zeitgeist_event_get_actor ()">zeitgeist_event_get_actor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-set-actor" title="zeitgeist_event_set_actor ()">zeitgeist_event_set_actor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-get-interpretation" title="zeitgeist_event_get_interpretation ()">zeitgeist_event_get_interpretation</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-set-interpretation" title="zeitgeist_event_set_interpretation ()">zeitgeist_event_set_interpretation</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-get-manifestation" title="zeitgeist_event_get_manifestation ()">zeitgeist_event_get_manifestation</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-set-manifestation" title="zeitgeist_event_set_manifestation ()">zeitgeist_event_set_manifestation</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="returnvalue">GPtrArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-get-subjects" title="zeitgeist_event_get_subjects ()">zeitgeist_event_get_subjects</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-set-subjects" title="zeitgeist_event_set_subjects ()">zeitgeist_event_set_subjects</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Byte-Arrays.html#GByteArray"><span class="returnvalue">GByteArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-get-payload" title="zeitgeist_event_get_payload ()">zeitgeist_event_get_payload</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-event-set-payload" title="zeitgeist_event_set_payload ()">zeitgeist_event_set_payload</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="returnvalue">GPtrArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-events-from-variant" title="zeitgeist_events_from_variant ()">zeitgeist_events_from_variant</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-events-to-variant" title="zeitgeist_events_to_variant ()">zeitgeist_events_to_variant</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ZeitgeistEvent.html#zeitgeist-events-to-variant-with-limit" title="zeitgeist_events_to_variant_with_limit ()">zeitgeist_events_to_variant_with_limit</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistEvent.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<td class="property_name"><a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--actor" title="The “actor” property">actor</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--id" title="The “id” property">id</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<td class="property_name"><a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--interpretation" title="The “interpretation” property">interpretation</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<td class="property_name"><a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--manifestation" title="The “manifestation” property">manifestation</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<td class="property_name"><a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--origin" title="The “origin” property">origin</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="../glib/glib-Byte-Arrays.html#GByteArray"><span class="type">GByteArray</span></a> *</td>
+<td class="property_name"><a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--payload" title="The “payload” property">payload</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *</td>
+<td class="property_name"><a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--subjects" title="The “subjects” property">subjects</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a></td>
+<td class="property_name"><a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--timestamp" title="The “timestamp” property">timestamp</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistEvent.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="ZeitgeistEvent.html#ZEITGEIST-TYPE-EVENT:CAPS" title="ZEITGEIST_TYPE_EVENT">ZEITGEIST_TYPE_EVENT</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="ZeitgeistEvent.html#ZEITGEIST-EVENT-SIGNATURE:CAPS" title="ZEITGEIST_EVENT_SIGNATURE">ZEITGEIST_EVENT_SIGNATURE</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent-struct" title="struct ZeitgeistEvent">ZeitgeistEvent</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="ZeitgeistEvent.html#ZeitgeistEventClass" title="struct ZeitgeistEventClass">ZeitgeistEventClass</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistEvent.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> ZeitgeistEvent
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistEvent.description"></a><h2>Description</h2>
+<p>The Event class is one of the primary elements for communicating with the Zeitgeist daemon. Events serve two purposes Unsurprisingly, they represent events that have happened, but they can also act as templates. See also <a class="link" href="ZeitgeistSubject.html" title="ZeitgeistSubject"><span class="type">ZeitgeistSubject</span></a>.</p>
+<p>An event in the Zeitgeist world is characterized by two main properties. "What happened", also called the interpretation, and "How did it happen", also called the manifestation. Besides these properties, an event also has an actor which identifies the party responsible for triggering the event which in most cases will be an application. Lastly there is an event timestamp and an event ID. The timestamp is calculated as the number of milliseconds since the Unix epoch and the event ID is a number assigned to the event by the Zeitgeist engine when it's logged. These five properties are collectively known as the event metadata.</p>
+<p>An event must also describe what it happened to. For this we have event subjects. Most events have one subject, but they may also have more. The metadata of the subjects are recorded at the time of logging, and are encapsulated by the <span class="type">Subject</span> class. It's important to understand that it's just the subject metadata at the time of logging, not necessarily the subject metadata as it exists right now.</p>
+<p>In addition to the listed properties, events may also carry a free form binary payload. The usage of this is application specific and is generally useless unless you have some contextual information to figure out what's in it.</p>
+<p>A large part of the Zeitgeist query and monitoring API revolves around a concept of template matching. A query is simply a list of event templates that you want to look for in the log. An unset property on an event template indicates that anything is allowed in that field. If the property is set it indicates that the property must be an exact match, unless a special operator is used.</p>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistEvent.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="zeitgeist-event-get-subject"></a><h3>zeitgeist_event_get_subject ()</h3>
+<pre class="programlisting"><a class="link" href="ZeitgeistSubject.html" title="ZeitgeistSubject"><span class="returnvalue">ZeitgeistSubject</span></a> *
+zeitgeist_event_get_subject (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> index</code></em>);</pre>
+<div class="refsect3">
+<a name="zeitgeist-event-get-subject.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-num-subjects"></a><h3>zeitgeist_event_num_subjects ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+zeitgeist_event_num_subjects (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>);</pre>
+<div class="refsect3">
+<a name="zeitgeist-event-num-subjects.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-add-subject"></a><h3>zeitgeist_event_add_subject ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_event_add_subject (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>,
+                             <em class="parameter"><code><a class="link" href="ZeitgeistSubject.html" title="ZeitgeistSubject"><span class="type">ZeitgeistSubject</span></a> *subject</code></em>);</pre>
+<div class="refsect3">
+<a name="zeitgeist-event-add-subject.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>subject</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-take-subject"></a><h3>zeitgeist_event_take_subject ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_event_take_subject (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>,
+                              <em class="parameter"><code><a class="link" href="ZeitgeistSubject.html" title="ZeitgeistSubject"><span class="type">ZeitgeistSubject</span></a> *subject</code></em>);</pre>
+<div class="refsect3">
+<a name="zeitgeist-event-take-subject.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>subject</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-set-actor-from-app-info"></a><h3>zeitgeist_event_set_actor_from_app_info ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_event_set_actor_from_app_info
+                               (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAppInfo.html#GAppInfo-struct"><span class="type">GAppInfo</span></a> *info</code></em>);</pre>
+<div class="refsect3">
+<a name="zeitgeist-event-set-actor-from-app-info.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-to-variant"></a><h3>zeitgeist_event_to_variant ()</h3>
+<pre class="programlisting"><a href="../glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+zeitgeist_event_to_variant (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>);</pre>
+<div class="refsect3">
+<a name="zeitgeist-event-to-variant.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-debug-print"></a><h3>zeitgeist_event_debug_print ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_event_debug_print (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>);</pre>
+<div class="refsect3">
+<a name="zeitgeist-event-debug-print.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-matches-template"></a><h3>zeitgeist_event_matches_template ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+zeitgeist_event_matches_template (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>,
+                                  <em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *template_event</code></em>);</pre>
+<div class="refsect3">
+<a name="zeitgeist-event-matches-template.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>template_event</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-new-full"></a><h3>zeitgeist_event_new_full ()</h3>
+<pre class="programlisting"><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="returnvalue">ZeitgeistEvent</span></a> *
+zeitgeist_event_new_full (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *interpretation</code></em>,
+                          <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *manifestation</code></em>,
+                          <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *actor</code></em>,
+                          <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *origin</code></em>,
+                          <em class="parameter"><code>...</code></em>);</pre>
+<div class="refsect3">
+<a name="zeitgeist-event-new-full.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>interpretation</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>manifestation</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>actor</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>origin</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-new-from-variant"></a><h3>zeitgeist_event_new_from_variant ()</h3>
+<pre class="programlisting"><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="returnvalue">ZeitgeistEvent</span></a> *
+zeitgeist_event_new_from_variant (<em class="parameter"><code><a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *event_variant</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="refsect3">
+<a name="zeitgeist-event-new-from-variant.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>event_variant</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Typed errors. Similar to throws in Java."><span class="acronym">error-domains</span></acronym> ZeitgeistDataModelError]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-new"></a><h3>zeitgeist_event_new ()</h3>
+<pre class="programlisting"><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="returnvalue">ZeitgeistEvent</span></a> *
+zeitgeist_event_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-get-id"></a><h3>zeitgeist_event_get_id ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+zeitgeist_event_get_id (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>);</pre>
+<p>Get and return the current value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--id" title="The “id” property"><span class="type">"id"</span></a> property.</p>
+<div class="refsect3">
+<a name="zeitgeist-event-get-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-event-get-id.returns"></a><h4>Returns</h4>
+<p> the value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--id" title="The “id” property"><span class="type">"id"</span></a> property</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-set-id"></a><h3>zeitgeist_event_set_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_event_set_id (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> value</code></em>);</pre>
+<p>Set the value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--id" title="The “id” property"><span class="type">"id"</span></a> property to <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="zeitgeist-event-set-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance to modify</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the new value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--id" title="The “id” property"><span class="type">"id"</span></a> property</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-get-timestamp"></a><h3>zeitgeist_event_get_timestamp ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint64"><span class="returnvalue">gint64</span></a>
+zeitgeist_event_get_timestamp (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>);</pre>
+<p>Get and return the current value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--timestamp" title="The “timestamp” property"><span class="type">"timestamp"</span></a> property.</p>
+<div class="refsect3">
+<a name="zeitgeist-event-get-timestamp.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-event-get-timestamp.returns"></a><h4>Returns</h4>
+<p> the value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--timestamp" title="The “timestamp” property"><span class="type">"timestamp"</span></a> property</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-set-timestamp"></a><h3>zeitgeist_event_set_timestamp ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_event_set_timestamp (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a> value</code></em>);</pre>
+<p>Set the value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--timestamp" title="The “timestamp” property"><span class="type">"timestamp"</span></a> property to <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="zeitgeist-event-set-timestamp.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance to modify</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the new value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--timestamp" title="The “timestamp” property"><span class="type">"timestamp"</span></a> property</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-get-origin"></a><h3>zeitgeist_event_get_origin ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+zeitgeist_event_get_origin (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>);</pre>
+<p>Get and return the current value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--origin" title="The “origin” property"><span class="type">"origin"</span></a> property.</p>
+<div class="refsect3">
+<a name="zeitgeist-event-get-origin.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-event-get-origin.returns"></a><h4>Returns</h4>
+<p> the value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--origin" title="The “origin” property"><span class="type">"origin"</span></a> property</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-set-origin"></a><h3>zeitgeist_event_set_origin ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_event_set_origin (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>,
+                            <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<p>Set the value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--origin" title="The “origin” property"><span class="type">"origin"</span></a> property to <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="zeitgeist-event-set-origin.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance to modify</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the new value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--origin" title="The “origin” property"><span class="type">"origin"</span></a> property</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-get-actor"></a><h3>zeitgeist_event_get_actor ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+zeitgeist_event_get_actor (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>);</pre>
+<p>Get and return the current value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--actor" title="The “actor” property"><span class="type">"actor"</span></a> property.</p>
+<div class="refsect3">
+<a name="zeitgeist-event-get-actor.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-event-get-actor.returns"></a><h4>Returns</h4>
+<p> the value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--actor" title="The “actor” property"><span class="type">"actor"</span></a> property</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-set-actor"></a><h3>zeitgeist_event_set_actor ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_event_set_actor (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>,
+                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<p>Set the value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--actor" title="The “actor” property"><span class="type">"actor"</span></a> property to <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="zeitgeist-event-set-actor.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance to modify</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the new value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--actor" title="The “actor” property"><span class="type">"actor"</span></a> property</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-get-interpretation"></a><h3>zeitgeist_event_get_interpretation ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+zeitgeist_event_get_interpretation (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>);</pre>
+<p>Get and return the current value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--interpretation" title="The “interpretation” property"><span class="type">"interpretation"</span></a> property.</p>
+<div class="refsect3">
+<a name="zeitgeist-event-get-interpretation.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-event-get-interpretation.returns"></a><h4>Returns</h4>
+<p> the value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--interpretation" title="The “interpretation” property"><span class="type">"interpretation"</span></a> property</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-set-interpretation"></a><h3>zeitgeist_event_set_interpretation ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_event_set_interpretation (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>,
+                                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<p>Set the value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--interpretation" title="The “interpretation” property"><span class="type">"interpretation"</span></a> property to <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="zeitgeist-event-set-interpretation.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance to modify</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the new value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--interpretation" title="The “interpretation” property"><span class="type">"interpretation"</span></a> property</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-get-manifestation"></a><h3>zeitgeist_event_get_manifestation ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+zeitgeist_event_get_manifestation (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>);</pre>
+<p>Get and return the current value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--manifestation" title="The “manifestation” property"><span class="type">"manifestation"</span></a> property.</p>
+<div class="refsect3">
+<a name="zeitgeist-event-get-manifestation.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-event-get-manifestation.returns"></a><h4>Returns</h4>
+<p> the value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--manifestation" title="The “manifestation” property"><span class="type">"manifestation"</span></a> property</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-set-manifestation"></a><h3>zeitgeist_event_set_manifestation ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_event_set_manifestation (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>,
+                                   <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<p>Set the value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--manifestation" title="The “manifestation” property"><span class="type">"manifestation"</span></a> property to <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="zeitgeist-event-set-manifestation.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance to modify</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the new value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--manifestation" title="The “manifestation” property"><span class="type">"manifestation"</span></a> property</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-get-subjects"></a><h3>zeitgeist_event_get_subjects ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="returnvalue">GPtrArray</span></a> *
+zeitgeist_event_get_subjects (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>);</pre>
+<p>Get and return the current value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--subjects" title="The “subjects” property"><span class="type">"subjects"</span></a> property.</p>
+<div class="refsect3">
+<a name="zeitgeist-event-get-subjects.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-event-get-subjects.returns"></a><h4>Returns</h4>
+<p> the value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--subjects" title="The “subjects” property"><span class="type">"subjects"</span></a> property</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-set-subjects"></a><h3>zeitgeist_event_set_subjects ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_event_set_subjects (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *value</code></em>);</pre>
+<p>Set the value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--subjects" title="The “subjects” property"><span class="type">"subjects"</span></a> property to <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="zeitgeist-event-set-subjects.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance to modify</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the new value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--subjects" title="The “subjects” property"><span class="type">"subjects"</span></a> property</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-get-payload"></a><h3>zeitgeist_event_get_payload ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Byte-Arrays.html#GByteArray"><span class="returnvalue">GByteArray</span></a> *
+zeitgeist_event_get_payload (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>);</pre>
+<p>Get and return the current value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--payload" title="The “payload” property"><span class="type">"payload"</span></a> property.</p>
+<div class="refsect3">
+<a name="zeitgeist-event-get-payload.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="zeitgeist-event-get-payload.returns"></a><h4>Returns</h4>
+<p> the value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--payload" title="The “payload” property"><span class="type">"payload"</span></a> property</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-event-set-payload"></a><h3>zeitgeist_event_set_payload ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+zeitgeist_event_set_payload (<em class="parameter"><code><a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> *self</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Byte-Arrays.html#GByteArray"><span class="type">GByteArray</span></a> *value</code></em>);</pre>
+<p>Set the value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--payload" title="The “payload” property"><span class="type">"payload"</span></a> property to <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="zeitgeist-event-set-payload.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a> instance to modify</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the new value of the <a class="link" href="ZeitgeistEvent.html#ZeitgeistEvent--payload" title="The “payload” property"><span class="type">"payload"</span></a> property</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-events-from-variant"></a><h3>zeitgeist_events_from_variant ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="returnvalue">GPtrArray</span></a> *
+zeitgeist_events_from_variant (<em class="parameter"><code><a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *vevents</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="refsect3">
+<a name="zeitgeist-events-from-variant.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the (null) instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>vevents</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Typed errors. Similar to throws in Java."><span class="acronym">error-domains</span></acronym> ZeitgeistDataModelError]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-events-to-variant"></a><h3>zeitgeist_events_to_variant ()</h3>
+<pre class="programlisting"><a href="../glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+zeitgeist_events_to_variant (<em class="parameter"><code><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *events</code></em>);</pre>
+<div class="refsect3">
+<a name="zeitgeist-events-to-variant.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the (null) instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>events</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zeitgeist-events-to-variant-with-limit"></a><h3>zeitgeist_events_to_variant_with_limit ()</h3>
+<pre class="programlisting"><a href="../glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+zeitgeist_events_to_variant_with_limit
+                               (<em class="parameter"><code><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *events</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> limit</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="refsect3">
+<a name="zeitgeist-events-to-variant-with-limit.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the (null) instance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>events</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>limit</p></td>
+<td class="parameter_description"><p> </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>location to store the error occurring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Typed errors. Similar to throws in Java."><span class="acronym">error-domains</span></acronym> ZeitgeistDataModelError]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistEvent.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="ZEITGEIST-TYPE-EVENT:CAPS"></a><h3>ZEITGEIST_TYPE_EVENT</h3>
+<pre class="programlisting">#define ZEITGEIST_TYPE_EVENT (zeitgeist_event_get_type ())
+</pre>
+<p>The type for <a class="link" href="ZeitgeistEvent.html" title="ZeitgeistEvent"><span class="type">ZeitgeistEvent</span></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZEITGEIST-EVENT-SIGNATURE:CAPS"></a><h3>ZEITGEIST_EVENT_SIGNATURE</h3>
+<pre class="programlisting">#define ZEITGEIST_EVENT_SIGNATURE "asaasay"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistEvent-struct"></a><h3>struct ZeitgeistEvent</h3>
+<pre class="programlisting">struct ZeitgeistEvent;</pre>
+<p>Event objects abstract Zeitgeist events</p>
+<p>The Event class is one of the primary elements for communicating with the Zeitgeist daemon. Events serve two purposes Unsurprisingly, they represent events that have happened, but they can also act as templates. See also <a class="link" href="ZeitgeistSubject.html" title="ZeitgeistSubject"><span class="type">ZeitgeistSubject</span></a>.</p>
+<p>An event in the Zeitgeist world is characterized by two main properties. "What happened", also called the interpretation, and "How did it happen", also called the manifestation. Besides these properties, an event also has an actor which identifies the party responsible for triggering the event which in most cases will be an application. Lastly there is an event timestamp and an event ID. The timestamp is calculated as the number of milliseconds since the Unix epoch and the event ID is a number assigned to the event by the Zeitgeist engine when it's logged. These five properties are collectively known as the event metadata.</p>
+<p>An event must also describe what it happened to. For this we have event subjects. Most events have one subject, but they may also have more. The metadata of the subjects are recorded at the time of logging, and are encapsulated by the <span class="type">Subject</span> class. It's important to understand that it's just the subject metadata at the time of logging, not necessarily the subject metadata as it exists right now.</p>
+<p>In addition to the listed properties, events may also carry a free form binary payload. The usage of this is application specific and is generally useless unless you have some contextual information to figure out what's in it.</p>
+<p>A large part of the Zeitgeist query and monitoring API revolves around a concept of template matching. A query is simply a list of event templates that you want to look for in the log. An unset property on an event template indicates that anything is allowed in that field. If the property is set it indicates that the property must be an exact match, unless a special operator is used.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistEventClass"></a><h3>struct ZeitgeistEventClass</h3>
+<pre class="programlisting">struct ZeitgeistEventClass {
+	GObjectClass parent_class;
+};
+</pre>
+<p>The class structure for <a class="link" href="ZeitgeistEvent.html#ZEITGEIST-TYPE-EVENT:CAPS" title="ZEITGEIST_TYPE_EVENT"><code class="literal">ZEITGEIST_TYPE_EVENT</code></a>. All the fields in this structure are private and should never be accessed directly.</p>
+<div class="refsect3">
+<a name="ZeitgeistEventClass.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="ZeitgeistEvent.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="ZeitgeistEvent--actor"></a><h3>The <code class="literal">“actor”</code> property</h3>
+<pre class="programlisting">  “actor”                    <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<p>actor.</p>
+<p>Owner: ZeitgeistEvent</p>
+<p>Flags: Read / Write</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistEvent--id"></a><h3>The <code class="literal">“id”</code> property</h3>
+<pre class="programlisting">  “id”                       <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>id.</p>
+<p>Owner: ZeitgeistEvent</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistEvent--interpretation"></a><h3>The <code class="literal">“interpretation”</code> property</h3>
+<pre class="programlisting">  “interpretation”           <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<p>interpretation.</p>
+<p>Owner: ZeitgeistEvent</p>
+<p>Flags: Read / Write</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistEvent--manifestation"></a><h3>The <code class="literal">“manifestation”</code> property</h3>
+<pre class="programlisting">  “manifestation”            <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<p>manifestation.</p>
+<p>Owner: ZeitgeistEvent</p>
+<p>Flags: Read / Write</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistEvent--origin"></a><h3>The <code class="literal">“origin”</code> property</h3>
+<pre class="programlisting">  “origin”                   <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<p>origin.</p>
+<p>Owner: ZeitgeistEvent</p>
+<p>Flags: Read / Write</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistEvent--payload"></a><h3>The <code class="literal">“payload”</code> property</h3>
+<pre class="programlisting">  “payload”                  <a href="../glib/glib-Byte-Arrays.html#GByteArray"><span class="type">GByteArray</span></a> *</pre>
+<p>payload.</p>
+<p>Owner: ZeitgeistEvent</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistEvent--subjects"></a><h3>The <code class="literal">“subjects”</code> property</h3>
+<pre class="programlisting">  “subjects”                 <a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *</pre>
+<p>subjects.</p>
+<p>Owner: ZeitgeistEvent</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZeitgeistEvent--timestamp"></a><h3>The <code class="literal">“timestamp”</code> property</h3>
+<pre class="programlisting">  “timestamp”                <a href="../glib/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a></pre>
+<p>timestamp.</p>
+<p>Owner: ZeitgeistEvent</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.32.1</div>
+</body>
+</html>

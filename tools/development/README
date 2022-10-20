@@ -1,0 +1,36 @@
+# USAGE
+#
+# To run the benchmarks on a certain branch of Zeitgeist make sure you are
+# running an instance of the branch and that it includes the benchmark
+# extension.
+#
+# To benchmark and output timing to 'output.json' run:
+#  ./query_timings.py -o output.json
+#
+# If you already have data in the output file and want to merge both
+# data sets (build avg.) run:
+#  ./query_timings.py -m -o output.json
+#
+# To plot the data use the '--plot' argument. Multiple '--plot' arguments
+# will define multiple series.
+#
+# When plotting one needs to choose between several types of plots using
+# --type with the following arguments: marsh_time, get_events_time,
+# find_ids_time, find_events or overall.
+#
+# In short, a run always looks like:
+#  tools/development/query_timings.py --name "lp:zeitgeist" -o trunk.json \
+#       --queries tools/development/query_sets/timerange_always.txt
+#  tools/development/query_timings.py --name "lp:some-branch" -o somebranch.json \
+#       --queries tools/development/query_sets/timerange_always.txt
+#  tools/development/query_timings.py --plot trunk.json --type overall \
+#       -o benchmark.svg
+
+# A good test for trunk and a release is as follows:
+
+tools/development/query_timings.py --name "trunk" -o synapse_trunk.json --queries tools/development/query_sets/synapse.txt && tools/development/query_timings.py --name "trunk" -o synapse_unlimited_trunk.json --queries tools/development/query_sets/synapse-unlimited.txt && tools/development/query_timings.py --name "trunk" -o timerange_always_trunk.json --queries tools/development/query_sets/timerange_always.txt && tools/development/query_timings.py --name "trunk" -o timerange_interval_trunk.json --queries tools/development/query_sets/timerange_interval.txt && tools/development/query_timings.py --name "trunk" -o jumplist_trunk.json --queries tools/development/query_sets/jumplist.txt
+
+tools/development/query_timings.py --name "0.9.5" -o jumplist_0.9.5.json --queries tools/development/query_sets/jumplist.txt && 
+tools/development/query_timings.py --name "0.9.5" -o synapse_0.9.5.json --queries tools/development/query_sets/synapse.txt && tools/development/query_timings.py --name "0.9.5" -o synapse_unlimited_0.9.5.json --queries tools/development/query_sets/synapse-unlimited.txt && tools/development/query_timings.py --name "0.9.5" -o timerange_always_0.9.5.json --queries tools/development/query_sets/timerange_always.txt && tools/development/query_timings.py --name "0.9.5" -o timerange_interval_0.9.5.json --queries tools/development/query_sets/timerange_interval.txt
+
+tools/development/query_timings.py --plot jumplist_0.9.5.json --plot jumplist_trunk.json --type overall -o jumplist.svg && tools/development/query_timings.py --plot synapse_0.9.5.json  --plot synapse_trunk.json --type overall -o synapse.svg && tools/development/query_timings.py --plot synapse_unlimited_0.9.5.json --plot synapse_unlimited_trunk.json --type overall -o synapse_unlimited.svg && tools/development/query_timings.py --plot timerange_always_0.9.5.json --plot timerange_always_trunk.json --type overall -o timerange_always.svg && tools/development/query_timings.py --plot timerange_interval_0.9.5.json --plot timerange_interval_trunk.json --type overall -o timerange_interval.svg

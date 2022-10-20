@@ -1,0 +1,937 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="ZeitgeistDataSourceRegistry">
+<refmeta>
+<refentrytitle role="top_of_page" id="ZeitgeistDataSourceRegistry.top_of_page">ZeitgeistDataSourceRegistry</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ZEITGEIST-2.0 Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ZeitgeistDataSourceRegistry</refname>
+<refpurpose>Query the Zeitgeist Data-Source Registry extension</refpurpose>
+</refnamediv>
+
+<refsect1 id="ZeitgeistDataSourceRegistry.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-registry-get-data-sources">zeitgeist_data_source_registry_get_data_sources</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-registry-get-data-sources-finish">zeitgeist_data_source_registry_get_data_sources_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-registry-get-data-source-from-id">zeitgeist_data_source_registry_get_data_source_from_id</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistDataSource"><returnvalue>ZeitgeistDataSource</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-registry-get-data-source-from-id-finish">zeitgeist_data_source_registry_get_data_source_from_id_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-registry-register-data-source">zeitgeist_data_source_registry_register_data_source</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-registry-register-data-source-finish">zeitgeist_data_source_registry_register_data_source_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-registry-set-data-source-enabled">zeitgeist_data_source_registry_set_data_source_enabled</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-registry-set-data-source-enabled-finish">zeitgeist_data_source_registry_set_data_source_enabled_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistDataSourceRegistry"><returnvalue>ZeitgeistDataSourceRegistry</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-data-source-registry-new">zeitgeist_data_source_registry_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-registry-get-data-sources">zeitgeist_remote_registry_get_data_sources</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-registry-get-data-sources-finish">zeitgeist_remote_registry_get_data_sources_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-registry-register-data-source">zeitgeist_remote_registry_register_data_source</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-registry-register-data-source-finish">zeitgeist_remote_registry_register_data_source_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-registry-set-data-source-enabled">zeitgeist_remote_registry_set_data_source_enabled</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-registry-set-data-source-enabled-finish">zeitgeist_remote_registry_set_data_source_enabled_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-registry-get-data-source-from-id">zeitgeist_remote_registry_get_data_source_from_id</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-remote-registry-get-data-source-from-id-finish">zeitgeist_remote_registry_get_data_source_from_id_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistDataSourceRegistry.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signal_proto_type" colwidth="150px"/>
+<colspec colname="signal_proto_name" colwidth="300px"/>
+<colspec colname="signal_proto_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="ZeitgeistDataSourceRegistry-source-disconnected">source-disconnected</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="ZeitgeistDataSourceRegistry-source-enabled">source-enabled</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="ZeitgeistDataSourceRegistry-source-registered">source-registered</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="ZeitgeistRemoteRegistry-data-source-disconnected">data-source-disconnected</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="ZeitgeistRemoteRegistry-data-source-enabled">data-source-enabled</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="ZeitgeistRemoteRegistry-data-source-registered">data-source-registered</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="ZeitgeistRemoteRegistry"/><refsect1 id="ZeitgeistDataSourceRegistry.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-TYPE-DATA-SOURCE-REGISTRY:CAPS">ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistDataSourceRegistry-struct">ZeitgeistDataSourceRegistry</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistDataSourceRegistryClass">ZeitgeistDataSourceRegistryClass</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ZeitgeistRemoteRegistry-struct">ZeitgeistRemoteRegistry</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistRemoteRegistryIface">ZeitgeistRemoteRegistryIface</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistDataSourceRegistry.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GInterface">GInterface</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ZeitgeistRemoteRegistry
+    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ZeitgeistQueuedProxyWrapper">ZeitgeistQueuedProxyWrapper</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ZeitgeistDataSourceRegistry
+</screen>
+</refsect1>
+<refsect1 id="ZeitgeistDataSourceRegistry.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+ZeitgeistRemoteRegistry requires
+ <link linkend="GObject">GObject</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="ZeitgeistDataSourceRegistry.description" role="desc">
+<title role="desc.title">Description</title>
+<para>The Zeitgeist engine maintains a publicly available list of recognized data-sources (components inserting information into Zeitgeist). ZeitgeistDataSourceRegistry is used to register new data sources, get information about them and gives the ability to enable or disable the data sources.</para>
+
+</refsect1>
+<refsect1 id="ZeitgeistDataSourceRegistry.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="zeitgeist-data-source-registry-get-data-sources" role="function">
+<title>zeitgeist_data_source_registry_get_data_sources&#160;()</title>
+<indexterm zone="zeitgeist-data-source-registry-get-data-sources"><primary>zeitgeist_data_source_registry_get_data_sources</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_data_source_registry_get_data_sources
+                               (<parameter><link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> *self</parameter>,
+                                <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-data-source-registry-get-data-sources-finish"><function><link linkend="zeitgeist-data-source-registry-get-data-sources-finish"><function>zeitgeist_data_source_registry_get_data_sources_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-data-source-registry-get-data-sources.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-registry-get-data-sources-finish" role="function">
+<title>zeitgeist_data_source_registry_get_data_sources_finish&#160;()</title>
+<indexterm zone="zeitgeist-data-source-registry-get-data-sources-finish"><primary>zeitgeist_data_source_registry_get_data_sources_finish</primary></indexterm>
+<programlisting language="C"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+zeitgeist_data_source_registry_get_data_sources_finish
+                               (<parameter><link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-data-source-registry-get-data-sources"><function><link linkend="zeitgeist-data-source-registry-get-data-sources"><function>zeitgeist_data_source_registry_get_data_sources()</function></link></function></link></para>
+<refsect3 id="zeitgeist-data-source-registry-get-data-sources-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-registry-get-data-source-from-id" role="function">
+<title>zeitgeist_data_source_registry_get_data_source_from_id&#160;()</title>
+<indexterm zone="zeitgeist-data-source-registry-get-data-source-from-id"><primary>zeitgeist_data_source_registry_get_data_source_from_id</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_data_source_registry_get_data_source_from_id
+                               (<parameter><link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> *self</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *unique_id</parameter>,
+                                <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-data-source-registry-get-data-source-from-id-finish"><function><link linkend="zeitgeist-data-source-registry-get-data-source-from-id-finish"><function>zeitgeist_data_source_registry_get_data_source_from_id_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-data-source-registry-get-data-source-from-id.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>unique_id</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-registry-get-data-source-from-id-finish" role="function">
+<title>zeitgeist_data_source_registry_get_data_source_from_id_finish&#160;()</title>
+<indexterm zone="zeitgeist-data-source-registry-get-data-source-from-id-finish"><primary>zeitgeist_data_source_registry_get_data_source_from_id_finish</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistDataSource"><returnvalue>ZeitgeistDataSource</returnvalue></link>&#160;*
+zeitgeist_data_source_registry_get_data_source_from_id_finish
+                               (<parameter><link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-data-source-registry-get-data-source-from-id"><function><link linkend="zeitgeist-data-source-registry-get-data-source-from-id"><function>zeitgeist_data_source_registry_get_data_source_from_id()</function></link></function></link></para>
+<refsect3 id="zeitgeist-data-source-registry-get-data-source-from-id-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-registry-register-data-source" role="function">
+<title>zeitgeist_data_source_registry_register_data_source&#160;()</title>
+<indexterm zone="zeitgeist-data-source-registry-register-data-source"><primary>zeitgeist_data_source_registry_register_data_source</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_data_source_registry_register_data_source
+                               (<parameter><link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> *self</parameter>,
+                                <parameter><link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link> *data_source</parameter>,
+                                <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-data-source-registry-register-data-source-finish"><function><link linkend="zeitgeist-data-source-registry-register-data-source-finish"><function>zeitgeist_data_source_registry_register_data_source_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-data-source-registry-register-data-source.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data_source</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-registry-register-data-source-finish" role="function">
+<title>zeitgeist_data_source_registry_register_data_source_finish&#160;()</title>
+<indexterm zone="zeitgeist-data-source-registry-register-data-source-finish"><primary>zeitgeist_data_source_registry_register_data_source_finish</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+zeitgeist_data_source_registry_register_data_source_finish
+                               (<parameter><link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-data-source-registry-register-data-source"><function><link linkend="zeitgeist-data-source-registry-register-data-source"><function>zeitgeist_data_source_registry_register_data_source()</function></link></function></link></para>
+<refsect3 id="zeitgeist-data-source-registry-register-data-source-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-registry-set-data-source-enabled" role="function">
+<title>zeitgeist_data_source_registry_set_data_source_enabled&#160;()</title>
+<indexterm zone="zeitgeist-data-source-registry-set-data-source-enabled"><primary>zeitgeist_data_source_registry_set_data_source_enabled</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_data_source_registry_set_data_source_enabled
+                               (<parameter><link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> *self</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *unique_id</parameter>,
+                                <parameter><link linkend="gboolean"><type>gboolean</type></link> enabled</parameter>,
+                                <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-data-source-registry-set-data-source-enabled-finish"><function><link linkend="zeitgeist-data-source-registry-set-data-source-enabled-finish"><function>zeitgeist_data_source_registry_set_data_source_enabled_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-data-source-registry-set-data-source-enabled.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>unique_id</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>enabled</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-registry-set-data-source-enabled-finish" role="function">
+<title>zeitgeist_data_source_registry_set_data_source_enabled_finish&#160;()</title>
+<indexterm zone="zeitgeist-data-source-registry-set-data-source-enabled-finish"><primary>zeitgeist_data_source_registry_set_data_source_enabled_finish</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_data_source_registry_set_data_source_enabled_finish
+                               (<parameter><link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-data-source-registry-set-data-source-enabled"><function><link linkend="zeitgeist-data-source-registry-set-data-source-enabled"><function>zeitgeist_data_source_registry_set_data_source_enabled()</function></link></function></link></para>
+<refsect3 id="zeitgeist-data-source-registry-set-data-source-enabled-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-data-source-registry-new" role="function">
+<title>zeitgeist_data_source_registry_new&#160;()</title>
+<indexterm zone="zeitgeist-data-source-registry-new"><primary>zeitgeist_data_source_registry_new</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistDataSourceRegistry"><returnvalue>ZeitgeistDataSourceRegistry</returnvalue></link>&#160;*
+zeitgeist_data_source_registry_new (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="zeitgeist-remote-registry-get-data-sources" role="function">
+<title>zeitgeist_remote_registry_get_data_sources&#160;()</title>
+<indexterm zone="zeitgeist-remote-registry-get-data-sources"><primary>zeitgeist_remote_registry_get_data_sources</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_registry_get_data_sources
+                               (<parameter><link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> *self</parameter>,
+                                <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-registry-get-data-sources-finish"><function><link linkend="zeitgeist-remote-registry-get-data-sources-finish"><function>zeitgeist_remote_registry_get_data_sources_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-registry-get-data-sources.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-registry-get-data-sources-finish" role="function">
+<title>zeitgeist_remote_registry_get_data_sources_finish&#160;()</title>
+<indexterm zone="zeitgeist-remote-registry-get-data-sources-finish"><primary>zeitgeist_remote_registry_get_data_sources_finish</primary></indexterm>
+<programlisting language="C"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+zeitgeist_remote_registry_get_data_sources_finish
+                               (<parameter><link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-registry-get-data-sources"><function><link linkend="zeitgeist-remote-registry-get-data-sources"><function>zeitgeist_remote_registry_get_data_sources()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-registry-get-data-sources-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-registry-register-data-source" role="function">
+<title>zeitgeist_remote_registry_register_data_source&#160;()</title>
+<indexterm zone="zeitgeist-remote-registry-register-data-source"><primary>zeitgeist_remote_registry_register_data_source</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_registry_register_data_source
+                               (<parameter><link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> *self</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *unique_id</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *description</parameter>,
+                                <parameter><link linkend="GVariant"><type>GVariant</type></link> *event_templates</parameter>,
+                                <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *sender</parameter>,
+                                <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-registry-register-data-source-finish"><function><link linkend="zeitgeist-remote-registry-register-data-source-finish"><function>zeitgeist_remote_registry_register_data_source_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-registry-register-data-source.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>unique_id</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>description</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event_templates</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sender</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-registry-register-data-source-finish" role="function">
+<title>zeitgeist_remote_registry_register_data_source_finish&#160;()</title>
+<indexterm zone="zeitgeist-remote-registry-register-data-source-finish"><primary>zeitgeist_remote_registry_register_data_source_finish</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+zeitgeist_remote_registry_register_data_source_finish
+                               (<parameter><link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-registry-register-data-source"><function><link linkend="zeitgeist-remote-registry-register-data-source"><function>zeitgeist_remote_registry_register_data_source()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-registry-register-data-source-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-registry-set-data-source-enabled" role="function">
+<title>zeitgeist_remote_registry_set_data_source_enabled&#160;()</title>
+<indexterm zone="zeitgeist-remote-registry-set-data-source-enabled"><primary>zeitgeist_remote_registry_set_data_source_enabled</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_registry_set_data_source_enabled
+                               (<parameter><link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> *self</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *unique_id</parameter>,
+                                <parameter><link linkend="gboolean"><type>gboolean</type></link> enabled</parameter>,
+                                <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-registry-set-data-source-enabled-finish"><function><link linkend="zeitgeist-remote-registry-set-data-source-enabled-finish"><function>zeitgeist_remote_registry_set_data_source_enabled_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-registry-set-data-source-enabled.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>unique_id</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>enabled</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-registry-set-data-source-enabled-finish" role="function">
+<title>zeitgeist_remote_registry_set_data_source_enabled_finish&#160;()</title>
+<indexterm zone="zeitgeist-remote-registry-set-data-source-enabled-finish"><primary>zeitgeist_remote_registry_set_data_source_enabled_finish</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_registry_set_data_source_enabled_finish
+                               (<parameter><link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-registry-set-data-source-enabled"><function><link linkend="zeitgeist-remote-registry-set-data-source-enabled"><function>zeitgeist_remote_registry_set_data_source_enabled()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-registry-set-data-source-enabled-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-registry-get-data-source-from-id" role="function">
+<title>zeitgeist_remote_registry_get_data_source_from_id&#160;()</title>
+<indexterm zone="zeitgeist-remote-registry-get-data-source-from-id"><primary>zeitgeist_remote_registry_get_data_source_from_id</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_remote_registry_get_data_source_from_id
+                               (<parameter><link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> *self</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *unique_id</parameter>,
+                                <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-registry-get-data-source-from-id-finish"><function><link linkend="zeitgeist-remote-registry-get-data-source-from-id-finish"><function>zeitgeist_remote_registry_get_data_source_from_id_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-registry-get-data-source-from-id.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>unique_id</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cancellable</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-remote-registry-get-data-source-from-id-finish" role="function">
+<title>zeitgeist_remote_registry_get_data_source_from_id_finish&#160;()</title>
+<indexterm zone="zeitgeist-remote-registry-get-data-source-from-id-finish"><primary>zeitgeist_remote_registry_get_data_source_from_id_finish</primary></indexterm>
+<programlisting language="C"><link linkend="GVariant"><returnvalue>GVariant</returnvalue></link>&#160;*
+zeitgeist_remote_registry_get_data_source_from_id_finish
+                               (<parameter><link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-remote-registry-get-data-source-from-id"><function><link linkend="zeitgeist-remote-registry-get-data-source-from-id"><function>zeitgeist_remote_registry_get_data_source_from_id()</function></link></function></link></para>
+<refsect3 id="zeitgeist-remote-registry-get-data-source-from-id-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistDataSourceRegistry.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ZEITGEIST-TYPE-DATA-SOURCE-REGISTRY:CAPS" role="macro">
+<title>ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY</title>
+<indexterm zone="ZEITGEIST-TYPE-DATA-SOURCE-REGISTRY:CAPS"><primary>ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY (zeitgeist_data_source_registry_get_type ())
+</programlisting>
+<para>The type for <link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link>.</para>
+</refsect2>
+<refsect2 id="ZeitgeistDataSourceRegistry-struct" role="struct">
+<title>struct ZeitgeistDataSourceRegistry</title>
+<indexterm zone="ZeitgeistDataSourceRegistry-struct"><primary>ZeitgeistDataSourceRegistry</primary></indexterm>
+<programlisting language="C">struct ZeitgeistDataSourceRegistry;</programlisting>
+<para>Query the Zeitgeist Data-Source Registry extension</para>
+<para>The Zeitgeist engine maintains a publicly available list of recognized data-sources (components inserting information into Zeitgeist). ZeitgeistDataSourceRegistry is used to register new data sources, get information about them and gives the ability to enable or disable the data sources.</para>
+</refsect2>
+<refsect2 id="ZeitgeistDataSourceRegistryClass" role="struct">
+<title>struct ZeitgeistDataSourceRegistryClass</title>
+<indexterm zone="ZeitgeistDataSourceRegistryClass"><primary>ZeitgeistDataSourceRegistryClass</primary></indexterm>
+<programlisting language="C">struct ZeitgeistDataSourceRegistryClass {
+	ZeitgeistQueuedProxyWrapperClass parent_class;
+};
+</programlisting>
+<para>The class structure for <link linkend="ZEITGEIST-TYPE-DATA-SOURCE-REGISTRY:CAPS"><literal>ZEITGEIST_TYPE_DATA_SOURCE_REGISTRY</literal></link>. All the fields in this structure are private and should never be accessed directly.</para>
+<refsect3 id="ZeitgeistDataSourceRegistryClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="ZeitgeistRemoteRegistry-struct" role="struct">
+<title>ZeitgeistRemoteRegistry</title>
+<indexterm zone="ZeitgeistRemoteRegistry-struct"><primary>ZeitgeistRemoteRegistry</primary></indexterm>
+<programlisting language="C">typedef struct _ZeitgeistRemoteRegistry ZeitgeistRemoteRegistry;</programlisting>
+</refsect2>
+<refsect2 id="ZeitgeistRemoteRegistryIface" role="struct">
+<title>struct ZeitgeistRemoteRegistryIface</title>
+<indexterm zone="ZeitgeistRemoteRegistryIface"><primary>ZeitgeistRemoteRegistryIface</primary></indexterm>
+<programlisting language="C">struct ZeitgeistRemoteRegistryIface {
+	GTypeInterface parent_iface;
+	void (*get_data_sources) (ZeitgeistRemoteRegistry* self, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	GVariant* (*get_data_sources_finish) (ZeitgeistRemoteRegistry* self, GAsyncResult* _res_, GError** error);
+	void (*register_data_source) (ZeitgeistRemoteRegistry* self, const gchar* unique_id, const gchar* name, const gchar* description, GVariant* event_templates, GCancellable* cancellable, const char* sender, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	gboolean (*register_data_source_finish) (ZeitgeistRemoteRegistry* self, GAsyncResult* _res_, GError** error);
+	void (*set_data_source_enabled) (ZeitgeistRemoteRegistry* self, const gchar* unique_id, gboolean enabled, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*set_data_source_enabled_finish) (ZeitgeistRemoteRegistry* self, GAsyncResult* _res_, GError** error);
+	void (*get_data_source_from_id) (ZeitgeistRemoteRegistry* self, const gchar* unique_id, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	GVariant* (*get_data_source_from_id_finish) (ZeitgeistRemoteRegistry* self, GAsyncResult* _res_, GError** error);
+};
+</programlisting>
+<para>Interface for creating <link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> implementations.</para>
+<refsect3 id="ZeitgeistRemoteRegistryIface.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GTypeInterface"><type>GTypeInterface</type></link>&#160;<structfield id="ZeitgeistRemoteRegistryIface.parent-iface">parent_iface</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the parent interface structure</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteRegistryIface.get-data-sources">get_data_sources</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-remote-registry-get-data-sources"><function><link linkend="zeitgeist-remote-registry-get-data-sources"><function>zeitgeist_remote_registry_get_data_sources()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteRegistryIface.get-data-sources-finish">get_data_sources_finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>asynchronous finish function for <structfield>get_data_sources</structfield>, called by <link linkend="zeitgeist-remote-registry-get-data-sources"><function><link linkend="zeitgeist-remote-registry-get-data-sources"><function>zeitgeist_remote_registry_get_data_sources()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteRegistryIface.register-data-source">register_data_source</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-remote-registry-register-data-source"><function><link linkend="zeitgeist-remote-registry-register-data-source"><function>zeitgeist_remote_registry_register_data_source()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteRegistryIface.register-data-source-finish">register_data_source_finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>asynchronous finish function for <structfield>register_data_source</structfield>, called by <link linkend="zeitgeist-remote-registry-register-data-source"><function><link linkend="zeitgeist-remote-registry-register-data-source"><function>zeitgeist_remote_registry_register_data_source()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteRegistryIface.set-data-source-enabled">set_data_source_enabled</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-remote-registry-set-data-source-enabled"><function><link linkend="zeitgeist-remote-registry-set-data-source-enabled"><function>zeitgeist_remote_registry_set_data_source_enabled()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteRegistryIface.set-data-source-enabled-finish">set_data_source_enabled_finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>asynchronous finish function for <structfield>set_data_source_enabled</structfield>, called by <link linkend="zeitgeist-remote-registry-set-data-source-enabled"><function><link linkend="zeitgeist-remote-registry-set-data-source-enabled"><function>zeitgeist_remote_registry_set_data_source_enabled()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteRegistryIface.get-data-source-from-id">get_data_source_from_id</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method called by <link linkend="zeitgeist-remote-registry-get-data-source-from-id"><function><link linkend="zeitgeist-remote-registry-get-data-source-from-id"><function>zeitgeist_remote_registry_get_data_source_from_id()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistRemoteRegistryIface.get-data-source-from-id-finish">get_data_source_from_id_finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>asynchronous finish function for <structfield>get_data_source_from_id</structfield>, called by <link linkend="zeitgeist-remote-registry-get-data-source-from-id"><function><link linkend="zeitgeist-remote-registry-get-data-source-from-id"><function>zeitgeist_remote_registry_get_data_source_from_id()</function></link></function></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistDataSourceRegistry.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="ZeitgeistDataSourceRegistry-source-disconnected" role="signal"><title>The <literal>“source-disconnected”</literal> signal</title>
+<indexterm zone="ZeitgeistDataSourceRegistry-source-disconnected"><primary>ZeitgeistDataSourceRegistry::source-disconnected</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> *data_source_registry,
+               <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link>         *data_source,
+               <link linkend="gpointer"><type>gpointer</type></link>                     user_data)</programlisting>
+<refsect3 id="ZeitgeistDataSourceRegistry-source-disconnected.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>data_source_registry</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> instance that received the signal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data_source</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2><refsect2 id="ZeitgeistDataSourceRegistry-source-enabled" role="signal"><title>The <literal>“source-enabled”</literal> signal</title>
+<indexterm zone="ZeitgeistDataSourceRegistry-source-enabled"><primary>ZeitgeistDataSourceRegistry::source-enabled</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> *data_source_registry,
+               <link linkend="gchar"><type>gchar</type></link>                       *unique_id,
+               <link linkend="gboolean"><type>gboolean</type></link>                     enabled,
+               <link linkend="gpointer"><type>gpointer</type></link>                     user_data)</programlisting>
+<refsect3 id="ZeitgeistDataSourceRegistry-source-enabled.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>data_source_registry</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> instance that received the signal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>unique_id</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>enabled</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2><refsect2 id="ZeitgeistDataSourceRegistry-source-registered" role="signal"><title>The <literal>“source-registered”</literal> signal</title>
+<indexterm zone="ZeitgeistDataSourceRegistry-source-registered"><primary>ZeitgeistDataSourceRegistry::source-registered</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> *data_source_registry,
+               <link linkend="ZeitgeistDataSource"><type>ZeitgeistDataSource</type></link>         *data_source,
+               <link linkend="gpointer"><type>gpointer</type></link>                     user_data)</programlisting>
+<refsect3 id="ZeitgeistDataSourceRegistry-source-registered.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>data_source_registry</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistDataSourceRegistry"><type>ZeitgeistDataSourceRegistry</type></link> instance that received the signal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data_source</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2><refsect2 id="ZeitgeistRemoteRegistry-data-source-disconnected" role="signal"><title>The <literal>“data-source-disconnected”</literal> signal</title>
+<indexterm zone="ZeitgeistRemoteRegistry-data-source-disconnected"><primary>ZeitgeistRemoteRegistry::data-source-disconnected</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> *remote_registry,
+               <link linkend="GVariant"><type>GVariant</type></link>                *data_source,
+               <link linkend="gpointer"><type>gpointer</type></link>                 user_data)</programlisting>
+<refsect3 id="ZeitgeistRemoteRegistry-data-source-disconnected.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>remote_registry</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> instance that received the signal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data_source</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2><refsect2 id="ZeitgeistRemoteRegistry-data-source-enabled" role="signal"><title>The <literal>“data-source-enabled”</literal> signal</title>
+<indexterm zone="ZeitgeistRemoteRegistry-data-source-enabled"><primary>ZeitgeistRemoteRegistry::data-source-enabled</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> *remote_registry,
+               <link linkend="gchar"><type>gchar</type></link>                   *unique_id,
+               <link linkend="gboolean"><type>gboolean</type></link>                 enabled,
+               <link linkend="gpointer"><type>gpointer</type></link>                 user_data)</programlisting>
+<refsect3 id="ZeitgeistRemoteRegistry-data-source-enabled.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>remote_registry</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> instance that received the signal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>unique_id</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>enabled</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2><refsect2 id="ZeitgeistRemoteRegistry-data-source-registered" role="signal"><title>The <literal>“data-source-registered”</literal> signal</title>
+<indexterm zone="ZeitgeistRemoteRegistry-data-source-registered"><primary>ZeitgeistRemoteRegistry::data-source-registered</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> *remote_registry,
+               <link linkend="GVariant"><type>GVariant</type></link>                *data_source,
+               <link linkend="gpointer"><type>gpointer</type></link>                 user_data)</programlisting>
+<refsect3 id="ZeitgeistRemoteRegistry-data-source-registered.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>remote_registry</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistRemoteRegistry"><type>ZeitgeistRemoteRegistry</type></link> instance that received the signal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data_source</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2>
+</refsect1>
+
+</refentry>

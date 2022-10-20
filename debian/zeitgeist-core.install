@@ -1,0 +1,10 @@
+debian/zeitgeist-maybe-vacuum usr/lib/zeitgeist/
+usr/bin/zeitgeist-daemon
+usr/lib/systemd/user/zeitgeist-fts.service
+usr/lib/systemd/user/zeitgeist.service
+usr/lib/zeitgeist/
+usr/share/bash-completion/completions/zeitgeist-daemon
+usr/share/dbus-1/services/org.gnome.zeitgeist.Engine.service
+usr/share/dbus-1/services/org.gnome.zeitgeist.SimpleIndexer.service
+usr/share/man/man1/zeitgeist-daemon.1
+usr/share/zeitgeist/doc

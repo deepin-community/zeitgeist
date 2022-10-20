@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="ZeitgeistMonitor">
+<refmeta>
+<refentrytitle role="top_of_page" id="ZeitgeistMonitor.top_of_page">ZeitgeistMonitor</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ZEITGEIST-2.0 Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ZeitgeistMonitor</refname>
+<refpurpose>Listens for updates to the Zeitgeist event log</refpurpose>
+</refnamediv>
+
+<refsect1 id="ZeitgeistMonitor.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-monitor-get-templates">zeitgeist_monitor_get_templates</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-monitor-get-path">zeitgeist_monitor_get_path</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistMonitor"><returnvalue>ZeitgeistMonitor</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-monitor-new">zeitgeist_monitor_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistTimeRange"><returnvalue>ZeitgeistTimeRange</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-monitor-get-time-range">zeitgeist_monitor_get_time_range</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-monitor-set-time-range">zeitgeist_monitor_set_time_range</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-monitor-get-event-templates">zeitgeist_monitor_get_event_templates</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-monitor-set-event-templates">zeitgeist_monitor_set_event_templates</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistMonitor.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistMonitor--event-templates">event-templates</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link>&#160;*</entry><entry role="property_name"><link linkend="ZeitgeistMonitor--time-range">time-range</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistMonitor.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signal_proto_type" colwidth="150px"/>
+<colspec colname="signal_proto_name" colwidth="300px"/>
+<colspec colname="signal_proto_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="ZeitgeistMonitor-events-deleted">events-deleted</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="ZeitgeistMonitor-events-inserted">events-inserted</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistMonitor.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-TYPE-MONITOR:CAPS">ZEITGEIST_TYPE_MONITOR</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistMonitor-struct">ZeitgeistMonitor</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistMonitorClass">ZeitgeistMonitorClass</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistMonitor.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ZeitgeistMonitor
+</screen>
+</refsect1>
+<refsect1 id="ZeitgeistMonitor.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+ZeitgeistMonitor implements
+ <link linkend="ZeitgeistRemoteMonitor">ZeitgeistRemoteMonitor</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="ZeitgeistMonitor.description" role="desc">
+<title role="desc.title">Description</title>
+<para>A <link linkend="Monitor"><type>Monitor</type></link> listens for updates to the Zeitgeist event log matching a given set of templates and with timestamps in some predefined time range.</para><para>A monitor must be installed into the running Zeitgeist daemon by calling <link linkend="zeitgeist-log-install-monitor"><function>zeitgeist_log_install_monitor()</function></link>. The monitor will not emit any of the ::events-added or ::events-deleted signals before this.</para>
+
+</refsect1>
+<refsect1 id="ZeitgeistMonitor.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="zeitgeist-monitor-get-templates" role="function">
+<title>zeitgeist_monitor_get_templates&#160;()</title>
+<indexterm zone="zeitgeist-monitor-get-templates"><primary>zeitgeist_monitor_get_templates</primary></indexterm>
+<programlisting language="C"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+zeitgeist_monitor_get_templates (<parameter><link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> *self</parameter>);</programlisting>
+<refsect3 id="zeitgeist-monitor-get-templates.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-monitor-get-path" role="function">
+<title>zeitgeist_monitor_get_path&#160;()</title>
+<indexterm zone="zeitgeist-monitor-get-path"><primary>zeitgeist_monitor_get_path</primary></indexterm>
+<programlisting language="C"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+zeitgeist_monitor_get_path (<parameter><link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> *self</parameter>);</programlisting>
+<refsect3 id="zeitgeist-monitor-get-path.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-monitor-new" role="function">
+<title>zeitgeist_monitor_new&#160;()</title>
+<indexterm zone="zeitgeist-monitor-new"><primary>zeitgeist_monitor_new</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistMonitor"><returnvalue>ZeitgeistMonitor</returnvalue></link>&#160;*
+zeitgeist_monitor_new (<parameter><link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> *time_range</parameter>,
+                       <parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *event_templates</parameter>);</programlisting>
+<para>zeitgeist_monitor_new</para>
+<para>Create a new monitor. Before you can receive signals from the monitor you need to install it in the running Zeitgeist daemon by calling <link linkend="zeitgeist-log-install-monitor"><function>zeitgeist_log_install_monitor()</function></link>.</para>
+<refsect3 id="zeitgeist-monitor-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>time_range</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>The monitor will only listen for events with timestamps within this time range. Note that it is legal for applications to insert events that are &quot;in the past&quot;. </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>event_templates</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A <link linkend="GPtrArray"><type>GPtrArray</type></link> of <link linkend="ZeitgeistEvent"><type>ZeitgeistEvent</type></link>&lt;!-- --&gt;s. Only listen for events that match any of these templates. </para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>in</acronym>][<acronym>transfer full</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-monitor-new.returns" role="returns">
+<title>Returns</title>
+<para>A reference to a newly allocated monitor </para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-monitor-get-time-range" role="function">
+<title>zeitgeist_monitor_get_time_range&#160;()</title>
+<indexterm zone="zeitgeist-monitor-get-time-range"><primary>zeitgeist_monitor_get_time_range</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistTimeRange"><returnvalue>ZeitgeistTimeRange</returnvalue></link>&#160;*
+zeitgeist_monitor_get_time_range (<parameter><link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistMonitor--time-range"><type>"time-range"</type></link> property.</para>
+<refsect3 id="zeitgeist-monitor-get-time-range.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-monitor-get-time-range.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistMonitor--time-range"><type>"time-range"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-monitor-set-time-range" role="function">
+<title>zeitgeist_monitor_set_time_range&#160;()</title>
+<indexterm zone="zeitgeist-monitor-set-time-range"><primary>zeitgeist_monitor_set_time_range</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_monitor_set_time_range (<parameter><link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> *self</parameter>,
+                                  <parameter><link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistMonitor--time-range"><type>"time-range"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-monitor-set-time-range.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistMonitor--time-range"><type>"time-range"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-monitor-get-event-templates" role="function">
+<title>zeitgeist_monitor_get_event_templates&#160;()</title>
+<indexterm zone="zeitgeist-monitor-get-event-templates"><primary>zeitgeist_monitor_get_event_templates</primary></indexterm>
+<programlisting language="C"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+zeitgeist_monitor_get_event_templates (<parameter><link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistMonitor--event-templates"><type>"event-templates"</type></link> property.</para>
+<refsect3 id="zeitgeist-monitor-get-event-templates.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-monitor-get-event-templates.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistMonitor--event-templates"><type>"event-templates"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-monitor-set-event-templates" role="function">
+<title>zeitgeist_monitor_set_event_templates&#160;()</title>
+<indexterm zone="zeitgeist-monitor-set-event-templates"><primary>zeitgeist_monitor_set_event_templates</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_monitor_set_event_templates (<parameter><link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> *self</parameter>,
+                                       <parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *value</parameter>);</programlisting>
+<para>Set the value of the <link linkend="ZeitgeistMonitor--event-templates"><type>"event-templates"</type></link> property to <parameter>value</parameter>
+.</para>
+<refsect3 id="zeitgeist-monitor-set-event-templates.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> instance to modify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the new value of the <link linkend="ZeitgeistMonitor--event-templates"><type>"event-templates"</type></link> property</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistMonitor.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ZEITGEIST-TYPE-MONITOR:CAPS" role="macro">
+<title>ZEITGEIST_TYPE_MONITOR</title>
+<indexterm zone="ZEITGEIST-TYPE-MONITOR:CAPS"><primary>ZEITGEIST_TYPE_MONITOR</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_TYPE_MONITOR (zeitgeist_monitor_get_type ())
+</programlisting>
+<para>The type for <link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link>.</para>
+</refsect2>
+<refsect2 id="ZeitgeistMonitor-struct" role="struct">
+<title>struct ZeitgeistMonitor</title>
+<indexterm zone="ZeitgeistMonitor-struct"><primary>ZeitgeistMonitor</primary></indexterm>
+<programlisting language="C">struct ZeitgeistMonitor;</programlisting>
+<para>Listens for updates to the Zeitgeist event log</para>
+<para>A <link linkend="Monitor"><type>Monitor</type></link> listens for updates to the Zeitgeist event log matching a given set of templates and with timestamps in some predefined time range.</para><para>A monitor must be installed into the running Zeitgeist daemon by calling <link linkend="zeitgeist-log-install-monitor"><function>zeitgeist_log_install_monitor()</function></link>. The monitor will not emit any of the ::events-added or ::events-deleted signals before this.</para>
+</refsect2>
+<refsect2 id="ZeitgeistMonitorClass" role="struct">
+<title>struct ZeitgeistMonitorClass</title>
+<indexterm zone="ZeitgeistMonitorClass"><primary>ZeitgeistMonitorClass</primary></indexterm>
+<programlisting language="C">struct ZeitgeistMonitorClass {
+	GObjectClass parent_class;
+};
+</programlisting>
+<para>The class structure for <link linkend="ZEITGEIST-TYPE-MONITOR:CAPS"><literal>ZEITGEIST_TYPE_MONITOR</literal></link>. All the fields in this structure are private and should never be accessed directly.</para>
+<refsect3 id="ZeitgeistMonitorClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistMonitor.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="ZeitgeistMonitor--event-templates" role="property"><title>The <literal>“event-templates”</literal> property</title>
+<indexterm zone="ZeitgeistMonitor--event-templates"><primary>ZeitgeistMonitor:event-templates</primary></indexterm>
+<programlisting>  “event-templates”          <link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*</programlisting>
+<para>event-templates.</para><para>Owner: ZeitgeistMonitor</para>
+<para>Flags: Read / Write / Construct</para>
+</refsect2>
+<refsect2 id="ZeitgeistMonitor--time-range" role="property"><title>The <literal>“time-range”</literal> property</title>
+<indexterm zone="ZeitgeistMonitor--time-range"><primary>ZeitgeistMonitor:time-range</primary></indexterm>
+<programlisting>  “time-range”               <link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link>&#160;*</programlisting>
+<para>time-range.</para><para>Owner: ZeitgeistMonitor</para>
+<para>Flags: Read / Write / Construct</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistMonitor.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="ZeitgeistMonitor-events-deleted" role="signal"><title>The <literal>“events-deleted”</literal> signal</title>
+<indexterm zone="ZeitgeistMonitor-events-deleted"><primary>ZeitgeistMonitor::events-deleted</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link>   *monitor,
+               <link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> *event_ids_length1,
+               <link linkend="gpointer"><type>gpointer</type></link>            time_range,
+               <link linkend="gint"><type>gint</type></link>                event_ids,
+               <link linkend="gpointer"><type>gpointer</type></link>            user_data)</programlisting>
+<para>ZeitgeistMonitor::events-deleted:</para>
+<para>Emitted when events with timestamps within the time range of this monitor have been deleted from the log. Note that the deleted events may not match the event templates for the monitor.</para>
+<refsect3 id="ZeitgeistMonitor-events-deleted.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>monitor</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> instance that received the signal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event_ids_length1</para></entry>
+<entry role="parameter_description"><para>length of the <parameter>event_ids</parameter>
+array</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>time_range</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A <link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> that specifies the minimum and maximum timestamps of the deleted events </para><para></para></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event_ids</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A <link linkend="GArray"><type>GArray</type></link> of <link linkend="guint32"><type>guint32</type></link>&lt;!-- --&gt;s holding the IDs of the deleted events </para><para></para></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2><refsect2 id="ZeitgeistMonitor-events-inserted" role="signal"><title>The <literal>“events-inserted”</literal> signal</title>
+<indexterm zone="ZeitgeistMonitor-events-inserted"><primary>ZeitgeistMonitor::events-inserted</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link>   *monitor,
+               <link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> *time_range,
+               <link linkend="ZeitgeistResultSet"><type>ZeitgeistResultSet</type></link> *events,
+               <link linkend="gpointer"><type>gpointer</type></link>            user_data)</programlisting>
+<para>ZeitgeistMonitor::events-inserted:</para>
+<para>Emitted when events matching the event templates and with timestamps within the time range of the monitor has been inserted into the log.</para>
+<refsect3 id="ZeitgeistMonitor-events-inserted.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>monitor</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistMonitor"><type>ZeitgeistMonitor</type></link> instance that received the signal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>time_range</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A <link linkend="ZeitgeistTimeRange"><type>ZeitgeistTimeRange</type></link> that specifies the minimum and maximum of the timestamps in <parameter>events</parameter>
+</para><para></para></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>events</para></entry>
+<entry role="parameter_description"><para>&nbsp;.  <para>A <link linkend="ZeitgeistResultSet"><type>ZeitgeistResultSet</type></link> holding the &quot;ZeitgeistEvent&quot;s that have been inserted into the log </para><para></para></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2>
+</refsect1>
+
+</refentry>

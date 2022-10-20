@@ -1,0 +1,663 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="ZeitgeistQueuedProxyWrapperQueuedMethod">
+<refmeta>
+<refentrytitle role="top_of_page" id="ZeitgeistQueuedProxyWrapperQueuedMethod.top_of_page">ZeitgeistQueuedProxyWrapperQueuedMethod</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ZEITGEIST-2.0 Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ZeitgeistQueuedProxyWrapperQueuedMethod</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="ZeitgeistQueuedProxyWrapperQueuedMethod.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-proxy-acquired">zeitgeist_queued_proxy_wrapper_proxy_acquired</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-proxy-unavailable">zeitgeist_queued_proxy_wrapper_proxy_unavailable</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-process-queued-methods">zeitgeist_queued_proxy_wrapper_process_queued_methods</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-name-owner-changed">zeitgeist_queued_proxy_wrapper_name_owner_changed</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-on-connection-established">zeitgeist_queued_proxy_wrapper_on_connection_established</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-on-connection-lost">zeitgeist_queued_proxy_wrapper_on_connection_lost</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-wait-for-proxy">zeitgeist_queued_proxy_wrapper_wait_for_proxy</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-wait-for-proxy-finish">zeitgeist_queued_proxy_wrapper_wait_for_proxy_finish</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ZeitgeistQueuedProxyWrapperQueuedMethod"><returnvalue>ZeitgeistQueuedProxyWrapperQueuedMethod</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-queued-method-new">zeitgeist_queued_proxy_wrapper_queued_method_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GSourceFunc"><returnvalue>GSourceFunc</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-queued-method-get-queued-method">zeitgeist_queued_proxy_wrapper_queued_method_get_queued_method</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-queued-method-ref">zeitgeist_queued_proxy_wrapper_queued_method_ref</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-queued-method-unref">zeitgeist_queued_proxy_wrapper_queued_method_unref</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GParamSpec"><returnvalue>GParamSpec</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-param-spec-queued-method">zeitgeist_queued_proxy_wrapper_param_spec_queued_method</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-value-set-queued-method">zeitgeist_queued_proxy_wrapper_value_set_queued_method</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-value-get-queued-method">zeitgeist_queued_proxy_wrapper_value_get_queued_method</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-value-take-queued-method">zeitgeist_queued_proxy_wrapper_value_take_queued_method</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-get-proxy-created">zeitgeist_queued_proxy_wrapper_get_proxy_created</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="zeitgeist-queued-proxy-wrapper-get-is-connected">zeitgeist_queued_proxy_wrapper_get_is_connected</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistQueuedProxyWrapperQueuedMethod.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="ZeitgeistQueuedProxyWrapper--is-connected">is-connected</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="ZeitgeistQueuedProxyWrapper--proxy-created">proxy-created</link></entry><entry role="property_flags">Read</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="ZeitgeistQueuedProxyWrapper"/><refsect1 id="ZeitgeistQueuedProxyWrapperQueuedMethod.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-TYPE-QUEUED-PROXY-WRAPPER:CAPS">ZEITGEIST_TYPE_QUEUED_PROXY_WRAPPER</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZEITGEIST-QUEUED-PROXY-WRAPPER-TYPE-QUEUED-METHOD:CAPS">ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistQueuedProxyWrapperQueuedMethod-struct">ZeitgeistQueuedProxyWrapperQueuedMethod</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistQueuedProxyWrapperQueuedMethodClass">ZeitgeistQueuedProxyWrapperQueuedMethodClass</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistQueuedProxyWrapper-struct">ZeitgeistQueuedProxyWrapper</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="ZeitgeistQueuedProxyWrapperClass">ZeitgeistQueuedProxyWrapperClass</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ZeitgeistQueuedProxyWrapperQueuedMethod.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ZeitgeistQueuedProxyWrapper
+        <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistDataSourceRegistry">ZeitgeistDataSourceRegistry</link>
+        <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ZeitgeistIndex">ZeitgeistIndex</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ZeitgeistLog">ZeitgeistLog</link>
+    ZeitgeistQueuedProxyWrapperQueuedMethod
+</screen>
+</refsect1>
+
+
+<refsect1 id="ZeitgeistQueuedProxyWrapperQueuedMethod.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ZeitgeistQueuedProxyWrapperQueuedMethod.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-proxy-acquired" role="function">
+<title>zeitgeist_queued_proxy_wrapper_proxy_acquired&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-proxy-acquired"><primary>zeitgeist_queued_proxy_wrapper_proxy_acquired</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_queued_proxy_wrapper_proxy_acquired
+                               (<parameter><link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> *self</parameter>,
+                                <parameter><link linkend="GObject"><type>GObject</type></link> *proxy</parameter>);</programlisting>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-proxy-acquired.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>proxy</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-proxy-unavailable" role="function">
+<title>zeitgeist_queued_proxy_wrapper_proxy_unavailable&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-proxy-unavailable"><primary>zeitgeist_queued_proxy_wrapper_proxy_unavailable</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_queued_proxy_wrapper_proxy_unavailable
+                               (<parameter><link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> *self</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> *err</parameter>);</programlisting>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-proxy-unavailable.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>err</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-process-queued-methods" role="function">
+<title>zeitgeist_queued_proxy_wrapper_process_queued_methods&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-process-queued-methods"><primary>zeitgeist_queued_proxy_wrapper_process_queued_methods</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_queued_proxy_wrapper_process_queued_methods
+                               (<parameter><link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> *self</parameter>);</programlisting>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-process-queued-methods.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-name-owner-changed" role="function">
+<title>zeitgeist_queued_proxy_wrapper_name_owner_changed&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-name-owner-changed"><primary>zeitgeist_queued_proxy_wrapper_name_owner_changed</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_queued_proxy_wrapper_name_owner_changed
+                               (<parameter><link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> *self</parameter>,
+                                <parameter><link linkend="GParamSpec"><type>GParamSpec</type></link> *pspec</parameter>);</programlisting>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-name-owner-changed.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>pspec</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-on-connection-established" role="function">
+<title>zeitgeist_queued_proxy_wrapper_on_connection_established&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-on-connection-established"><primary>zeitgeist_queued_proxy_wrapper_on_connection_established</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_queued_proxy_wrapper_on_connection_established
+                               (<parameter><link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> *self</parameter>);</programlisting>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-on-connection-established.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-on-connection-lost" role="function">
+<title>zeitgeist_queued_proxy_wrapper_on_connection_lost&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-on-connection-lost"><primary>zeitgeist_queued_proxy_wrapper_on_connection_lost</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_queued_proxy_wrapper_on_connection_lost
+                               (<parameter><link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> *self</parameter>);</programlisting>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-on-connection-lost.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-wait-for-proxy" role="function">
+<title>zeitgeist_queued_proxy_wrapper_wait_for_proxy&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-wait-for-proxy"><primary>zeitgeist_queued_proxy_wrapper_wait_for_proxy</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_queued_proxy_wrapper_wait_for_proxy
+                               (<parameter><link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-queued-proxy-wrapper-wait-for-proxy-finish"><function><link linkend="zeitgeist-queued-proxy-wrapper-wait-for-proxy-finish"><function>zeitgeist_queued_proxy_wrapper_wait_for_proxy_finish()</function></link></function></link></para>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-wait-for-proxy.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_callback_</para></entry>
+<entry role="parameter_description"><para>callback to call when the request is satisfied. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>_user_data_</para></entry>
+<entry role="parameter_description"><para>the data to pass to <parameter>_callback_</parameter>
+function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-wait-for-proxy-finish" role="function">
+<title>zeitgeist_queued_proxy_wrapper_wait_for_proxy_finish&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-wait-for-proxy-finish"><primary>zeitgeist_queued_proxy_wrapper_wait_for_proxy_finish</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_queued_proxy_wrapper_wait_for_proxy_finish
+                               (<parameter><link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> *self</parameter>,
+                                <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para><emphasis>See also</emphasis>: <link linkend="zeitgeist-queued-proxy-wrapper-wait-for-proxy"><function><link linkend="zeitgeist-queued-proxy-wrapper-wait-for-proxy"><function>zeitgeist_queued_proxy_wrapper_wait_for_proxy()</function></link></function></link></para>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-wait-for-proxy-finish.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>_res_</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>location to store the error occurring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-queued-method-new" role="function">
+<title>zeitgeist_queued_proxy_wrapper_queued_method_new&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-queued-method-new"><primary>zeitgeist_queued_proxy_wrapper_queued_method_new</primary></indexterm>
+<programlisting language="C"><link linkend="ZeitgeistQueuedProxyWrapperQueuedMethod"><returnvalue>ZeitgeistQueuedProxyWrapperQueuedMethod</returnvalue></link>&#160;*
+zeitgeist_queued_proxy_wrapper_queued_method_new
+                               (<parameter><link linkend="GSourceFunc"><type>GSourceFunc</type></link> callback</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> callback_target</parameter>,
+                                <parameter><link linkend="GDestroyNotify"><type>GDestroyNotify</type></link> callback_target_destroy_notify</parameter>);</programlisting>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-queued-method-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>callback_target</para></entry>
+<entry role="parameter_description"><para>user data to pass to <parameter>callback</parameter>
+. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>][<acronym>closure</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>callback_target_destroy_notify</para></entry>
+<entry role="parameter_description"><para>function to call when <parameter>callback_target</parameter>
+is no longer needed. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>callback</para></entry>
+<entry role="parameter_description"><para>&nbsp;</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-queued-method-get-queued-method" role="function">
+<title>zeitgeist_queued_proxy_wrapper_queued_method_get_queued_method&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-queued-method-get-queued-method"><primary>zeitgeist_queued_proxy_wrapper_queued_method_get_queued_method</primary></indexterm>
+<programlisting language="C"><link linkend="GSourceFunc"><returnvalue>GSourceFunc</returnvalue></link>
+zeitgeist_queued_proxy_wrapper_queued_method_get_queued_method
+                               (<parameter><link linkend="ZeitgeistQueuedProxyWrapperQueuedMethod"><type>ZeitgeistQueuedProxyWrapperQueuedMethod</type></link> *self</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> *result_target</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistQueuedProxyWrapperQueuedMethod--queued-method"><type>"queued-method"</type></link> property.</para>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-queued-method-get-queued-method.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistQueuedProxyWrapperQueuedMethod"><type>ZeitgeistQueuedProxyWrapperQueuedMethod</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-queued-proxy-wrapper-queued-method-get-queued-method.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistQueuedProxyWrapperQueuedMethod--queued-method"><type>"queued-method"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-queued-method-ref" role="function">
+<title>zeitgeist_queued_proxy_wrapper_queued_method_ref&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-queued-method-ref"><primary>zeitgeist_queued_proxy_wrapper_queued_method_ref</primary></indexterm>
+<programlisting language="C"><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>
+zeitgeist_queued_proxy_wrapper_queued_method_ref
+                               (<parameter><link linkend="gpointer"><type>gpointer</type></link> instance</parameter>);</programlisting>
+<para>Increases the reference count of <parameter>object</parameter>
+.</para>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-queued-method-ref.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>instance</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ZeitgeistQueuedProxyWrapperQueuedMethod"><type>ZeitgeistQueuedProxyWrapperQueuedMethod</type></link>.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-queued-proxy-wrapper-queued-method-ref.returns" role="returns">
+<title>Returns</title>
+<para> the same <parameter>object</parameter>
+</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-queued-method-unref" role="function">
+<title>zeitgeist_queued_proxy_wrapper_queued_method_unref&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-queued-method-unref"><primary>zeitgeist_queued_proxy_wrapper_queued_method_unref</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_queued_proxy_wrapper_queued_method_unref
+                               (<parameter><link linkend="gpointer"><type>gpointer</type></link> instance</parameter>);</programlisting>
+<para>Decreases the reference count of <parameter>object</parameter>
+. When its reference count drops to 0, the object is finalized (i.e. its memory is freed).</para>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-queued-method-unref.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>instance</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ZeitgeistQueuedProxyWrapperQueuedMethod"><type>ZeitgeistQueuedProxyWrapperQueuedMethod</type></link>.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-param-spec-queued-method" role="function">
+<title>zeitgeist_queued_proxy_wrapper_param_spec_queued_method&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-param-spec-queued-method"><primary>zeitgeist_queued_proxy_wrapper_param_spec_queued_method</primary></indexterm>
+<programlisting language="C"><link linkend="GParamSpec"><returnvalue>GParamSpec</returnvalue></link>&#160;*
+zeitgeist_queued_proxy_wrapper_param_spec_queued_method
+                               (<parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *nick</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *blurb</parameter>,
+                                <parameter><link linkend="GType"><type>GType</type></link> object_type</parameter>,
+                                <parameter><link linkend="GParamFlags"><type>GParamFlags</type></link> flags</parameter>);</programlisting>
+<para>Creates a new <link linkend="GParamSpecBoxed"><type>GParamSpecBoxed</type></link> instance specifying a <link linkend="ZEITGEIST-QUEUED-PROXY-WRAPPER-TYPE-QUEUED-METHOD:CAPS"><literal>ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD</literal></link> derived property.</para>
+<para>See <link linkend="g-param-spec-internal"><function><link linkend="g-param-spec-internal"><function>g_param_spec_internal()</function></link></function></link> for details on property names.</para>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-param-spec-queued-method.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>canonical name of the property specified</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>nick</para></entry>
+<entry role="parameter_description"><para>nick name for the property specified</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>blurb</para></entry>
+<entry role="parameter_description"><para>description of the property specified</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>object_type</para></entry>
+<entry role="parameter_description"><link linkend="ZEITGEIST-QUEUED-PROXY-WRAPPER-TYPE-QUEUED-METHOD:CAPS"><literal>ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD</literal></link> derived type of this property</entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para>flags for the property specified</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-value-set-queued-method" role="function">
+<title>zeitgeist_queued_proxy_wrapper_value_set_queued_method&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-value-set-queued-method"><primary>zeitgeist_queued_proxy_wrapper_value_set_queued_method</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_queued_proxy_wrapper_value_set_queued_method
+                               (<parameter><link linkend="GValue"><type>GValue</type></link> *value</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> v_object</parameter>);</programlisting>
+<para>Set the contents of a <link linkend="ZEITGEIST-QUEUED-PROXY-WRAPPER-TYPE-QUEUED-METHOD:CAPS"><literal>ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD</literal></link> derived <link linkend="GValue"><type>GValue</type></link> to <parameter>v_object</parameter>
+.</para>
+<link linkend="zeitgeist-queued-proxy-wrapper-value-set-queued-method"><function><link linkend="zeitgeist-queued-proxy-wrapper-value-set-queued-method"><function>zeitgeist_queued_proxy_wrapper_value_set_queued_method()</function></link></function></link> increases the reference count of <parameter>v_object</parameter> (the <link linkend="GValue"><type>GValue</type></link> holds a reference to <parameter>v_object</parameter>). If you do not wish to increase the reference count of the object (i.e. you wish to pass your current reference to the <link linkend="GValue"><type>GValue</type></link> because you no longer need it), use <link linkend="zeitgeist-queued-proxy-wrapper-value-take-queued-method"><function><link linkend="zeitgeist-queued-proxy-wrapper-value-take-queued-method"><function>zeitgeist_queued_proxy_wrapper_value_take_queued_method()</function></link></function></link> instead.
+<para>It is important that your <link linkend="GValue"><type>GValue</type></link> holds a reference to <parameter>v_object</parameter>
+ (either its own, or one it has taken) to ensure that the object won't be destroyed while the <link linkend="GValue"><type>GValue</type></link> still exists).</para>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-value-set-queued-method.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>a valid <link linkend="GValue"><type>GValue</type></link> of <link linkend="ZEITGEIST-QUEUED-PROXY-WRAPPER-TYPE-QUEUED-METHOD:CAPS"><literal>ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD</literal></link> derived type</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>v_object</para></entry>
+<entry role="parameter_description"><para>object value to be set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-value-get-queued-method" role="function">
+<title>zeitgeist_queued_proxy_wrapper_value_get_queued_method&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-value-get-queued-method"><primary>zeitgeist_queued_proxy_wrapper_value_get_queued_method</primary></indexterm>
+<programlisting language="C"><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>
+zeitgeist_queued_proxy_wrapper_value_get_queued_method
+                               (<parameter>const <link linkend="GValue"><type>GValue</type></link> *value</parameter>);</programlisting>
+<para>Get the contents of a <link linkend="ZEITGEIST-QUEUED-PROXY-WRAPPER-TYPE-QUEUED-METHOD:CAPS"><literal>ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD</literal></link> derived <link linkend="GValue"><type>GValue</type></link>.</para>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-value-get-queued-method.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>a valid <link linkend="GValue"><type>GValue</type></link> of <link linkend="ZEITGEIST-QUEUED-PROXY-WRAPPER-TYPE-QUEUED-METHOD:CAPS"><literal>ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD</literal></link> derived type</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-queued-proxy-wrapper-value-get-queued-method.returns" role="returns">
+<title>Returns</title>
+<para> object contents of <parameter>value</parameter>
+</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-value-take-queued-method" role="function">
+<title>zeitgeist_queued_proxy_wrapper_value_take_queued_method&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-value-take-queued-method"><primary>zeitgeist_queued_proxy_wrapper_value_take_queued_method</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+zeitgeist_queued_proxy_wrapper_value_take_queued_method
+                               (<parameter><link linkend="GValue"><type>GValue</type></link> *value</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> v_object</parameter>);</programlisting>
+<para>Sets the contents of a <link linkend="ZEITGEIST-QUEUED-PROXY-WRAPPER-TYPE-QUEUED-METHOD:CAPS"><literal>ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD</literal></link> derived <link linkend="GValue"><type>GValue</type></link> to <parameter>v_object</parameter>
+ and takes over the ownership of the callers reference to <parameter>v_object</parameter>
+; the caller doesn't have to unref it any more (i.e. the reference count of the object is not increased).</para>
+<para>If you want the GValue to hold its own reference to <parameter>v_object</parameter>
+, use <link linkend="zeitgeist-queued-proxy-wrapper-value-set-queued-method"><function><link linkend="zeitgeist-queued-proxy-wrapper-value-set-queued-method"><function>zeitgeist_queued_proxy_wrapper_value_set_queued_method()</function></link></function></link> instead.</para>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-value-take-queued-method.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>a valid <link linkend="GValue"><type>GValue</type></link> of <link linkend="ZEITGEIST-QUEUED-PROXY-WRAPPER-TYPE-QUEUED-METHOD:CAPS"><literal>ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD</literal></link> derived type</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>v_object</para></entry>
+<entry role="parameter_description"><para>object value to be set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-get-proxy-created" role="function">
+<title>zeitgeist_queued_proxy_wrapper_get_proxy_created&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-get-proxy-created"><primary>zeitgeist_queued_proxy_wrapper_get_proxy_created</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+zeitgeist_queued_proxy_wrapper_get_proxy_created
+                               (<parameter><link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistQueuedProxyWrapper--proxy-created"><type>"proxy-created"</type></link> property.</para>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-get-proxy-created.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-queued-proxy-wrapper-get-proxy-created.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistQueuedProxyWrapper--proxy-created"><type>"proxy-created"</type></link> property</para>
+</refsect3></refsect2>
+<refsect2 id="zeitgeist-queued-proxy-wrapper-get-is-connected" role="function">
+<title>zeitgeist_queued_proxy_wrapper_get_is_connected&#160;()</title>
+<indexterm zone="zeitgeist-queued-proxy-wrapper-get-is-connected"><primary>zeitgeist_queued_proxy_wrapper_get_is_connected</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+zeitgeist_queued_proxy_wrapper_get_is_connected
+                               (<parameter><link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> *self</parameter>);</programlisting>
+<para>Get and return the current value of the <link linkend="ZeitgeistQueuedProxyWrapper--is-connected"><type>"is-connected"</type></link> property.</para>
+<refsect3 id="zeitgeist-queued-proxy-wrapper-get-is-connected.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link> instance to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="zeitgeist-queued-proxy-wrapper-get-is-connected.returns" role="returns">
+<title>Returns</title>
+<para> the value of the <link linkend="ZeitgeistQueuedProxyWrapper--is-connected"><type>"is-connected"</type></link> property</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistQueuedProxyWrapperQueuedMethod.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ZEITGEIST-TYPE-QUEUED-PROXY-WRAPPER:CAPS" role="macro">
+<title>ZEITGEIST_TYPE_QUEUED_PROXY_WRAPPER</title>
+<indexterm zone="ZEITGEIST-TYPE-QUEUED-PROXY-WRAPPER:CAPS"><primary>ZEITGEIST_TYPE_QUEUED_PROXY_WRAPPER</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_TYPE_QUEUED_PROXY_WRAPPER (zeitgeist_queued_proxy_wrapper_get_type ())
+</programlisting>
+<para>The type for <link linkend="ZeitgeistQueuedProxyWrapper"><type>ZeitgeistQueuedProxyWrapper</type></link>.</para>
+</refsect2>
+<refsect2 id="ZEITGEIST-QUEUED-PROXY-WRAPPER-TYPE-QUEUED-METHOD:CAPS" role="macro">
+<title>ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD</title>
+<indexterm zone="ZEITGEIST-QUEUED-PROXY-WRAPPER-TYPE-QUEUED-METHOD:CAPS"><primary>ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD</primary></indexterm>
+<programlisting language="C">#define ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD (zeitgeist_queued_proxy_wrapper_queued_method_get_type ())
+</programlisting>
+<para>The type for <link linkend="ZeitgeistQueuedProxyWrapperQueuedMethod"><type>ZeitgeistQueuedProxyWrapperQueuedMethod</type></link>.</para>
+</refsect2>
+<refsect2 id="ZeitgeistQueuedProxyWrapperQueuedMethod-struct" role="struct">
+<title>struct ZeitgeistQueuedProxyWrapperQueuedMethod</title>
+<indexterm zone="ZeitgeistQueuedProxyWrapperQueuedMethod-struct"><primary>ZeitgeistQueuedProxyWrapperQueuedMethod</primary></indexterm>
+<programlisting language="C">struct ZeitgeistQueuedProxyWrapperQueuedMethod;</programlisting>
+</refsect2>
+<refsect2 id="ZeitgeistQueuedProxyWrapperQueuedMethodClass" role="struct">
+<title>struct ZeitgeistQueuedProxyWrapperQueuedMethodClass</title>
+<indexterm zone="ZeitgeistQueuedProxyWrapperQueuedMethodClass"><primary>ZeitgeistQueuedProxyWrapperQueuedMethodClass</primary></indexterm>
+<programlisting language="C">struct ZeitgeistQueuedProxyWrapperQueuedMethodClass {
+	GTypeClass parent_class;
+	void (*finalize) (ZeitgeistQueuedProxyWrapperQueuedMethod *self);
+};
+</programlisting>
+<para>The class structure for <link linkend="ZEITGEIST-QUEUED-PROXY-WRAPPER-TYPE-QUEUED-METHOD:CAPS"><literal>ZEITGEIST_QUEUED_PROXY_WRAPPER_TYPE_QUEUED_METHOD</literal></link>. All the fields in this structure are private and should never be accessed directly.</para>
+<refsect3 id="ZeitgeistQueuedProxyWrapperQueuedMethodClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistQueuedProxyWrapperQueuedMethodClass.finalize">finalize</structfield>&#160;()</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="ZeitgeistQueuedProxyWrapper-struct" role="struct">
+<title>struct ZeitgeistQueuedProxyWrapper</title>
+<indexterm zone="ZeitgeistQueuedProxyWrapper-struct"><primary>ZeitgeistQueuedProxyWrapper</primary></indexterm>
+<programlisting language="C">struct ZeitgeistQueuedProxyWrapper;</programlisting>
+</refsect2>
+<refsect2 id="ZeitgeistQueuedProxyWrapperClass" role="struct">
+<title>struct ZeitgeistQueuedProxyWrapperClass</title>
+<indexterm zone="ZeitgeistQueuedProxyWrapperClass"><primary>ZeitgeistQueuedProxyWrapperClass</primary></indexterm>
+<programlisting language="C">struct ZeitgeistQueuedProxyWrapperClass {
+	GObjectClass parent_class;
+	void (*on_connection_established) (ZeitgeistQueuedProxyWrapper* self);
+	void (*on_connection_lost) (ZeitgeistQueuedProxyWrapper* self);
+};
+</programlisting>
+<para>The class structure for <link linkend="ZEITGEIST-TYPE-QUEUED-PROXY-WRAPPER:CAPS"><literal>ZEITGEIST_TYPE_QUEUED_PROXY_WRAPPER</literal></link>. All the fields in this structure are private and should never be accessed directly.</para>
+<refsect3 id="ZeitgeistQueuedProxyWrapperClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistQueuedProxyWrapperClass.on-connection-established">on_connection_established</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method used internally</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="ZeitgeistQueuedProxyWrapperClass.on-connection-lost">on_connection_lost</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>virtual method used internally</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ZeitgeistQueuedProxyWrapperQueuedMethod.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="ZeitgeistQueuedProxyWrapper--is-connected" role="property"><title>The <literal>“is-connected”</literal> property</title>
+<indexterm zone="ZeitgeistQueuedProxyWrapper--is-connected"><primary>ZeitgeistQueuedProxyWrapper:is-connected</primary></indexterm>
+<programlisting>  “is-connected”             <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>is-connected.</para><para>Owner: ZeitgeistQueuedProxyWrapper</para>
+<para>Flags: Read</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="ZeitgeistQueuedProxyWrapper--proxy-created" role="property"><title>The <literal>“proxy-created”</literal> property</title>
+<indexterm zone="ZeitgeistQueuedProxyWrapper--proxy-created"><primary>ZeitgeistQueuedProxyWrapper:proxy-created</primary></indexterm>
+<programlisting>  “proxy-created”            <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>proxy-created.</para><para>Owner: ZeitgeistQueuedProxyWrapper</para>
+<para>Flags: Read</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

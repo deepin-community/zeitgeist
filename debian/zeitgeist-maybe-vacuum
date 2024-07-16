@@ -12,7 +12,7 @@ stamp_file="$cache_dir/zeitgeist-vacuum.stamp"
 timestamp=0
 
 if [ -f "$stamp_file" ]; then
-  timestamp="$(cat $stamp_file)"
+  timestamp="$(cat "$stamp_file")"
 fi
 
 case $timestamp in
@@ -20,7 +20,7 @@ case $timestamp in
   *) ;;
 esac
 
-if [ $(($(date +%s) - $timestamp)) -lt $FREQUENCY ]; then
+if [ $(($(date +%s) - timestamp)) -lt $FREQUENCY ]; then
   exit 0;
 fi
 

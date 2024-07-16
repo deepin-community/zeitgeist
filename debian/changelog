@@ -1,8 +1,46 @@
-zeitgeist (1.0.4-2) UNRELEASED; urgency=medium
+zeitgeist (1.0.4-5) unstable; urgency=medium
 
-  * update
+  * fix source helper tool copyright-check
+    + work with Path::Tiny 0.144
+    + avoid insecure shell expansion
+  * add patch cherry-picked upstream to support Python 3.11;
+    closes: bug#1032125, thanks to s3v
+  * declare compliance with Debian Policy 4.6.2
+  * update copyright info: update coverage
 
- -- Debian semweb Team <team+semweb@tracker.debian.org>  Thu, 16 Jun 2022 14:38:10 +0800
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 28 Feb 2023 19:20:44 +0100
+
+zeitgeist (1.0.4-4) unstable; urgency=medium
+
+  * update source helper script copyright-check
+  * update copyright info:
+    + use field License-Grant
+    + update coverage
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 18 Sep 2022 11:47:35 +0200
+
+zeitgeist (1.0.4-3) unstable; urgency=medium
+
+  * add patch cherry-picked upstream
+    to fix wrong parameter for Event.full() ctor
+  * declare compliance with Debian Policy 4.6.1
+  * update copyright info:
+    + merge Files sections with identical licensing
+    + sort copyright holders
+    + use field Reference
+    + update coverage
+  * add source helper script copyright-check
+  * use semantic newlines
+    in long descriptions and copyright file License grants
+  * build-depend on dh-sequence-pkgkde-symbolshelper
+    (not pkg-kde-tools)
+  * build-depend on dh-sequence-gir
+    (not gobject-introspection)
+  * build-depend on dh-sequence-python3
+    (not dh-python)
+  * tighten packaging shell files
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sat, 17 Sep 2022 21:39:19 +0200
 
 zeitgeist (1.0.4-2) unstable; urgency=medium
 
